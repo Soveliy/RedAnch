@@ -71,6 +71,51 @@
       }
     }
   }
+
+  .p-list__item{
+    .mobi{
+      font-family: 'PF Din Text Cond Pro';
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.05em;
+      color: #150F0F;
+
+      @media screen and (min-width: 600px) {
+        font-size: 18px;
+        line-height: 22px;
+      }
+      
+      p{
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.05em;
+        margin-bottom: 8px;
+        color: rgba(79, 86, 89, 0.7);
+
+        @media screen and (min-width: 600px) {
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+      b{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.03em;
+        color: #150F0F;
+        margin-top: 2px;
+
+        @media screen and (min-width: 600px) {
+          font-size: 20px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
 }
 
 .search-box{
