@@ -624,29 +624,29 @@
   outline: none;
 }
 
-input[type='text'],
-input[type='url'],
-input[type='tel'],
-input[type='number'],
-input[type='color'],
-input[type='email'],
-input[type='password'] {
-  width: 100px;
-  height: 20px;
-  font: 400 16px sans-serif;
-  padding: 0px;
-  border-radius: 6px;
-  border: 1px solid #c7d7df;
-  color: #000;
-  &::placeholder {
-    color: #150f0f;
-    opacity: 0.5;
-  }
-  &::-moz-placeholder {
-    color: #150f0f;
-    opacity: 0.5;
-  }
-}
+// input[type='text'],
+// input[type='url'],
+// input[type='tel'],
+// input[type='number'],
+// input[type='color'],
+// input[type='email'],
+// input[type='password'] {
+//   width: 100px;
+//   height: 20px;
+//   font: 400 16px sans-serif;
+//   padding: 0px;
+//   border-radius: 6px;
+//   border: 1px solid #c7d7df;
+//   color: #000;
+//   &::placeholder {
+//     color: #150f0f;
+//     opacity: 0.5;
+//   }
+//   &::-moz-placeholder {
+//     color: #150f0f;
+//     opacity: 0.5;
+//   }
+// }
 
 /*filter*/
 //! filter

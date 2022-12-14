@@ -7,6 +7,10 @@
    font-family: 'TT Bluescreens';
    font-weight: 700;
 
+   &--db{
+      display: block;
+   }
+
    &--ms {
 
       &-24 {
@@ -76,7 +80,9 @@
       &-120 {
          font-size: 120px;
       }
-
+      &-130{
+         font-size: 130px;
+      }
       &-144 {
          font-size: 144px;
       }
@@ -229,6 +235,12 @@
 
          @media screen and (min-width: 600px) {
             font-size: 172px;
+         }
+      }
+      &-180 {
+
+         @media screen and (min-width: 600px) {
+            font-size: 180px;
          }
       }
 
@@ -538,6 +550,12 @@
             font-size: 200px;
          }
       }
+      &-248 {
+
+         @media screen and (min-width: 1024px) {
+            font-size: 248px;
+         }
+      }
    }
 
    &--dm {
@@ -688,6 +706,12 @@
             font-size: 200px;
          }
       }
+      &-280 {
+
+         @media screen and (min-width: 1366px) {
+            font-size: 280px;
+         }
+      }
    }
 
    &--dl {
@@ -836,6 +860,18 @@
 
          @media screen and (min-width: 1600px) {
             font-size: 200px;
+         }
+      }
+      &-232 {
+
+         @media screen and (min-width: 1600px) {
+            font-size: 232px;
+         }
+      }
+      &-312 {
+
+         @media screen and (min-width: 1600px) {
+            font-size: 312px;
          }
       }
    }

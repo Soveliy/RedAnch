@@ -1,5 +1,7 @@
 $DM : 'PF Din Text Cond Pro';
 $TT : 'TT Bluescreens';
+$transition: .8s cubic-bezier(.5,0,0,1);
+
 @mixin for-600 {
     @media (min-width: 568px) { @content; }
 }
@@ -9,6 +11,10 @@ $TT : 'TT Bluescreens';
 @mixin for-1024 {
     @media (min-width: 1023px) { @content; }
 }
+@mixin for-1024-only {
+    @media (min-width: 1023px) and (max-width:1365px) { @content; }
+}
+
 @mixin for-1366 {
     @media (min-width: 1366px) { @content; }
 }
@@ -19,6 +25,6 @@ $TT : 'TT Bluescreens';
     @media (min-width: 1919px) { @content; }
 }
 @mixin for-retina {
-    @media (min-width: 2200px) { @content; }
+    @media (min-width: 1921px) { @content; }
 }
 
