@@ -1,0 +1,740 @@
+@@include('./assets/templates/template-header.html', { 'lang': 'ru', 'title': 'Red Anchor | Все категории' })
+
+
+<div class="page">
+   <section class="page__section you-order">
+      <div class="page__container">
+         <div class="page__box you-order__box">
+            <div class="you-order__header order-header">
+               <div class="order-header__main">
+                  <h1 class="order-header__title">ваш заказ</h1>
+                  <ul class="order-header__result result-list">
+                     <li class="result-list__item">
+                        <span class="result-list__count">7</span>
+                        <span class="result-list__name">позиций</span>
+                     </li>
+                     <li class="result-list__item">
+                        <span class="result-list__count">7</span>
+                        <span class="result-list__name">м</span>
+                     </li>
+                     <li class="result-list__item">
+                        <span class="result-list__count">7</span>
+                        <span class="result-list__name">шт.</span>
+                     </li>
+                  </ul>
+               </div>
+               <div class="order-header__print">
+                  <a href="#" class="print-link">
+                     <svg class="icon print-link__icon">
+                        <use xlink:href="assets/svg-sprite/svg-sprite.svg#print"></use>
+                     </svg>
+                     <span>Распечатать</span>
+                  </a>
+               </div>
+            </div>
+            <div class="you-order__body">
+               <div class="order-table">
+                  <div class="order-table__header table-header">
+                     <div class="table-header__body">Наименование</div>
+                     <div class="table-header__count">Количество</div>
+                     <div class="table-header__unit">Ед. измерения</div>
+                  </div>
+                  <div class="order-table__item order-card go-js-hover-catalog">
+                     <picture class="order-card__preview">
+                        <img src="assets/images/content/about-product/product-chain1.png" alt="preview">
+                     </picture>
+                     <div class="order-card__body">
+                        <a href="#" class="order-card__header">
+                           <span class="order-card__title">Якорная смычка с распорками, калибр 11 мм, категория 1</span>
+                           <span class="order-card__desc">ЦГНП-10-U2</span>
+                        </a>
+                        <div class="order-card__filter card-filter">
+                           <div class="card-filter__item">
+                              <div class="card-filter__name">Вид покрытия:</div>
+                              <div class="card-filter__choice choice-box js-choice-box">
+                                 <div class="choice-box__header">
+                                    <span class="choice-box__title">
+                                       Значение
+                                    </span>
+                                    <button type="button" class="choice-box__btn">
+                                       <svg class="icon">
+                                          <use xlink:href="svg-sprite/svg-sprite.svg#arrow-down"></use>
+                                       </svg>
+                                    </button>
+                                 </div>
+                                 <ul class="choice-box__list">
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение А</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение Б</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение В</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение Г</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="order-card__pagination">
+                        <div class="counter order-card__counter">
+                           <button type="button" class="counter__btn counter__btn--down">
+                              <span></span>
+                           </button>
+                           <input type="text" class="counter__input" min="1" max="100" value="1">
+                           <button type="button" class="counter__btn counter__btn--up">
+                              <span></span>
+                           </button>
+                        </div>
+                        <div class="order-card__details">
+                           <div class="order-card__label unit-choice">
+                              <label class="unit-choice__label">
+                                 <input type="radio" name="unit" class="unit-choice__input">
+                                 <span class="unit-choice__custom">м</span>
+                              </label>
+                              <label class="unit-choice__label">
+                                 <input type="radio" name="unit" class="unit-choice__input">
+                                 <span class="unit-choice__custom">шт.</span>
+                              </label>
+                           </div>
+                           <button type="button" class="order-card__clear">
+                              <svg class="icon order-footer__icon">
+                                 <use xlink:href="./assets/svg-sprite/svg-sprite.svg#print"></use>
+                              </svg>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="order-table__item order-card go-js-hover-catalog">
+                     <picture class="order-card__preview">
+                        <img src="assets/images/content/about-product/product-chain1.png" alt="preview">
+                     </picture>
+                     <div class="order-card__body">
+                        <a href="#" class="order-card__header">
+                           <span class="order-card__title">Якорная смычка с распорками, калибр 11 мм, категория 1</span>
+                           <span class="order-card__desc">ЦГНП-10-U2</span>
+                        </a>
+                        <div class="order-card__filter card-filter">
+                           <div class="card-filter__item">
+                              <div class="card-filter__name">Вид покрытия:</div>
+                              <div class="card-filter__choice choice-box js-choice-box">
+                                 <div class="choice-box__header">
+                                    <span class="choice-box__title">
+                                       Значение
+                                    </span>
+                                    <button type="button" class="choice-box__btn">
+                                       <svg class="icon">
+                                          <use xlink:href="svg-sprite/svg-sprite.svg#arrow-down"></use>
+                                       </svg>
+                                    </button>
+                                 </div>
+                                 <ul class="choice-box__list">
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение А</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение Б</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение В</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение Г</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <div class="card-filter__item">
+                              <div class="card-filter__name">Вид покрытия:</div>
+                              <div class="card-filter__choice choice-box js-choice-box">
+                                 <div class="choice-box__header">
+                                    <span class="choice-box__title">
+                                       Значение
+                                    </span>
+                                    <button type="button" class="choice-box__btn">
+                                       <svg class="icon">
+                                          <use xlink:href="svg-sprite/svg-sprite.svg#arrow-down"></use>
+                                       </svg>
+                                    </button>
+                                 </div>
+                                 <ul class="choice-box__list">
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение А</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение Б</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение В</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение Г</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <div class="card-filter__item">
+                              <div class="card-filter__name">Вид покрытия:</div>
+                              <div class="card-filter__choice choice-box js-choice-box">
+                                 <div class="choice-box__header">
+                                    <span class="choice-box__title">
+                                       Значение
+                                    </span>
+                                    <button type="button" class="choice-box__btn">
+                                       <svg class="icon">
+                                          <use xlink:href="svg-sprite/svg-sprite.svg#arrow-down"></use>
+                                       </svg>
+                                    </button>
+                                 </div>
+                                 <ul class="choice-box__list">
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение А</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение Б</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение В</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение Г</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <div class="card-filter__item">
+                              <div class="card-filter__name">Вид покрытия:</div>
+                              <div class="card-filter__choice choice-box js-choice-box">
+                                 <div class="choice-box__header">
+                                    <span class="choice-box__title">
+                                       Значение
+                                    </span>
+                                    <button type="button" class="choice-box__btn">
+                                       <svg class="icon">
+                                          <use xlink:href="svg-sprite/svg-sprite.svg#arrow-down"></use>
+                                       </svg>
+                                    </button>
+                                 </div>
+                                 <ul class="choice-box__list">
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение А</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение Б</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение В</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение Г</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <div class="card-filter__item">
+                              <div class="card-filter__name">Вид покрытия:</div>
+                              <div class="card-filter__choice choice-box js-choice-box">
+                                 <div class="choice-box__header">
+                                    <span class="choice-box__title">
+                                       Значение
+                                    </span>
+                                    <button type="button" class="choice-box__btn">
+                                       <svg class="icon">
+                                          <use xlink:href="svg-sprite/svg-sprite.svg#arrow-down"></use>
+                                       </svg>
+                                    </button>
+                                 </div>
+                                 <ul class="choice-box__list">
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение А</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение Б</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение В</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение Г</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <div class="card-filter__item">
+                              <div class="card-filter__name">Вид покрытия:</div>
+                              <div class="card-filter__choice choice-box js-choice-box">
+                                 <div class="choice-box__header">
+                                    <span class="choice-box__title">
+                                       Значение
+                                    </span>
+                                    <button type="button" class="choice-box__btn">
+                                       <svg class="icon">
+                                          <use xlink:href="svg-sprite/svg-sprite.svg#arrow-down"></use>
+                                       </svg>
+                                    </button>
+                                 </div>
+                                 <ul class="choice-box__list">
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение А</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение Б</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение В</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение Г</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                           <div class="card-filter__item">
+                              <div class="card-filter__name">Вид покрытия:</div>
+                              <div class="card-filter__choice choice-box js-choice-box">
+                                 <div class="choice-box__header">
+                                    <span class="choice-box__title">
+                                       Значение
+                                    </span>
+                                    <button type="button" class="choice-box__btn">
+                                       <svg class="icon">
+                                          <use xlink:href="svg-sprite/svg-sprite.svg#arrow-down"></use>
+                                       </svg>
+                                    </button>
+                                 </div>
+                                 <ul class="choice-box__list">
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение А</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение Б</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение В</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение Г</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="order-card__pagination">
+                        <div class="counter order-card__counter">
+                           <button type="button" class="counter__btn counter__btn--down">
+                              <span></span>
+                           </button>
+                           <input type="text" class="counter__input" min="1" max="100" value="1">
+                           <button type="button" class="counter__btn counter__btn--up">
+                              <span></span>
+                           </button>
+                        </div>
+                        <div class="order-card__details">
+                           <div class="order-card__label unit-choice">
+                              <label class="unit-choice__label">
+                                 <input type="radio" name="unit" class="unit-choice__input">
+                                 <span class="unit-choice__custom">м</span>
+                              </label>
+                              <label class="unit-choice__label">
+                                 <input type="radio" name="unit" class="unit-choice__input">
+                                 <span class="unit-choice__custom">шт.</span>
+                              </label>
+                           </div>
+                           <button type="button" class="order-card__clear">
+                              <svg class="icon order-footer__icon">
+                                 <use xlink:href="./assets/svg-sprite/svg-sprite.svg#print"></use>
+                              </svg>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="order-table__item order-card go-js-hover-catalog">
+                     <picture class="order-card__preview">
+                        <img src="assets/images/content/about-product/product-chain1.png" alt="preview">
+                     </picture>
+                     <div class="order-card__body">
+                        <a href="#" class="order-card__header">
+                           <span class="order-card__title">Якорная смычка с распорками, калибр 11 мм, категория 1</span>
+                           <span class="order-card__desc">ЦГНП-10-U2</span>
+                        </a>
+                        <div class="order-card__filter card-filter">
+                           <div class="card-filter__item">
+                              <div class="card-filter__name">Вид покрытия:</div>
+                              <div class="card-filter__choice choice-box js-choice-box">
+                                 <div class="choice-box__header">
+                                    <span class="choice-box__title">
+                                       Значение
+                                    </span>
+                                    <button type="button" class="choice-box__btn">
+                                       <svg class="icon">
+                                          <use xlink:href="svg-sprite/svg-sprite.svg#arrow-down"></use>
+                                       </svg>
+                                    </button>
+                                 </div>
+                                 <ul class="choice-box__list">
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение А</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение Б</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение В</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение Г</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="order-card__pagination">
+                        <div class="counter order-card__counter">
+                           <button type="button" class="counter__btn counter__btn--down">
+                              <span></span>
+                           </button>
+                           <input type="text" class="counter__input" min="1" max="100" value="1">
+                           <button type="button" class="counter__btn counter__btn--up">
+                              <span></span>
+                           </button>
+                        </div>
+                        <div class="order-card__details">
+                           <div class="order-card__label unit-choice">
+                              <label class="unit-choice__label">
+                                 <input type="radio" name="unit" class="unit-choice__input">
+                                 <span class="unit-choice__custom">м</span>
+                              </label>
+                              <label class="unit-choice__label">
+                                 <input type="radio" name="unit" class="unit-choice__input">
+                                 <span class="unit-choice__custom">шт.</span>
+                              </label>
+                           </div>
+                           <button type="button" class="order-card__clear">
+                              <svg class="icon order-footer__icon">
+                                 <use xlink:href="./assets/svg-sprite/svg-sprite.svg#print"></use>
+                              </svg>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="order-table__item order-card go-js-hover-catalog">
+                     <picture class="order-card__preview">
+                        <img src="assets/images/content/about-product/product-chain1.png" alt="preview">
+                     </picture>
+                     <div class="order-card__body">
+                        <a href="#" class="order-card__header">
+                           <span class="order-card__title">Якорная смычка с распорками, калибр 11 мм, категория 1</span>
+                           <span class="order-card__desc">ЦГНП-10-U2</span>
+                        </a>
+                        <div class="order-card__filter card-filter">
+                           <div class="card-filter__item">
+                              <div class="card-filter__name">Вид покрытия:</div>
+                              <div class="card-filter__choice choice-box js-choice-box">
+                                 <div class="choice-box__header">
+                                    <span class="choice-box__title">
+                                       Значение
+                                    </span>
+                                    <button type="button" class="choice-box__btn">
+                                       <svg class="icon">
+                                          <use xlink:href="svg-sprite/svg-sprite.svg#arrow-down"></use>
+                                       </svg>
+                                    </button>
+                                 </div>
+                                 <ul class="choice-box__list">
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение А</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение Б</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение В</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение Г</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="order-card__pagination">
+                        <div class="counter order-card__counter">
+                           <button type="button" class="counter__btn counter__btn--down">
+                              <span></span>
+                           </button>
+                           <input type="text" class="counter__input" min="1" max="100" value="1">
+                           <button type="button" class="counter__btn counter__btn--up">
+                              <span></span>
+                           </button>
+                        </div>
+                        <div class="order-card__details">
+                           <div class="order-card__label unit-choice">
+                              <label class="unit-choice__label">
+                                 <input type="radio" name="unit" class="unit-choice__input">
+                                 <span class="unit-choice__custom">м</span>
+                              </label>
+                              <label class="unit-choice__label">
+                                 <input type="radio" name="unit" class="unit-choice__input">
+                                 <span class="unit-choice__custom">шт.</span>
+                              </label>
+                           </div>
+                           <button type="button" class="order-card__clear">
+                              <svg class="icon order-footer__icon">
+                                 <use xlink:href="./assets/svg-sprite/svg-sprite.svg#print"></use>
+                              </svg>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="order-table__item order-card go-js-hover-catalog">
+                     <picture class="order-card__preview">
+                        <img src="assets/images/content/about-product/product-chain1.png" alt="preview">
+                     </picture>
+                     <div class="order-card__body">
+                        <a href="#" class="order-card__header">
+                           <span class="order-card__title">Якорная смычка с распорками, калибр 11 мм, категория 1</span>
+                           <span class="order-card__desc">ЦГНП-10-U2</span>
+                        </a>
+                        <div class="order-card__filter card-filter">
+                           <div class="card-filter__item">
+                              <div class="card-filter__name">Вид покрытия:</div>
+                              <div class="card-filter__choice choice-box js-choice-box">
+                                 <div class="choice-box__header">
+                                    <span class="choice-box__title">
+                                       Значение
+                                    </span>
+                                    <button type="button" class="choice-box__btn">
+                                       <svg class="icon">
+                                          <use xlink:href="svg-sprite/svg-sprite.svg#arrow-down"></use>
+                                       </svg>
+                                    </button>
+                                 </div>
+                                 <ul class="choice-box__list">
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение А</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение Б</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение В</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                    <li class="go-js-choice-item choice-box__item">
+                                       <label class="choice-box__label choice-element">
+                                          <span class="choice-box__name">Значение Г</span>
+                                          <input class="choice-box__input" name="count" type="radio" />
+                                       </label>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="order-card__pagination">
+                        <div class="counter order-card__counter">
+                           <button type="button" class="counter__btn counter__btn--down">
+                              <span></span>
+                           </button>
+                           <input type="text" class="counter__input" min="1" max="100" value="1">
+                           <button type="button" class="counter__btn counter__btn--up">
+                              <span></span>
+                           </button>
+                        </div>
+                        <div class="order-card__details">
+                           <div class="order-card__label unit-choice">
+                              <label class="unit-choice__label">
+                                 <input type="radio" name="unit" class="unit-choice__input">
+                                 <span class="unit-choice__custom">м</span>
+                              </label>
+                              <label class="unit-choice__label">
+                                 <input type="radio" name="unit" class="unit-choice__input">
+                                 <span class="unit-choice__custom">шт.</span>
+                              </label>
+                           </div>
+                           <button type="button" class="order-card__clear">
+                              <svg class="icon order-footer__icon">
+                                 <use xlink:href="./assets/svg-sprite/svg-sprite.svg#print"></use>
+                              </svg>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="you-order__footer order-footer">
+         <button class="order-footer__item order-footer__item--btn" type="button">
+            очистить заказ
+            <svg class="icon order-footer__icon">
+               <use xlink:href="assets/svg-sprite/svg-sprite.svg#print"></use>
+            </svg>
+            <span class="order-footer__item-line"></span>
+         </button>
+         <div class="order-footer__item order-footer__item--result">
+            всего:
+            <ul class="result-list">
+               <li class="result-list__item">
+                  <span class="result-list__count">7</span>
+                  <span class="result-list__name">позиций</span>
+               </li>
+               <li class="result-list__item">
+                  <span class="result-list__count">7</span>
+                  <span class="result-list__name">м</span>
+               </li>
+               <li class="result-list__item">
+                  <span class="result-list__count">7</span>
+                  <span class="result-list__name">шт.</span>
+               </li>
+            </ul>
+         </div>
+         <div class="order-footer__item order-footer__item--link">
+            перейти к оформлению
+            <svg class="icon order-footer__icon">
+               <use xlink:href="assets/svg-sprite/svg-sprite.svg#print"></use>
+            </svg>
+            <span class="order-footer__item-line"></span>
+         </div>
+      </div>
+   </section>
+</div>
+
+<!-- footer-black -->
+@@include('./assets/block-mixin/_footer-black.html')
+@@include('./assets/templates/template-footer.html')
