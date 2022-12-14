@@ -1,0 +1,24 @@
+// categories.scss
+
+// Categories
+
+.categories {
+
+    &__item {
+        min-height: 216px;
+        margin-bottom: 8px;
+
+        @media screen and (min-width: 600px) {
+            min-height: 240px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            min-height: 320px;
+            margin-bottom: 32px;
+        }
+
+        @media screen and (min-width: 1600px) {
+            min-height: 400px;
+        }
+    }
+}

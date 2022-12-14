@@ -1,0 +1,107 @@
+// sub-categories-head.scss
+
+// Sub Categories Head
+
+.sub-categories-head {
+    margin-bottom: 24px;
+
+    @media screen and (min-width: 600px) {
+        margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        margin-bottom: 56px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        margin-bottom: 56px;
+    }
+
+    &__title {
+        max-width: 250px;
+        letter-spacing: 0.03em;
+    
+        @media screen and (min-width: 600px) {
+            max-width: 430px;
+        }
+    
+        @media screen and (min-width: 1024px) {
+            max-width: 712px; 
+        }
+
+        @media screen and (min-width: 1366px) {
+            max-width: 968px;
+            letter-spacing: 0.02em;
+        }
+
+        @media screen and (min-width: 1600px) {
+            max-width: 1052px;
+        }
+
+        @media screen and (min-width: 1920px) {
+            max-width: 992px;
+        }
+    }
+
+    &__description {
+        margin-top: 16px;
+        line-height: 28px;
+        letter-spacing: 0.03em;
+        font-family: 'PF Din Text Cond Pro', serif;
+        font-weight: 300;
+        font-size: 18px;
+
+        @media screen and (min-width: 600px) {
+            max-width: 430px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            max-width: 548px;
+            margin-left: 165px;
+            line-height: 24px;
+            font-size: 16px;
+        }
+
+        @media screen and (min-width: 1366px) {
+            max-width: 744px;
+            margin-left: 223px;
+            line-height: 36px;
+            font-size: 24px;
+        }
+
+        @media screen and (min-width: 1600px) {
+            max-width: 752px;
+            margin-left: 256px;
+            line-height: 40px;
+            font-size: 24px;
+        }
+
+        p:not(:first-child) {
+            margin-top: 28px;
+
+            @media screen and (min-width: 1024px) {
+                margin-top: 24px;
+            }
+    
+            @media screen and (min-width: 1366px) {
+                margin-top: 36px;
+            }
+    
+            @media screen and (min-width: 1600px) {
+                margin-top: 40px;
+            }
+        }
+    }
+
+    &__more-button {
+        margin-top: 8px;
+
+        @media screen and (min-width: 1366px) {
+            margin-top: 16px;
+        }
+
+        @media screen and (min-width: 1600px) {
+            margin-top: 24px;
+        }
+    }
+}

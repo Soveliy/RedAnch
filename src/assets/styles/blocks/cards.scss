@@ -1,0 +1,24 @@
+// cards.scss
+
+// Cards
+
+.cards {
+
+    &__item {
+        margin-bottom: 8px;
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__item,
+    &__card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__card {
+        flex: 1 1 auto;
+    }
+}

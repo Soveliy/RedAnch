@@ -1,0 +1,98 @@
+// requisite-card.scss
+
+// Requisite Card
+
+.requisite-card {
+    padding: 16px 16px 4px;
+
+    @media screen and (min-width: 1366px) {
+        padding: 25px 32px 5px;
+    }
+
+    &__title {
+        letter-spacing: .05em;
+
+        @media screen and (min-width: 1366px) {
+            letter-spacing: .06em;
+        }
+
+        @media screen and (min-width: 1600px) {
+            letter-spacing: .05em;
+        }
+    }
+
+    &__list {
+        margin-top: 16px;
+        letter-spacing: .03em;
+
+        @media screen and (min-width: 600px) {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -6px;
+            margin-right: -6px;
+        }
+
+        @media screen and (min-width: 1366px) {
+            display: block;
+            margin: 24px 0 0;
+            letter-spacing: .05em;
+        }
+    }
+
+    &__item {
+        margin-bottom: 12px;
+
+        @media screen and (min-width: 600px) {
+            flex: 0 0 auto;
+            width: 50%;
+            padding-left: 6px;
+            padding-right: 6px;
+        }
+
+        @media screen and (min-width: 1366px) {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            width: auto;
+            margin-bottom: 20px;
+            padding: 0;
+        }
+
+        &::before {
+
+            @media screen and (min-width: 1366px) {
+                content: ' ';
+                display: block;
+                order: 2;
+                height: 2px;
+                margin: 4px;
+                flex: 1 1 auto;
+                background: linear-gradient(90deg, rgba(79, 86, 89, 0.2) 0, rgba(79, 86, 89, 0.2) 50%, transparent 50%, transparent 100%) repeat-x;
+                background-size: 4px;
+                pointer-events: none;
+            }
+        }
+    }
+
+    &__property {
+
+        @media screen and (min-width: 1366px) {
+            order: 1;
+            flex: 0 0 auto;
+        }
+    }
+
+    &__value {
+
+        @media screen and (min-width: 600px) {
+            margin-top: 2px;
+        }
+
+        @media screen and (min-width: 1366px) {
+            order: 3;
+            flex: 0 0 auto;
+            width: 258px;
+            margin: 0;
+        }
+    }
+}

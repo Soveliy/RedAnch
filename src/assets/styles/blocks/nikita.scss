@@ -1,0 +1,307 @@
+
+.linkLabel{
+    &__box{
+        display: inline-flex;
+        align-items: center;
+        svg{
+            margin-left: 24px;
+        }
+        &--white{
+            color: #fff;
+            border-bottom: 2px solid rgba(#fff, .2);
+            box-sizing: border-box;
+            svg{
+                height: 16px;
+                width: 16px;
+                fill: rgba(#fff, .2);
+                flex-shrink: 0;
+                @include for-1024(){
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+        &--default{
+            font-family: $TT;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 32px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 13px 0;
+            @include for-1024(){
+                font-size: 36px;
+                line-height: 36px;
+                padding: 28px 0;
+            }
+        }
+        &--big{
+            align-items: flex-end;
+        }
+    }
+}
+
+.video-gallery{
+    &__container{
+        position: relative;
+        display: block;
+
+    }
+    img{
+        width: 100%;
+    }
+    &__btn{
+        height: 64px;
+        width: 64px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 50%;
+        background: #DD2B1C;
+        opacity: 0.8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 5;
+    }
+    &__icon{
+        stroke: #fff;
+        height: 26px;
+        width: 21px;
+    }
+   
+}
+.aboutUs{
+    padding: 34px 0;
+    background-color: #110101;
+    @include for-600(){
+        padding: 45px 0;
+    }
+    &__desc{
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.03em;
+        color: #fff;
+        font-family: $DM;
+        @include for-600(){
+            font-size: 18px;
+            line-height: 28px;
+        }
+    }
+
+    &__video-gallery{
+        margin: 20px 0 10px;
+        @include for-600(){
+            margin: 24px 0 10px;
+        }
+    }
+    
+    &__content{
+        padding-right: 56px;
+        box-sizing: border-box;
+        @include for-600(){
+            padding: 0;
+            max-width: 423px;
+            width: 100%;
+        }
+    }
+    &__title{
+        letter-spacing: 1.5px;
+        line-height: .8;
+        span{
+            margin-top: 13px;
+            @include for-600(){
+                letter-spacing: 2.8px;
+            }
+        }
+    }
+}
+.tech{
+    background-color: #110101;
+    padding: 48px 0;
+    @include for-600{
+        padding: 85px 0;
+    }
+    &__title{
+        color: #fff;
+        line-height: 1;
+        letter-spacing: 0.03em;
+        margin-bottom: 153px;
+        @include for-600(){
+            letter-spacing: 3.6px;
+            margin-bottom: 138px;
+        }
+    }
+    &__tizers{
+        max-width: 400px;
+    }
+    &__linkLabel{
+        margin-top: 39px;
+    }
+    &__title{
+        letter-spacing: 1.8px;
+    }
+}
+.tizers{
+   
+    &__row{
+        display: flex;
+        &--grid{
+            flex-direction: column;
+        }
+        &--wrap{
+            flex-wrap: wrap;
+            margin: -24px -16px;
+        }
+    }
+    &__item-container{
+        &--w40{
+            width: 40%;
+            padding: 24px 0 24px 16px;
+        }
+        &--w50{
+            width: 50%;
+            padding: 16px;
+        }
+        &--w60{
+            width: 60%;
+            padding: 24px 16px;
+        }
+        &--w100{
+            width: 100%;
+            & + &{
+                margin-top: 24px;
+            }
+        }
+    }
+    &-item{
+        &--row{
+            display: flex;
+            align-items: center;
+        }
+        &__title{
+            font-size: 24px;
+            line-height: 1;
+            font-family: $TT;
+            color: #fff;
+            letter-spacing: 0.06em;
+            font-weight: 700;
+            text-transform: uppercase;
+            @include for-600(){
+                font-size: 28px;
+                line-height: 32px;
+            }
+        }
+        &__picture{
+            width: 40px;
+            height: 40px;
+            img{
+                width: 100%;
+            }
+            @include for-600(){
+                width: 64px;
+                height: 64px;
+            }
+            &--column{
+                margin-bottom: 16px;
+            }
+            &--left{
+                flex-shrink: 0;
+                margin-right: 16px;
+            }
+        }
+    }
+    
+}
+.checks{
+    background-color: #110101;
+    padding: 32px 0;
+    &__title{
+        letter-spacing: 2px;
+    }
+    &__content{
+        padding-right: 71px;
+        box-sizing: border-box;
+    }
+    &__tizers{
+        margin-top: 42px;
+    }
+    &__linkLabel{
+        margin-top: 24px;
+    }
+}
+.partners{
+    background-color: #110101;
+    padding: 48px 0 78px;
+    &__content{
+        padding-right: 70px;
+        box-sizing: border-box;
+    }
+    &__title{
+        letter-spacing: 2px;
+    }
+    &__desc{
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+        /* or 150% */
+        
+        letter-spacing: 0.03em;
+        font-family: $DM;
+        color: #fff;
+        margin: 24px 0;
+    }
+    &__item + &__item{
+        margin-top: 24px;
+    }
+    &__items{
+        padding: 0;
+        max-width: 150px;
+    }
+    &__item-link{
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 32px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        font-family: $TT;
+        color: #fff;
+    }
+    &__linkLabel{
+        margin-top: 40px;
+    }
+}
+.categories{
+    padding: 24px 0;
+    background: linear-gradient(180deg, #C52518 0%, #8C0D03 100%);
+    &__items{
+        margin-top: 25px;
+    }
+    &-item{
+        display: block;
+        &__name{
+            font-weight: 700;
+            font-size: 52px;
+            line-height: 52px;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            opacity: 0.4;
+            font-family: $TT;
+        }
+        &__picture{
+            width: calc(100% + 30px);
+            margin: -33px -15px -2px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+.container{
+    padding: 0 15px;
+    box-sizing: border-box;
+}

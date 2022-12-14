@@ -1,0 +1,66 @@
+// slider.js
+
+// Slider
+
+.slider {
+    position: relative;
+
+    &__slide {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__image {
+        flex: 0 0 auto;
+    }
+
+    &__buttons {
+        display: flex;
+    }
+
+    &__button {
+        display: block;
+        width: 16px;
+        height: 16px;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background: none;
+        box-shadow: none;
+
+        @media screen and (min-width: 1024px) {
+            width: 24px;
+            height: 24px;
+        }
+
+        &:not(:last-child) {
+            margin-right: 12px;
+
+            @media screen and (min-width: 1024px) {
+                margin-right: 16px;
+            }
+        }
+    }
+
+    &__box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__icon {
+        display: block;
+        width: 16px;
+        height: 16px;
+        fill: #DD2B1C;
+        stroke: transparent;
+
+        @media screen and (min-width: 1024px) {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}

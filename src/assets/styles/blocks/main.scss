@@ -1,0 +1,86 @@
+// main.scss
+
+// Main
+
+.main {
+    padding-top: 84px;
+
+    @media screen and (min-width: 600px) {
+        padding-top: 88px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        padding-top: 100px;
+    }
+
+    @media screen and (min-width: 1366px) {
+        padding-top: 124px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        padding-top: 140px;
+    }
+
+    &__layout {
+        margin-bottom: 80px;
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: 96px;
+        }
+
+        @media screen and (min-width: 1366px) {
+            margin-bottom: 48px;
+        }
+
+        @media screen and (min-width: 1600px) {
+            margin-bottom: 128px;
+        }
+    }
+
+    &__tabs {
+        margin-bottom: 80px;
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: 128px;
+        }
+
+        @media screen and (min-width: 1366px) {
+            margin-bottom: 80px;
+        }
+
+        @media screen and (min-width: 1600px) {
+            margin-bottom: 160px;
+        }
+    }
+
+    &__help {
+        margin-bottom: 40px;
+
+        @media screen and (min-width: 600px) {
+            margin-bottom: 80px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: 128px;
+        }
+
+        @media screen and (min-width: 1600px) {
+            margin-bottom: 160px;
+        }
+    }
+
+    &__title {
+        
+        &--contacts {
+            margin-top: 16px;
+    
+            @media screen and (min-width: 600px) {
+                margin-top: 24px;
+            }
+    
+            @media screen and (min-width: 1024px) {
+                margin-top: 40px;
+            }
+        }
+    }
+}

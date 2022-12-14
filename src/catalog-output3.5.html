@@ -1,0 +1,778 @@
+@@include('./assets/templates/template-header.html', { 'lang': 'ru', 'title': 'Red Anchor | Все категории' })
+
+<div class="catalog-output common-styles block-wrapper page">
+  <main class="main">
+    @@include('./assets/templates/header.html')
+
+    <!--site-navigation-->
+    @@include('./assets/block-mixin/3.7.cart-product/_site-navigation.html')
+
+    <!--about-product-->
+    @@include('./assets/block-mixin/3.5.catalog-output/_about-product.html')
+  
+
+    <!-- container-product -->
+    <div class="container-product">
+      <div class="container-product__inner">
+        <div class="container-product__sidebar">
+          <!-- _block-dropdown -->
+
+          <div class="sidebar__block sidebar__block--ms-hidden sidebar__block--ds-visible">
+            <!-- UNIT BLOCK -->
+            <div class="unit-block js-unit-block">
+              <button
+                class="unit-block__button js-unit-block__button unit unit--button ui-background-light"
+                type="button"
+              >
+                <span
+                  class="unit__name brief brief--light brief--ds-16 brief--dm-20 brief--dl-24 ui-color-black-100"
+                >
+                  Якорные цепи и комплектующие
+                </span>
+                <svg class="unit-block__icon">
+                  <use href="./assets/images/svg-sprite/svg-sprite.svg#chevron-n"></use>
+                </svg>
+              </button>
+              <div class="unit-block__content js-unit-block__content">
+                <!-- UNITS -->
+                <ul class="units">
+                  <li class="units__item units__item--light">
+                    <a class="unit unit--small ui-background-light" href="#">
+                      <div
+                        class="unit__name brief brief--light brief--ds-14 brief--dm-16 brief--dl-20 ui-color-black-100"
+                      >
+                        Комплектующие якорных цепей
+                      </div>
+                    </a>
+                  </li>
+          
+                  <li class="units__item units__item--light">
+                    <a class="unit unit--small ui-background-light " href="#">
+                      <div
+                        class="unit__name brief brief--light brief--ds-14 brief--dm-16 brief--dl-20 ui-color-black-100"
+                      >
+                        Якорные смычки
+                      </div>
+                    </a>
+                  </li>
+          
+                  <li class="units__item units__item--light unit--active">
+                    <a class="unit unit--small ui-background-light" href="#">
+                      <div
+                        class="unit__name brief brief--light brief--ds-14 brief--dm-16 brief--dl-20 ui-color-black-100"
+                      >
+                      Звено общее с контрфорсом якорной цепи
+                      </div>
+                    </a>
+                  </li>
+          
+                  <li class="units__item units__item--light">
+                    <a class="unit unit--small ui-background-light" href="#">
+                      <div
+                        class="unit__name brief brief--light brief--ds-14 brief--dm-16 brief--dl-20 ui-color-black-100"
+                      >
+                      Звено увеличенное с контрфорсом якорной цепи
+                      </div>
+                    </a>
+                  </li>
+          
+                  <li class="units__item units__item--light">
+                    <a class="unit unit--small ui-background-light" href="#">
+                      <div
+                        class="unit__name brief brief--light brief--ds-14 brief--dm-16 brief--dl-20 ui-color-black-100"
+                      >
+                      Концевое звено для якорной цепи с контрфорсами
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="units__item units__item--light">
+                    <a class="unit unit--small ui-background-light" href="#">
+                      <div
+                        class="unit__name brief brief--light brief--ds-14 brief--dm-16 brief--dl-20 ui-color-black-100"
+                      >
+                      Звено общее без контрфорса якорной цепи
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="units__item units__item--light">
+                    <a class="unit unit--small ui-background-light" href="#">
+                      <div
+                        class="unit__name brief brief--light brief--ds-14 brief--dm-16 brief--dl-20 ui-color-black-100"
+                      >
+                      Звено увеличенное без контрфорса якорной цепи
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="units__item units__item--light">
+                    <a class="unit unit--small ui-background-light" href="#">
+                      <div
+                        class="unit__name brief brief--light brief--ds-14 brief--dm-16 brief--dl-20 ui-color-black-100"
+                      >
+                      Концевое звено для якорной цепи без контрфорсов
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="units__item units__item--light">
+                    <a class="unit unit--small ui-background-light" href="#">
+                      <div
+                        class="unit__name brief brief--light brief--ds-14 brief--dm-16 brief--dl-20 ui-color-black-100"
+                      >
+                      Звено соединительное (Кентера)
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="units__item units__item--light">
+                    <a class="unit unit--small ui-background-light" href="#">
+                      <div
+                        class="unit__name brief brief--light brief--ds-14 brief--dm-16 brief--dl-20 ui-color-black-100"
+                      >
+                      Скоба концевая
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="units__item units__item--light">
+                    <a class="unit unit--small ui-background-light" href="#">
+                      <div
+                        class="unit__name brief brief--light brief--ds-14 brief--dm-16 brief--dl-20 ui-color-black-100"
+                      >
+                      Вертлюг и вертлюг-скобы
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+                <!-- / UNITS -->
+              </div>
+            </div>
+            <!-- / UNIT BLOCK -->
+          </div>
+
+          <!-- _download-catalog -->
+          @@include('./assets/block-mixin/_download-catalog.html')
+        </div>
+
+        <div class="container-product__body">
+          <div class="container-product__info">
+            <!-- information-wrapper -->
+            <div class="information-wrapper container">
+              <button class="content__information information pointer ui-background-light" type="button">
+                <span class="information__box">
+                  <span class="information__shape">
+                    <span class="information__shape ui-background-gray-20">
+                      <svg class="information__icon information__icon--info information__icon--special">
+                        <use href="./assets/images/svg-sprite/svg-sprite.svg#info"></use>
+                      </svg>
+                    </span>
+                  </span>
+                  <span class="information__text">
+                    <span
+                      class="information__name brief brief--light brief--ms-14 brief--ts-18 brief--ds-20 brief--dm-24 brief--dl-32 ui-color-black-50"
+                    >
+                      Справочная информация:
+                    </span>
+                    <span
+                      class="information__desc brief brief--light brief--ms-16 brief--ts-18 brief--ds-20 brief--dm-24 brief--dl-32 ui-color-black-100"
+                    >
+                      Виды исполнений якорных цепей
+                    </span>
+                  </span>
+                  <svg class="information__icon information__icon--follow information__icon--special">
+                    <use href="./assets/images/svg-sprite/svg-sprite.svg#arrow-se"></use>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <div class="container-product__items">
+            <!-- addition -->
+
+            <div class="page__section main__layout main__addition addition">
+              <div class="page__container">
+
+                <div class="page__box page__box--offset">
+                  <div class="page__row page__row--ms-1 page__row--ts-2 cards sub-categories">
+                    <article class="page__col cards__item sub-categories__item">
+                      <a class="cards__card sub-category ui-background-white-100" href="#">
+                        <figure class="sub-category__picture">
+                          <img
+                            class="sub-category__image"
+                            src="./assets/images/content/sub-category/img-sub-category-1.png"
+                            alt="Alt Text"
+                          />
+                        </figure>
+                        <h2
+                          class="sub-category__name brief brief--light brief--ms-18 brief--ts-20 brief--ds-24 brief--dl-32 ui-color-black-100"
+                        >
+                        Якорные смычки
+                        </h2>
+                        <svg class="sub-category__icon">
+                          <use href="./assets/images/svg-sprite/svg-sprite.svg#arrow-se"></use>
+                        </svg>
+                      </a>
+                    </article>
+
+                    <article class="page__col cards__item sub-categories__item">
+                      <a class="cards__card sub-category ui-background-white-100" href="#">
+                        <figure class="sub-category__picture">
+                          <img
+                            class="sub-category__image"
+                            src="./assets/images/content/sub-category/img-sub-category-2.png"
+                            alt="Alt Text"
+                          />
+                        </figure>
+                        <h2
+                          class="sub-category__name brief brief--light brief--ms-18 brief--ts-20 brief--ds-24 brief--dl-32 ui-color-black-100"
+                        >
+                        Промежуточные смычки
+                        </h2>
+                        <svg class="sub-category__icon">
+                          <use href="./assets/images/svg-sprite/svg-sprite.svg#arrow-se"></use>
+                        </svg>
+                      </a>
+                    </article>
+
+                    <article class="page__col cards__item sub-categories__item">
+                      <a class="cards__card sub-category ui-background-white-100" href="#">
+                        <figure class="sub-category__picture">
+                          <img
+                            class="sub-category__image"
+                            src="./assets/images/content/sub-category/img-sub-category-3.png"
+                            alt="Alt Text"
+                          />
+                        </figure>
+                        <h2
+                          class="sub-category__name brief brief--light brief--ms-18 brief--ts-20 brief--ds-24 brief--dl-32 ui-color-black-100"
+                        >
+                        Коренная смычка
+                        </h2>
+                        <svg class="sub-category__icon">
+                          <use href="./assets/images/svg-sprite/svg-sprite.svg#arrow-se"></use>
+                        </svg>
+                      </a>
+                    </article>
+
+                    <article class="page__col cards__item sub-categories__item">
+                      <a class="cards__card sub-category ui-background-white-100" href="#">
+                        <figure class="sub-category__picture">
+                          <img
+                            class="sub-category__image"
+                            src="./assets/images/content/sub-category/img-sub-category-4.png"
+                            alt="Alt Text"
+                          />
+                        </figure>
+                        <h2
+                          class="sub-category__name brief brief--light brief--ms-18 brief--ts-20 brief--ds-24 brief--dl-32 ui-color-black-100"
+                        >
+                        Звеное соединительное
+                        </h2>
+                        <svg class="sub-category__icon">
+                          <use href="./assets/images/svg-sprite/svg-sprite.svg#arrow-se"></use>
+                        </svg>
+                      </a>
+                    </article>
+
+                    <article class="page__col cards__item sub-categories__item">
+                      <a class="cards__card sub-category ui-background-white-100" href="#">
+                        <figure class="sub-category__picture">
+                          <img class="sub-category__image" src="./assets/images/content/sub-category/img-sub-category-8.png" alt="Alt Text">
+                        </figure>
+                        <h2 class="sub-category__name brief brief--light brief--ms-18 brief--ts-20 brief--ds-24 brief--dl-32 ui-color-black-100">
+                                Такелажные изделия
+                        </h2>
+                        <svg class="sub-category__icon">
+                          <use href="./assets/images/svg-sprite/svg-sprite.svg#arrow-se"></use>
+                        </svg>
+                      </a>
+                    </article>
+
+                    <article class="page__col cards__item sub-categories__item">
+                      <a class="cards__card sub-category ui-background-white-100" href="#">
+                        <figure class="sub-category__picture">
+                          <img
+                            class="sub-category__image"
+                            src="./assets/images/content/sub-category/img-sub-category-4.png"
+                            alt="Alt Text"
+                          />
+                        </figure>
+                        <h2
+                          class="sub-category__name brief brief--light brief--ms-18 brief--ts-20 brief--ds-24 brief--dl-32 ui-color-black-100"
+                        >
+                        Скоба концевая Исполнение А
+                        </h2>
+                        <svg class="sub-category__icon">
+                          <use href="./assets/images/svg-sprite/svg-sprite.svg#arrow-se"></use>
+                        </svg>
+                      </a>
+                    </article>
+
+                    <article class="page__col cards__item sub-categories__item">
+                      <a class="cards__card sub-category ui-background-white-100" href="#">
+                        <figure class="sub-category__picture">
+                          <img
+                            class="sub-category__image"
+                            src="./assets/images/content/sub-category/img-sub-category-4.png"
+                            alt="Alt Text"
+                          />
+                        </figure>
+                        <h2
+                          class="sub-category__name brief brief--light brief--ms-18 brief--ts-20 brief--ds-24 brief--dl-32 ui-color-black-100"
+                        >
+                        Вертлюг-скоба арктического исполнения
+                        </h2>
+                        <svg class="sub-category__icon">
+                          <use href="./assets/images/svg-sprite/svg-sprite.svg#arrow-se"></use>
+                        </svg>
+                      </a>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-product__navigation">
+            <div class="container">
+              <div class="product-list">
+
+                <div class="product-list__inner">
+  
+                    <div class="product-list__menu">
+                        <div class="product-list__menu-item">
+                            <a href="#" class="product-list__menu-button">
+                                Показать еще
+                            </a>
+                        </div>
+                        
+                        <div class="product-list__menu-item">
+                            @@include('./assets/block-mixin/_pagination.html')
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobi">
+        <!-- _download-catalog -->
+        @@include('./assets/block-mixin/_download-catalog.html')
+
+      </div>
+    </div>
+
+    <!-- help -->
+    @@include('./assets/block-mixin/3.7.cart-product/_help.html')
+    
+    <!-- tabs -->
+    <div class="container tabs-wrap">
+      <div class="tabs js-tabs">
+        <!-- TABS HEAD -->
+        <div class="tabs__head">
+          <div class="tabs__tabs">
+            <ul class="tabs__options">
+              <!--<li class="tabs__option">
+                <button
+                  class="tabs__tab tabs__tab--light pointer js-tabs__tab"
+                  type="button"
+                  data-tabs-content-name="content-1"
+                >
+                  <div class="tabs__box">
+                    <svg class="tabs__icon tabs__icon--dark">
+                      <use href="./assets/images/svg-sprite/svg-sprite.svg#information"></use>
+                    </svg>
+                    <div
+                      class="tabs__name tabs__name--dark title title--ms-24 title--ts-28 title--ds-24 title--dm-28 title--dl-36"
+                    >
+                      Описание
+                    </div>
+                  </div>
+                </button>
+              </li>-->
+      
+              <li class="tabs__option">
+                <button
+                  class="tabs__tab tabs__tab--light pointer js-tabs__tab"
+                  type="button"
+                  data-tabs-content-name="content-2"
+                >
+                  <div class="tabs__box">
+                    <svg class="tabs__icon tabs__icon--dark">
+                      <use href="./assets/images/svg-sprite/svg-sprite.svg#information"></use>
+                    </svg>
+                    <div
+                      class="tabs__name tabs__name--dark title title--ms-24 title--ts-28 title--ds-24 title--dm-28 title--dl-36"
+                    >
+                      свойства
+                    </div>
+                  </div>
+                </button>
+              </li>
+      
+              <li class="tabs__option">
+                <button
+                  class="tabs__tab tabs__tab--light pointer js-tabs__tab"
+                  type="button"
+                  data-tabs-content-name="content-3"
+                >
+                  <div class="tabs__box">
+                    <svg class="tabs__icon tabs__icon--dark">
+                      <use href="./assets/images/svg-sprite/svg-sprite.svg#document"></use>
+                    </svg>
+                    <div
+                      class="tabs__name tabs__name--dark title title--ms-24 title--ts-28 title--ds-24 title--dm-28 title--dl-36"
+                    >
+                      Документы
+                    </div>
+                  </div>
+                </button>
+              </li>
+      
+              <li class="tabs__option">
+                <button
+                  class="tabs__tab tabs__tab--light pointer js-tabs__tab"
+                  type="button"
+                  data-tabs-content-name="content-4"
+                >
+                  <div class="tabs__box">
+                    <svg class="tabs__icon tabs__icon--dark">
+                      <use href="./assets/images/svg-sprite/svg-sprite.svg#award"></use>
+                    </svg>
+                    <div
+                      class="tabs__name tabs__name--dark title title--ms-24 title--ts-28 title--ds-24 title--dm-28 title--dl-36"
+                    >
+                      Сертификаты
+                    </div>
+                  </div>
+                </button>
+              </li>
+      
+              <li class="tabs__option">
+                <button
+                  class="tabs__tab tabs__tab--light pointer js-tabs__tab"
+                  type="button"
+                  data-tabs-content-name="content-5"
+                >
+                  <div class="tabs__box">
+                    <svg class="tabs__icon tabs__icon--dark">
+                      <use href="./assets/images/svg-sprite/svg-sprite.svg#book"></use>
+                    </svg>
+                    <div
+                      class="tabs__name tabs__name--dark title title--ms-24 title--ts-28 title--ds-24 title--dm-28 title--dl-36"
+                    >
+                      Полезные статьи
+                    </div>
+                  </div>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- / TABS HEAD -->
+      
+        <!-- TABS BODY -->
+        <div class="tabs__body">
+          <div class="tabs__content js-tabs__content" data-tabs-content-name="content-1">
+            <!-- DESCRIPTION -->
+            <div class="description description--light text" data-max-lines="8">
+     
+            </div>
+            <!-- / DESCRIPTION -->
+          </div>
+      
+          <div class="tabs__content js-tabs__content" data-tabs-content-name="content-2">
+            <!-- DESCRIPTION -->
+            <div class="description description--light text js-text" data-max-lines="8">
+              <div class="description__container text-dropdown">
+                <div class="sub-categories-head__description text js-text" data-max-lines="5">
+                  <div class="description__content text__content js-text__content ui-color-black-100">
+                    <p class="pc">
+                      Цепи по ОСТ В5.2299–79 из маломагнитной стали изготавливаются из высоколегированной
+                      стали с добавлением марганца и алюминия в соответствии с ТУ 14–1-779–73.
+      
+                      <span> Форма выпуска: Смычки длиной 25 или 27,5 метров. </span>
+                    </p>
+      
+                    <p>
+                      Цепи по ОСТ В5.2299–79 из маломагнитной стали изготавливаются из высоколегированной
+                      стали с добавлением марганца и алюминия в соответствии с ТУ 14–1-779–73. Форма
+                      выпуска: Смычки длиной 25 или 27,5 метров. Цепи по ОСТ В5.2299–79 из маломагнитной
+                      стали изготавливаются из высоколегированной стали с добавлением марганца и алюминия
+                      в соответствии с ТУ 14–1-779–73.
+                    </p>
+      
+                    <p>
+                      Цепи по ОСТ В5.2299–79 из маломагнитной стали изготавливаются из высоколегированной
+                      стали с добавлением марганца и алюминия в соответствии с ТУ 14–1-779–73. Форма
+                      выпуска: Смычки длиной 25 или 27,5 метров. Цепи по ОСТ В5.2299–79 из маломагнитной
+                      стали изготавливаются из высоколегированной стали с добавлением марганца и алюминия
+                      в соответствии с ТУ 14–1-779–73.
+                    </p>
+                  </div>
+      
+                  <button
+                    class="sub-categories-head__more-button text__more-button js-text__more-button pointer more-button brief brief--medium brief--ms-14 brief--ts-16 brief--dl-20 ui-color-red-100"
+                    type="button"
+                    data-opening-text="Подробнее"
+                    data-closing-text="Свернуть"
+                  >
+                    Подробнее
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- / DESCRIPTION -->
+          </div>
+      
+          <div class="tabs__content js-tabs__content" data-tabs-content-name="content-3">
+            <ul class="tabs__list">
+              <li class="tabs__item tabs__item--light">
+                <a
+                  class="label label--light label--document"
+                  href="./assets/files/documents/document.pdf"
+                  download
+                >
+                  <div class="label__container label__box">
+                    <div class="label__info">
+                      <div
+                        class="label__name brief brief--light brief--ms-18 brief--ds-20 brief--dm-24 brief--dl-32 ui-color-black-100"
+                      >
+                        ГОСТ 228–79 для цепей стандартного исполнения
+                      </div>
+                      <div
+                        class="label__desc brief brief--light brief--ms-16 brief--dm-20 brief--dl-24 ui-color-black-50"
+                      >
+                        PDF, 6.3 МБ
+                      </div>
+                    </div>
+                    <svg class="label__icon">
+                      <use href="./assets/images/svg-sprite/svg-sprite.svg#download"></use>
+                    </svg>
+                  </div>
+                </a>
+              </li>
+      
+              <li class="tabs__item tabs__item--light">
+                <a
+                  class="label label--light label--document"
+                  href="./assets/files/documents/document.pdf"
+                  download
+                >
+                  <div class="label__container label__box">
+                    <div class="label__info">
+                      <div
+                        class="label__name brief brief--light brief--ms-18 brief--ts-20 brief--dm-24 brief--dl-32 ui-color-black-100"
+                      >
+                        ГОСТ 228–79 для цепей стандартного исполнения
+                      </div>
+                      <div
+                        class="label__desc brief brief--light brief--ms-16 brief--dm-20 brief--dl-24 ui-color-black-50"
+                      >
+                        PDF, 6.3 МБ
+                      </div>
+                    </div>
+                    <svg class="label__icon">
+                      <use href="./assets/images/svg-sprite/svg-sprite.svg#download"></use>
+                    </svg>
+                  </div>
+                </a>
+              </li>
+      
+              <li class="tabs__item tabs__item--light">
+                <a
+                  class="label label--light label--document"
+                  href="./assets/files/documents/document.pdf"
+                  download
+                >
+                  <div class="label__container label__box">
+                    <div class="label__info">
+                      <div
+                        class="label__name brief brief--light brief--ms-18 brief--ts-20 brief--dm-24 brief--dl-32 ui-color-black-100"
+                      >
+                        ГОСТ 228–79 для цепей стандартного исполнения
+                      </div>
+                      <div
+                        class="label__desc brief brief--light brief--ms-16 brief--dm-20 brief--dl-24 ui-color-black-50"
+                      >
+                        PDF, 6.3 МБ
+                      </div>
+                    </div>
+                    <svg class="label__icon">
+                      <use href="./assets/images/svg-sprite/svg-sprite.svg#download"></use>
+                    </svg>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+      
+          <div class="tabs__content js-tabs__content" data-tabs-content-name="content-4">
+            <ul class="tabs__list">
+              <li class="tabs__item tabs__item--light">
+                <a
+                  class="label label--light label--certificate"
+                  data-fslightbox="certificate-gallery"
+                  href="./assets/images/content/certificate/img-certificate-original.png"
+                >
+                  <div class="label__container label__box">
+                    <div class="label__info label__box">
+                      <figure class="label__picture picture">
+                        <img
+                          class="label__image picture__image picture__image--contain lazyload"
+                          src="./assets/images/loading.gif"
+                          data-src="./assets/images/content/certificate/img-certificate-preview.png"
+                          alt="Alt Text"
+                        />
+                      </figure>
+                      <div
+                        class="label__name brief brief--light brief--ms-18 brief--ds-20 brief--dm-24 brief--dl-32 ui-color-black-100"
+                      >
+                        Сертификат Соответствия Веритас
+                      </div>
+                    </div>
+                    <svg class="label__icon">
+                      <use href="./assets/images/svg-sprite/svg-sprite.svg#search"></use>
+                    </svg>
+                  </div>
+                </a>
+              </li>
+      
+              <li class="tabs__item tabs__item--light">
+                <a
+                  class="label label--light label--certificate"
+                  data-fslightbox="certificate-gallery"
+                  href="./assets/images/content/certificate/img-certificate-original.png"
+                >
+                  <div class="label__container label__box">
+                    <div class="label__info label__box">
+                      <figure class="label__picture picture">
+                        <img
+                          class="label__image picture__image picture__image--contain lazyload"
+                          src="./assets/images/loading.gif"
+                          data-src="./assets/images/content/certificate/img-certificate-preview.png"
+                          alt="Alt Text"
+                        />
+                      </figure>
+                      <div
+                        class="label__name brief brief--light brief--ms-18 brief--ds-20 brief--dm-24 brief--dl-32 ui-color-black-100"
+                      >
+                        Сертификат Соответствия Веритас
+                      </div>
+                    </div>
+                    <svg class="label__icon">
+                      <use href="./assets/images/svg-sprite/svg-sprite.svg#search"></use>
+                    </svg>
+                  </div>
+                </a>
+              </li>
+      
+              <li class="tabs__item tabs__item--light">
+                <a
+                  class="label label--light label--certificate"
+                  data-fslightbox="certificate-gallery"
+                  href="./assets/images/content/certificate/img-certificate-original.png"
+                >
+                  <div class="label__container label__box">
+                    <div class="label__info label__box">
+                      <figure class="label__picture picture">
+                        <img
+                          class="label__image picture__image picture__image--contain lazyload"
+                          src="./assets/images/loading.gif"
+                          data-src="./assets/images/content/certificate/img-certificate-preview.png"
+                          alt="Alt Text"
+                        />
+                      </figure>
+                      <div
+                        class="label__name brief brief--light brief--ms-18 brief--ds-20 brief--dm-24 brief--dl-32 ui-color-black-100"
+                      >
+                        Сертификат Соответствия Веритас
+                      </div>
+                    </div>
+                    <svg class="label__icon">
+                      <use href="./assets/images/svg-sprite/svg-sprite.svg#search"></use>
+                    </svg>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+      
+          <div class="tabs__content js-tabs__content" data-tabs-content-name="content-5">
+            <ul class="tabs__list">
+              <li class="tabs__item tabs__item--light">
+                <a class="label label--light label--article" href="#">
+                  <div class="label__container label__box">
+                    <div class="label__info">
+                      <div
+                        class="label__name brief brief--light brief--ms-18 brief--ts-20 brief--dm-24 brief--dl-32 ui-color-black-100"
+                      >
+                        5 видов антикорозионных покрытий
+                      </div>
+                    </div>
+                    <svg class="label__icon">
+                      <use href="./assets/images/svg-sprite/svg-sprite.svg#arrow-se"></use>
+                    </svg>
+                  </div>
+                </a>
+              </li>
+      
+              <li class="tabs__item tabs__item--light">
+                <a class="label label--light label--article" href="#">
+                  <div class="label__container label__box">
+                    <div class="label__info">
+                      <div
+                        class="label__name brief brief--light brief--ms-18 brief--ts-20 brief--dm-24 brief--dl-32 ui-color-black-100"
+                      >
+                        5 видов антикорозионных покрытий
+                      </div>
+                    </div>
+                    <svg class="label__icon">
+                      <use href="./assets/images/svg-sprite/svg-sprite.svg#arrow-se"></use>
+                    </svg>
+                  </div>
+                </a>
+              </li>
+      
+              <li class="tabs__item tabs__item--light">
+                <a class="label label--light label--article" href="#">
+                  <div class="label__container label__box">
+                    <div class="label__info">
+                      <div
+                        class="label__name brief brief--light brief--ms-18 brief--ts-20 brief--dm-24 brief--dl-32 ui-color-black-100"
+                      >
+                        5 видов антикорозионных покрытий
+                      </div>
+                    </div>
+                    <svg class="label__icon">
+                      <use href="./assets/images/svg-sprite/svg-sprite.svg#arrow-se"></use>
+                    </svg>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- / TABS BODY -->
+      </div>
+    </div>
+    
+    <!-- manager -->
+    @@include('./assets/block-mixin/3.7.cart-product/_manager.html')
+
+
+  </main>
+  
+</div>
+
+<!-- footer-black -->
+@@include('./assets/block-mixin/_footer-black.html')
+@@include('./assets/templates/template-footer.html')

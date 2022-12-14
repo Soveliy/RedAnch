@@ -1,0 +1,174 @@
+.hero{
+    position: relative;
+    overflow: hidden;
+    padding: 12px 0 15px;
+    @include for-1024(){
+        padding: 0;
+    }
+    &__title{
+        letter-spacing: 1.5px;
+        @include for-600(){
+            letter-spacing: 2.6px;
+        }
+        @include for-1024(){
+            color: #fff;
+        }
+    }
+    &:after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 114px;
+        background: linear-gradient(180deg, rgba(25, 74, 103, 0) 0%, #194A67 100%);
+        @include for-1024(){
+            display: none;
+        }
+    }
+    &__content{
+        position: relative;
+        z-index: 10;
+        @include for-1024(){
+            display: flex;
+            align-items: center;
+            min-height: 768px;
+            padding: 0 16px;
+            box-sizing: border-box;
+            justify-content: space-between;
+        }
+        @include for-1600(){
+            min-height: 900px;
+        }
+        @include for-1920(){
+            min-height: 1280px;
+        }
+        @include for-retina(){
+            min-height: 1440px;
+        }
+    }
+    &__picture-big{
+        display: none;
+        @include for-1024(){
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            img{
+                width: 100%;
+                object-fit: cover;
+                display: block;
+                height: 100%;
+                object-position: bottom;
+            }
+        }
+    }
+    &__picture{
+        position: absolute;
+        z-index: 0;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        @include for-1024(){
+            width: 50%;
+            left: auto;right: 0;
+        }
+        img{
+            width: 100%;
+            object-fit: cover;
+            display: block;
+            height: 100%;
+            object-position: bottom;
+        
+        }
+    }
+    &__desc{
+        font-size: 14px;
+        line-height: 15px;
+        color: #fff;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        font-family: $DM;
+        margin-top: 44px;
+        @include for-600(){
+            margin-top: 115px;
+        }
+        @include for-1024(){
+            margin-top: 0;
+            color: #150F0F;
+            font-size: 16px;
+            line-height: 20px;
+            max-width: 300px;
+            text-align: right;
+        }
+        @include for-1366(){
+            font-size: 20px;
+            line-height: 24px;
+        }
+        @include for-1600(){
+            font-size: 24px;
+            line-height: 28px;
+        }
+    }
+    &__right{
+        align-self: flex-start;
+        @include for-1024(){
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding-top: 82px;
+        }
+        .linkLabel{
+            margin-top: 8px;
+        }
+        .linkLabel__box{
+            @include for-1024(){
+                color: #fff;
+                font-size: 36px;
+                line-height: 36px;
+                /* identical to box height, or 100% */
+
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+
+                /* txt/black */
+
+                color: #150F0F;
+                border-bottom-color: rgba(#4F565933, .2);
+                svg{
+                    fill:  rgba(#4F565933, .2);
+                }
+            }
+        }
+    }
+    &__about{
+        display: none;
+        @include for-1024(){
+            position: absolute;
+            left: 16px;
+            bottom: 16px;
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 24px;
+            /* identical to box height, or 100% */
+            
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            
+            /* txt/white */
+            
+            color: #FFFFFF;
+            font-family: $TT;
+            &-icon{
+                height: 24px;
+                width: 24px;
+                margin-right: 4px;
+            }
+        }
+    }
+}
