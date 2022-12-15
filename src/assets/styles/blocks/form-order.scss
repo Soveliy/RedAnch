@@ -1,0 +1,62 @@
+.form-order {
+   background: #E5E5E5;
+   &__header {
+      margin-bottom: 40px;
+   }
+}
+
+.form-order-header {
+   display: flex;
+   align-items: flex-end;
+   justify-content: space-between;
+   font-family: $TT;
+   &__title {
+      font-weight: 700;
+      font-size: 120px;
+      line-height: 120px;
+      color: #150F0F;
+   }
+}
+
+.form-box {
+   &__subtitle {
+      font-family: $TT;
+      font-weight: 700;
+      font-size: 44px;
+      line-height: 44px;
+      margin-bottom: 16px;
+   }
+   
+   &__block {
+      font-family: $TT;
+      margin-bottom: 40px;
+   }
+
+   &__choice {
+      margin-bottom: 20px;
+      .choice-box__header {
+         padding: 20px 32px;
+         background-color: #fff;
+      }
+   }
+
+   .choice-box {
+      font-family: $DM;
+      &__wrapper {
+         transition: .3s;
+         z-index: 9999;
+      }
+
+      &__title {
+         font-weight: 300;
+         font-size: 28px;
+         line-height: 32px;
+      }
+
+      &__item {
+         padding: 15px 32px;
+         border-left: none;
+         border-right: none;
+      }
+   }
+}
