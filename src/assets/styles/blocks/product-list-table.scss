@@ -90,7 +90,7 @@
         display: grid;
       }
       padding: 0;
-      transition: 300ms;
+      transition: 800ms;
       display: grid;
       border-bottom: 2px solid rgba(79, 86, 89, 0.1);
       grid-template-columns: minmax(180px, 2fr)  repeat(7, 1fr) minmax(180px, 1fr);
@@ -233,7 +233,7 @@
     justify-content: center;
     @media screen and (min-width: 1024px) {
       margin: 0;
-      transition: 300ms;
+      transition: 800ms;
       height: 100%;
       display: flex;
       align-items: center;
@@ -424,7 +424,7 @@
   }
 
   &__options {
-    transition: 300ms;
+    transition: 800ms;
     height: 100%;
     display: flex;
     align-items: center;

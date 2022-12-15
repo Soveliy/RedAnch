@@ -4,10 +4,12 @@
 
 const ChoiceBox = () => {
    const boxQuantitys = document.querySelectorAll('.js-choice-box');
+
    if (!boxQuantitys) return;
 
    boxQuantitys.forEach((boxQuantity) => {
       let dropBtn = boxQuantity.querySelector('.choice-box__btn');
+      let choiceWrapper = boxQuantity.querySelector('.choice-box__wrapper');
       let choiceList = boxQuantity.querySelector('.choice-box__list');
       let choiceHeader = boxQuantity.querySelector('.choice-box__header');
 
@@ -18,6 +20,8 @@ const ChoiceBox = () => {
          boxQuantity.classList.toggle('choice-box--active');
 
          if (boxQuantity.classList.contains('choice-box--active')) {
+            choiceWrapper.classList.add('choice-box__wrapper--active');
+
             choiceList.style.maxHeight = choiceList.scrollHeight + "px";
 
             const elementAnchors = document.querySelectorAll('.go-js-choice-item');
@@ -32,12 +36,11 @@ const ChoiceBox = () => {
                   if (thisAnchor.checked) {
                      let activeAnchor = this.querySelector('.choice-box__name').textContent;
                      let choiceTitleName = this.closest('.choice-box').querySelector('.choice-box__title');
-                     console.log(choiceTitleName);
-                     console.log(activeAnchor);
                      choiceTitleName.textContent = activeAnchor;
                      boxQuantity.classList.remove('choice-box--active');
                      dropBtn.classList.remove('choice-box__btn--active');
                      choiceList.style.maxHeight = 0;
+                     choiceWrapper.classList.remove('choice-box__wrapper--active');
                   } else {
                      let choiceTitleName = this.closest('.choice-box').querySelector('.choice-box__title');
                      choiceTitleName.value = choiceName;
@@ -47,6 +50,7 @@ const ChoiceBox = () => {
          } else {
             choiceList.style.maxHeight = 0;
             dropBtn.classList.remove('field__btn--active');
+            choiceWrapper.classList.remove('choice-box__wrapper--active');
          }
       }
    });

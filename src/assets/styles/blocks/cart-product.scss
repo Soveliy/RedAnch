@@ -317,7 +317,7 @@
 
     &__item{
       &:last-child{
-        transition: 300ms;
+        transition: 800ms;
         display: none;
 
         @media screen and (min-width: 1024px) {
@@ -681,7 +681,7 @@
 
   &__description {
     display: flex;
-    transition: 300ms;
+    transition: 800ms;
     background: #fff;
 
     &.p-list{

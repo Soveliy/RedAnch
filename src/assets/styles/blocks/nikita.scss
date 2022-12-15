@@ -2473,3 +2473,11 @@ body{
         transition: .4s;
     }
 }
+
+@media (min-width:1600px){
+    .header--dark .header-bot .container:after {
+        right: calc(100% - 48px);
+        width: 100em;
+        left: auto;
+    }
+}
