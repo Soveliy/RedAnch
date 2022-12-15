@@ -617,16 +617,85 @@
     margin-top: 8px;
     display: flex;
     position: relative;
-    
     gap: 8px;
+
+    &.row-wrap{
+      flex-direction: column;
+    }
+
 
     @media screen and (min-width: 600px) {
       padding-bottom: 104px;
+
+      &.f-wrap{
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  &__body{
+    &.flex-3{
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+
+      @media screen and (min-width: 800px) {
+        flex-wrap: nowrap;
+      }
+    }
+    &.flex-2{
+      gap: 8px;
+      display: flex;
+
+      &-wrap{
+        gap: 8px;
+        display: flex;
+        flex-wrap: wrap;
+
+        @media screen and (min-width: 800px) {
+          flex-wrap: nowrap;
+        }
+      }
     }
   }
 
   &__col{
-    height: 96px;
+    height: 60px;
+
+    &.w33{
+      width: 100%;
+      height: 100%;
+      @media screen and (min-width: 800px) {
+        width: 30%;
+        flex-grow: 10;
+        
+      }
+    }
+
+    &.w50{
+      width: 100%;
+      gap:8px;
+
+      @media screen and (min-width: 800px) {
+        width: 50%;
+        
+      }
+    }
+
+    &.w100{
+      width: 100%;
+    }
+
+    &.col-first{
+      width: 90%;
+
+      @media screen and (min-width: 600px) {
+        width: 50%;
+      }
+    }
+    @media screen and (min-width: 600px) {
+      height: 96px;
+    }
     width: 50%;
     &-contain{
       display: flex;
@@ -664,6 +733,16 @@
     bottom: 0;
     left: 0;
 
+    .linkLabel__box--form{
+      font-family: 'TT Bluescreens';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 28px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
     @media screen and (min-width: 600px) {
       position: absolute;
     }
@@ -673,7 +752,15 @@
   &__head{
     &.defaultModal__head {
       background: #EDEDED;
+
+      b{
+        display: block;
+        @media screen and (min-width: 600px) {
+          display: inline;
+        }
+      }
     }
+
   }
 
   &__head-desc{
@@ -683,11 +770,12 @@
       font-weight: 300;
       font-size: 14px;
       line-height: 16px;
-      margin-bottom: 32px;
 
       @media screen and (min-width: 600px) {
         font-size: 20px;
         line-height: 24px;
+        margin-bottom: 32px;
+
       }
 
       &:last-child{
@@ -715,6 +803,9 @@
 
   .counter {
     width: 100%;
+    &__btn{
+      background: rgba(79, 86, 89, 0.1);
+    }
     @media screen and (min-width: 600px) {
       background: #FFFFFF;
       width: 50%;
@@ -725,13 +816,20 @@
       &__btn{
         background: #FFFFFF;
         opacity: 1;
-        padding: 0 25px;
+        padding: 0 10px;
         span{
           background: rgba(79, 86, 89, 0.7);
           &:after{
             background: rgba(79, 86, 89, 0.7);
           }
         }
+
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      &__btn{
+        padding: 0 25px;
       }
     }
 
@@ -740,20 +838,41 @@
   .order-card{
 
     &__label{
+      width: 100%;
       margin-right: 0;
       display: flex;
       align-items: center;
       justify-content: center;
 
+      @media screen and (min-width: 600px) {
+        width: auto;
+      }
+
       .unit-choice__label{
+
+        width: 50%;
         span{
           opacity: 1;
         }
         &:last-child{
-          margin-left: 40px;
+
           span{
-            color: rgba(79, 86, 89, 0.7);
+            color: #150F0F;
           }
+          @media screen and (min-width: 600px) {
+            margin-left: 40px;
+
+            span{
+              color: rgba(79, 86, 89, 0.7);
+            }
+          }
+        }
+      }
+
+      .unit-choice__custom{
+        width: 100%;
+        @media screen and (min-width: 600px) {
+          width: auto;
         }
       }
       span{
@@ -792,6 +911,46 @@
     svg{
       transform: rotate(0deg);
 
+    }
+  }
+
+  .choice-box{
+    margin-bottom: 0;
+
+    &__header{
+      padding: 11px 16px;
+
+      @media screen and (min-width: 600px) {
+        padding: 20px 32px;
+      }
+    }
+    &__title{
+      font-family: 'PF Din Text Cond Pro';
+      font-style: normal;
+      font-weight: 300;
+      letter-spacing: 0.03em;
+      font-size: 18px;
+      line-height: 22px;
+      color: #150F0F;
+      padding: 0;
+
+      span{
+        display: block;
+        font-size: 14px;
+        line-height: 16px;
+        margin-bottom: 2px;
+      }
+
+      @media screen and (min-width: 600px) {
+        font-size: 28px;
+        line-height: 32px;
+        span{
+          font-size: 16px;
+          line-height: 20px;
+          letter-spacing: 0.05em;
+          margin-bottom: 4px;
+        }
+      }
     }
   }
 

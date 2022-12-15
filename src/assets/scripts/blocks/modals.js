@@ -87,3 +87,33 @@ $('.add-goods').click(function () {
     },
   });
 });
+
+$('.add-goods2').click(function () {
+  $('#add-modal2').arcticmodal({
+    afterOpen: function (data, el) {
+      $('body').css('overflow', 'hidden');
+      $('.b-modal#add-modal2').addClass('is-active');
+    },
+    beforeClose: function (data, el) {
+      setTimeout(() => {
+        $('body').css('overflow', 'auto');
+        $('.b-modal').removeClass('is-active');
+      }, 100);
+    },
+  });
+});
+
+$('.add-goods3').click(function () {
+  $('#add-modal3').arcticmodal({
+    afterOpen: function (data, el) {
+      $('body').css('overflow', 'hidden');
+      $('.b-modal#add-modal3').addClass('is-active');
+    },
+    beforeClose: function (data, el) {
+      setTimeout(() => {
+        $('body').css('overflow', 'auto');
+        $('.b-modal').removeClass('is-active');
+      }, 100);
+    },
+  });
+});
