@@ -1,6 +1,14 @@
+.page__section.you-order {
+   padding-top: 90px;
+   @media screen and (min-width: 1600px) {
+      padding-top: 150px;
+   }
+}
+
 .you-order {
    background-color: #e5e5e5;
    font-family: $TT;
+
    &__header {
       margin-bottom: 30px;
    }

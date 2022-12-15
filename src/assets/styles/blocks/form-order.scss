@@ -26,7 +26,7 @@
       line-height: 44px;
       margin-bottom: 16px;
    }
-
+   
    &__block {
       font-family: $TT;
       margin-bottom: 40px;
@@ -37,6 +37,26 @@
       .choice-box__header {
          padding: 20px 32px;
          background-color: #fff;
+      }
+   }
+
+   .choice-box {
+      font-family: $DM;
+      &__wrapper {
+         transition: .3s;
+         z-index: 9999;
+      }
+
+      &__title {
+         font-weight: 300;
+         font-size: 28px;
+         line-height: 32px;
+      }
+
+      &__item {
+         padding: 15px 32px;
+         border-left: none;
+         border-right: none;
       }
    }
 }
