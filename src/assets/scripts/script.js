@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     @@include('./blocks/popup.js');
     @@include('./blocks/unit-block.js');
     @@include('./blocks/modal-popup.js');
+    @@include('./blocks/modals.js');
     @@include('./blocks/slider.js');
     @@include('./blocks/button-none.js');
   @@include('./blocks/table-header-scroll.js');
