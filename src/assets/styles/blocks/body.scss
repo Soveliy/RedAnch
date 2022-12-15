@@ -1,7 +1,17 @@
 // body.scss
 
 // Body
+.page {
+   &__section {
+      padding-top: 80px;
+      min-height: 100%;
+      height: auto;
 
+      @media screen and (min-width: 1600px) {
+         padding-top: 120px;
+      }
+   }
+}
 .body {
 
     &__page {

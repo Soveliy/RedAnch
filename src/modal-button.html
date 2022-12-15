@@ -27,6 +27,14 @@
         Добавление товара в заказ
       </button>
 
+      <button class="main-btn add-goods2">
+        Добавление товара в заказ2
+      </button>
+
+      <button class="main-btn add-goods3">
+        Добавление товара в заказ3
+      </button>
+
     </main>
     <!-- / MAIN -->
 
@@ -298,14 +306,14 @@
     <!-- / QUESTIONS-MODAL -->
 
     <!-- PRODUCTS-MODAL -->
-      <div class="b-modal b-modal--lit counter-modal main-modal-litle" id="add-modal">
+    <div class="b-modal b-modal--lit counter-modal modal-form" id="add-modal">
       <div class="modal-content">
         <div class="defaultModal">
-          <div class="defaultModal__head">
+          <div class="defaultModal__head modal-form__head">
               <div class="defaultModal__head-title">
-                Добавление товара в заказ
+                Добавление <b></b> товара в заказ
               </div>
-              <div class="defaultModal__head-desc">
+              <div class="modal-form__head-desc">
                 <p>
                   Цепь с пониженным вертикальным звеном <span>ЦПВЗ-11-U1</span>
                 </p>
@@ -321,21 +329,26 @@
               </div>
           </div>
           <form action="#" class="defaultModal__form">
-            <div class="defaultModal__row">
-            <div class="defaultModal__container ui-background-white-100 defaultModal__container--w50 main-counter">
-              <div class="counter-name">Количество:</div>
-              <div class="counter order-card__counter">
-                <button type="button" class="counter__btn counter__btn--down">
-                  <span></span>
-                </button>
-                <input type="text" class="counter__input" min="1" max="100" value="1">
-                <button type="button" class="counter__btn counter__btn--up">
-                  <span></span>
-                </button>
-              </div>
+            <div class="modal-form__row">
+              <div class="modal-form__col col-first">
+                <div class="modal-form__col-contain">
+                  <div class="modal-form__name">Количество:</div>
+                  <div class="counter order-card__counter">
+                    <button type="button" class="counter__btn counter__btn--down">
+                      <span></span>
+                    </button>
+                    <input type="text" class="counter__input" min="1" max="100" value="1">
+                    <button type="button" class="counter__btn counter__btn--up">
+                      <span></span>
+                    </button>
+                  </div>
                 </div>
-                <div class="defaultModal__container ui-background-white-100 defaultModal__container--w50 main-counter">
-                <div class="counter-name">Ед. измерения:</div>
+          
+              </div>
+
+              <div class="modal-form__col">
+                <div class="modal-form__col-contain">
+                  <div class="modal-form__name">Ед. измерения:</div>
 
                   <div class="order-card__details">
                     <div class="order-card__label unit-choice">
@@ -350,23 +363,641 @@
                     </div>
                   </div>
                 </div>
+              </div>
 
-                <div class="defaultModal__container defaultModal__container--w50 modal-big--btn">
-                    <div class="linkLabel defaultModal__linkLabel ">
-                            <button class="linkLabel__box linkLabel__box--red linkLabel__box--form">
-                              добавить в заказ
-                            <svg>
-                                    <use xlink:href="./assets/images/svg-sprite/svg-sprite.svg#arrow-se"></use>
-                            </svg>
-                            </button>
-                    </div>
-                </div>
+              <div class="modal-form__col modal-form__button">
+                  <div class="linkLabel defaultModal__linkLabel ">
+                    <button class="linkLabel__box linkLabel__box--red linkLabel__box--form">
+                      добавить в заказ
+                    <svg>
+                            <use xlink:href="./assets/images/svg-sprite/svg-sprite.svg#arrow-se"></use>
+                    </svg>
+                    </button>
+                  </div>
+              </div>
             </div>
           </form>
         </div>
       </div>
     </div>
     <!-- / PRODUCTS-MODAL -->
+
+    <!-- PRODUCTS-MODAL2 -->
+    <div class="b-modal b-modal--lit counter-modal modal-form" id="add-modal2">
+      <div class="modal-content">
+        <div class="defaultModal">
+          <div class="defaultModal__head modal-form__head">
+              <div class="defaultModal__head-title">
+                Добавление <b></b> товара в заказ
+              </div>
+              <div class="modal-form__head-desc">
+                <p>
+                  Цепь с пониженным вертикальным звеном <span>ЦПВЗ-11-U1</span>
+                </p>
+
+                <p>
+                  Укажите дополнительные параметры товара, чтобы добавить его в заказ:
+                </p>
+              </div>
+              <div class="defaultModal__head-close b-modal_close arcticmodal-close">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M14.827 12.0027L23.6653 3.16436L20.8369 0.335938L11.9985 9.17432L3.16046 0.336239L0.332031 3.16467L9.17011 12.0027L0.332234 20.8406L3.16066 23.669L11.9985 14.8312L20.8394 23.672L23.6678 20.8436L14.827 12.0027Z" fill="#110101"/>
+                  </svg>
+              </div>
+          </div>
+          <form action="#" class="defaultModal__form">
+            <div class="modal-form__row row-wrap">
+
+              <div class="modal-form__body flex-3">
+                <div class="modal-form__col w33">
+                  <div class="modal-form__col-contain">
+                    
+                    <div class="card-filter__choice choice-box js-choice-box form-box__choice">
+                      <div class="choice-box__header">
+                        <div class="choice-box__title">
+                          <span>Вид покрытия</span>
+                          Без покрытия
+                        </div>
+                        <button type="button" class="choice-box__btn">
+                            <svg class="icon">
+                              <use xlink:href="./assets/images/svg-sprite/svg-sprite.svg#arrow"></use>
+                            </svg>
+                        </button>
+                      </div>
+                      <div class="choice-box__wrapper">
+                        <ul class="choice-box__list">
+                            <li class="choice-box__item choice-box__item-title">
+                              <span>Тип калибровки:</span>
+                            </li>
+                            <li class="go-js-choice-item choice-box__item">
+                              <label class="choice-box__label choice-element">
+                                  <span class="choice-box__name">Значение А</span>
+                                  <input class="choice-box__input" name="count" type="radio" />
+                              </label>
+                            </li>
+                            <li class="go-js-choice-item choice-box__item">
+                              <label class="choice-box__label choice-element">
+                                  <span class="choice-box__name">Значение Б</span>
+                                  <input class="choice-box__input" name="count" type="radio" />
+                              </label>
+                            </li>
+                            <li class="go-js-choice-item choice-box__item">
+                              <label class="choice-box__label choice-element">
+                                  <span class="choice-box__name">Значение В</span>
+                                  <input class="choice-box__input" name="count" type="radio" />
+                              </label>
+                            </li>
+                            <li class="go-js-choice-item choice-box__item">
+                              <label class="choice-box__label choice-element">
+                                  <span class="choice-box__name">Значение Г</span>
+                                  <input class="choice-box__input" name="count" type="radio" />
+                              </label>
+                            </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="modal-form__col w33">
+                  <div class="modal-form__col-contain">
+                    
+                    <div class="card-filter__choice choice-box js-choice-box form-box__choice">
+                      <div class="choice-box__header">
+                        <div class="choice-box__title">
+                          <span>Вид покрытия</span>
+                          ОТК
+                        </div>
+                        <button type="button" class="choice-box__btn">
+                            <svg class="icon">
+                              <use xlink:href="./assets/images/svg-sprite/svg-sprite.svg#arrow"></use>
+                            </svg>
+                        </button>
+                      </div>
+                      <div class="choice-box__wrapper">
+                        <ul class="choice-box__list">
+                            <li class="choice-box__item choice-box__item-title">
+                              <span>Тип калибровки:</span>
+                            </li>
+                            <li class="go-js-choice-item choice-box__item">
+                              <label class="choice-box__label choice-element">
+                                  <span class="choice-box__name">Значение А</span>
+                                  <input class="choice-box__input" name="count" type="radio" />
+                              </label>
+                            </li>
+                            <li class="go-js-choice-item choice-box__item">
+                              <label class="choice-box__label choice-element">
+                                  <span class="choice-box__name">Значение Б</span>
+                                  <input class="choice-box__input" name="count" type="radio" />
+                              </label>
+                            </li>
+                            <li class="go-js-choice-item choice-box__item">
+                              <label class="choice-box__label choice-element">
+                                  <span class="choice-box__name">Значение В</span>
+                                  <input class="choice-box__input" name="count" type="radio" />
+                              </label>
+                            </li>
+                            <li class="go-js-choice-item choice-box__item">
+                              <label class="choice-box__label choice-element">
+                                  <span class="choice-box__name">Значение Г</span>
+                                  <input class="choice-box__input" name="count" type="radio" />
+                              </label>
+                            </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="modal-form__col w33">
+                  <div class="modal-form__col-contain">
+                    
+                    <div class="card-filter__choice choice-box js-choice-box form-box__choice">
+                      <div class="choice-box__header">
+                        <div class="choice-box__title">
+                          <span>Вид покрытия</span>
+                          С калибровкой
+                        </div>
+                        <button type="button" class="choice-box__btn">
+                            <svg class="icon">
+                              <use xlink:href="./assets/images/svg-sprite/svg-sprite.svg#arrow"></use>
+                            </svg>
+                        </button>
+                      </div>
+                      <div class="choice-box__wrapper">
+                        <ul class="choice-box__list">
+                            <li class="choice-box__item choice-box__item-title">
+                              <span>Тип калибровки:</span>
+                            </li>
+                            <li class="go-js-choice-item choice-box__item">
+                              <label class="choice-box__label choice-element">
+                                  <span class="choice-box__name">Значение А</span>
+                                  <input class="choice-box__input" name="count" type="radio" />
+                              </label>
+                            </li>
+                            <li class="go-js-choice-item choice-box__item">
+                              <label class="choice-box__label choice-element">
+                                  <span class="choice-box__name">Значение Б</span>
+                                  <input class="choice-box__input" name="count" type="radio" />
+                              </label>
+                            </li>
+                            <li class="go-js-choice-item choice-box__item">
+                              <label class="choice-box__label choice-element">
+                                  <span class="choice-box__name">Значение В</span>
+                                  <input class="choice-box__input" name="count" type="radio" />
+                              </label>
+                            </li>
+                            <li class="go-js-choice-item choice-box__item">
+                              <label class="choice-box__label choice-element">
+                                  <span class="choice-box__name">Значение Г</span>
+                                  <input class="choice-box__input" name="count" type="radio" />
+                              </label>
+                            </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal-form__body flex-2">
+                <div class="modal-form__col col-first">
+                  <div class="modal-form__col-contain">
+                    <div class="modal-form__name">Количество:</div>
+                    <div class="counter order-card__counter">
+                      <button type="button" class="counter__btn counter__btn--down">
+                        <span></span>
+                      </button>
+                      <input type="text" class="counter__input" min="1" max="100" value="1">
+                      <button type="button" class="counter__btn counter__btn--up">
+                        <span></span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="modal-form__col">
+                  <div class="modal-form__col-contain">
+                    <div class="modal-form__name">Ед. измерения:</div>
+  
+                    <div class="order-card__details">
+                      <div class="order-card__label unit-choice">
+                        <label class="unit-choice__label">
+                            <input type="radio" name="unit" class="unit-choice__input">
+                            <span class="unit-choice__custom">м</span>
+                        </label>
+                        <label class="unit-choice__label">
+                            <input type="radio" name="unit" class="unit-choice__input">
+                            <span class="unit-choice__custom">шт.</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal-form__col modal-form__button">
+                  <div class="linkLabel defaultModal__linkLabel ">
+                    <button class="linkLabel__box linkLabel__box--red linkLabel__box--form">
+                      добавить в заказ
+                    <svg>
+                            <use xlink:href="./assets/images/svg-sprite/svg-sprite.svg#arrow-se"></use>
+                    </svg>
+                    </button>
+                  </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- / PRODUCTS-MODAL2 -->
+
+        <!-- PRODUCTS-MODAL3 -->
+        <div class="b-modal b-modal--lit counter-modal modal-form" id="add-modal3">
+          <div class="modal-content">
+            <div class="defaultModal">
+              <div class="defaultModal__head modal-form__head">
+                  <div class="defaultModal__head-title">
+                    Добавление <b></b> товара в заказ
+                  </div>
+                  <div class="modal-form__head-desc">
+                    <p>
+                      Цепь с пониженным вертикальным звеном <span>ЦПВЗ-11-U1</span>
+                    </p>
+    
+                    <p>
+                      Укажите дополнительные параметры товара, чтобы добавить его в заказ:
+                    </p>
+                  </div>
+                  <div class="defaultModal__head-close b-modal_close arcticmodal-close">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M14.827 12.0027L23.6653 3.16436L20.8369 0.335938L11.9985 9.17432L3.16046 0.336239L0.332031 3.16467L9.17011 12.0027L0.332234 20.8406L3.16066 23.669L11.9985 14.8312L20.8394 23.672L23.6678 20.8436L14.827 12.0027Z" fill="#110101"/>
+                      </svg>
+                  </div>
+              </div>
+              <form action="#" class="defaultModal__form">
+                <div class="modal-form__row row-wrap">
+    
+                  <div class="modal-form__body flex-3">
+                    <div class="modal-form__col w33">
+                      <div class="modal-form__col-contain">
+                        
+                        <div class="card-filter__choice choice-box js-choice-box form-box__choice">
+                          <div class="choice-box__header">
+                            <div class="choice-box__title">
+                              <span>Вид покрытия</span>
+                              Без покрытия
+                            </div>
+                            <button type="button" class="choice-box__btn">
+                                <svg class="icon">
+                                  <use xlink:href="./assets/images/svg-sprite/svg-sprite.svg#arrow"></use>
+                                </svg>
+                            </button>
+                          </div>
+                          <div class="choice-box__wrapper">
+                            <ul class="choice-box__list">
+                                <li class="choice-box__item choice-box__item-title">
+                                  <span>Тип калибровки:</span>
+                                </li>
+                                <li class="go-js-choice-item choice-box__item">
+                                  <label class="choice-box__label choice-element">
+                                      <span class="choice-box__name">Значение А</span>
+                                      <input class="choice-box__input" name="count" type="radio" />
+                                  </label>
+                                </li>
+                                <li class="go-js-choice-item choice-box__item">
+                                  <label class="choice-box__label choice-element">
+                                      <span class="choice-box__name">Значение Б</span>
+                                      <input class="choice-box__input" name="count" type="radio" />
+                                  </label>
+                                </li>
+                                <li class="go-js-choice-item choice-box__item">
+                                  <label class="choice-box__label choice-element">
+                                      <span class="choice-box__name">Значение В</span>
+                                      <input class="choice-box__input" name="count" type="radio" />
+                                  </label>
+                                </li>
+                                <li class="go-js-choice-item choice-box__item">
+                                  <label class="choice-box__label choice-element">
+                                      <span class="choice-box__name">Значение Г</span>
+                                      <input class="choice-box__input" name="count" type="radio" />
+                                  </label>
+                                </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+      
+                    <div class="modal-form__col w33">
+                      <div class="modal-form__col-contain">
+                        
+                        <div class="card-filter__choice choice-box js-choice-box form-box__choice">
+                          <div class="choice-box__header">
+                            <div class="choice-box__title">
+                              <span>Вид покрытия</span>
+                              ОТК
+                            </div>
+                            <button type="button" class="choice-box__btn">
+                                <svg class="icon">
+                                  <use xlink:href="./assets/images/svg-sprite/svg-sprite.svg#arrow"></use>
+                                </svg>
+                            </button>
+                          </div>
+                          <div class="choice-box__wrapper">
+                            <ul class="choice-box__list">
+                                <li class="choice-box__item choice-box__item-title">
+                                  <span>Тип калибровки:</span>
+                                </li>
+                                <li class="go-js-choice-item choice-box__item">
+                                  <label class="choice-box__label choice-element">
+                                      <span class="choice-box__name">Значение А</span>
+                                      <input class="choice-box__input" name="count" type="radio" />
+                                  </label>
+                                </li>
+                                <li class="go-js-choice-item choice-box__item">
+                                  <label class="choice-box__label choice-element">
+                                      <span class="choice-box__name">Значение Б</span>
+                                      <input class="choice-box__input" name="count" type="radio" />
+                                  </label>
+                                </li>
+                                <li class="go-js-choice-item choice-box__item">
+                                  <label class="choice-box__label choice-element">
+                                      <span class="choice-box__name">Значение В</span>
+                                      <input class="choice-box__input" name="count" type="radio" />
+                                  </label>
+                                </li>
+                                <li class="go-js-choice-item choice-box__item">
+                                  <label class="choice-box__label choice-element">
+                                      <span class="choice-box__name">Значение Г</span>
+                                      <input class="choice-box__input" name="count" type="radio" />
+                                  </label>
+                                </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+      
+                    <div class="modal-form__col w33">
+                      <div class="modal-form__col-contain">
+                        
+                        <div class="card-filter__choice choice-box js-choice-box form-box__choice">
+                          <div class="choice-box__header">
+                            <div class="choice-box__title">
+                              <span>Вид покрытия</span>
+                              С калибровкой
+                            </div>
+                            <button type="button" class="choice-box__btn">
+                                <svg class="icon">
+                                  <use xlink:href="./assets/images/svg-sprite/svg-sprite.svg#arrow"></use>
+                                </svg>
+                            </button>
+                          </div>
+                          <div class="choice-box__wrapper">
+                            <ul class="choice-box__list">
+                                <li class="choice-box__item choice-box__item-title">
+                                  <span>Тип калибровки:</span>
+                                </li>
+                                <li class="go-js-choice-item choice-box__item">
+                                  <label class="choice-box__label choice-element">
+                                      <span class="choice-box__name">Значение А</span>
+                                      <input class="choice-box__input" name="count" type="radio" />
+                                  </label>
+                                </li>
+                                <li class="go-js-choice-item choice-box__item">
+                                  <label class="choice-box__label choice-element">
+                                      <span class="choice-box__name">Значение Б</span>
+                                      <input class="choice-box__input" name="count" type="radio" />
+                                  </label>
+                                </li>
+                                <li class="go-js-choice-item choice-box__item">
+                                  <label class="choice-box__label choice-element">
+                                      <span class="choice-box__name">Значение В</span>
+                                      <input class="choice-box__input" name="count" type="radio" />
+                                  </label>
+                                </li>
+                                <li class="go-js-choice-item choice-box__item">
+                                  <label class="choice-box__label choice-element">
+                                      <span class="choice-box__name">Значение Г</span>
+                                      <input class="choice-box__input" name="count" type="radio" />
+                                  </label>
+                                </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="modal-form__body flex-2-wrap">
+                    <div class="modal-form__col w50">
+                      <div class="modal-form__col-contain">
+                        
+                        <div class="card-filter__choice choice-box js-choice-box form-box__choice">
+                          <div class="choice-box__header">
+                            <div class="choice-box__title">
+                              <span>Дополнительный параметр</span>
+                              Первый параметр
+                            </div>
+                            <button type="button" class="choice-box__btn">
+                                <svg class="icon">
+                                  <use xlink:href="./assets/images/svg-sprite/svg-sprite.svg#arrow"></use>
+                                </svg>
+                            </button>
+                          </div>
+                          <div class="choice-box__wrapper">
+                            <ul class="choice-box__list">
+                                <li class="choice-box__item choice-box__item-title">
+                                  <span>Тип калибровки:</span>
+                                </li>
+                                <li class="go-js-choice-item choice-box__item">
+                                  <label class="choice-box__label choice-element">
+                                      <span class="choice-box__name">Значение А</span>
+                                      <input class="choice-box__input" name="count" type="radio" />
+                                  </label>
+                                </li>
+                                <li class="go-js-choice-item choice-box__item">
+                                  <label class="choice-box__label choice-element">
+                                      <span class="choice-box__name">Значение Б</span>
+                                      <input class="choice-box__input" name="count" type="radio" />
+                                  </label>
+                                </li>
+                                <li class="go-js-choice-item choice-box__item">
+                                  <label class="choice-box__label choice-element">
+                                      <span class="choice-box__name">Значение В</span>
+                                      <input class="choice-box__input" name="count" type="radio" />
+                                  </label>
+                                </li>
+                                <li class="go-js-choice-item choice-box__item">
+                                  <label class="choice-box__label choice-element">
+                                      <span class="choice-box__name">Значение Г</span>
+                                      <input class="choice-box__input" name="count" type="radio" />
+                                  </label>
+                                </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+      
+                    <div class="modal-form__col w50">
+                      <div class="modal-form__col-contain">
+                        
+                        <div class="card-filter__choice choice-box js-choice-box form-box__choice">
+                          <div class="choice-box__header">
+                            <div class="choice-box__title">
+                              <span>Дополнительный параметр</span>
+                              Второй параметр
+                            </div>
+                            <button type="button" class="choice-box__btn">
+                                <svg class="icon">
+                                  <use xlink:href="./assets/images/svg-sprite/svg-sprite.svg#arrow"></use>
+                                </svg>
+                            </button>
+                          </div>
+                          <div class="choice-box__wrapper">
+                            <ul class="choice-box__list">
+                                <li class="choice-box__item choice-box__item-title">
+                                  <span>Тип калибровки:</span>
+                                </li>
+                                <li class="go-js-choice-item choice-box__item">
+                                  <label class="choice-box__label choice-element">
+                                      <span class="choice-box__name">Значение А</span>
+                                      <input class="choice-box__input" name="count" type="radio" />
+                                  </label>
+                                </li>
+                                <li class="go-js-choice-item choice-box__item">
+                                  <label class="choice-box__label choice-element">
+                                      <span class="choice-box__name">Значение Б</span>
+                                      <input class="choice-box__input" name="count" type="radio" />
+                                  </label>
+                                </li>
+                                <li class="go-js-choice-item choice-box__item">
+                                  <label class="choice-box__label choice-element">
+                                      <span class="choice-box__name">Значение В</span>
+                                      <input class="choice-box__input" name="count" type="radio" />
+                                  </label>
+                                </li>
+                                <li class="go-js-choice-item choice-box__item">
+                                  <label class="choice-box__label choice-element">
+                                      <span class="choice-box__name">Значение Г</span>
+                                      <input class="choice-box__input" name="count" type="radio" />
+                                  </label>
+                                </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="modal-form__body flex-1">
+                    <div class="modal-form__col w100">
+                      <div class="modal-form__col-contain">
+                        
+                        <div class="card-filter__choice choice-box js-choice-box form-box__choice">
+                          <div class="choice-box__header">
+                            <div class="choice-box__title">
+                              <span>Дополнительный параметр</span>
+                              Первый параметр
+                            </div>
+                            <button type="button" class="choice-box__btn">
+                                <svg class="icon">
+                                  <use xlink:href="./assets/images/svg-sprite/svg-sprite.svg#arrow"></use>
+                                </svg>
+                            </button>
+                          </div>
+                          <div class="choice-box__wrapper">
+                            <ul class="choice-box__list">
+                                <li class="choice-box__item choice-box__item-title">
+                                  <span>Тип калибровки:</span>
+                                </li>
+                                <li class="go-js-choice-item choice-box__item">
+                                  <label class="choice-box__label choice-element">
+                                      <span class="choice-box__name">Значение А</span>
+                                      <input class="choice-box__input" name="count" type="radio" />
+                                  </label>
+                                </li>
+                                <li class="go-js-choice-item choice-box__item">
+                                  <label class="choice-box__label choice-element">
+                                      <span class="choice-box__name">Значение Б</span>
+                                      <input class="choice-box__input" name="count" type="radio" />
+                                  </label>
+                                </li>
+                                <li class="go-js-choice-item choice-box__item">
+                                  <label class="choice-box__label choice-element">
+                                      <span class="choice-box__name">Значение В</span>
+                                      <input class="choice-box__input" name="count" type="radio" />
+                                  </label>
+                                </li>
+                                <li class="go-js-choice-item choice-box__item">
+                                  <label class="choice-box__label choice-element">
+                                      <span class="choice-box__name">Значение Г</span>
+                                      <input class="choice-box__input" name="count" type="radio" />
+                                  </label>
+                                </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+      
+                  </div>
+    
+                  <div class="modal-form__body flex-2">
+                    <div class="modal-form__col col-first">
+                      <div class="modal-form__col-contain">
+                        <div class="modal-form__name">Количество:</div>
+                        <div class="counter order-card__counter">
+                          <button type="button" class="counter__btn counter__btn--down">
+                            <span></span>
+                          </button>
+                          <input type="text" class="counter__input" min="1" max="100" value="1">
+                          <button type="button" class="counter__btn counter__btn--up">
+                            <span></span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+      
+                    <div class="modal-form__col">
+                      <div class="modal-form__col-contain">
+                        <div class="modal-form__name">Ед. измерения:</div>
+      
+                        <div class="order-card__details">
+                          <div class="order-card__label unit-choice">
+                            <label class="unit-choice__label">
+                                <input type="radio" name="unit" class="unit-choice__input">
+                                <span class="unit-choice__custom">м</span>
+                            </label>
+                            <label class="unit-choice__label">
+                                <input type="radio" name="unit" class="unit-choice__input">
+                                <span class="unit-choice__custom">шт.</span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <div class="modal-form__col modal-form__button">
+                      <div class="linkLabel defaultModal__linkLabel ">
+                        <button class="linkLabel__box linkLabel__box--red linkLabel__box--form">
+                          добавить в заказ
+                        <svg>
+                                <use xlink:href="./assets/images/svg-sprite/svg-sprite.svg#arrow-se"></use>
+                        </svg>
+                        </button>
+                      </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- / PRODUCTS-MODAL3 -->
 
   </div>
   <!-- / PAGE -->
