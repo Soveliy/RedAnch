@@ -585,86 +585,197 @@
   }
 }
 
-//!
 
 
+//! modal-form
 
-.main-modal-litle{
-  .main-counter{
+.modal-form{
+  .defaultModal{
+    background: #EDEDED;
+  }
+
+  &__row{
+    margin-top: 8px;
     display: flex;
-    align-items: center;
-    background: #F5F5F5;
-    width: 100%;
-  
+    position: relative;
+    
+    gap: 8px;
+
     @media screen and (min-width: 600px) {
-      height: 96px;
+      padding-bottom: 104px;
+    }
+  }
+
+  &__col{
+    height: 96px;
+    width: 50%;
+    &-contain{
+      display: flex;
+      align-items: center;
+      height: 100%;
+      background: #F5F5F5;
+    }
+  }
+
+  &__name{
+    display: none;
+    @media screen and (min-width: 600px) {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-family: 'PF Din Text Cond Pro';
       font-style: normal;
       font-weight: 300;
-      font-size: 28px;
-      line-height: 32px;
       letter-spacing: 0.03em;
       color: rgba(79, 86, 89, 0.7);
+      font-size: 22px;
+      line-height: 32px;
     }
-  
-    
-  
-    .counter {
+
+    @media screen and (min-width: 700px) {
+      font-size: 28px;
+    }
+  }
+
+  &__button{
+    position: fixed;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    @media screen and (min-width: 600px) {
+      position: absolute;
+    }
+
+  }
+
+  &__head{
+    &.defaultModal__head {
+      background: #EDEDED;
+    }
+  }
+
+  &__head-desc{
+    p{
+      font-family: 'PF Din Text Cond Pro';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 16px;
+      margin-bottom: 32px;
+
+      @media screen and (min-width: 600px) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      &:last-child{
+        display: none;
+        margin-bottom: 0;
+
+        @media screen and (min-width: 600px) {
+          display: block;
+        }
+      }
+
+      span{
+        display: block;
+        margin-top: 4px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        @media screen and (min-width: 600px) {
+          display: inline;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .counter {
+    width: 100%;
+    @media screen and (min-width: 600px) {
       background: #FFFFFF;
       width: 50%;
-  
-      .counter__btn{
-        width: 64px;
+      margin-right: 0;
+      input{
+        border: none !important;
+      }
+      &__btn{
         background: #FFFFFF;
-  
+        opacity: 1;
+        padding: 0 25px;
         span{
-          background-color: #150f0f;
-          &::after{
-            background-color: #150f0f;
+          background: rgba(79, 86, 89, 0.7);
+          &:after{
+            background: rgba(79, 86, 89, 0.7);
           }
         }
       }
-  
-      &__input{
-        border: none !important;
-      }
     }
+
   }
 
-  .defaultModal{
-  
-    &__row{
-    }
+  .order-card{
 
-    &__head-desc{
-      p{
-        @media screen and (min-width: 600px) {
-          margin-bottom: 32px;
-        }
+    &__label{
+      margin-right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
+      .unit-choice__label{
         span{
-          font-weight: 500;
+          opacity: 1;
+        }
+        &:last-child{
+          margin-left: 40px;
+          span{
+            color: rgba(79, 86, 89, 0.7);
+          }
         }
       }
+      span{
+        font-family: 'PF Din Text Cond Pro';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.03em;
+        color: #150F0F;
+    
+      }
+
+      @media screen and (min-width: 600px) {
+      
+        span{
+          font-size: 28px;
+          line-height: 32px;
+        }
+      }
+
+    
     }
-  }
-  
-  .counter-name{
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .counter-modal{
-  
-  }
-  
-  .modal-big--btn{
-    @media screen and (min-width: 600px) {
-      height: 104px !important;
+
+    &__details{
       width: 100%;
+      @media screen and (min-width: 600px) {
+        background: #FFFFFF;
+        width: 50%;
+      }
+    }
+
+  }
+
+  .linkLabel__box--red {
+    svg{
+      transform: rotate(0deg);
+
     }
   }
+
 }
+
 

@@ -298,14 +298,14 @@
     <!-- / QUESTIONS-MODAL -->
 
     <!-- PRODUCTS-MODAL -->
-      <div class="b-modal b-modal--lit counter-modal main-modal-litle" id="add-modal">
+      <div class="b-modal b-modal--lit counter-modal modal-form" id="add-modal">
       <div class="modal-content">
         <div class="defaultModal">
-          <div class="defaultModal__head">
+          <div class="defaultModal__head modal-form__head">
               <div class="defaultModal__head-title">
-                Добавление товара в заказ
+                Добавление <b></b> товара в заказ
               </div>
-              <div class="defaultModal__head-desc">
+              <div class="modal-form__head-desc">
                 <p>
                   Цепь с пониженным вертикальным звеном <span>ЦПВЗ-11-U1</span>
                 </p>
@@ -321,21 +321,26 @@
               </div>
           </div>
           <form action="#" class="defaultModal__form">
-            <div class="defaultModal__row">
-            <div class="defaultModal__container ui-background-white-100 defaultModal__container--w50 main-counter">
-              <div class="counter-name">Количество:</div>
-              <div class="counter order-card__counter">
-                <button type="button" class="counter__btn counter__btn--down">
-                  <span></span>
-                </button>
-                <input type="text" class="counter__input" min="1" max="100" value="1">
-                <button type="button" class="counter__btn counter__btn--up">
-                  <span></span>
-                </button>
-              </div>
+            <div class="modal-form__row">
+              <div class="modal-form__col">
+                <div class="modal-form__col-contain">
+                  <div class="modal-form__name">Количество:</div>
+                  <div class="counter order-card__counter">
+                    <button type="button" class="counter__btn counter__btn--down">
+                      <span></span>
+                    </button>
+                    <input type="text" class="counter__input" min="1" max="100" value="1">
+                    <button type="button" class="counter__btn counter__btn--up">
+                      <span></span>
+                    </button>
+                  </div>
                 </div>
-                <div class="defaultModal__container ui-background-white-100 defaultModal__container--w50 main-counter">
-                <div class="counter-name">Ед. измерения:</div>
+          
+              </div>
+
+              <div class="modal-form__col">
+                <div class="modal-form__col-contain">
+                  <div class="modal-form__name">Ед. измерения:</div>
 
                   <div class="order-card__details">
                     <div class="order-card__label unit-choice">
@@ -350,17 +355,18 @@
                     </div>
                   </div>
                 </div>
+              </div>
 
-                <div class="defaultModal__container defaultModal__container--w50 modal-big--btn">
-                    <div class="linkLabel defaultModal__linkLabel ">
-                            <button class="linkLabel__box linkLabel__box--red linkLabel__box--form">
-                              добавить в заказ
-                            <svg>
-                                    <use xlink:href="./assets/images/svg-sprite/svg-sprite.svg#arrow-se"></use>
-                            </svg>
-                            </button>
-                    </div>
-                </div>
+              <div class="modal-form__col modal-form__button">
+                  <div class="linkLabel defaultModal__linkLabel ">
+                    <button class="linkLabel__box linkLabel__box--red linkLabel__box--form">
+                      добавить в заказ
+                    <svg>
+                            <use xlink:href="./assets/images/svg-sprite/svg-sprite.svg#arrow-se"></use>
+                    </svg>
+                    </button>
+                  </div>
+              </div>
             </div>
           </form>
         </div>
