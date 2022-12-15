@@ -11,6 +11,7 @@
 // Blocks
 
 document.addEventListener('DOMContentLoaded', () => {
+  @@include('./blocks/jquery.mask.min.js');
     @@include('./blocks/main-page.js');
     @@include('./blocks/tabs.js');
     @@include('./blocks/bricks.js');

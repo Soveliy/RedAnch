@@ -36,10 +36,10 @@
        
         @include for-1024(){
             // position: sticky;
-            overflow: hidden;
-            top: 0;
-            left: 0;
-            overflow-x: hidden;
+            // overflow: hidden;
+            // top: 0;
+            // left: 0;
+            // overflow-x: hidden;
            
         }
     
@@ -156,8 +156,9 @@
             top: 0;
             width: 50%;
             height: 100%;
-            transition: $transition;
+           
             img{
+                transition: $transition;
                 width: 100%;
                 object-fit: cover;
                 display: block;
@@ -177,6 +178,7 @@
         top: 0;
         left: 0;
         z-index: -1;
+        overflow: hidden;
         &:after{
             content: '';
             position: absolute;
@@ -201,6 +203,7 @@
             width: 50%;
         }
         img{
+            transition: $transition;
             width: 100%;
             object-fit: cover;
             display: block;
@@ -256,7 +259,7 @@
             box-sizing: border-box;
             z-index: 700;
             &:not(:hover){
-                & + picture{
+                & + picture img{
                     filter: blur(20px);
                 }
             }
@@ -331,7 +334,7 @@
             padding-bottom: 16px;
             z-index: 750;
             &:not(:hover){
-                & + picture{
+                & + picture img{
                     filter: blur(20px);
                 }
             }
@@ -409,7 +412,7 @@
 }
 
 
-.hero__bg.end + .hero__right + .hero__picture{
+.hero__bg.end + .hero__right + .hero__picture img{
     filter: none;
 }
 

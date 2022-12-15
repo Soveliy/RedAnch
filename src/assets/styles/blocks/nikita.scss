@@ -822,7 +822,7 @@ body{
                 margin-top: 30px;
             }
             @include for-1600(){
-                margin-top: -40px;
+                margin-top: -120px;
             }
         }
         &__name{
@@ -852,12 +852,9 @@ body{
                 width: calc(100% + 64px);
                 margin: -33px -32px 0;
             }
-            @include for-1366(){
-               margin-top: 165px;
-            }
             @include for-1600(){
                 width: calc(100% + 96px);
-                margin: 165px -48px 0;
+                margin: 40px -48px 0;
             }
             @include for-retina(){
                 width: 100vw;
@@ -1067,8 +1064,8 @@ body{
     right: 0;
     visibility: hidden;
     z-index: -1;
-    left: 50%;
-    transform: translateX(-50vh);
+    // left: 50%;
+    transform:translate3d(0,0,0);
 
     @media (max-width:1024px){
         left: auto;
@@ -1078,6 +1075,7 @@ body{
 }
 .frameImage  img{
     height: 100vh;
+    transform:translate3d(0,0,0) !important;
     // @include for-1920(){
     //     height: auto;
     // }
@@ -1211,7 +1209,9 @@ body{
     &--dark{
     background: rgba(21, 15, 15, 0.8);
     transition: $transition;
-
+        .burger__container svg,.header-top__item:first-child,.header__search-button svg{
+            fill: #fff;
+        }
   
      .header-top{
       
@@ -1230,15 +1230,15 @@ body{
                 width: 16px;
                 background: rgba(21, 15, 15, 0.9);
                 @include for-1024(){
-                    width: 32px;
+                    width: 100em;
+                    left: calc(100% - 48px);
                 }
                 @include for-1600(){
                     width: 48px;
                     left: calc(100% - 48px);
                 }
                 @include for-retina(){
-                    width: 100em;
-                    left: calc(100% - 48px);
+                 
                 }
             }
             &:after{
@@ -2454,3 +2454,22 @@ body{
     display: none !important;
 }
 
+#preloadImages{
+    @media (max-width:1024px){
+    
+            display: none;
+        
+    }
+}
+
+@media (max-width:1024px){
+    .c-manager img{
+        max-height: 500px;
+    }
+    #mobile-anchor.c-manager{
+       
+    }
+    .c-manager [class*=img_]{
+        transition: .4s;
+    }
+}
