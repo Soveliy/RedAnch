@@ -114,6 +114,25 @@
     height: 100%;
     width: 100%;
   }
+
+  &__container--psr {
+   position: relative !important;
+  }
+
+  &__wrapper {
+   width: 100%;
+   display: flex;
+   gap: 20px;
+   .defaultModal__container {
+      width: 50%;
+      &:first-child {
+         width: 30%;
+      }
+      &:last-child {
+         width: 70%;
+      }
+   }
+  }
   &__head {
     position: relative;
     box-sizing: border-box;
