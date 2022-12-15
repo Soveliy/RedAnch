@@ -110,6 +110,10 @@
       fill: #4f5659;
       margin-right: 10px;
    }
+
+   &:hover {
+      text-decoration: underline;
+   }
 }
 
 .order-footer {
@@ -166,9 +170,21 @@
          border: none;
          background-color: #50575A;
          cursor: pointer;
+         .order-footer__name {
+            display: none;
+         }
+         .order-footer__icon {
+            margin: 0;
+         }
          .order-footer__item-line {
             &::after {
                background-color: #DD2B1C;
+            }
+         }
+
+         &:active {
+            .order-footer__icon {
+               opacity: 1;
             }
          }
       }
@@ -185,12 +201,28 @@
                background-color: #FFF;
             }
          }
+
+         &:active {
+            .order-footer__icon {
+               opacity: 1;
+            }
+         }
       }
 
       @media screen and (min-width: 1024px) {
          &--btn {
+            .order-footer__name {
+               display: block;
+            }
+            .order-footer__icon {
+               margin-left: 34px;
+            }
             width: min-content;
             &:hover {
+               .order-footer__icon {
+                  opacity: 1;
+                  fill: #DD2B1C;
+               }
                .order-footer__item-line {
                   &::after {
                      width: 100%;
@@ -215,6 +247,10 @@
          &--link {
             width: min-content;
             &:hover {
+               .order-footer__icon {
+                  fill: #FFF;
+                  opacity: 1;
+               }
                .order-footer__item-line {
                   &::after {
                      width: 100%;
@@ -228,8 +264,10 @@
    &__icon {
       width: 24px;
       height: 24px;
-      fill: rgba(255, 255, 255, 0.2);
+      fill: #FFF;
+      opacity: .2;
       margin-left: 34px;
+      transition: .3s;
    }
    @media screen and (min-width: 1366px) {
       min-height: 104px;
@@ -264,6 +302,9 @@
 
    &__body {
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
    }
 
    &__header {
@@ -273,14 +314,17 @@
       font-size: 14px;
       line-height: 1;
       padding: 15px;
+      transition: .3s;
    }
    &__title {
       font-weight: 300;
       margin-bottom: 8px;
+      transition: .3s;
    }
    &__desc {
       font-weight: 500;
-      color: #150F0F;
+      transition: .3s;
+      white-space: nowrap;
    }
    &__pagination {
       display: flex;
@@ -297,10 +341,25 @@
       background-color: none;
       border: none;
       cursor: pointer;
+      background: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: .3s;
       .icon {
          width: 24px;
          height: 24px;
          fill: #150F0F;
+         transition: .3s;
+      }
+
+      @media screen and (min-width: 1024px) {
+         opacity: 0;
+         &:hover {
+            .icon {
+               fill: #DD2B1C;
+            }
+         }
       }
    }
 
@@ -357,11 +416,15 @@
       &__header {
          padding: 0;
          flex-direction: row;
-         align-items: center;
+         align-items: flex-end;
          margin-bottom: 4px;
 
          font-size: 20px;
          line-height: 24px;
+         transition: .3s;
+         &:hover {
+            color: #DD2B1C;
+         }
       }
 
       &__title {
@@ -375,6 +438,7 @@
 
       &__pagination {
          height: 72px;
+         margin-left: 20px;
       }
    }
    @media screen and (min-width: 1600px) {
@@ -461,6 +525,7 @@
       width: 100%;
       border-top: 1px solid #c5c5c5;
       @media screen and (min-width: 1024px) {
+         margin-right: 20px;
          align-items: center;
          border: none;
          width: min-content;
@@ -514,6 +579,7 @@
          width: 16px;
          height: 16px;
          fill: rgba(79, 86, 89, 0.4);
+         transform: rotate(-90deg);
       }
    }
 
@@ -563,6 +629,15 @@
       height: 0;
       opacity: 0;
       position: absolute;
+   }
+
+   &--active {
+      .choice-box__btn {
+         .icon {
+            transition: .3s;
+            transform: rotate(90deg);
+         }
+      }
    }
 }
 
@@ -648,6 +723,10 @@
          &__btn {
             opacity: 1; 
          }
+      }
+
+      .order-card__clear {
+         opacity: 1;
       }
    }
 }
