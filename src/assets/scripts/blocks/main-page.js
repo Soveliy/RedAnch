@@ -51,95 +51,95 @@ var Animations = function() {
    
  
  
-    var loadImgsHandler = function(objects) {
-      if (objects) {
-        var count = 0;
-        for (var k in objects) {
-          if (objects.hasOwnProperty(k) && objects[k].wrap) {
-            var object = objects[k];
-            var start = object.i ? object.i : 1;
-            for (var i = start; i < object.count + 1; i++) {
-              var image = new Image();
-              image.index = i;
-              image.k = k;
-              image.object = object;
-              image.array = object.images;
-              image.firstImage = object.firstImage;
-              image.i = start;
+    // var loadImgsHandler = function(objects) {
+    //   if (objects) {
+    //     var count = 0;
+    //     for (var k in objects) {
+    //       if (objects.hasOwnProperty(k) && objects[k].wrap) {
+    //         var object = objects[k];
+    //         var start = object.i ? object.i : 1;
+    //         for (var i = start; i < object.count + 1; i++) {
+    //           var image = new Image();
+    //           image.index = i;
+    //           image.k = k;
+    //           image.object = object;
+    //           image.array = object.images;
+    //           image.firstImage = object.firstImage;
+    //           image.i = start;
   
-              if (object.canvas) {
-                image.canvas = object.canvas;
-              }
+    //           if (object.canvas) {
+    //             image.canvas = object.canvas;
+    //           }
   
-              image.onload = function() {
-                if (!this.canvas) {
-                  if (this.object.imgHasWrap) {
-                    var div = document.createElement('div');
-                    div.classList.add('img_' + this.index);
-                    div.appendChild(this);
-                    this.object.wrap.appendChild(div);
-                  } else {
-                    this.object.wrap.appendChild(this);
-                    this.classList.add('img_' + this.index);
-                  }
-                } else {
-                  if (this.index === this.i) {
-                    this.canvas.height = this.height;
-                    this.canvas.width = this.width;
-                    if (this.firstImage) {
-                      this.canvas.getContext('2d').drawImage(this, 0, 0, this.width, this.height);
-                    }
-                  }
-                  objects[this.k].images[this.index] = this;
-                }
+    //           image.onload = function() {
+    //             if (!this.canvas) {
+    //               if (this.object.imgHasWrap) {
+    //                 var div = document.createElement('div');
+    //                 div.classList.add('img_' + this.index);
+    //                 div.appendChild(this);
+    //                 this.object.wrap.appendChild(div);
+    //               } else {
+    //                 this.object.wrap.appendChild(this);
+    //                 this.classList.add('img_' + this.index);
+    //               }
+    //             } else {
+    //               if (this.index === this.i) {
+    //                 this.canvas.height = this.height;
+    //                 this.canvas.width = this.width;
+    //                 if (this.firstImage) {
+    //                   this.canvas.getContext('2d').drawImage(this, 0, 0, this.width, this.height);
+    //                 }
+    //               }
+    //               objects[this.k].images[this.index] = this;
+    //             }
   
-                count++;
-                let counterPng;
-                if  (count > 25){
-                    counterPng = true
-                    console.log("more 5")
-                }
+    //             count++;
+    //             let counterPng;
+    //             if  (count > 25){
+    //                 counterPng = true
+    //                 console.log("more 5")
+    //             }
 
-                if (allImgsCount === counterPng && !isTablet) {
-                  allImageLoaded.resolve();
-                }
-              };
+    //             if (allImgsCount === counterPng && !isTablet) {
+    //               allImageLoaded.resolve();
+    //             }
+    //           };
   
-              if (!isTablet) {
-                image.classList.add('is-visible');
-              }
-              if (i > 25){
-                object.type = ".jpg"
-              }
-              image.src = object.src + i + object.type;
-              //add_hint('prerender', 'http://toledo.dev17.ru/' + object.src + i + object.type);
-            }
-          }
-        }
-      }
-    };
+    //           if (!isTablet) {
+    //             image.classList.add('is-visible');
+    //           }
+    //           if (i > 25){
+    //             object.type = ".jpg"
+    //           }
+    //           image.src = object.src + i + object.type;
+    //           //add_hint('prerender', 'http://toledo.dev17.ru/' + object.src + i + object.type);
+    //         }
+    //       }
+    //     }
+    //   }
+    // };
   
-    var setLoadImages = function() {
-    //   var intro = document.querySelector('.c-intro');
-      var objects = [];
+    // var setLoadImages = function() {
+    // //   var intro = document.querySelector('.c-intro');
+    //   var objects = [];
   
-      if (isTablet){
+    //   if (isTablet){
         
-        objects =[scene_cst];
-      } else {
-        objects =[scene_5];
-      }
+    //     objects =[scene_cst];
+    //   } else {
+    //     objects =[scene_5];
+    //   }
        
       
-      objects.map(function(item) {
-        allImgsCount += item.count;
-        if (item.i) {
-          allImgsCount -= item.i;
-        }
-      });
+    //   objects.map(function(item) {
+    //     allImgsCount += item.count;
+    //     if (item.i) {
+    //       allImgsCount -= item.i;
+    //     }
+    //   });
   
-      loadImgsHandler(objects);
-    };
+    //   loadImgsHandler(objects);
+    // };
   
     var setVisibleClassImages = function() {
       scene_5.wrap.className = 'c-manager frame_1';
@@ -218,7 +218,7 @@ var Animations = function() {
           triggerHook: 1,
         })
           .setClassToggle(".hero__bg", "end") // add class toggle
-            //  .addIndicators() // add indicators (requires plugin)
+             .addIndicators() // add indicators (requires plugin)
             .addTo(controller);
   
         scene5.index = i + 24;
@@ -342,9 +342,9 @@ var Animations = function() {
           });
         }
   
-        if (!isSafari) {
-          //  mousewheelListener()
-        }
+        // if (!isSafari) {
+        //   //  mousewheelListener()
+        // }
   
         document.addEventListener('touchstart', function(event) {
           if (!isTablet) {
@@ -660,7 +660,7 @@ var Animations = function() {
         // }, 5000);
         $(window).one('scroll',function() {
             console.log("loaded")
-            setLoadImages();
+            // setLoadImages();
             sequention_5();
          });
         $(".tizers__item-container--w60").each(function() {
