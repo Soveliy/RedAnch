@@ -18,8 +18,8 @@
 // Blocks
 
 @import './blocks/mixins.scss';
-// @import './blocks/hero.scss';
-// @import './blocks/nikita.scss';
+
+
 @import "./blocks/container.scss";
 @import "./blocks/body.scss";
 @import "./blocks/page.scss";
@@ -94,8 +94,11 @@
 @import "./blocks/product-description.scss";
 @import "./blocks/you-order.scss";
 @import "./blocks/search.scss";
+@import "./blocks/delivery.scss";
 
-
+@import './blocks/hero.scss';
+@import './blocks/nikita.scss';
+@import './blocks/modals.scss';
 
 
 

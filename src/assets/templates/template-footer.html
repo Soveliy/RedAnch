@@ -1,5 +1,5 @@
         <!-- POPUP -->
-        <div class="body__popup popup js-popup" data-popup-name="popup-l">
+        <!-- <div class="body__popup popup js-popup" data-popup-name="popup-l">
             <div class="popup__box">
                     <div class="popup__block popup__block--light js-popup__block">
 
@@ -96,11 +96,11 @@
 
                     </div>
             </div>
-        </div>
+        </div> -->
         <!-- / POPUP -->
 
         <!-- POPUP -->
-        <div class="body__popup popup js-popup" data-popup-name="popup-d">
+        <!-- <div class="body__popup popup js-popup" data-popup-name="popup-d">
                 <div class="popup__box">
                         <div class="popup__block popup__block--dark js-popup__block">
 
@@ -197,9 +197,74 @@
 
                         </div>
                 </div>
-        </div>
+        </div> -->
         <!-- / POPUP -->
+        <div class="g-hidden">
+                <div class="b-modal b-modal--lit" id="callback-modal">
+                    <div class="modal-content">
+                        <div class="defaultModal">
+                            <div class="defaultModal__head">
+                                <div class="defaultModal__head-title">
+                                    Обратный звонок
+                                </div>
+                                <div class="defaultModal__head-desc">
+                                        Оставьте свои контактные данные, и мы свяжемся с вами в ближайшее время.
+                                </div>
+                                <div class="defaultModal__head-close b-modal_close arcticmodal-close">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.827 12.0027L23.6653 3.16436L20.8369 0.335938L11.9985 9.17432L3.16046 0.336239L0.332031 3.16467L9.17011 12.0027L0.332234 20.8406L3.16066 23.669L11.9985 14.8312L20.8394 23.672L23.6678 20.8436L14.827 12.0027Z" fill="#110101"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <form action="#" class="defaultModal__form">
+                               <div class="defaultModal__row">
+                                <div class="defaultModal__container ui-background-white-100 defaultModal__container--w50">
+                                        <span class="defaultModal__input-req">*</span>
+                                        <input type="text" class="defaultModal__input" name="name" placeholder=" ">
+                                        <label class="defaultModal__input-placeholder" for="name">Ваше имя</label>
+                                    </div>
+                                    <div class="defaultModal__container ui-background-white-100 defaultModal__container--w50">
+                                        <span class="defaultModal__input-req">*</span>
+                                        <input type="text" name="phone" class="defaultModal__input defaultModal__input--phone" placeholder=" ">
+                                        <label class="defaultModal__input-placeholder" for="phone">Телефон</label>
+                                    </div>
+                                    <div class="defaultModal__container defaultModal__container--w50">
+                                       <label class="defaultModal__policy-checkbox policy-checkbox">
+                                                <input type="checkbox" name="policy" id="" checked>
+                                                <span class="policy-checkbox__container">
+                                                        <span class="policy-checkbox__button">
+                                                                <svg width="33" height="24" viewBox="0 0 33 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2798 23.6339L32.7181 3.19561L29.8896 0.367188L12.2729 17.9839L3.10968 8.82061L0.28125 11.649L12.2665 23.6343L12.2733 23.6274L12.2798 23.6339Z" fill="#DD2B1C"/>
+                                                                        </svg>
+                                                                        
+                                                        </span>
+                                                        <span class="policy-checkbox__text">
+                                                                Я принимаю условия <a href="#">Политики 
+                                                                        конфиденциальности</a> и даю согласие 
+                                                                        на обработку своих персональных данных
+                                                                </span>
+                                                </span>
 
+                                       </label>
+                                    </div>
+                                    <div class="defaultModal__container defaultModal__container--w50">
+                                        <div class="linkLabel defaultModal__linkLabel">
+                                                <button class="linkLabel__box linkLabel__box--red linkLabel__box--form">
+                                                        Отправить
+                                                <svg>
+                                                        <use xlink:href="./assets/images/svg-sprite/svg-sprite.svg#arrow-se"></use>
+                                                </svg>
+                                                </button>
+                                        </div>
+                                    </div>
+                               </div>
+                                
+                            </form>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
         <!-- SCRIPTS -->
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
