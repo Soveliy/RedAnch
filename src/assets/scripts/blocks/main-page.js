@@ -449,7 +449,9 @@ var Animations = function() {
         $('.css-opacity').css({opacity: ''}).addClass('css-opacity-1');
       }
     });
-  
+  if ($("body").hasClass("main-page")){
+
+
     window.addEventListener('load', function() {
       $(function() {  
 
@@ -753,6 +755,7 @@ var Animations = function() {
       // });
   
   })();
+}
   
     
        
