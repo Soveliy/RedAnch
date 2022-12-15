@@ -603,3 +603,87 @@
     }
   }
 }
+
+//!
+
+
+
+.main-modal-litle{
+  .main-counter{
+    display: flex;
+    align-items: center;
+    background: #F5F5F5;
+    width: 100%;
+  
+    @media screen and (min-width: 600px) {
+      height: 96px;
+      font-family: 'PF Din Text Cond Pro';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 28px;
+      line-height: 32px;
+      letter-spacing: 0.03em;
+      color: rgba(79, 86, 89, 0.7);
+    }
+  
+    
+  
+    .counter {
+      background: #FFFFFF;
+      width: 50%;
+  
+      .counter__btn{
+        width: 64px;
+        background: #FFFFFF;
+  
+        span{
+          background-color: #150f0f;
+          &::after{
+            background-color: #150f0f;
+          }
+        }
+      }
+  
+      &__input{
+        border: none !important;
+      }
+    }
+  }
+
+  .defaultModal{
+  
+    &__row{
+    }
+
+    &__head-desc{
+      p{
+        @media screen and (min-width: 600px) {
+          margin-bottom: 32px;
+        }
+
+        span{
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  
+  .counter-name{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .counter-modal{
+  
+  }
+  
+  .modal-big--btn{
+    @media screen and (min-width: 600px) {
+      height: 104px !important;
+      width: 100%;
+    }
+  }
+}
+

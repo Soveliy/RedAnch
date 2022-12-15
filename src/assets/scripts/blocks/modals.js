@@ -73,11 +73,11 @@ $('.were-questions').click(function () {
   });
 });
 
-$('.order-products').click(function () {
-  $('#products-modal').arcticmodal({
+$('.add-goods').click(function () {
+  $('#add-modal').arcticmodal({
     afterOpen: function (data, el) {
       $('body').css('overflow', 'hidden');
-      $('.b-modal#products-modal').addClass('is-active');
+      $('.b-modal#add-modal').addClass('is-active');
     },
     beforeClose: function (data, el) {
       setTimeout(() => {
