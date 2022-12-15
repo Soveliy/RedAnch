@@ -23,8 +23,8 @@
         Остались вопросы?
       </button>
 
-      <button class="main-btn order-products">
-        Заказ продукции
+      <button class="main-btn add-goods">
+        Добавление товара в заказ
       </button>
 
     </main>
@@ -298,91 +298,63 @@
     <!-- / QUESTIONS-MODAL -->
 
     <!-- PRODUCTS-MODAL -->
-    <div class="b-modal b-modal--1366" id="products-modal">
+      <div class="b-modal b-modal--lit counter-modal main-modal-litle" id="add-modal">
       <div class="modal-content">
         <div class="defaultModal">
-          <div class="defaultModal__head defaultModal__head-1366">
-              <div class="defaultModal__head-title defaultModal__head-title--big">
-                Заказ продукции
+          <div class="defaultModal__head">
+              <div class="defaultModal__head-title">
+                Добавление товара в заказ
               </div>
-              <div class="defaultModal__head-desc defaultModal__head-desc--big">
-                <h3>Якорная цепь, исполнение 1</h3>
-                с якорной смычкой, скобой и коренной смычкой
+              <div class="defaultModal__head-desc">
+                <p>
+                  Цепь с пониженным вертикальным звеном <span>ЦПВЗ-11-U1</span>
+                </p>
+
+                <p>
+                  Укажите дополнительные параметры товара, чтобы добавить его в заказ:
+                </p>
               </div>
-              <div class="defaultModal__head-close defaultModal__head-close--1366 b-modal_close arcticmodal-close">
+              <div class="defaultModal__head-close b-modal_close arcticmodal-close">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M14.827 12.0027L23.6653 3.16436L20.8369 0.335938L11.9985 9.17432L3.16046 0.336239L0.332031 3.16467L9.17011 12.0027L0.332234 20.8406L3.16066 23.669L11.9985 14.8312L20.8394 23.672L23.6678 20.8436L14.827 12.0027Z" fill="#110101"/>
                   </svg>
               </div>
           </div>
           <form action="#" class="defaultModal__form">
-        
-            <div class="defaultModal__row defaultModal__row--1366">
-
-              <div class="defaultModal__form-name">
-                Заказчик
+            <div class="defaultModal__row">
+            <div class="defaultModal__container ui-background-white-100 defaultModal__container--w50 main-counter">
+              <div class="counter-name">Количество:</div>
+              <div class="counter order-card__counter">
+                <button type="button" class="counter__btn counter__btn--down">
+                  <span></span>
+                </button>
+                <input type="text" class="counter__input" min="1" max="100" value="1">
+                <button type="button" class="counter__btn counter__btn--up">
+                  <span></span>
+                </button>
               </div>
-        
-              <div class="defaultModal__container ui-background-white-100 container--w100">
-                <span class="defaultModal__input-req">*</span>
-                <input type="text" class="defaultModal__input" name="name" placeholder=" ">
-                <label class="defaultModal__input-placeholder" for="name">Ваше имя</label>
-              </div>
+                </div>
+                <div class="defaultModal__container ui-background-white-100 defaultModal__container--w50 main-counter">
+                <div class="counter-name">Ед. измерения:</div>
 
-              <div class="defaultModal__container ui-background-white-100 container--w100">
-                <span class="defaultModal__input-req">*</span>
-                <input type="text" class="defaultModal__input" name="name" placeholder=" ">
-                <label class="defaultModal__input-placeholder" for="name">Должность</label>
-              </div>
-
-              <div class="defaultModal__container ui-background-white-100 container--w100">
-                <span class="defaultModal__input-req">*</span>
-                <input type="text" class="defaultModal__input" name="name" placeholder=" ">
-                <label class="defaultModal__input-placeholder" for="name">Компания</label>
-              </div>
-
-                <div class="defaultModal__container ui-background-white-100 container--w30">
-                    <span class="defaultModal__input-req">*</span>
-                    <input type="text" name="phone" class="defaultModal__input defaultModal__input--phone" placeholder=" ">
-                    <label class="defaultModal__input-placeholder" for="phone">Телефон</label>
+                  <div class="order-card__details">
+                    <div class="order-card__label unit-choice">
+                      <label class="unit-choice__label">
+                          <input type="radio" name="unit" class="unit-choice__input">
+                          <span class="unit-choice__custom">м</span>
+                      </label>
+                      <label class="unit-choice__label">
+                          <input type="radio" name="unit" class="unit-choice__input">
+                          <span class="unit-choice__custom">шт.</span>
+                      </label>
+                    </div>
+                  </div>
                 </div>
 
-                <div class="defaultModal__container ui-background-white-100 container--w70">
-                  <span class="defaultModal__input-req">*</span>
-                  <input type="text" class="defaultModal__input" name="name" placeholder=" ">
-                  <label class="defaultModal__input-placeholder" for="name">Эл.почта</label>
-                </div>
-
-
-
-                <div class="defaultModal__container ui-background-white-100 container--w100 textarea-big">
-                  <textarea class="defaultModal__textarea" name="text" placeholder="Комментарий"></textarea>
-                  <!--<label class="defaultModal__input-placeholder" for="phone"></label>-->
-                </div>
-
-                <div class="defaultModal__container container--w100 policy-wrap">
-                    <label class="defaultModal__policy-checkbox policy-checkbox">
-                            <input type="checkbox" name="policy" id="" checked>
-                            <span class="policy-checkbox__container">
-                                    <span class="policy-checkbox__button">
-                                            <svg width="33" height="24" viewBox="0 0 33 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2798 23.6339L32.7181 3.19561L29.8896 0.367188L12.2729 17.9839L3.10968 8.82061L0.28125 11.649L12.2665 23.6343L12.2733 23.6274L12.2798 23.6339Z" fill="#DD2B1C"/>
-                                                    </svg>
-                                                    
-                                    </span>
-                                    <span class="policy-checkbox__text">
-                                            Я принимаю условия <a href="#">Политики 
-                                                    конфиденциальности</a> и даю согласие 
-                                                    на обработку своих персональных данных
-                                            </span>
-                            </span>
-
-                    </label>
-                </div>
-                <div class="defaultModal__container container--w100 btn-fixed">
-                    <div class="linkLabel defaultModal__linkLabel">
+                <div class="defaultModal__container defaultModal__container--w50 modal-big--btn">
+                    <div class="linkLabel defaultModal__linkLabel ">
                             <button class="linkLabel__box linkLabel__box--red linkLabel__box--form">
-                                    Отправить
+                              добавить в заказ
                             <svg>
                                     <use xlink:href="./assets/images/svg-sprite/svg-sprite.svg#arrow-se"></use>
                             </svg>
