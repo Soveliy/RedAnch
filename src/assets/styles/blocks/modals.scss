@@ -253,10 +253,9 @@
 
   .textarea{
     width: 100%;
-    height: 100%;
     margin-bottom: 0px;
     overflow: hidden;
-    padding: 20px 16px;
+    padding: 32px 32px;
     height: 100%;
     width: 100%;
     resize: none;
@@ -266,11 +265,10 @@
     font-weight: 300;
     font-weight: 300;
     color: #150F0F;
-    min-height: 100%;
+    //min-height: 100px;
 
-    @media screen and (min-width: 1024px) {
-      padding: 32px 32px;
-    }
+
+
   }
 
   &__textarea{
@@ -288,7 +286,6 @@
   .textarea-big{
     min-height: 180px;
 
-    
 
     &.defaultModal__container {
 
@@ -298,34 +295,7 @@
       }
 
       .defaultModal__input:focus~.defaultModal__input-placeholder, .defaultModal__input:not(:placeholder-shown)~.defaultModal__input-placeholder {
-        font-weight: 300;
-        font-size: 18px;
-        line-height: 22px;
-  
-        @media screen and (min-width: 600px) {
-          font-size: 28px;
-          line-height: 32px;
-        }
-
-        @media screen and (min-width: 1366px) {
-          font-size: 28px;
-          line-height: 32px;
-        }
-  
-        @media screen and (min-width: 1600px) {
-          font-size: 28px;
-          line-height: 32px;
-        }
-    
-        transform: translateY(0%);
-        top: 20px;
-    }
-
-      .defaultModal__input:focus~.defaultModal__input-placeholder, .defaultModal__input:not(:placeholder-shown):focus~.defaultModal__input-placeholder {
-        transform: translateY(0%);
-        font-size: 16px;
-        line-height: 20px;
-        top: 10px;
+        transform: translateY(-80%);
       }
     }
 
@@ -490,7 +460,7 @@
       line-height: 16px;
       transform: translateY(-110%);
       @media screen and (min-width: 600px) {
-        transform: translateY(-150%);
+        transform: translateY(-170%);
         font-size: 16px;
         line-height: 20px;
       }
@@ -1034,14 +1004,7 @@
 
 }
 
-// ! form-contacts
-
 .form-contacts{
-
-  @media screen and (min-width: 1024px) {
-    margin-bottom: 80px;
-  }
-
   &.page__row{
     display: flex;
     justify-content: space-between;
@@ -1104,16 +1067,17 @@
       line-height: 22px;
 
       @media screen and (min-width: 600px) {
-        font-size: 20px !important;
-      }
-
-      @media screen and (min-width: 1366px) {
-        font-size: 28px !important;
+        font-size: 20px;
+        line-height: 24px;
       }
 
       @media screen and (min-width: 1600px) {
-        font-size: 36px !important;
+        font-size: 36px;
         line-height: 40px;
+      }
+      @media screen and (min-width: 1366px) {
+        font-size: 28px;
+        line-height: 32px;
       }
     }
   }
@@ -1185,12 +1149,3 @@
 
 
 
-label.error{
-  color: #DD2B1C;
-  font-family: $DM;
-  font-size: 16px;
-  position: absolute;
-  left: 32px;
-  bottom: 10px;
-  letter-spacing: 0.05em;
-}
