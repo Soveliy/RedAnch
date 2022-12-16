@@ -103,7 +103,7 @@
         position: relative;
         z-index: 10;
         height: 100%;
-        padding:68px 15px 15px;
+        padding:95px 15px 15px;
         margin: 0 -15px;
         display: flex;
         flex-direction: column;
@@ -136,8 +136,11 @@
     }
     &__mobile-anch{
         position: absolute;
-        top: 0;
+        top: -85px;
         right: 0;
+        img{
+            height: 190vh;
+        }
         @include for-1024(){
             display: none;
         }
@@ -265,6 +268,7 @@
             }
             &:hover{
                 .linkLabel__box{
+                  
                     &:after{
                         width: 100%;
                     }
@@ -305,7 +309,20 @@
                 }
 
                 svg{
+                   
                     fill:  rgba(#4F565933, .2);
+                }
+            }
+            @include for-1024(){
+                transition: $transition;
+                svg{
+                    transition: $transition;
+                }
+                &:hover{
+                    color: #fff;
+                    svg{
+                        fill: #fff;
+                    }
                 }
             }
             @include for-1366(){
@@ -418,11 +435,20 @@
 
 
 .site-navigation__list:not(:first-child){
-    padding-left: 30px;
+    
     &:before{
         content: '';
         position: absolute; 
 
         
     }
+}
+.hero__bg{
+    z-index: 750;
+}
+.hero__bg[style="width: 0px; transform: matrix(1, 0, 0, 1, 0, 0);"] + .hero__right{
+    z-index: 750;
+}
+.hero__bg:not([style="*"]) + .hero__right{
+    z-index: 700;
 }
