@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
    @@include('./blocks/counter.js');
    @@include('./blocks/hover-card.js');
    @@include('./blocks/fixed-cart-footer.js');
-   @@include('./blocks/textarea-height.js');
 
    var swiper = new Swiper(".mySwiper", {
       navigation: {
