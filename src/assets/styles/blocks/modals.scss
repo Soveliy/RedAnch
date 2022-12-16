@@ -233,7 +233,7 @@
     width: 100%;
     margin-bottom: 0px;
     overflow: hidden;
-    padding: 20px 32px;
+    padding: 32px 32px;
     height: 100%;
     width: 100%;
     resize: none;
@@ -269,14 +269,11 @@
 
       position: relative;
       .defaultModal__input-placeholder{
-        position: absolute;
-        top: 30px;
-        left: 32px;
         
       }
 
       .defaultModal__input:focus~.defaultModal__input-placeholder, .defaultModal__input:not(:placeholder-shown)~.defaultModal__input-placeholder {
-        transform: translateY(-90%);
+        transform: translateY(-80%);
       }
     }
 
