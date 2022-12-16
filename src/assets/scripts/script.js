@@ -7,7 +7,6 @@
 @@include('./plugins/fslightbox.js');
 @@include('./plugins/swiper-bundle.min.js');
 @@include('./libraries/jquery.arcticmodal.js');
-
 // Blocks
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -26,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
    @@include('./blocks/counter.js');
    @@include('./blocks/hover-card.js');
    @@include('./blocks/fixed-cart-footer.js');
-   @@include('./blocks/textarea-height.js');
+
    var swiper = new Swiper(".mySwiper", {
       navigation: {
          nextEl: ".swiper-button-next",
