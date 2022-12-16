@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
    @@include('./blocks/choice-box.js');
    @@include('./blocks/counter.js');
    @@include('./blocks/hover-card.js');
-   @@include('./blocks/fixed-cart-footer.js');
-   @@include('./blocks/drop-drag.js');
+  @@include('./blocks/fixed-cart-footer.js');
+  @@include('./blocks/textarea-height.js');
 
    var swiper = new Swiper(".mySwiper", {
       navigation: {

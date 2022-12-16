@@ -253,9 +253,10 @@
 
   .textarea{
     width: 100%;
+    height: 100%;
     margin-bottom: 0px;
     overflow: hidden;
-    padding: 32px 32px;
+    padding: 20px 16px;
     height: 100%;
     width: 100%;
     resize: none;
@@ -265,10 +266,11 @@
     font-weight: 300;
     font-weight: 300;
     color: #150F0F;
-    //min-height: 100px;
+    min-height: 100%;
 
-
-
+    @media screen and (min-width: 1024px) {
+      padding: 32px 32px;
+    }
   }
 
   &__textarea{
@@ -286,6 +288,7 @@
   .textarea-big{
     min-height: 180px;
 
+    
 
     &.defaultModal__container {
 
@@ -295,7 +298,34 @@
       }
 
       .defaultModal__input:focus~.defaultModal__input-placeholder, .defaultModal__input:not(:placeholder-shown)~.defaultModal__input-placeholder {
-        transform: translateY(-80%);
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 22px;
+  
+        @media screen and (min-width: 600px) {
+          font-size: 28px;
+          line-height: 32px;
+        }
+
+        @media screen and (min-width: 1366px) {
+          font-size: 28px;
+          line-height: 32px;
+        }
+  
+        @media screen and (min-width: 1600px) {
+          font-size: 28px;
+          line-height: 32px;
+        }
+    
+        transform: translateY(0%);
+        top: 20px;
+    }
+
+      .defaultModal__input:focus~.defaultModal__input-placeholder, .defaultModal__input:not(:placeholder-shown):focus~.defaultModal__input-placeholder {
+        transform: translateY(0%);
+        font-size: 16px;
+        line-height: 20px;
+        top: 10px;
       }
     }
 
@@ -1004,7 +1034,14 @@
 
 }
 
+// ! form-contacts
+
 .form-contacts{
+
+  @media screen and (min-width: 1024px) {
+    margin-bottom: 80px;
+  }
+
   &.page__row{
     display: flex;
     justify-content: space-between;
@@ -1067,17 +1104,16 @@
       line-height: 22px;
 
       @media screen and (min-width: 600px) {
-        font-size: 20px;
-        line-height: 24px;
+        font-size: 20px !important;
+      }
+
+      @media screen and (min-width: 1366px) {
+        font-size: 28px !important;
       }
 
       @media screen and (min-width: 1600px) {
-        font-size: 36px;
+        font-size: 36px !important;
         line-height: 40px;
-      }
-      @media screen and (min-width: 1366px) {
-        font-size: 28px;
-        line-height: 32px;
       }
     }
   }
