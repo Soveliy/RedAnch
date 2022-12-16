@@ -119,17 +119,39 @@
    position: relative !important;
   }
 
+  &__icon {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   right: 16px;
+
+   width: 24px;
+   height: 24px;
+   fill: rgba(79, 86, 89, 0.4);;
+   @media screen and (min-width: 1366px) {
+      right: 32px;
+      width: 32px;
+      height: 32px;
+   }
+  }
+
   &__wrapper {
    width: 100%;
    display: flex;
-   gap: 20px;
-   .defaultModal__container {
-      width: 50%;
-      &:first-child {
-         width: 30%;
-      }
-      &:last-child {
-         width: 70%;
+   flex-direction: column;
+   margin-bottom: 8px;
+
+   @media screen and (min-width: 1366px) {
+      flex-direction: row;
+      gap: 8px;
+      .defaultModal__container {
+         width: 50%;
+         &:first-child {
+            max-width: 30%;
+         }
+         &:last-child {
+            max-width: 70%;
+         }
       }
    }
   }
