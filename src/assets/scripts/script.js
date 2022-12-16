@@ -7,6 +7,9 @@
 @@include('./plugins/fslightbox.js');
 @@include('./plugins/swiper-bundle.min.js');
 @@include('./libraries/jquery.arcticmodal.js');
+@@include('./libraries/jquery.validate.min.js');
+
+@@include('./libraries/jquery.mask.min.js');
 // Blocks
 
 document.addEventListener('DOMContentLoaded', () => {

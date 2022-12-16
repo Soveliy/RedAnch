@@ -460,7 +460,7 @@
       line-height: 16px;
       transform: translateY(-110%);
       @media screen and (min-width: 600px) {
-        transform: translateY(-170%);
+        transform: translateY(-150%);
         font-size: 16px;
         line-height: 20px;
       }
@@ -1149,3 +1149,12 @@
 
 
 
+label.error{
+  color: #DD2B1C;
+  font-family: $DM;
+  font-size: 16px;
+  position: absolute;
+  left: 32px;
+  bottom: 10px;
+  letter-spacing: 0.05em;
+}
