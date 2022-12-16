@@ -119,17 +119,39 @@
    position: relative !important;
   }
 
+  &__icon {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   right: 16px;
+
+   width: 24px;
+   height: 24px;
+   fill: rgba(79, 86, 89, 0.4);;
+   @media screen and (min-width: 1366px) {
+      right: 32px;
+      width: 32px;
+      height: 32px;
+   }
+  }
+
   &__wrapper {
    width: 100%;
    display: flex;
-   gap: 20px;
-   .defaultModal__container {
-      width: 50%;
-      &:first-child {
-         width: 30%;
-      }
-      &:last-child {
-         width: 70%;
+   flex-direction: column;
+   margin-bottom: 8px;
+
+   @media screen and (min-width: 1366px) {
+      flex-direction: row;
+      gap: 8px;
+      .defaultModal__container {
+         width: 50%;
+         &:first-child {
+            max-width: 30%;
+         }
+         &:last-child {
+            max-width: 70%;
+         }
       }
    }
   }
@@ -229,7 +251,11 @@
     }
   }
 
-  &__textarea{
+  .textarea{
+    width: 100%;
+    margin-bottom: 0px;
+    overflow: hidden;
+    padding: 32px 32px;
     height: 100%;
     width: 100%;
     resize: none;
@@ -238,7 +264,14 @@
     font-style: normal;
     font-weight: 300;
     font-weight: 300;
-    font-size: 18px;
+    color: #150F0F;
+    //min-height: 100px;
+
+
+
+  }
+
+  &__textarea{
 
     @media screen and (min-width: 600px) {
       font-size: 28px;
@@ -251,10 +284,25 @@
   }
 
   .textarea-big{
-    height: 180px;
+    min-height: 180px;
+
+
+    &.defaultModal__container {
+
+      position: relative;
+      .defaultModal__input-placeholder{
+        
+      }
+
+      .defaultModal__input:focus~.defaultModal__input-placeholder, .defaultModal__input:not(:placeholder-shown)~.defaultModal__input-placeholder {
+        transform: translateY(-80%);
+      }
+    }
+
+
 
     @media screen and (min-width: 1366px) {
-      height: 200px;
+      min-height: 200px;
     }
   }
 
@@ -955,5 +1003,149 @@
   }
 
 }
+
+.form-contacts{
+  &.page__row{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .defaultModal{
+    &__form{
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__input{
+
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 22px;
+
+      @media screen and (min-width: 600px) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      @media screen and (min-width: 1600px) {
+        font-size: 36px;
+        line-height: 40px;
+      }
+      @media screen and (min-width: 1366px) {
+        font-size: 28px;
+        line-height: 32px;
+      }
+    
+    }
+
+    &__input-placeholder{
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 22px;
+
+      @media screen and (min-width: 600px) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      @media screen and (min-width: 1600px) {
+        font-size: 36px;
+        line-height: 40px;
+      }
+      @media screen and (min-width: 1366px) {
+        font-size: 28px;
+        line-height: 32px;
+      }
+    }
+  }
+
+  .textarea-big{
+
+    .defaultModal__input-placeholder{
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 22px;
+
+      @media screen and (min-width: 600px) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      @media screen and (min-width: 1600px) {
+        font-size: 36px;
+        line-height: 40px;
+      }
+      @media screen and (min-width: 1366px) {
+        font-size: 28px;
+        line-height: 32px;
+      }
+    }
+  }
+
+  .container--w100{
+    margin-bottom: 8px;
+  }
+
+  .policy{
+    width: 100%;
+    background: #E5E5E5;
+
+    @media screen and (min-width: 1024px) {
+      margin: 0 0 8px 0;
+    }
+
+    @media screen and (min-width: 1366px) {
+      margin: 0 8px 0 0;
+      width: calc(50% - 8px);
+    }
+  }
+
+  .contact-section__sidebar{
+    @media screen and (min-width: 1024px) {
+      margin-right: 32px;
+    }
+  }
+
+  .button-bottom{
+    position: fixed !important;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    @media screen and (min-width: 1024px) {
+      width: 100%;
+      position: static !important;
+    }
+
+    @media screen and (min-width: 1366px) {
+      width: 50%;
+    }
+
+    .defaultModal__linkLabel{
+      height: 64px;
+
+      @media screen and (min-width: 600px) {
+        height: 76px;
+        font-size: 40px;
+        line-height: 40px;
+      }
+
+      @media screen and (min-width: 1024px) {
+        height: 104px;
+      }
+
+      @media screen and (min-width: 1366px) {
+        height: 100%;
+      }
+    }
+    @media screen and (min-width: 1024px) {
+      position: static;
+    }
+  }
+
+}
+
+
 
 

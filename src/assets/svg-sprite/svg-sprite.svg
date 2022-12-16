@@ -10,7 +10,11 @@
     <path d="M0 6h4v12H0zM0 4h4V0H0z" />
   </symbol>
 
+  <symbol id="plus" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M14 10V0h-4v10H0v4h10v10h4V14h10v-4H14z" clip-rule="evenodd"/></symbol>
+
   <symbol id="arrow-tangle" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M24 0v24H0v-4h16.964L.09 3.125 2.918.297 20 17.379V0h4z" clip-rule="evenodd"/></symbol><symbol id="arrow-w" viewBox="0 0 16 16"><path d="M8.707 2.707L9.414 2 8 .586l-.707.707 1.414 1.414zM2 8l-.707-.707L.586 8l.707.707L2 8zm5.293 6.707l.707.707L9.414 14l-.707-.707-1.414 1.414zm0-13.414l-6 6 1.414 1.414 6-6-1.414-1.414zm-6 7.414l6 6 1.414-1.414-6-6-1.414 1.414zM2 9h12V7H2v2z"/></symbol>
+
+  <symbol id="calendar" viewBox="0 0 32 32"><path fill-opacity=".4" fill-rule="evenodd" d="M12 1.334H9.332v2.667H2.666v24h26.667V4h-6.667V1.334h-2.667v2.667h-8V1.334zm14.666 5.333h-4v2.667h-2.667V6.667h-8v2.667H9.333V6.667h-4v5.334h21.333V6.667zm0 8H5.333v10.667h21.333V14.667z" clip-rule="evenodd"/></symbol>
 
   <symbol id="chevron-n" viewBox="0 0 16 10">
     <path fill-rule="evenodd"

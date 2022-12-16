@@ -6,7 +6,7 @@
       <div class="page__container">
          <div class="page__box form-order__box">
             <div class="form-order__header form-order-header">
-               <h1 class="form-order-header__title">ваш заказ</h1>
+               <h1 class="form-order-header__title">оформление заказа</h1>
                <ul class="form-order-header__result result-list">
                   <li class="result-list__item">
                      <span class="result-list__count">7</span>
@@ -24,11 +24,14 @@
             </div>
             <div class="form-order__body container">
                <form action="" class="form-box">
+
+                  <!-- form-box__block-->
                   <div class="form-box__block">
                      <div class="form-box__window">
 
                         <div class="card-filter__choice choice-box js-choice-box form-box__choice">
-                           <div class="choice-box__header">
+                           <div class="choice-box__header choice-box__header--gost">
+                              <span class="choice-box__header-tipe">Нормативно-технический документ</span>
                               <span class="choice-box__title">
                                  ГОСТ
                               </span>
@@ -72,29 +75,26 @@
                         </div>
 
                         <div class="defaultModal">
-                           <form action="#" class="defaultModal__form">
-                              <div class="defaultModal__row defaultModal__row--1366">
-
-                                 <div
-                                    class="defaultModal__container ui-background-white-100 container--w70 defaultModal__container--psr">
-                                    <span class="defaultModal__input-req">*</span>
-                                    <input type="text" class="defaultModal__input" name="name" placeholder=" ">
-                                    <label class="defaultModal__input-placeholder" for="name">Назначение</label>
-                                 </div>
-
+                           <div class="defaultModal__form">
+                              <div class="defaultModal__container ui-background-white-100 defaultModal__container--psr">
+                                 <span class="defaultModal__input-req">*</span>
+                                 <input type="text" class="defaultModal__input" name="name" placeholder=" ">
+                                 <label class="defaultModal__input-placeholder" for="name">Назначение</label>
                               </div>
-                           </form>
+                           </div>
                         </div>
 
                      </div>
                   </div>
 
+                  <!-- form-box__block-->
                   <div class="form-box__block">
-                     <h2 class="form-box__subtitle">Для якорных цепей</h2>
+                     <h2 class="form-box__subtitle">Для якорных цепей</h2>
                      <div class="form-box__window">
 
                         <div class="card-filter__choice choice-box js-choice-box form-box__choice">
                            <div class="choice-box__header">
+                              <span class="choice-box__header-tipe">Вид приемки</span>
                               <span class="choice-box__title">
                                  ОТК
                               </span>
@@ -140,13 +140,16 @@
                      </div>
                   </div>
 
+                  <!-- form-box__block-->
                   <div class="form-box__block">
-                     <h2 class="form-box__subtitle">Поставка</h2>
+                     <h2 class="form-box__subtitle">Доставка</h2>
                      <div class="form-box__window">
+
                         <div class="card-filter__choice choice-box js-choice-box form-box__choice">
                            <div class="choice-box__header">
+                              <span class="choice-box__header-tipe">Условия поставки</span>
                               <span class="choice-box__title">
-                                 ГОСТ
+                                 Выберете способ доставки
                               </span>
                               <button type="button" class="choice-box__btn">
                                  <svg class="icon">
@@ -187,30 +190,48 @@
                            </div>
                         </div>
 
-                        <div class="defaultModal">
-                           <form action="#" class="defaultModal__form">
-                              <div class="defaultModal__row defaultModal__row--1366">
-
-
-                                 <div
-                                    class="defaultModal__container ui-background-white-100 container--w100 textarea-big">
-                                    <textarea class="defaultModal__textarea" name="text"
-                                       placeholder="Укажите ваши условия поставки или задайте вопрос консультанту"></textarea>
-                                    <!--<label class="defaultModal__input-placeholder" for="phone"></label>-->
-                                 </div>
-
+                        <div class="form-box__tipe-delivery delivery-tipe">
+                           <span class="delivery-tipe__title">Заберу со склада по адресу:</span>
+                           <div class="delivery-tipe__choice">
+                              <div class="delivery-tipe__choice-item">
+                                 <label class="delivery-tipe__label">
+                                    <input type="radio" checked name="one" class="delivery-tipe__input">
+                                    <span class="delivery-tipe__custom"></span>
+                                 </label>
+                                 <span class="delivery-tipe__name">Нижний Новгород, ул. Московское шоссе, д. 120</span>
                               </div>
-                           </form>
+                              <div class="delivery-tipe__choice-item">
+                                 <label class="delivery-tipe__label">
+                                    <input type="radio" name="one" class="delivery-tipe__input">
+                                    <span class="delivery-tipe__custom"></span>
+                                 </label>
+                                 <span class="delivery-tipe__name">Нижний Новгород, ул. Московское шоссе, д. 120</span>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="defaultModal">
+                           <div class="defaultModal__form">
+                              <div class="defaultModal__container ui-background-white-100 defaultModal__container--psr">
+                                 <span class="defaultModal__input-req">*</span>
+                                 <input type="text" class="defaultModal__input" name="date" placeholder=" ">
+                                 <label class="defaultModal__input-placeholder" for="date">Желаемый срок</label>
+                                 <svg class="icon defaultModal__icon">
+                                    <use xlink:href="./assets/images/svg-sprite/svg-sprite.svg#calendar"></use>
+                                 </svg>
+                              </div>
+                           </div>
                         </div>
                      </div>
                   </div>
 
+                  <!-- form-box__block-->
                   <div class="form-box__block">
                      <h2 class="form-box__subtitle">Заказчик</h2>
                      <div class="form-box__window">
                         <div class="defaultModal">
-                           <form action="#" class="defaultModal__form">
-                              <div class="defaultModal__row defaultModal__row--1366">
+                           <div class="defaultModal__form">
+                              <div class="defaultModal__row">
 
                                  <div class="defaultModal__container ui-background-white-100 container--w100">
                                     <span class="defaultModal__input-req">*</span>
@@ -249,30 +270,94 @@
                                     </div>
                                  </div>
 
-
-                              </div>
-                           </form>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div class="form-box__block">
-                     <div class="form-box__window">
-                        <div class="defaultModal">
-                           <form action="#" class="defaultModal__form">
-                              <div class="defaultModal__row defaultModal__row--1366">
-
-                                 <div
-                                    class="defaultModal__container ui-background-white-100 container--w100 textarea-big">
-                                    <textarea class="defaultModal__textarea" name="text"
-                                       placeholder="Комментарий"></textarea>
-                                    <!--<label class="defaultModal__input-placeholder" for="phone"></label>-->
+                                 <div class="card-filter__choice choice-box js-choice-box form-box__choice">
+                                    <div class="choice-box__header">
+                                       <span class="choice-box__header-tipe">Статус заказчика</span>
+                                       <span class="choice-box__title">
+                                          Область применения
+                                       </span>
+                                       <button type="button" class="choice-box__btn">
+                                          <svg class="icon">
+                                             <use xlink:href="./assets/images/svg-sprite/svg-sprite.svg#arrow"></use>
+                                          </svg>
+                                       </button>
+                                    </div>
+                                    <div class="choice-box__wrapper">
+                                       <ul class="choice-box__list">
+                                          <li class="choice-box__item choice-box__item-title">
+                                             <span>Область применения:</span>
+                                          </li>
+                                          <li class="go-js-choice-item choice-box__item">
+                                             <label class="choice-box__label choice-element">
+                                                <span class="choice-box__name">Значение А</span>
+                                                <input class="choice-box__input" name="count" type="radio" />
+                                             </label>
+                                          </li>
+                                          <li class="go-js-choice-item choice-box__item">
+                                             <label class="choice-box__label choice-element">
+                                                <span class="choice-box__name">Значение Б</span>
+                                                <input class="choice-box__input" name="count" type="radio" />
+                                             </label>
+                                          </li>
+                                          <li class="go-js-choice-item choice-box__item">
+                                             <label class="choice-box__label choice-element">
+                                                <span class="choice-box__name">Значение В</span>
+                                                <input class="choice-box__input" name="count" type="radio" />
+                                             </label>
+                                          </li>
+                                          <li class="go-js-choice-item choice-box__item">
+                                             <label class="choice-box__label choice-element">
+                                                <span class="choice-box__name">Значение Г</span>
+                                                <input class="choice-box__input" name="count" type="radio" />
+                                             </label>
+                                          </li>
+                                       </ul>
+                                    </div>
                                  </div>
                               </div>
-                           </form>
+                           </div>
                         </div>
                      </div>
                   </div>
+
+                  <!-- form-box__block-->
+                  <div class="form-box__block">
+                     <div class="form-box__window">
+                        <div class="form-box__drop drag-drop">
+                           <div class="drag-drop__main">
+                              <div class="drag-drop__title">Выберите файл <span>или перетащите его сюда</span>
+                              </div>
+                              <div class="drag-drop__desc">
+                                 <span>Принимаемые форматы: gif, jpg, jpeg, png, bmp, tif, txt, rtf, html, pdf, doc,
+                                    docx, odt, ppt, pptx.</span>
+                                 <span>
+                                    Максимальный размер файла: 10 мб
+                                 </span>
+                              </div>
+                           </div>
+                           <label class="drag-drop__btn">
+                              <input type="file" id="file-uploader" class="drag-drop__input">
+                              <span class="drag-drop__custom">
+                                 <svg class="icon">
+                                    <use xlink:href="./assets/images/svg-sprite/svg-sprite.svg#plus"></use>
+                                 </svg>
+                              </span>
+                           </label>
+
+                           <div id="feedback" class="drag-drop__feedback">
+
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <button type="button" class="button-order-fix form-box__button">
+                     <span>Оформить заказ</span>
+                     <svg class="icon button-order-fix__icon">
+                        <use xlink:href="./assets/images/svg-sprite/svg-sprite.svg#arrow-tangle"></use>
+                     </svg>
+                     <span class="button-order-fix__line"></span>
+                  </button>
                </form>
             </div>
          </div>

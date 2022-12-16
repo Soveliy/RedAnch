@@ -116,6 +116,22 @@
          display: none;
       }
    }
+
+   &__count {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 28px;
+      color: #150F0F;
+      margin-right: 8px;
+   }
+
+   &__name {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 28px;
+      color: rgba(79, 86, 89, 0.5);
+      letter-spacing: 0.06em;
+   }
 }
 
 .print-link {
