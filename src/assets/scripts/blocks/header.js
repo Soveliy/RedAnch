@@ -1,4 +1,4 @@
-$(".header__productionButton").click(function(){
+$(".header__productionButton.header__defaulButton--desk").click(function(){
     $(this).toggleClass("js-active")
     $(this).next().toggleClass("js-active")
     $(this).next().next().toggle(500)

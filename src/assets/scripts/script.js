@@ -7,7 +7,6 @@
 @@include('./plugins/fslightbox.js');
 @@include('./plugins/swiper-bundle.min.js');
 @@include('./libraries/jquery.arcticmodal.js');
-
 // Blocks
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -16,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     @@include('./blocks/tabs.js');
     @@include('./blocks/bricks.js');
     @@include('./blocks/page.js');
+    @@include('./blocks/choice-box.js');
     @@include('./blocks/popup.js');
     @@include('./blocks/unit-block.js');
     @@include('./blocks/modal-popup.js');
