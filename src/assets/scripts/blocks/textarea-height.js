@@ -1,7 +1,8 @@
 //! Textarea-height
 
 let observe;
-let text = document.querySelector('.add__text');
+const text = document.querySelector('.add__text');
+if (!text) return;
 
 if (window.attachEvent) {
    observe = function (element, event, handler) {

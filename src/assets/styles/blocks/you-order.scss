@@ -811,3 +811,33 @@
       }
    }
 }
+
+.form-order-header {
+   display: flex;
+   flex-direction: column;
+   font-family: $TT;
+   &__title {
+      font-weight: 700;
+      font-size: 44px;
+      text-transform: uppercase;
+      line-height: 44px;
+      color: #150F0F;
+      margin-bottom: 8px;
+      @media screen and (min-width: 1366px) {
+         font-size: 120px;
+         line-height: 120px;
+         margin-bottom: 0;
+      }
+
+      @media screen and (min-width: 1600px) {
+         font-size: 144px;
+         line-height: 144px;
+      }
+   }
+
+   @media screen and (min-width: 1366px) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+   }
+}

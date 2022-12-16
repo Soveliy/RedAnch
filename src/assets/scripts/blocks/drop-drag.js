@@ -221,9 +221,9 @@ const dragDrop = () => {
 
    function ParseFile(file) {
       Output(
-         "<p>File information: <strong>" + file.name +
-         "</strong> type: <strong>" + file.type +
-         "</strong> size: <strong>" + file.size +
+         "<p>Информация о файле: <strong>" + file.name +
+         "</strong> тип: <strong>" + file.type +
+         "</strong> размер: <strong>" + file.size +
          "</strong> bytes</p>"
       );
    }
