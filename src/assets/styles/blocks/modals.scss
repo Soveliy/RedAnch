@@ -256,7 +256,7 @@
     height: 100%;
     margin-bottom: 0px;
     overflow: hidden;
-    padding: 32px 32px;
+    padding: 20px 16px;
     height: 100%;
     width: 100%;
     resize: none;
@@ -268,8 +268,9 @@
     color: #150F0F;
     min-height: 100%;
 
-
-
+    @media screen and (min-width: 1024px) {
+      padding: 32px 32px;
+    }
   }
 
   &__textarea{
@@ -288,26 +289,6 @@
     min-height: 180px;
 
     
-    .defaultModal__input-placeholder{
-      font-weight: 300;
-      font-size: 18px;
-      line-height: 22px;
-
-      @media screen and (min-width: 600px) {
-        font-size: 20px;
-        line-height: 24px;
-      }
-
-      @media screen and (min-width: 1600px) {
-        font-size: 36px;
-        line-height: 40px;
-      }
-      @media screen and (min-width: 1366px) {
-        font-size: 28px;
-        line-height: 32px;
-      }
-    }
-
 
     &.defaultModal__container {
 
@@ -325,15 +306,17 @@
           font-size: 28px;
           line-height: 32px;
         }
-  
-        @media screen and (min-width: 1600px) {
-          font-size: 36px;
-          line-height: 40px;
-        }
+
         @media screen and (min-width: 1366px) {
           font-size: 28px;
           line-height: 32px;
         }
+  
+        @media screen and (min-width: 1600px) {
+          font-size: 28px;
+          line-height: 32px;
+        }
+    
         transform: translateY(0%);
         top: 20px;
     }
@@ -1114,17 +1097,16 @@
       line-height: 22px;
 
       @media screen and (min-width: 600px) {
-        font-size: 20px;
-        line-height: 24px;
+        font-size: 20px !important;
+      }
+
+      @media screen and (min-width: 1366px) {
+        font-size: 28px !important;
       }
 
       @media screen and (min-width: 1600px) {
-        font-size: 36px;
+        font-size: 36px !important;
         line-height: 40px;
-      }
-      @media screen and (min-width: 1366px) {
-        font-size: 28px;
-        line-height: 32px;
       }
     }
   }
