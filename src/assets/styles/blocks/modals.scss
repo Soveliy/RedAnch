@@ -317,6 +317,23 @@
       }
 
       .defaultModal__input:focus~.defaultModal__input-placeholder, .defaultModal__input:not(:placeholder-shown)~.defaultModal__input-placeholder {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 22px;
+  
+        @media screen and (min-width: 600px) {
+          font-size: 28px;
+          line-height: 32px;
+        }
+  
+        @media screen and (min-width: 1600px) {
+          font-size: 36px;
+          line-height: 40px;
+        }
+        @media screen and (min-width: 1366px) {
+          font-size: 28px;
+          line-height: 32px;
+        }
         transform: translateY(0%);
         top: 20px;
     }
