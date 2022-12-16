@@ -33,7 +33,7 @@ var Animations = function() {
 
 
     let scene_cst = {
-      target: '#mobile-secvention',
+      target: '#section_5',
       target_2: '#categories',
       count: 10,
       src: './assets/images/mobile_anch2/',
@@ -185,9 +185,8 @@ var Animations = function() {
           reverse: true,
           triggerHook: 1,
         })
-        // .addIndicators()
-            .addTo(controller)
-          
+            .addTo(controller);
+  
             scene_for_cst.index = i;
   
             scene_for_cst.on('start', function(event) {
@@ -214,7 +213,7 @@ var Animations = function() {
       for (var i = 1, l = scene_5.count; i <= l; i++) {
         var scene5 = new ScrollMagic.Scene({
           triggerElement: scene_5.target,
-          offset: ((i*1.1) * offset_scene_5) + offset_top_scene_5 - 300,
+          offset: ((i*1.1) * offset_scene_5) + offset_top_scene_5 - 600,
           reverse: true,
           triggerHook: 1,
         })
@@ -222,19 +221,19 @@ var Animations = function() {
             //  .addIndicators() // add indicators (requires plugin)
             .addTo(controller);
   
-        scene5.index = i + 23;
+        scene5.index = i + 24;
+  
         scene5.on('start', function(event) {
+          if (scene_5.canvas) {
+            //scene_5.wrap.className = 'c-manager frame_' + this.index;
+            if (this.index <= scene_5.count && scene_5.images[this.index]) {
+              scene_5.canvas.getContext('2d').drawImage(scene_5.images[this.index], 0, 0, scene_5.canvas.width, scene_5.images[this.index].height);
+            }
+          } else {
             if (this.index <= scene_5.count) {
-                // ikr = this.index
-                // let ikr2 = ikr - 1
-                // scene_5.wrap.className = 'c-manager frame_' + this.index;
-                // console.log("ikr" + ikr)
-                // console.log("ikr2" + ikr2)
-                $(".c-manager").removeClass('frame_' + (this.index - 1))
-                $(".c-manager").addClass('frame_' + this.index);
-                $(".c-manager").removeClass('frame_' + (this.index + 1))
-                // defaultImageCount = defaultImageCount + 1;
-              }
+              scene_5.wrap.className = 'c-manager frame_' + this.index;
+            }
+          }
         });
       }
     };
@@ -392,43 +391,43 @@ var Animations = function() {
     // };
   
    
-    var setDesktopAnimation = function() {
-      if (initIntro) {
-        if (window.location.hash === '') {
-          setTimeout(function() {
-            // document.body.classList.add('w-fixed')
-            initIntroAnimation();
-          }, 5);
-        } else {
-          setTimeout(function() {
-            // window.scrollTo(0, 0);
-            //document.body.classList.add('w-fixed')
-            initIntroAnimation();
-          }, 5);
-        }
-      } else {
-        introLoaded = true;
-        if (window.location.hash === '') {
-          setTimeout(function() {
-            // window.scrollTo(0, 0);
+    // var setDesktopAnimation = function() {
+    //   if (initIntro) {
+    //     if (window.location.hash === '') {
+    //       setTimeout(function() {
+    //         // document.body.classList.add('w-fixed')
+    //         initIntroAnimation();
+    //       }, 5);
+    //     } else {
+    //       setTimeout(function() {
+    //         // window.scrollTo(0, 0);
+    //         //document.body.classList.add('w-fixed')
+    //         initIntroAnimation();
+    //       }, 5);
+    //     }
+    //   } else {
+    //     introLoaded = true;
+    //     if (window.location.hash === '') {
+    //       setTimeout(function() {
+    //         // window.scrollTo(0, 0);
          
-            initAnimationsPage();
-            scrollFunction();
-          }, 5);
-        } else {
-          setTimeout(function() {
+    //         initAnimationsPage();
+    //         scrollFunction();
+    //       }, 5);
+    //     } else {
+    //       setTimeout(function() {
           
-            initAnimationsPage();
-            scrollFunction();
-          }, 5);
-        }
-      }
-    };
+    //         initAnimationsPage();
+    //         scrollFunction();
+    //       }, 5);
+    //     }
+    //   }
+    // };
   
   
   
     window.addEventListener('resize', function() {
-
+      setMarkersAreasSizes();
       winw = window.innerWidth || e.clientWidth || g.clientWidth;
       isTablet = winw < 1280;
       if (isTablet) {
@@ -448,13 +447,18 @@ var Animations = function() {
 
 
     window.addEventListener('load', function() {
-       
+      $(function() {  
+
+        // Default
+
+        
+
+        
+    });
    
       // $("body").overlayScrollbars({ });
       controller = new ScrollMagic.Controller();
-     setTimeout(() => {
-            sequention_5();
-        }, 50);
+      sequention_5();
       var tl = new TimelineMax();
       let parallaxElem = $(".video-gallery img");
       tl.to(parallaxElem, 1, { y: -100, ease: "cubic-bezier(.5,0,0,1)" });
@@ -481,17 +485,14 @@ var Animations = function() {
 
         var mobile_anchTest = new TimelineMax();
         let firstAnchMob = $(".hero__mobile-anch");
-        mobile_anchTest.to(firstAnchMob, 1, { y: 200, ease: "cubic-bezier(.5,0,0,1)" });
-        let durationAnch = $("#mobile-secvention").offset().top
-
+        mobile_anchTest.to(firstAnchMob, 1, { y: -80, ease: "cubic-bezier(.5,0,0,1)" });
+      
         var sceneMobAnch = new ScrollMagic.Scene({
           triggerElement: ".hero",
-          triggerHook: .5,
-          duration: durationAnch,
+          triggerHook: 0.4,
+          duration: "100%",
         })
-            .setClassToggle("body", "anchor-visible") // add class toggle
           .setTween(mobile_anchTest)
-        //   .addIndicators()
           .addTo(controller);
 
         var anchorRight = new TimelineMax();
@@ -596,7 +597,7 @@ var Animations = function() {
      
       
       
-   
+      sequention_5();
 
         initAnimationsPage();
 
@@ -770,38 +771,3 @@ var Animations = function() {
   
   Animations();
   
-  $( "form" ).each(function( ) {
-    $($(this)).validate({
-      rules:{
-         name:{
-           required: true,
-           minlength: 4,
-           maxlength: 16,
-         },
-         pswd:{
-           required: true,
-           minlength: 6,
-           maxlength: 16,
-         },
-      },
-      messages:{
-        login:{
-          required: "Это поле обязательно для заполнения",
-          minlength: "Логин должен быть минимум 4 символа",
-          maxlength: "Максимальное число символов - 16",
-      },
-        pswd:{
-        required: "Это поле обязательно для заполнения",
-        minlength: "Пароль должен быть минимум 6 символа",
-        maxlength: "Пароль должен быть максимум 16 символов",
-        },
-      }
-   });
-  });
-
-$(".print").click(function(e){
-  window.print()
-})
-
-
-

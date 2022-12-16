@@ -7,9 +7,7 @@
 @@include('./plugins/fslightbox.js');
 @@include('./plugins/swiper-bundle.min.js');
 @@include('./libraries/jquery.arcticmodal.js');
-@@include('./libraries/jquery.validate.min.js');
 
-@@include('./libraries/jquery.mask.min.js');
 // Blocks
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -27,8 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
    @@include('./blocks/choice-box.js');
    @@include('./blocks/counter.js');
    @@include('./blocks/hover-card.js');
-  @@include('./blocks/fixed-cart-footer.js');
-  @@include('./blocks/textarea-height.js');
+   @@include('./blocks/fixed-cart-footer.js');
+   @@include('./blocks/drop-drag.js');
+   @@include('./blocks/textarea-height.js');
 
    var swiper = new Swiper(".mySwiper", {
       navigation: {
