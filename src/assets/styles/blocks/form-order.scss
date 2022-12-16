@@ -313,6 +313,12 @@
 .drag-drop {
    display: none;
    @media screen and (min-width: 1024px)  {
+
+      fieldset {
+         outline: none;
+         border: none;
+      }
+
       background-color: #fff;
       font-family: $DM;
       display: flex;
@@ -328,6 +334,12 @@
          span {
             color: rgba(79, 86, 89, 0.7);
          }
+      }
+
+      &__block {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
       }
 
       &__desc {
@@ -369,5 +381,39 @@
             fill: #DD2B1C;
          }
       }
+   }
+}
+
+fieldset {
+   border: none;
+   padding: 0;
+}
+.upload-zone {
+   font-family: $DM;
+   background-color: #fff;
+   position: relative;
+   height: 196px;
+   padding: 32px;
+   .wrapper{
+      margin: 150px auto;
+      padding: 10px;
+      width: 500px;
+   }
+   #filedrag{
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      cursor: default;
+      display: none;
+      text-align: center;
+      background:#f9f9f9;
+   }
+   #messages{
+      margin-top:10px;
+      padding:5px;
+      font-size:14px;
    }
 }
