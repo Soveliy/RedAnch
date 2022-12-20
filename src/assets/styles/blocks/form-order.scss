@@ -2,6 +2,10 @@
    background: #E5E5E5;
    &__box {
       padding-bottom: 80px;
+      padding-top: 30px;
+      @media screen and (min-width: 1024px) {
+         padding-top: 40px;
+      }
    }
    &__header {
       margin-bottom: 32px;
@@ -22,6 +26,10 @@
       line-height: 44px;
       color: #150F0F;
       margin-bottom: 8px;
+      @media screen and (min-width: 1024px) {
+         font-size: 80px;
+         line-height: 80px;
+      }
       @media screen and (min-width: 1366px) {
          font-size: 120px;
          line-height: 120px;
@@ -95,7 +103,7 @@
       font-family: $DM;
       &__wrapper {
          transition: .3s;
-         z-index: 9999;
+         z-index: 99999;
       }
 
       &__header {
@@ -133,9 +141,23 @@
       }
 
       &__item {
-         padding: 15px 32px;
+         padding: 0;
          border-left: none;
          border-right: none;
+      }
+
+      &__item-title {
+         padding: 16px;
+         padding-bottom: 24px;
+      }
+
+      &__label {
+         display: block;
+         width: 100%;
+         padding: 16px;
+         @media screen and (min-width: 1024px) {
+            padding: 15px 32px;
+         }
       }
    }
 }
@@ -326,7 +348,23 @@
       position: absolute !important;
       font-size: 0 !important;
    }
-   @media screen and (min-width: 1024px)  {
+
+   &__custom {
+      cursor: pointer;
+      width: 56px;
+      height: 56px;
+      background: rgba(79, 86, 89, 0.1);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .icon {
+         width: 24px;
+         height: 24px;
+         fill: #DD2B1C;
+      }
+   }
 
       fieldset {
          outline: none;
@@ -339,16 +377,6 @@
       padding: 32px;
       align-items: center;
       justify-content: space-between;
-
-      &__title {
-         font-weight: 300;
-         font-size: 28px;
-         line-height: 32px;
-         color: #150F0F;
-         span {
-            color: rgba(79, 86, 89, 0.7);
-         }
-      }
 
       &__block {
          display: flex;
@@ -378,69 +406,64 @@
          position: absolute;
          font-size: 0;
       }
+}
 
-      &__custom {
-         cursor: pointer;
-         width: 56px;
-         height: 56px;
-         background: rgba(79, 86, 89, 0.1);
+.defaultModal__container--comment {
+   padding-top: 10px;
+   .defaultModal__input-placeholder {
+      top: 40px;
+   }
+}
 
+.form-box__block {
+   fieldset {
+      font-family: $DM;
+      background-color: #fff;
+      padding: 32px;
+      border: none;
+      margin: 0;
+   }
+   #filedrag > {
+      .drag-drop__title {
          display: flex;
-         align-items: center;
-         justify-content: center;
-
-         .icon {
-            width: 24px;
-            height: 24px;
-            fill: #DD2B1C;
+         font-weight: 300;
+         font-size: 28px;
+         line-height: 32px;
+         color: #150F0F;
+         span {
+            color: rgba(79, 86, 89, 0.7);
          }
       }
    }
-}
+   
 
-fieldset {
-   border: none;
-   padding: 0;
-}
-.upload-zone {
-   font-family: $DM;
-   background-color: #fff;
-   position: relative;
-   min-height: 196px;
-   padding: 32px;
-   .wrapper{
-      margin: 150px auto;
-      padding: 10px;
-      width: 500px;
+   .drag-drop__custom {
+      display: flex;
+      margin-left: auto;
    }
 
-   #messages {
-      font-weight: 300;
-      font-family: $DM;
+   .drag-drop__desc {
+      max-width: 505px;
+      margin-bottom: 10px;
    }
-   #filedrag{
-      z-index: -1;
+
+   #fileselect {
+      width: 0;
+      height: 0;
+      opacity: 0;
       position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      cursor: default;
-      display: none;
-      text-align: center;
-      background:#f9f9f9;
    }
+
    #messages{
-      margin-top:10px;
-      padding:5px;
-      font-size:14px;
+      font-family: $DM;
+      font-weight: 300;
    }
 }
 
-#form-order-modal {
-   .modal-content {
-      background-color: #ededed;
-      padding: 20px;
+.form-box__block--drop {
+   display: none;
+   @media screen and (min-width: 1024px) {
+      display: block;
    }
 }
 

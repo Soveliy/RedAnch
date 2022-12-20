@@ -3,9 +3,22 @@
 // Route Map
 
 .route-map {
+    &__container{
+        cursor: pointer;
+    }
+    .label-link{
+        max-width: 1920px;
+        margin: 0 auto;
+    }
     display: none;
-
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
     @media screen and (min-width: 1024px) {
         display: block;
     }
 }
+

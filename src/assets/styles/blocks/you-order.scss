@@ -1,7 +1,12 @@
 .page__section.you-order {
    padding-top: 90px;
+   padding-bottom: 150px;
+   @media screen and (min-width: 1024px) {
+      padding-top: 110px;
+   }
    @media screen and (min-width: 1600px) {
       padding-top: 150px;
+      padding-bottom: 200px;
    }
 }
 
@@ -162,7 +167,7 @@
    position: fixed;
    bottom: 0;
    left: 0;
-
+   z-index: 501;
    height: 50px;
    transition: .1s;
    &__item {
@@ -275,11 +280,23 @@
             display: flex;
             gap: 24px;
             .result-list {
+               font-weight: 700;
+               font-size: 44px;
+               line-height: 44px;
+               color: #fff;
                &__name {
                   opacity: 0.4;
+                  font-weight: 700;
+                  font-size: 44px;
+                  line-height: 44px;
+                  color: #fff;
                }
                &__count {
                   margin-right: 8px;
+                  font-weight: 700;
+                  font-size: 44px;
+                  line-height: 44px;
+                  color: #fff;
                }
             }
          }

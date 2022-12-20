@@ -18,6 +18,7 @@
     }
     &__bg{
         @include for-1024(){
+            will-change: transform;
             left: 50%;
             width: 0;
             height: 100vh;
@@ -263,6 +264,7 @@
             z-index: 700;
             &:not(:hover){
                 & + picture img{
+                    will-change: filter;
                     filter: blur(20px);
                 }
             }
@@ -421,11 +423,23 @@
 
 
 .site-navigation__list:not(:first-child){
-    padding-left: 30px;
+
     &:before{
         content: '';
         position: absolute; 
 
         
     }
+}
+
+@media (min-width:1300px) and (max-height:560px){
+    .hero__title{
+        padding-top: 50px !important;
+        padding-bottom: 0 !important;
+        font-size: 70px !important;
+    }
+}
+
+.page__index{
+    overflow: hidden;
 }

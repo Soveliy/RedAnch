@@ -17,9 +17,11 @@ body{
         align-items: flex-end;
         svg{
             margin-left: 24px;
+            transition: $transition;
         }
         &--white{
             color: #fff;
+            transition: $transition;
             // border-bottom: 2px solid rgba(#fff, .2);
             box-sizing: border-box;
             &:before{
@@ -51,12 +53,69 @@ body{
                     &:after{
                         width: 100%;
                     }
+                    // color: #DD2B1C;
+                    svg{
+                        fill: #DD2B1C;
+                    }
                 }
             }
             svg{
                 height: 16px;
                 width: 16px;
                 fill: rgba(#fff, .2);
+                flex-shrink: 0;
+                @include for-1024(){
+                    width: 24px;
+                    height: 24px;
+                    
+                }
+            }
+
+        }
+        &--black{
+            color: #150F0F;
+            transition: $transition;
+            // border-bottom: 2px solid rgba(#fff, .2);
+            box-sizing: border-box;
+            &:before{
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 2px;
+                background: rgba(79, 86, 89, 0.2);
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 2px;
+                background-color: #150F0F;
+                transition: $transition;
+                // background-color: rgba(#fff, .2);
+            }
+            @include for-1024(){
+              
+                &::after,&:before{
+                    height: 4px;
+                }
+                &:hover{
+                    &:after{
+                        width: 100%;
+                    }
+                    // color: #DD2B1C;
+                    svg{
+                        fill: #150F0F;
+                    }
+                }
+            }
+            svg{
+                height: 16px;
+                width: 16px;
+                fill: rgba(#150F0F, .2);
                 flex-shrink: 0;
                 @include for-1024(){
                     width: 24px;
@@ -183,7 +242,7 @@ body{
     img{
         width: 130%;
         height: 120%;
-        margin: -10%;
+        margin: -10% 0;
     }
 
     &__btn{
@@ -200,11 +259,20 @@ body{
         align-items: center;
         justify-content: center;
         z-index: 5;
+        @include for-1366(){
+            height: 96px;
+            width: 96px;
+        }
     }
     &__icon{
         stroke: #fff;
         height: 26px;
         width: 21px;
+        @include for-1366(){
+            height: 40px;
+            width: 32px;
+            margin-left: 5px;
+        }
     }
    
 }
@@ -310,7 +378,7 @@ body{
         @include for-1024(){
             letter-spacing: 5px;
             position: relative;
-            z-index: 700;
+            z-index: 900;
         }
         @include for-1366(){
             letter-spacing: 5.5px;
@@ -792,7 +860,7 @@ body{
         width: 1px;
     }
 }
-.categories{
+.categoriesMain{
     position: relative;
     z-index: 1000;
     padding: 24px 0;
@@ -814,6 +882,13 @@ body{
     }
     &-item{
         display: block;
+
+        &:hover{
+         
+            .categoriesMain-item__name{
+                color: #fff;
+            }
+        }
         & + &{
             @include for-1024(){
                 margin-top: 30px;
@@ -834,8 +909,10 @@ body{
             color: rgba(#fff, .4);
             font-family: $TT;
             display: block;
+            transition: $transition;
             @include for-1024(){
                 font-size: 90px;
+              
             }
             @include for-1366(){
                 font-size: 120px;
@@ -846,7 +923,7 @@ body{
         }
         &__picture{
             width: calc(100% + 30px);
-            margin: -33px -15px -2px;
+            margin: -33px -15px -60px;
             overflow: visible;
             @include for-1024(){
                 width: calc(100% + 64px);
@@ -906,6 +983,41 @@ body{
             font-family: $TT;
             transition: $transition;
             margin-top: 82px;
+            svg{
+                transition: $transition;
+            }
+            &::after,&:before{
+                height: 4px;
+            }
+            &:hover{
+                &:after{
+                    width: 100%;
+                }
+                // color: #DD2B1C;
+                svg{
+                    fill: #DD2B1C;
+                }
+            }
+            &:before{
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 2px;
+                background-color: rgba(#fff, .2);
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 2px;
+                background-color: #DD2B1C;
+                transition: $transition;
+                // background-color: rgba(#fff, .2);
+            }
             @include for-1366(){
                 font-size: 60px;
                 line-height: 60px;
@@ -953,9 +1065,41 @@ body{
     z-index: 740;
     display: flex;
     justify-content: center;
-    &.hidden{
-        display: none;
-    }
+    
+}
+#preloadImages.hidden{
+    display: none;
+}
+#mobile-anchor [class*="img_"]{
+    opacity: 0 !important;
+}
+
+
+#mobile-anchor.frame_1 .img_1{
+    opacity: 1 !important;
+}
+#mobile-anchor.frame_2 .img_2{
+    opacity: 1 !important;
+}
+#mobile-anchor.frame_3 .img_3{
+    opacity: 1 !important;
+}
+#mobile-anchor.frame_4 .img_4{
+    opacity: 1 !important;
+}
+#mobile-anchor.frame_5 .img_5{
+    opacity: 1 !important;
+}
+#mobile-anchor.frame_6 .img_6{
+    opacity: 1 !important;
+}
+
+
+#mobile-anchor.frame_7 .img_7{
+    opacity: 1 !important;
+}
+#mobile-anchor  .frame_8 .img_8{
+    opacity: 1 !important;
 }
 .c-manager {
     height: 100vh;
@@ -968,11 +1112,13 @@ body{
         left: 0;
         right: 0;
         justify-content: center;
+        will-change: transform;
     img{
         height: 100vh;
         // @include for-1920(){
         //     height: auto;
         // }
+       
     }
     &__wrap{
       
@@ -1017,7 +1163,7 @@ body{
     right: 0;
     left: 0;
     //   visibility: hidden;
-    opacity: 0;
+    // opacity: 0;
     z-index: -1;
     display: flex;
     justify-content: center;
@@ -1028,6 +1174,11 @@ body{
                 top: 0;
                 z-index: 700;
                 height: 100vh;
+                will-change: opacity;
+                opacity: 0;
+                @media (max-width:1024px) {
+                        // visibility: hidden;
+                }
 }
 @for $i from 1 to 350 {
     $side: $i;
@@ -1037,15 +1188,17 @@ body{
             // right: 0;
         //    display: flex;
             z-index: #{$side};
-            opacity: 1;
+            // opacity: 1;
             // margin-top: -#{$side}px;
             // @include for-1024(){
-                visibility: visible;
+                // visibility: visible;
            transform: none;
+           opacity: 1;
                 @media (max-width:1024px){
                     left: auto;
                     right: 0;
                     transform: none !important;
+                    opacity: 1 !important;
                 }
             //     z-index: 500;
             // }
@@ -1062,7 +1215,7 @@ body{
     position: absolute;
     top: 0;
     right: 0;
-    visibility: hidden;
+    // visibility: hidden;
     z-index: -1;
     // left: 50%;
     transform:translate3d(0,0,0);
@@ -1197,6 +1350,11 @@ body{
     width: 100%;
     z-index: 5000;
     width: 100%;
+    transition:$transition;
+    .header-top{
+      
+        transition:$transition;
+     }
     &--out{
         transform: translateY(-42px) !important;
         @include for-1024(){
@@ -1206,17 +1364,18 @@ body{
             transform: translateY(-56px) !important;
         }
     }
+   
     &--dark{
     background: rgba(21, 15, 15, 0.8);
+    .header-top__item svg{
+        fill: #fff;
+    }
     transition: $transition;
         .burger__container svg,.header-top__item:first-child,.header__search-button svg{
             fill: #fff;
         }
   
-     .header-top{
-      
-        transition:$transition;
-     }
+   
      .header-bot{
         // background-color: #110101;
         .container{
@@ -1225,39 +1384,40 @@ body{
                 content: '';
                 position: absolute;
                 height: 100%;
-                left: 100%;
+                left: 0;
                 top: 0;
-                width: 16px;
+                width: 15px;
                 background: rgba(21, 15, 15, 0.9);
                 @include for-1024(){
-                    width: 100em;
-                    left: calc(100% - 48px);
+                    width: 32px;
+
                 }
                 @include for-1600(){
-                    width: 48px;
-                    left: calc(100% - 48px);
+                    width: 1000em;
+                    left: auto;
+                    right: calc(100% - 48px);
                 }
-                @include for-retina(){
+                
+                // @include for-retina(){
                  
-                }
+                // }
             }
             &:after{
                 content: '';
                 position: absolute;
                 height: 100%;
-                right: 100%;
+                right: 0;
                 top: 0;
-                width: 16px;
+                width: 15px;
                 background: rgba(21, 15, 15, 0.9);
                 @include for-1024(){
                     width: 32px;
+
                 }
                 @include for-1600(){
+                    width: 1000em;
+                    right: auto;
                     left: calc(100% - 48px);
-                }
-                @include for-retina(){
-                    width: 100em;
-                    right: calc(100% - 48px);
                 }
             }
         }
@@ -1268,8 +1428,10 @@ body{
             margin-top: 4px;
         }
      }
-
-     .header__defaulButton-icon,.yourOrderInfo svg,.header__callback-btn svg,.header__defaulButton-dropdownIcon,.search-form__buttonIcon{
+     .header__callback-btn svg{
+        stroke: #fff;
+     }
+     .header__defaulButton-icon,.yourOrderInfo svg,.header__defaulButton-dropdownIcon,.search-form__buttonIcon{
         fill: #fff;
     }
    
@@ -1278,10 +1440,32 @@ body{
         }
     }
     &--light{
+        .catalog-menu__left{
+            margin-right: 0;
+            border: 4px solid rgba(#F5F5F5, .2);
+        }
+        .header__callback-btn svg{
+            fill: transparent;
+        }
+        .search-form__input.js-active{
+            background-color: #F5F5F5 !important;
+        }
+        .search-formResults__title{
+            color: #150F0F;
+        }
+        .search-formResults__link{
+            color: #150F0F;
+        }
+        .search-formResults{
+            background-color: #fff;
+        }
         .header__defaulButton-text,.search-form__input,.search-form__input::placeholder,.yourOrderInfo__text,.main-menu__link,.header-top__item-text,.header__callback-btn,.catalog-menu__main-link,.catalog-menu__submenu-title a,.submenu-list__link{
             color: #150F0F;
         }
-        .header__defaulButton-icon,.yourOrderInfo svg,.header__callback-btn svg,.header__defaulButton-dropdownIcon,.search-form__buttonIcon{
+        .header__callback-btn svg{
+            stroke: #150F0F;
+        }
+        .header__defaulButton-icon,.yourOrderInfo svg,.header__defaulButton-dropdownIcon,.search-form__buttonIcon{
             fill: #150F0F;
         }
       
@@ -1295,46 +1479,45 @@ body{
             // background-color: #110101;
             .container{
                 position: relative;
+                
                 &:before{
                     content: '';
                     position: absolute;
                     height: 100%;
-                    left: 100%;
+                    left: 0;
                     top: 0;
-                    width: 16px;
-                    background: #F5F5F5;
+                    width: 15px;
+                    background: #f5f5f5;
                     @include for-1024(){
                         width: 32px;
+    
                     }
                     @include for-1600(){
-                        width: 48px;
-                        left: calc(100% - 48px);
+                        width: 1000em;
+                        left: auto;
+                        right: calc(100% - 48px);
                     }
-                    @include for-retina(){
-                        width: 100em;
-                        left: calc(100% - 48px);
-                    }
+                    
+                    // @include for-retina(){
+                     
+                    // }
                 }
                 &:after{
                     content: '';
                     position: absolute;
                     height: 100%;
-                    right: 100%;
+                    right: 0;
                     top: 0;
-                    width: 16px;
-                    background: #F5F5F5;
+                    width: 15px;
+                    background: #f5f5f5;
                     @include for-1024(){
                         width: 32px;
+    
                     }
                     @include for-1600(){
-                        right: calc(100% - 48px);
-                        width: 100%;
-                        z-index: 500;
-                        left: auto;
-                    }
-                    @include for-retina(){
-                        width: 100em;
-                        right: calc(100% - 48px);
+                        width: 1000em;
+                        right: auto;
+                        left: calc(100% - 48px);
                     }
                 }
             }
@@ -1348,9 +1531,11 @@ body{
     }
     &__yourOrderInfo{
         // width: 100%;
+        margin-left: 2px;
         padding-right: 16px;
         @include for-1024(){
             width: auto;
+            margin-left: 4px;
         }
     }
     &__search-button{
@@ -1411,6 +1596,17 @@ body{
         outline: none;
         position: relative;
         z-index: 5500;
+        &--mobile{
+            @include for-1024(){
+                display: none;
+            }
+        }
+        &--desk{
+            display: none;
+            @include for-1024(){
+                display: flex;
+            }
+        }
         &:after{
             content: '';
             position: absolute;
@@ -1540,11 +1736,13 @@ body{
                 height: 16px;
                 width: 16px;
                 margin-right: 8px;
+                transition: $transition;
             }
             &:hover{
                 color: #dd2b1c;
                 svg{
-                    fill: #dd2b1c;
+                    fill:#dd2b1c;
+                    stroke: #dd2b1c;
                 }
                
             }
@@ -2126,7 +2324,7 @@ body{
     }
 }
 
-.main{
+.main:not(.page__main ){
     position: relative;
     z-index: 750;
     padding: 0 !important;
@@ -2136,6 +2334,7 @@ body{
 }
 .footer .help{
     padding: 0;
+    cursor: pointer;
 }
 
 .header__defaulButton-container--desk{
@@ -2463,9 +2662,9 @@ body{
 }
 
 @media (max-width:1024px){
-    .c-manager img{
-        max-height: 500px;
-    }
+    // .c-manager img{
+    //     max-height: 500px;
+    // }
     #mobile-anchor.c-manager{
        
     }
@@ -2474,9 +2673,231 @@ body{
     }
 }
 
-@media (min-width:1600px){
-    .header--dark .header-bot .container:after {
-        right: calc(100% - 48px);
-        width: 100em;
+// @media (min-width:1600px){
+//     .header--dark .header-bot .container:after {
+//         right: calc(100% - 48px);
+//         width: 100em;
+//     }
+// }
+
+#mobile-anchor{
+    transition: .4s;
+}
+.hero__mobile-anch{
+    opacity: 1;
+    transition: .4s;
+}
+.hero__mobile-anchor{
+    position: fixed;
+}
+
+body:not(.anchor-visible) .hero__mobile-anch{
+    position: fixed;
+    top: -570px!important;
+    transform: none !important;
+    transition: 0s !important;
+  }
+body.anchor-visible{
+        
+    .hero__mobile-anch{
+        opacity: 1;
+        position: absolute;
+        top: -250px;
+        right: 0;
+
+
     }
+    #mobile-anchor{
+        opacity: 0;
+    }
+}
+#mobile-anchor{
+    opacity: 0;
+}
+#mobile-anchor.c-manager .img_10{
+    display: none !important;
+}
+// body:not(.anchor-visible){
+//     .hero__mobile-anch{
+//         opacity: 0 !important;
+//     }
+// }
+body{
+    .hero__mobile-anch{
+        opacity: 1 !important;
+    }
+}
+// body.anchor-visible{
+//     .hero__mobile-anch{
+//         opacity: 1 !important;
+//     }
+// }
+body.pinned{
+    .hero__mobile-anch{
+        opacity: 0 !important;
+    }
+}
+.c-manager [class*=img_]{
+    @media (max-width:1023px){
+        left: auto;
+    }
+    
+}
+
+.page__footer {
+    .help__box{
+        align-items: flex-end;
+    }
+    .help__desc{
+        margin-right: 0;
+    }
+}
+
+.page__main{
+    padding-top: 102px;
+    @include for-1024(){
+        padding-top: 100px !important;
+    }
+    @include for-1366(){
+        padding-top: 140px !important;
+    }
+    @include for-1600(){
+        padding-top: 160px !important;
+    }
+
+}
+.nav-wrap,.site-navigation{
+    margin-top: 0 !important;
+}
+.catalog-kit .site-navigation{
+    margin-top: 0 !important;
+}
+.page__section{
+    padding-top: 0 !important;
+}
+body, html{
+    height: auto;
+}
+.main{
+    min-height: calc(100vh - 88px);
+}
+
+@media print {
+    .header,.footer{
+        display: none;
+    }
+  }
+
+
+  
+@media (max-width:1024px){
+    #mobile-anchor.c-manager{
+        img{
+            height: 500px;
+        }
+    }
+}
+
+.frame_1.frame_5{
+    display: none;
+}
+
+.how-to-get{
+   
+    max-width: 318px;
+    width: 100%;
+    @include for-1366(){
+        max-width: 352px;
+    }
+    @include for-1600(){
+        max-width: 450px;
+
+        .linkLabel__box--medium{
+            font-size: 60px;
+            line-height: 60px;
+            letter-spacing: .05em;
+
+            svg{
+                height: 32px;
+                width: 32px;
+                margin-left: 0;
+            }
+        }
+    }
+    &__close{
+        cursor: pointer;
+    }
+    
+    &__window{
+        background-color: #EDEDED;
+        padding: 32px 32px 0;
+        color: #150F0F;
+           
+    box-sizing: border-box;
+    }
+    &__head{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 36px;
+        /* identical to box height, or 100% */
+        
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        font-family: $TT;
+     
+        @include for-1366(){
+            font-size: 44px;
+            line-height: 44px;
+        }
+        @include for-1600(){
+            font-size: 60px;
+            line-height: 60px;
+        }
+    }
+    &__list{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        &-title{
+            color: rgba(79, 86, 89, 0.7);
+            margin-right: 8px;
+        }
+        margin-bottom: 24px;
+    }
+    &__item{
+        display: flex;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 24px;
+        /* identical to box height, or 100% */
+        font-family: $TT;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        
+        /* txt/gray 1 70% */
+        @include for-1366(){
+            font-size: 28px;
+            line-height: 28px;
+        }
+        @include for-1600(){
+            font-size: 36px;
+            line-height: 36px;
+        }
+        & + &{
+            margin-top: 8px;
+            @include for-1366(){
+                margin-top: 16px;
+            }
+        }
+    }
+}
+
+#section_5 .c-manager__wrap{
+    display: none;
 }

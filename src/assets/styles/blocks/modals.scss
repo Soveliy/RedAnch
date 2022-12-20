@@ -1149,3 +1149,19 @@
 
 
 
+label.error{
+    position: absolute;
+    bottom: 10px;
+    left: 32px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    /* identical to box height, or 114% */
+    
+    letter-spacing: 0.05em;
+    
+    /* txt/primary */
+    
+    color: #DD2B1C;
+    font-family: $DM;
+}

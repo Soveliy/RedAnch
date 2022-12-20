@@ -59,10 +59,10 @@ $('.order-technical').click(function () {
 });
 
 $('.were-questions').click(function () {
-   $('#technical-modal').arcticmodal({
+   $('#questions-modal').arcticmodal({
       afterOpen: function (data, el) {
          $('body').css('overflow', 'hidden');
-         $('.b-modal#technical-modal').addClass('is-active');
+         $('.b-modal#questions-modal').addClass('is-active');
       },
       beforeClose: function (data, el) {
          setTimeout(() => {
@@ -123,6 +123,22 @@ $('.form-order-btn').click(function () {
       afterOpen: function (data, el) {
          $('body').css('overflow', 'hidden');
          $('.b-modal#form-order-modal').addClass('is-active');
+      },
+      beforeClose: function (data, el) {
+         setTimeout(() => {
+            $('body').css('overflow', 'auto');
+            $('.b-modal').removeClass('is-active');
+         }, 100);
+      },
+   });
+});
+
+
+$('.label-link--modal').click(function () {
+   $('#how-to-get').arcticmodal({
+      afterOpen: function (data, el) {
+         $('body').css('overflow', 'hidden');
+         $('.b-modal#how-to-get').addClass('is-active');
       },
       beforeClose: function (data, el) {
          setTimeout(() => {
