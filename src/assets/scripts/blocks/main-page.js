@@ -51,7 +51,7 @@ var Animations = function() {
    
  
  
-    var loadImgsHandler = function(objects, maxImageLenght) {
+    var loadImgsHandler = function(objects) {
       if (objects) {
         var count = 0;
         for (var k in objects) {
