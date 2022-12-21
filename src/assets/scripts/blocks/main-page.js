@@ -111,11 +111,8 @@ var Animations = function() {
               if (i > 25){
                 object.type = ".jpg"
               }
-             if (!isTablet && i < 26){
-             } else {
               image.src = object.src + i + object.type;
-             }
-            
+              //add_hint('prerender', 'http://toledo.dev17.ru/' + object.src + i + object.type);
             }
           }
         }
@@ -134,13 +131,12 @@ var Animations = function() {
       }
        
       
-      // objects.map(function(item) {
-      //   console.log(item)
-      //   allImgsCount += item.count;
-      //   if (item.i) {
-      //     allImgsCount -= item.i;
-      //   }
-      // });
+      objects.map(function(item) {
+        allImgsCount += item.count;
+        if (item.i) {
+          allImgsCount -= item.i;
+        }
+      });
   
       loadImgsHandler(objects);
     };
@@ -618,8 +614,8 @@ var Animations = function() {
         initAnimationsPage();
 
         let defaultImageCount = 1;
-      let interVal = setInterval(sayHi, 100);
-      function sayHi() {
+      let interVal = setInterval(preloaderAnch, 100);
+      function preloaderAnch() {
         $(".c-manager").removeClass('frame_' + (defaultImageCount - 1))
         $(".c-manager").addClass('frame_' + defaultImageCount);
         defaultImageCount = defaultImageCount + 1;
@@ -631,8 +627,8 @@ var Animations = function() {
       if(isTablet){
         setLoadImages();
         sequention_mob();
-      } 
-       
+      }
+      
       document.body.classList.add('w-load');
 
       let aosOffset;
@@ -672,11 +668,9 @@ var Animations = function() {
          
         // }, 5000);
         $(window).one('scroll',function() {
-         
-            setTimeout(() => {
-              setLoadImages();
-            sequention_5();
-            }, 0);
+            console.log("loaded")
+            // setLoadImages();
+            // sequention_5();
          });
         $(".tizers__item-container--w60").each(function() {
           var tizersItemTimeline = new TimelineMax();
