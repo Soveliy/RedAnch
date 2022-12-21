@@ -293,16 +293,13 @@
     &.defaultModal__container {
 
       position: relative;
-      .defaultModal__input-placeholder{
-        
-      }
 
       .defaultModal__input:focus~.defaultModal__input-placeholder, .defaultModal__input:not(:placeholder-shown)~.defaultModal__input-placeholder {
         font-weight: 300;
         font-size: 18px;
         line-height: 22px;
   
-        @media screen and (min-width: 600px) {
+        @media screen and (min-width: 1024px) {
           font-size: 28px;
           line-height: 32px;
         }
@@ -354,7 +351,7 @@
       }
 
       @media screen and (min-width: 1366px) {
-        padding: 0 143px 96px;
+        padding: 0 143px 104px;
         gap: 8px;
       }
     }
@@ -439,7 +436,7 @@
     background-color: transparent;
     color: #150f0f;
 
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 1024px) {
       padding: 0 32px;
       height: 96px;
       font-size: 28px;
@@ -998,7 +995,7 @@
     &__header{
       padding: 11px 16px;
 
-      @media screen and (min-width: 600px) {
+      @media screen and (min-width: 1024px) {
         padding: 20px 32px;
       }
     }
@@ -1080,7 +1077,7 @@
       font-size: 18px;
       line-height: 22px;
 
-      @media screen and (min-width: 600px) {
+      @media screen and (min-width: 1024px) {
         font-size: 20px;
         line-height: 24px;
       }

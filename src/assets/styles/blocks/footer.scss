@@ -20,6 +20,12 @@
         }
     }
 
+    &__link {
+      &:hover {
+         text-decoration: underline;
+      }
+    }
+
     &__info {
         margin-bottom: 12px;
 

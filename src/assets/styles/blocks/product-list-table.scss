@@ -92,6 +92,7 @@
       padding: 0;
       transition: 800ms;
       display: grid;
+      grid-gap: 0;
       border-bottom: 2px solid rgba(79, 86, 89, 0.1);
       grid-template-columns: minmax(180px, 2fr)  repeat(7, 1fr) minmax(180px, 1fr);
       &:hover{

@@ -133,6 +133,21 @@ $('.form-order-btn').click(function () {
    });
 });
 
+$('.form-order-btn-fast').click(function () {
+   $('#form-order-modal-fast').arcticmodal({
+      afterOpen: function (data, el) {
+         $('body').css('overflow', 'hidden');
+         $('.b-modal#form-order-modal-fast').addClass('is-active');
+      },
+      beforeClose: function (data, el) {
+         setTimeout(() => {
+            $('body').css('overflow', 'auto');
+            $('.b-modal').removeClass('is-active');
+         }, 100);
+      },
+   });
+});
+
 
 $('.label-link--modal').click(function () {
    $('#how-to-get').arcticmodal({

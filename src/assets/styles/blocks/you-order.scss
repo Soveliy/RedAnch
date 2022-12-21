@@ -17,6 +17,10 @@
    &__header {
       margin-bottom: 30px;
    }
+
+   &__body.container--big-p  {
+      padding-bottom: 80px;
+   }
 }
 
 .order-header {
@@ -79,7 +83,7 @@
       }
 
       &__count {
-         margin-right: 120px;
+         margin-right: 8%;
       }
    }
    @media screen and (min-width: 1024px) {
@@ -88,12 +92,24 @@
          padding: 8px;
          background-color: #F5F5F5;
          padding-left: 112px;
-         padding-right: 80px;
+         padding-right: 65px;
       }
    }
 
-   @media screen and (min-width: 1024px) {
+   @media screen and (min-width: 1366px) {
+      .table-header {
+         &__count {
+            margin-right: 60px;
+         }
+      }
+   }
 
+   @media screen and (min-width: 1600px) {
+      &__header {
+         font-size: 16px;
+         line-height: 20px;
+         padding-right: 55px;
+      }
    }
 }
 
@@ -175,7 +191,7 @@
       width: 100%;
       padding: 15px 20px;
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       justify-content: center;
       font-size: 24px;
       letter-spacing: 0.05em;
@@ -279,6 +295,8 @@
          &--result {
             display: flex;
             gap: 24px;
+            font-size: 24px;
+            line-height: 24px;
             .result-list {
                font-weight: 700;
                font-size: 44px;
@@ -287,15 +305,15 @@
                &__name {
                   opacity: 0.4;
                   font-weight: 700;
-                  font-size: 44px;
-                  line-height: 44px;
+                  font-size: 24px;
+                  line-height: 24px;
                   color: #fff;
                }
                &__count {
                   margin-right: 8px;
                   font-weight: 700;
-                  font-size: 44px;
-                  line-height: 44px;
+                  font-size: 24px;
+                  line-height: 24px;
                   color: #fff;
                }
             }
@@ -315,6 +333,49 @@
                }
             }
          }
+      }
+
+      @media screen and (min-width: 1366px) {
+         &--result {
+            font-size: 44px;
+            line-height: 44px;
+            .result-list {
+               &__name {
+                  font-size: 44px;
+                  line-height: 44px;
+                  }
+               &__count {
+                  font-size: 44px;
+                  line-height: 44px;
+               }
+            }
+
+         }
+      }
+
+      @media screen and (min-width: 1600px) {
+         &--result {
+            font-size: 60px;
+            line-height: 60px;
+            .result-list {
+               &__name {
+                  font-size: 60px;
+                  line-height: 60px;
+                  }
+               &__count {
+                  font-size: 60px;
+                  line-height: 60px;
+               }
+            }
+
+         }
+      }
+   }
+
+   &__name {
+      @media screen and (min-width: 1366px) {
+         display: block;
+         margin-bottom: -8px;
       }
    }
 
@@ -387,6 +448,9 @@
       display: flex;
       align-items: center;
       height: 50px;
+      @media screen and (min-width: 1024px) {
+         max-width: 280px;
+      }
    }
    &__details {
       display: flex;
@@ -583,7 +647,7 @@
       width: 100%;
       border-top: 1px solid #c5c5c5;
       @media screen and (min-width: 1024px) {
-         margin-right: 20px;
+         margin-right: 24px;
          align-items: center;
          border: none;
          width: min-content;
@@ -595,7 +659,6 @@
       font-size: 16px;
       line-height: 20px;
       color: #50575A;
-      margin-right: 8px;
       white-space: nowrap;
       padding: 8px;
       @media screen and (min-width: 1024px) {
@@ -620,7 +683,6 @@
       font-size: 16px;
       line-height: 20px;
       color: #150F0F;
-      margin-right: 8px;
       padding: 8px;
    }
 
@@ -631,6 +693,7 @@
       border: none;
       cursor: pointer;
       background: none;
+      padding: 0;
       margin-left: auto;
       margin-right: 15px;
       .icon {
@@ -638,6 +701,9 @@
          height: 16px;
          fill: rgba(79, 86, 89, 0.4);
          transform: rotate(-90deg);
+      }
+      @media screen and (min-width: 1024px) {
+         margin-right: 0;
       }
    }
 

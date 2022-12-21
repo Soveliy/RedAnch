@@ -63,9 +63,18 @@
    &__subtitle {
       font-family: $TT;
       font-weight: 700;
-      font-size: 44px;
-      line-height: 44px;
+      font-size: 28px;
+      line-height: 28px;
       margin-bottom: 16px;
+      text-transform: uppercase;
+      @media screen and (min-width: 600px) {
+         font-size: 40px;
+         line-height: 40px;
+      }
+      @media screen and (min-width: 1024px) {
+         font-size: 44px;
+         line-height: 44px;
+      }
    }
    
    &__block {
@@ -82,7 +91,7 @@
          padding: 11px 16px;
          background-color: #fff;
          @media screen and (min-width: 1366px) {
-            padding: 24px 32px;
+            padding: 19px 32px;
          }
       }
    }
@@ -273,6 +282,7 @@
 
    font-size: 28px;
    line-height: 28px;
+   text-transform: uppercase;
    font-weight: 700;
    font-family: $TT;
    color: #fff;
@@ -321,6 +331,7 @@
    @media screen and (min-width: 1366px)  {
       padding: 30px 32px;
       font-size: 44px;
+      line-height: 44px;
       &__icon {
          width: 24px;
          height: 24px;
@@ -329,6 +340,12 @@
       &__line {
          height: 4px;
       }
+   }
+
+   @media screen and (min-width: 1600px) {
+      padding: 34px 45px;
+      font-size: 60px;
+      line-height: 60px;
    }
 }
 
@@ -464,6 +481,12 @@
    display: none;
    @media screen and (min-width: 1024px) {
       display: block;
+   }
+}
+
+.textarea-big {
+   .defaultModal__input-placeholder {
+      top: 32px;
    }
 }
 

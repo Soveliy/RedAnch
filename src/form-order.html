@@ -22,7 +22,7 @@
                   </li>
                </ul>
             </div>
-            <div class="form-order__body container">
+            <div class="form-order__body container container--big-p">
                <form action="" class="form-box">
 
                   <!-- form-box__block-->
@@ -241,7 +241,7 @@
 
                                  <div class="defaultModal__container ui-background-white-100 container--w100">
                                     <span class="defaultModal__input-req">*</span>
-                                    <input type="text" name="phone"
+                                    <input type="text" name="boss"
                                        class="defaultModal__input defaultModal__input--phone" placeholder=" ">
                                     <label class="defaultModal__input-placeholder" for="phone">Должность</label>
                                  </div>
@@ -330,7 +330,7 @@
 
                   <!-- form-box__block-->
                   <div class="form-box__block form-box__block--drop">
-                     <div class="form-box__window">
+                     <div class="form-box__window form-box-drag-js">
 
                         <fieldset>
                            <input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="300000" />
@@ -356,8 +356,10 @@
                            </div>
 
                            <div id="messages"></div>
+                           <div id="submitbutton">
+                              <button type="submit">Загрузить файлы</button>
+                           </div>
                         </fieldset>
-
                      </div>
                   </div>
 
