@@ -1042,14 +1042,25 @@ body{
     @include for-1024(){
         padding: 0 32px;
     }
+    @include for-1366() {
+      &--big-p {
+         padding: 0 112px;
+        }
+    }
     @include for-1600(){
         padding: 0 48px;
+        &--big-p {
+         padding: 0 128px;
+        }
     }
     @include for-1920(){
         max-width: 1920px;
         width: 100%;
         margin: 0 auto;
         box-sizing: border-box;
+        &--big-p {
+         padding: 0 155px;
+        }
     }
 }
 .anim-container{
@@ -2741,13 +2752,13 @@ body.anchor-hidden{
 .page__main{
     padding-top: 102px;
     @include for-1024(){
-        padding-top: 100px !important;
-    }
-    @include for-1366(){
         padding-top: 140px !important;
     }
+    @include for-1366(){
+        padding-top: 164px !important;
+    }
     @include for-1600(){
-        padding-top: 160px !important;
+        padding-top: 180px !important;
     }
 
 }

@@ -1,24 +1,24 @@
 /**/
 /* container */
-//! container
-.container{
-  padding: 0 16px;
-  width: 100%;
-  max-width: 100%;
+// //! container
+// .container{
+//   padding: 0 16px;
+//   width: 100%;
+//   max-width: 100%;
 
-  @media screen and (min-width: 1024px) {
-    padding: 0 32px;
-  }
+//   @media screen and (min-width: 1024px) {
+//     padding: 0 32px;
+//   }
 
-  @media screen and (min-width: 1600px) {
-    padding: 0 48px;
-  }
+//   @media screen and (min-width: 1600px) {
+//     padding: 0 48px;
+//   }
 
-  @media screen and (min-width: 1920px) {
-    max-width: 1920px;
-    margin: 0 auto;
-  }
-}
+//   @media screen and (min-width: 1920px) {
+//     max-width: 1920px;
+//     margin: 0 auto;
+//   }
+// }
 
 /* block-wrapper */
 //! block-wrapper
@@ -45,6 +45,7 @@
   @media screen and (min-width: 1024px) {
     &.pc{
       display: block;
+      padding-bottom: 16px;
     }
   }
 
@@ -108,11 +109,10 @@
     height: 16px;
 
     @media screen and (min-width: 1024px) {
-      display: none;
+      display: flex;
     }
 
     @media screen and (min-width: 1600px) {
-      display: flex;
       width: 25px;
       height: 25px;
     }
@@ -593,6 +593,33 @@
     display: none;
     @media screen and (min-width: 1024px) {
       display: flex;
+      .pc__link-title {
+         width: 250px;
+         flex: 0 0 250px;
+         margin-right: 40px;
+         white-space: normal;
+
+         font-size: 16px;
+         line-height: 20px;
+         letter-spacing: 0.05em;
+         color: #50575A;
+      }
+      .pc__link-product {
+         width: auto;
+         display: flex;
+         .text-bold {
+            font-weight: 700;
+         }
+      }
+      a {
+         display: inline-flex;
+         align-items: center;
+      }
+    }
+
+    @media screen and (min-width: 1366px) {
+      width: 334px;
+      flex: 0 0 334px;
     }
   }
 
@@ -625,17 +652,22 @@
   }
 
   &__items {
-    display: grid;
-    grid-gap: 8px;
-    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 
     
     @media screen and (min-width: 1024px) {
-      grid-gap: 2px;
+      gap: 2px;
 
       .p-list__item{
+         width: 100%;
+         justify-content: start;
         font-size: 14px;
         line-height: 16px;
+        .pc {
+         width: 100%;
+        }
       }
     }
 
@@ -654,104 +686,126 @@
     }
   }
 
-  &__item {
+   &__item {
 
 
-    span{
-      font-weight: 500;
-    }
-
-    @media screen and (min-width: 1024px) {
-      a{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+      span{
+         font-weight: 500;
       }
-    }
-
-    &:nth-child(n+5){
-      display: none;
 
       @media screen and (min-width: 1024px) {
-        display: block;
+         .p-list__item-main{
+         width: 100%;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         }
       }
-    }
-  }
+
+      &:nth-child(n+5){
+         display: none;
+
+         @media screen and (min-width: 1024px) {
+         display: block;
+         }
+      }
+   }
 
   &__description {
-    display: flex;
-    transition: 800ms;
-    background: #fff;
+      display: flex;
+      transition: 800ms;
+      background: #fff;
 
-    &.p-list{
+      &.p-list{
       display: flex;
       flex-direction: column;
+      padding: 16px 32px;
 
       @media screen and (min-width: 1024px) {
-        flex-direction: row;
+         flex-direction: row;
+      }
+
+      @media screen and (min-width: 1366px) {
+         flex-direction: row;
+         padding: 20px 32px;
+      }
+
+      @media screen and (min-width: 1600px) {
+         flex-direction: row;
+         padding: 24px 32px;
       }
 
       .p-list__item{
 
-        .p-list__options{
-          opacity: 1;
-        }
-
-        .p-list__option{
-          &:first-child{
-            @media screen and (min-width: 1024px) {
-              .p-mobile__text-button{
-                display: none;
-              }
-            }
-          }
-        }
-        &:first-child{
-          padding: 16px;
-          span{
-            margin-left: 8px;
-          }
-        }
-        &:last-child{
-          display: flex;
-          padding: 0 16px;
-
-          @media screen and (min-width: 1024px) {
-            padding: 0;
-            height: 100%;
-          }
-        }
-
-      }
-    
-    }
-
-    .p-list__text,.p-mobile__text-button{
-      font-size: 24px;
-      line-height: 24px;
-    }
-
-    @media screen and (min-width: 1024px) {
-      .p-list__item{
-        &:last-child{
-          opacity: 0;
-        }
-      }
-
-      &:hover{
-        background: #F5F5F5;
-        .p-list__item{
-          &:last-child{
+         .p-list__options{
             opacity: 1;
-          }
-        }
-      }
-    }
+            white-space: nowrap;
+         }
 
-  }
+         .p-list__option{
+            &:first-child {
+               @media screen and (min-width: 1024px) {
+                  .p-mobile__text-button{
+                     display: none;
+                  }
+               }
+            }
+         }
+         &:first-child{
+            padding: 16px;
+            span{
+               margin-left: 8px;
+            }
+         }
+         &:last-child{
+            display: flex;
+            padding: 0 16px;
+
+            @media screen and (min-width: 1024px) {
+               padding: 0;
+               height: 100%;
+            }
+         }
+
+      }
+      
+      }
+
+      .p-list__text,.p-mobile__text-button{
+         font-size: 24px;
+         line-height: 24px;
+      }
+
+      @media screen and (min-width: 1024px) {
+         .p-list__item--hover {
+            width: 164px;
+            opacity: 0;
+            transition: .3s;
+         }
+
+         &:hover{
+            background: #F5F5F5;
+            .p-list__item--hover {
+               opacity: 1;
+            }
+         }
+      }
+   }
 
 }
+
+.description {
+   .text-dropdown {
+      .text__content p {
+         font-size: 20px;
+         line-height: 32px;
+         @media screen and (min-width: 1600px) {
+            font-size: 24px;
+            line-height: 40px;
+         }
+      }
+   }
+ }
 
 
 

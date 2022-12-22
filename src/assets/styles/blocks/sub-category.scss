@@ -8,11 +8,8 @@
     padding: 16px;
 
     @media screen and (min-width: 1024px) {
-        padding: 32px 32px 24px;
-    }
-
-    @media screen and (min-width: 1600px) {
-        padding: 40px 40px 32px;
+      //   padding: 32px 32px 24px;
+      padding: 32px;
     }
 
     &__picture {
@@ -30,13 +27,13 @@
         .sub-category:hover & {
 
             @media screen and (min-width: 1024px) {
-                transform: scale(1.1);
+                transform: scale(1.08);
             }
         }
     }
 
     &__image {
-        width: auto;
+        width: 100%;
         height: auto;
     }
 
@@ -62,7 +59,7 @@
 
         @media screen and (min-width: 1024px) {
             right: 32px;
-            bottom: 24px;
+            bottom: 30px;
             width: 24px;
             height: 24px;
             fill: #DD2B1C;
@@ -72,7 +69,7 @@
 
         @media screen and (min-width: 1600px) {
             right: 40px;
-            bottom: 32px;
+            bottom: 40px;
         }
 
         .sub-category:hover & {

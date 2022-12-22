@@ -290,9 +290,6 @@
     &.defaultModal__container {
 
       position: relative;
-      .defaultModal__input-placeholder{
-        
-      }
 
       .defaultModal__input:focus~.defaultModal__input-placeholder, .defaultModal__input:not(:placeholder-shown)~.defaultModal__input-placeholder {
         transform: translateY(-80%);
@@ -324,7 +321,7 @@
       }
 
       @media screen and (min-width: 1366px) {
-        padding: 0 143px 96px;
+        padding: 0 143px 104px;
         gap: 8px;
       }
     }
@@ -409,12 +406,17 @@
     background-color: transparent;
     color: #150f0f;
 
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 1024px) {
       padding: 0 32px;
       height: 96px;
       font-size: 28px;
       line-height: 32px;
 
+    }
+
+    @media screen and (min-width: 1600px) {
+      font-size: 36px;
+      line-height: 40px;
     }
     &-placeholder {
       font-family: $DM;
@@ -591,6 +593,10 @@
     justify-content: center;
     font-size: 20px;
   }
+}
+
+.modal-content {
+   background-color: #fff;
 }
 
 .mini-modal {
@@ -963,13 +969,12 @@
   }
 
   .choice-box{
-    margin-bottom: 0;
 
     &__header{
       padding: 11px 16px;
 
-      @media screen and (min-width: 600px) {
-        padding: 20px 32px;
+      @media screen and (min-width: 1024px) {
+        padding: 23px 32px;
       }
     }
     &__title{
@@ -1146,9 +1151,6 @@
 
 }
 
-
-
-
 label.error{
     position: absolute;
     bottom: 10px;
@@ -1164,4 +1166,186 @@ label.error{
     
     color: #DD2B1C;
     font-family: $DM;
+}
+
+// .arcticmodal-container {
+//    overflow-x: hidden;
+// }
+
+.b-modal--100 {
+   max-width: 100%;
+   .modal-content {
+      background: #f5f5f5;
+   }
+}
+
+.defaultModal__head--big {
+   font-family: $TT;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   margin-bottom: 54px;
+   background: #ededed;
+   .defaultModal__head-title {
+      font-size: 44px;
+      line-height: 44px;
+      font-weight: 700;
+   }
+
+   .defaultModal__head-desc {
+      display: flex;
+      flex-direction: column;
+      margin-right: 68px;
+   }
+
+   .defaultModal__head-desc-head {
+      font-family: $DM;
+      display: block;
+      margin-bottom: 4px;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 16px;
+      color: #150f0f;
+   }
+
+   .defaultModal__head-desc-text {
+      font-family: $DM;
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: 500;
+      color: #50575A;
+   }
+
+   @media screen and (min-width: 600px) {
+      .defaultModal__head-title {
+         font-size: 80px;
+         line-height: 80px;
+         font-weight: 700;
+      }
+
+      .defaultModal__head-desc-head {
+         font-size: 16px;
+         line-height: 20px;
+      }
+
+      .defaultModal__head-desc-text {
+         font-family: $DM;
+         font-size: 20px;
+         line-height: 24px;
+      }
+   }
+
+   @media screen and (min-width: 1024px) {
+      align-items: center;
+      flex-direction: row;
+      .defaultModal__head-title {
+         font-size: 60px;
+         line-height: 60px;
+         font-weight: 700;
+      }
+
+      .defaultModal__head-desc {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-end;
+         text-align: right;
+         margin-right: 68px;
+      }
+
+      .defaultModal__head-desc-text {
+         font-family: $DM;
+         font-size: 20px;
+         line-height: 24px;
+         font-weight: 500;
+         color: #50575A;
+      }
+   }
+}
+
+.defaultModal {
+   .modal-form__col-contain {
+      padding-bottom: 8px;
+      height: 104px;
+   }
+}
+
+.modal-form__col-contain {
+   background: none;
+
+   @media screen and (min-width: 1024px) {
+      background: #EDEDED;
+   }
+}
+
+.defaultModal__subtitle {
+   font-size: 44px;
+   line-height: 44px;
+   font-weight: 700;
+   font-family: $TT;
+   text-transform: uppercase;
+   letter-spacing: 0.05em;
+   margin-bottom: 20px;
+}
+
+.form-box__window-flex {
+   display: flex;
+   flex-wrap: wrap;
+   margin-left: -4px;
+   margin-right: -4px;
+   .item-col {
+      padding-left: 4px;
+      padding-right: 4px;
+      flex: 0 0 auto;
+      width: 100%;
+      .card-filter__choice {
+         margin-bottom: 8px;
+      }
+
+      &--order {
+         order: 3;
+      }
+
+      &--5 {
+         width: 50%;
+      }
+
+      @media screen and (min-width: 1024px) {
+         &--3 {
+            width: 30%;
+         }
+
+         &--order {
+            order: 0;
+         }
+   
+         &--5 {
+            width: 50%;
+         }
+   
+         &--7 {
+            width: 70%;
+         }
+      }
+   }
+}
+
+.defaultModal__box-container {
+   padding-left: 16px;
+   padding-right: 16px;
+   padding-bottom: 60px;
+   @media screen and (min-width: 1366px) {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding-bottom: 140px;
+   }
+
+   @media screen and (min-width: 1600px) {
+      max-width: 1248px;
+      margin: 0 auto;
+   }
+
+   @media screen and (min-width: 1920px) {
+      max-width: 1514px;
+      margin: 0 auto;
+   }
 }
