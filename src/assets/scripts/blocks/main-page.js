@@ -50,7 +50,16 @@ var Animations = function() {
 
    
  
- 
+    function FixedFooter(){
+      if ($("body").hasClass("main-page")){
+        let footerHeight = $(".footer").height();
+        $("body").css("padding-bottom" , footerHeight + "px")
+        console.log(footerHeight)
+      }
+      
+
+   
+    }     
     var loadImgsHandler = function(objects) {
       if (objects) {
         var count = 0;
@@ -185,7 +194,7 @@ var Animations = function() {
           reverse: true,
           triggerHook: 1,
         })
-            .addIndicators() // add indicators (requires plugin)
+            // .addIndicators() // add indicators (requires plugin)
             .addTo(controller)
           
             scene_for_cst.index = i;
@@ -215,7 +224,6 @@ var Animations = function() {
       var offset_scene_5 = duration_scene_5 / scene_5.count;
       var offset_top_scene_5 = $(scene_5.wrap).outerHeight();
 
-  
       for (var i = 1, l = scene_5.count; i <= l; i++) {
         var scene5 = new ScrollMagic.Scene({
           triggerElement: scene_5.target,
@@ -223,18 +231,16 @@ var Animations = function() {
           reverse: true,
           triggerHook: 1,
         })
+   
           .setClassToggle(".hero__bg", "end") // add class toggle
             //  .addIndicators() // add indicators (requires plugin)
             .addTo(controller);
-  
-        scene5.index = i + 23;
+        
+          
+            scene5.index = i + 23;
         scene5.on('start', function(event) {
             if (this.index <= scene_5.count) {
-                // ikr = this.index
-                // let ikr2 = ikr - 1
-                // scene_5.wrap.className = 'c-manager frame_' + this.index;
-                // console.log("ikr" + ikr)
-                // console.log("ikr2" + ikr2)
+                console.log("start")
                 $("#preloadImagesContainer").removeClass('frame_' + (this.index - 1))
                 $("#preloadImagesContainer").addClass('frame_' + this.index);
                 $("#preloadImagesContainer").removeClass('frame_' + (this.index + 1))
@@ -302,11 +308,10 @@ var Animations = function() {
   
         $window.on('resize', function() {
           resizeManagerSizes();
-          FixedFooter();
+          // FixedFooter();
           scrollManager();
+          console.log("resize")
           sequention_5();
-          console.log("q")
-          // sequention_5();
         }).on('scroll', scrollManager).on('mousewheel DOMMouseScroll', function(event) {
            scrollManager();
            if (!isTablet) {
@@ -434,7 +439,9 @@ var Animations = function() {
   
   
     window.addEventListener('resize', function() {
-
+      console.log("resizeVan")
+      FixedFooter();
+      // sequention_5();
       winw = window.innerWidth || e.clientWidth || g.clientWidth;
       isTablet = winw < 1280;
       if (isTablet) {
@@ -454,14 +461,32 @@ var Animations = function() {
 
 
     window.addEventListener('load', function() {
-       
-   
+      
+
+      if(isTablet){
+        let vh = window.innerHeight * 0.01;
+        // Then we set the value in the --vh custom property to the root of the document
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+        
+        // We listen to the resize event
+        window.addEventListener('resize', () => {
+          // We execute the same script as before
+          let vh = window.innerHeight * 0.01;
+          document.documentElement.style.setProperty('--vh', `${vh}px`);
+        });
+      }
+      // let mobileParam = $(window).height() - 
+      
       // $("body").overlayScrollbars({ });
       controller = new ScrollMagic.Controller();
+
         if(!isTablet){
-          sequention_5();
+          setTimeout(() => {
+            sequention_5();
+          }, 100);
         }
             
+
         
       var tl = new TimelineMax();
       let parallaxElem = $(".video-gallery img");
@@ -475,29 +500,54 @@ var Animations = function() {
         .addTo(controller);
 
 
-        var iconsTimeline = new TimelineMax();
-        let iconsPallax = $(".checks__tizers");
-        iconsTimeline.to(iconsPallax, 1, { y: -100, ease: "cubic-bezier(.5,0,0,1)" });
-        var iconsScene = new ScrollMagic.Scene({
-          triggerElement: ".checks__tizers",
-          triggerHook: 0.4,
-          duration: "100%",
-        })
-          .setTween(iconsTimeline)
-          .addTo(controller);
+       if(!isTablet){
+          var iconsTimeline = new TimelineMax();
+          let iconsPallax = $(".checks__title");
+          iconsTimeline.to(iconsPallax, 1, { y: 200, ease: "cubic-bezier(.5,0,0,1)" });
+          var iconsScene = new ScrollMagic.Scene({
+            triggerElement: ".checks__title",
+            triggerHook: 0.4,
+            duration: "100%",
+          })
+            .setTween(iconsTimeline)
+            .addTo(controller);
+
+            $(".tizers__item-container--w60").each(function() {
+              var tizersItemTimeline = new TimelineMax();
+              var child = $(this).find(".tizers-item");
+              let parallaxY;
+              if (!isTablet){
+                parallaxY = 100
+              } else {
+                parallaxY = 30
+              }
+              tizersItemTimeline.to(child, 1, { y: parallaxY, ease: "cubic-bezier(.5,0,0,1)" });
+            
+              var scene = new ScrollMagic.Scene({
+                triggerElement: this,
+                triggerHook: 1,
+                duration: "100%"
+              })
+                .setTween(tizersItemTimeline)
+                
+                .addTo(controller);
+            });
+       }
 
 
         var mobile_anchTest = new TimelineMax();
         let firstAnchMob = $(".hero__mobile-anch");
-        mobile_anchTest.to(firstAnchMob, 1, { y: 570, ease: "cubic-bezier(.5,0,0,1)" });
+        let mobileParam = $('.tech__title').offset().top - $(window).height();
+        console.log(mobileParam)
+        mobile_anchTest.to(firstAnchMob, 1, { y: - mobileParam + 80, ease: "cubic-bezier(.5,0,0,1)" });
         let durationAnch = $("#mobile-secvention").offset().top
 
         var sceneMobAnch = new ScrollMagic.Scene({
           triggerElement: ".hero",
-          triggerHook: .5,
-          duration: durationAnch,
+          triggerHook: 0,
+          duration: durationAnch - 100,
         })
-            .setClassToggle("body", "anchor-visible") // add class toggle
+            .setClassToggle("body", "anchor-hidden") // add class toggle
           .setTween(mobile_anchTest)
           // .addIndicators()
           .addTo(controller);
@@ -530,7 +580,7 @@ var Animations = function() {
         var sceneBgRight = new ScrollMagic.Scene({
           // triggerElement: ".triger_dev",
           
-          duration: 400,
+          duration: 1950,
         })
        
         // .addIndicators()
@@ -596,15 +646,15 @@ var Animations = function() {
         
     
 
-      //  for (var i = 0; i < 41; i++) {
-      //   function timeout(val) {
-      //     setTimeout(function() {
-      //       $(".frameImage").removeClass('frameImage' + (i - 1))
-      //       $(".frameImage").addClass('frameImage' + i)
-      //     }, 100);
-      //   }
-      //   timeout(i);
-      // }
+       for (var i = 0; i < 41; i++) {
+        function timeout(val) {
+          setTimeout(function() {
+            $(".frameImage").removeClass('frameImage' + (i - 1))
+            $(".frameImage").addClass('frameImage' + i)
+          }, 100);
+        }
+        timeout(i);
+      }
        
      
       
@@ -635,7 +685,7 @@ var Animations = function() {
       if (!isMobile){
         aosOffset = 200
       } else{
-        aosOffset = 50
+        aosOffset = 100
       }
       AOS.init({
         offset:aosOffset,
@@ -668,42 +718,13 @@ var Animations = function() {
          
         // }, 5000);
         $(window).one('scroll',function() {
-            console.log("loaded")
             // setLoadImages();
             // sequention_5();
          });
-        $(".tizers__item-container--w60").each(function() {
-          var tizersItemTimeline = new TimelineMax();
-          var child = $(this).find(".tizers-item");
-          let parallaxY;
-          if (!isTablet){
-            parallaxY = 100
-          } else {
-            parallaxY = 30
-          }
-          tizersItemTimeline.to(child, 1, { y: parallaxY, ease: "cubic-bezier(.5,0,0,1)" });
-        
-          var scene = new ScrollMagic.Scene({
-            triggerElement: this,
-            triggerHook: 1,
-            duration: "100%"
-          })
-            .setTween(tizersItemTimeline)
-            
-            .addTo(controller);
-        });
+      
 
 
-        function FixedFooter(){
-          if ($("body").hasClass("main-page")){
-            let footerHeight = $(".footer").height();
-            $("body").css("padding-bottom" , footerHeight + "px")
-            console.log(footerHeight)
-          }
-          
-
-       
-        }     
+    
         FixedFooter();
 
         new ScrollMagic.Scene({triggerElement: "#categoriesMain",offset:120})
