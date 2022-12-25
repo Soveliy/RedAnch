@@ -4,7 +4,8 @@
 
 const initText = () => {
   const texts = document.querySelectorAll('.js-text');
-  if (!texts) return;
+  if (!texts){
+    console.log(texts)
   texts.forEach((text) => {
     const textContent = text.querySelector('.js-text__content');
     const textButton = text.querySelector('.js-text__more-button');
@@ -41,6 +42,7 @@ const initText = () => {
       }
     });
   });
+}
 };
 
 initText();

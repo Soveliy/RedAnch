@@ -522,7 +522,11 @@
             font-size: 120px;
          }
       }
-
+      &-136 {
+         @media screen and (min-width: 1024px) {
+            font-size: 136px;
+         }
+      }
       &-144 {
 
          @media screen and (min-width: 1024px) {
@@ -699,7 +703,12 @@
             font-size: 172px;
          }
       }
+      &-192 {
 
+         @media screen and (min-width: 1366px) {
+            font-size: 192px;
+         }
+      }
       &-200 {
 
          @media screen and (min-width: 1366px) {

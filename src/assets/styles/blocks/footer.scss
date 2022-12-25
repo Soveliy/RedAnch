@@ -21,9 +21,12 @@
     }
 
     &__link {
-      &:hover {
-         text-decoration: underline;
-      }
+           @include for-1024(){
+            transition: $transition;
+            &:hover{
+                opacity: .8;
+            }
+           }
     }
 
     &__info {

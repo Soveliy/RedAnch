@@ -14,10 +14,22 @@ var Animations = function() {
     var g = document.getElementsByTagName('body')[0];
     var winw = window.innerWidth || e.clientWidth || g.clientWidth;
     var isTablet = winw < 1024;
-    var isMobile = winw < 1024;
+    var isRetina = winw > 1920;
     var desktopLoadedFunc = false;
   
-  
+    if (isTablet){
+      jQuery(function($){
+        $(document).mouseup( function(e){ // событие клика по веб-документу
+          var div = $( ".choice-box__wrapper--active" ); // тут указываем ID элемента
+          if (div.is(e.target) ) { 
+                  $(".js-choice-box").removeClass("choice-box--active")
+                  $(".choice-box__wrapper").removeClass("choice-box__wrapper--active")
+                  
+                  
+          }
+        });
+      });
+    }
     let scene_5 = {
       target: '#section_5',
       target_2: '.end_of_seq',
@@ -48,7 +60,25 @@ var Animations = function() {
  
 
 
-   
+    function heroAnimationAnch(){
+      var anchorRight = new TimelineMax();
+      let anchorRightElem = $("#preloadImagesContainer");
+      if (isRetina){
+        anchorRight.to(anchorRightElem, 1, { x: "35%", ease: "cubic-bezier(.5,0,0,1)",
+        });
+      } else {
+        anchorRight.to(anchorRightElem, 1, { x: "25%", ease: "cubic-bezier(.5,0,0,1)",
+      });
+      }
+    
+      var sceneAnchor = new ScrollMagic.Scene({
+        // triggerElement: ".triger_dev",
+        duration: 400,
+      })
+      // .addIndicators()
+      .setTween(anchorRight)
+      .addTo(controller);
+    }
  
     function FixedFooter(){
       if ($("body").hasClass("main-page")){
@@ -121,7 +151,6 @@ var Animations = function() {
                 object.type = ".jpg"
               }
               image.src = object.src + i + object.type;
-              //add_hint('prerender', 'http://toledo.dev17.ru/' + object.src + i + object.type);
             }
           }
         }
@@ -180,76 +209,7 @@ var Animations = function() {
       }
     };
   
-    var sequention_mob = function() {
 
-      var duration_scene_cst = $(scene_cst.target).outerHeight() + $(scene_cst.target_2).outerHeight() - $(scene_cst.wrap).outerHeight();
-      var offset_scene_cst = duration_scene_cst / scene_cst.count;
-      var offset_top_scene_cst = $(scene_cst.wrap).outerHeight();
-  
-  
-      for (var i = 1, l = scene_cst.count; i <= l; i++) {
-        var scene_for_cst = new ScrollMagic.Scene({
-          triggerElement: scene_cst.target,
-          offset: (i * offset_scene_cst) + offset_top_scene_cst + 200,
-          reverse: true,
-          triggerHook: 1,
-        })
-            // .addIndicators() // add indicators (requires plugin)
-            .addTo(controller)
-          
-            scene_for_cst.index = i;
-  
-            scene_for_cst.on('start', function(event) {
-              $("body").addClass("pinned")
-          if (scene_cst.canvas) {
-            //scene_5.wrap.className = 'c-manager frame_' + this.index;
-            if (this.index <= scene_cst.count && scene_cst.images[this.index]) {
-              scene_cst.canvas.getContext('2d').drawImage(scene_cst.images[this.index], 0, 0, scene_cst.canvas.width, scene_cst.images[this.index].height);
-            }
-          } else {
-            if (this.index <= scene_cst.count) {
-              // $("#mobile-anchor").removeClass('frame_' + (this.index - 1))
-              // $("#mobile-anchor").addClass('frame_' + this.index).addClass("c-manager");
-              // $("#mobile-anchor").removeClass('frame_' + (this.index + 1))
-              console.log(this.index)
-              scene_cst.wrap.className = 'c-manager frame_' + this.index;
-            }
-          }
-        });
-      }
-
-    };
-    var sequention_5 = function() {
-      var duration_scene_5 = $(scene_5.target).outerHeight() + $(scene_5.target_2).outerHeight() - $(scene_5.wrap).outerHeight();
-      var offset_scene_5 = duration_scene_5 / scene_5.count;
-      var offset_top_scene_5 = $(scene_5.wrap).outerHeight();
-
-      for (var i = 1, l = scene_5.count; i <= l; i++) {
-        var scene5 = new ScrollMagic.Scene({
-          triggerElement: scene_5.target,
-          offset: ((i*1.1) * offset_scene_5) + offset_top_scene_5 - 300,
-          reverse: true,
-          triggerHook: 1,
-        })
-   
-          .setClassToggle(".hero__bg", "end") // add class toggle
-            //  .addIndicators() // add indicators (requires plugin)
-            .addTo(controller);
-        
-          
-            scene5.index = i + 23;
-        scene5.on('start', function(event) {
-            if (this.index <= scene_5.count) {
-                console.log("start")
-                $("#preloadImagesContainer").removeClass('frame_' + (this.index - 1))
-                $("#preloadImagesContainer").addClass('frame_' + this.index);
-                $("#preloadImagesContainer").removeClass('frame_' + (this.index + 1))
-                // defaultImageCount = defaultImageCount + 1;
-              }
-        });
-      }
-    };
- 
 
    
 
@@ -382,25 +342,7 @@ var Animations = function() {
       });
     };
 
-  
-    // var setMarkersAreasSizes = function() {
-    //   var areas = document.querySelectorAll('.c-map__area');
-    //   var w = window,
-    //       d = document,
-    //       e = d.documentElement,
-    //       g = d.getElementsByTagName('body')[0],
-    //       x = w.innerWidth || e.clientWidth || g.clientWidth;
-  
-    //   if (areas.length) {
-    //     for (var i = 0, l = areas.length; i < l; i++) {
-    //       if (x <= 1500) {
-    //         areas[i].querySelector('circle').setAttribute('r', '50');
-    //       } else {
-    //         areas[i].querySelector('circle').setAttribute('r', '110');
-    //       }
-    //     }
-    //   }
-    // };
+
   
    
     var setDesktopAnimation = function() {
@@ -439,8 +381,11 @@ var Animations = function() {
   
   
     window.addEventListener('resize', function() {
-      console.log("resizeVan")
+   
       FixedFooter();
+      controllerAnch.destroy(true);
+      heroAnimationAnch();
+      sequention_5();
       // sequention_5();
       winw = window.innerWidth || e.clientWidth || g.clientWidth;
       isTablet = winw < 1280;
@@ -451,14 +396,92 @@ var Animations = function() {
           setDesktopAnimation();
           removeAllImageVisible();
           setVisibleClassImages();
-        
-        // setMobileScrollHeader(false);
-        $('.css-transform-down, .css-transform-up-100').css({transform: ''}).addClass('css-transform-normal');
-        $('.css-opacity').css({opacity: ''}).addClass('css-opacity-1');
       }
     });
+    let isMain = false;
   if ($("body").hasClass("main-page")){
+     isMain = true
+  }
+  console.log(isMain)
+   if (isMain){
+    var sequention_mob = function() {
 
+      var duration_scene_cst = $(scene_cst.target).outerHeight() + $(scene_cst.target_2).outerHeight() - $(scene_cst.wrap).outerHeight();
+      var offset_scene_cst = duration_scene_cst / scene_cst.count;
+      var offset_top_scene_cst = $(scene_cst.wrap).outerHeight();
+  
+  
+      for (var i = 1, l = scene_cst.count; i <= l; i++) {
+        var scene_for_cst = new ScrollMagic.Scene({
+          triggerElement: scene_cst.target,
+          offset: (i * offset_scene_cst) + offset_top_scene_cst + 200,
+          reverse: true,
+          triggerHook: 1,
+        })
+            // .addIndicators() // add indicators (requires plugin)
+            .addTo(controller)
+          
+            scene_for_cst.index = i;
+  
+            scene_for_cst.on('start', function(event) {
+              $("body").addClass("pinned")
+          if (scene_cst.canvas) {
+            //scene_5.wrap.className = 'c-manager frame_' + this.index;
+            if (this.index <= scene_cst.count && scene_cst.images[this.index]) {
+              scene_cst.canvas.getContext('2d').drawImage(scene_cst.images[this.index], 0, 0, scene_cst.canvas.width, scene_cst.images[this.index].height);
+            }
+          } else {
+            if (this.index <= scene_cst.count) {
+              // $("#mobile-anchor").removeClass('frame_' + (this.index - 1))
+              // $("#mobile-anchor").addClass('frame_' + this.index).addClass("c-manager");
+              // $("#mobile-anchor").removeClass('frame_' + (this.index + 1))
+              console.log(this.index)
+              scene_cst.wrap.className = 'c-manager frame_' + this.index;
+            }
+          }
+        });
+      }
+
+    };
+    var sequention_5 = function() {
+      controllerAnch = new ScrollMagic.Controller();
+      var duration_scene_5 = $(scene_5.target).outerHeight() + $(scene_5.target_2).outerHeight() - $(scene_5.wrap).outerHeight();
+      var offset_scene_5 = duration_scene_5 / scene_5.count;
+      var offset_top_scene_5 = $(scene_5.wrap).outerHeight();
+
+      for (var i = 1, l = scene_5.count; i <= l; i++) {
+
+          
+        window.addEventListener('resize', function() {
+
+          scene5.destroy(true)
+        })
+        var scene5 = new ScrollMagic.Scene({
+          triggerElement: scene_5.target,
+          offset: ((i*1.1) * offset_scene_5) + offset_top_scene_5 - 300,
+          reverse: true,
+          triggerHook: 1,
+          // duration: "100%",
+        })
+       
+   
+          .setClassToggle(".hero__bg", "end") // add class toggle
+            //  .addIndicators() // add indicators (requires plugin)
+            .addTo(controllerAnch);
+        
+            scene5.index = i + 23;
+          scene5.on('start', function(event) {
+            if (this.index <= scene_5.count) {
+                console.log("start")
+                $("#preloadImagesContainer").removeClass('frame_' + (this.index - 1))
+                $("#preloadImagesContainer").addClass('frame_' + this.index);
+                $("#preloadImagesContainer").removeClass('frame_' + (this.index + 1))
+                // defaultImageCount = defaultImageCount + 1;
+              }
+        });
+      }
+    };
+ 
 
     window.addEventListener('load', function() {
       
@@ -479,7 +502,7 @@ var Animations = function() {
       
       // $("body").overlayScrollbars({ });
       controller = new ScrollMagic.Controller();
-
+   
         if(!isTablet){
           setTimeout(() => {
             sequention_5();
@@ -529,7 +552,6 @@ var Animations = function() {
                 duration: "100%"
               })
                 .setTween(tizersItemTimeline)
-                
                 .addTo(controller);
             });
        }
@@ -557,10 +579,9 @@ var Animations = function() {
 					// 	.setPin(".hero__mobile-anch")
 					// 	.addIndicators({name: "1 (duration: 300)"}) // add indicators (requires plugin)
 					// 	.addTo(controller);
-        var anchorRight = new TimelineMax();
-        let anchorRightElem = $("#preloadImagesContainer");
-        anchorRight.to(anchorRightElem, 1, { x: "25%", ease: "cubic-bezier(.5,0,0,1)",
-        });
+      
+        heroAnimationAnch();
+        
 
         var bgRight = new TimelineMax();
         let bgRightElem = $(".hero__bg")
@@ -569,13 +590,7 @@ var Animations = function() {
         },
          );
       
-        var sceneAnchor = new ScrollMagic.Scene({
-          // triggerElement: ".triger_dev",
-          duration: 400,
-        })
-        // .addIndicators()
-        .setTween(anchorRight)
-        .addTo(controller);
+      
 
         var sceneBgRight = new ScrollMagic.Scene({
           // triggerElement: ".triger_dev",
@@ -682,7 +697,7 @@ var Animations = function() {
       document.body.classList.add('w-load');
 
       let aosOffset;
-      if (!isMobile){
+      if (!isTablet){
         aosOffset = 200
       } else{
         aosOffset = 100
@@ -745,6 +760,7 @@ var Animations = function() {
         .addTo(controller);
         
       });
+   }
  
     (function () {
     
@@ -769,7 +785,7 @@ var Animations = function() {
       // });
   
   })();
-}
+
   
     
        
@@ -836,6 +852,10 @@ var Animations = function() {
 $(".print").click(function(e){
   window.print()
 })
+
+
+
+
 
 
 

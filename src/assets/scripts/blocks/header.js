@@ -66,3 +66,38 @@ $(".header__productionButton").click(function(){
   });
 
      $('[name="phone"]').mask('+7 (999) 999 99-99');
+     $('[name="date"]').mask('00.00.0000');
+    window.initPhoneMask = function () {
+      $('[name="phone"],.defaultModal__input-phone').mask('+7 (999) 999 99-99');
+      $('[name="date"],.defaultModal__input-date').mask('00.00.0000');
+    }
+    window.initPhoneMask();
+
+
+    function compareWidth(){
+      let widthTitle = 0;
+      $(".p-list__items").each(function () {
+        let currentWidth = parseInt($(this).find(".mobile-title").width());
+        if(currentWidth > widthTitle) {
+          widthTitle = currentWidth;
+        };
+      });
+
+      let buttonsWidth = $(".p-list__item:last-child").width();
+      // $(".p-list__head:last-child").css("min-width", buttonsWidth + "px")
+     $(".mobile-title").css("width", widthTitle  + "px")
+
+
+     $('.p-list__head').each(function (index, value){
+      let widthHeadCell = $(".p-list__item").eq(index).width();
+      $(".p-list__head").eq(index).css("width", widthHeadCell + "px")
+    })
+    }
+    compareWidth()
+    
+    
+
+    window.addEventListener('resize', function(event){
+
+      compareWidth()
+    });

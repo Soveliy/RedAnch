@@ -21,18 +21,25 @@
    &__body.container--big-p  {
       padding-bottom: 80px;
    }
+   .choice-box__btn{
+      @media (max-width:1023px){
+         margin-right: 15px;
+      }
+   }
 }
 
 .order-header {
    display: flex;
    align-items: flex-end;
    justify-content: space-between;
+   position: relative;
    &__title {
       font-size: 50px;
       font-weight: 700;
       color: #150F0F;
       margin-bottom: 10px;
       text-transform: uppercase;
+      letter-spacing: 0.04em;
    }
 
    .result-list {
@@ -43,6 +50,13 @@
       &__count {
          color: #150F0F;
       }
+   }
+   &__print{
+    @media (max-width:1024px){
+      position: absolute;
+      right: 0;
+      top: 26px;
+    }
    }
 
    @media screen and (min-width: 1024px) {
@@ -144,18 +158,35 @@
       line-height: 28px;
       color: #150F0F;
       margin-right: 8px;
+      @include for-1024(){
+         font-size: 28px;
+         line-height: 28px;
+      }
+      @include for-1600(){
+         font-size: 36px;
+         line-height: 36px;
+      }
    }
 
    &__name {
       font-weight: 700;
-      font-size: 28px;
-      line-height: 28px;
+      font-size: 24px;
+      line-height: 24px;
       color: rgba(79, 86, 89, 0.5);
       letter-spacing: 0.06em;
+      @include for-1024(){
+         font-size: 28px;
+         line-height: 28px;
+      }
+      @include for-1600(){
+         font-size: 36px;
+         line-height: 36px;
+      }
    }
 }
 
 .print-link {
+ 
    display: flex;
    align-items: center;
 
@@ -443,6 +474,9 @@
       font-weight: 500;
       transition: .3s;
       white-space: nowrap;
+      font-size: 18px;
+      line-height: 21px;
+      letter-spacing: 0.03em;
    }
    &__pagination {
       display: flex;
@@ -695,16 +729,20 @@
       background: none;
       padding: 0;
       margin-left: auto;
-      margin-right: 15px;
+      margin-right: 0;
       .icon {
          width: 16px;
          height: 16px;
          fill: rgba(79, 86, 89, 0.4);
          transform: rotate(-90deg);
+         @include for-1600(){
+            height: 28px;
+            width: 28px;
+         }
       }
-      @media screen and (min-width: 1024px) {
-         margin-right: 0;
-      }
+      // @media screen and (min-width: 1024px) {
+      //    margin-right: 0;
+      // }
    }
 
    &__wrapper {

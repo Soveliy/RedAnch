@@ -6,9 +6,10 @@
 
     @media screen and (min-width: 1024px) {
       background-color: #f5f5f5;
-      display: grid;
+      // display: grid;
       border-bottom: 2px solid rgba(79, 86, 89, 0.1);
-      grid-template-columns: minmax(180px, 2fr)  repeat(7, 1fr) minmax(180px, 1fr);
+      // grid-template-columns: minmax(180px, 2fr)  repeat(7, 1fr) minmax(180px, 1fr);
+      display: flex;
     }
     
   }
@@ -18,10 +19,29 @@
     display: flex;
     align-items: center;
     font-weight: 300;
-    padding: 12px 8px;
+  
     font-size: 12px;
     line-height: 12px;
     letter-spacing: 0.05em;
+
+    @include for-1024(){
+      .p-list__dropdown{
+        padding: 12px 32px;
+      }
+       span{
+        padding: 15px 8px;
+      }
+    }
+    @include for-1600(){
+      .p-list__dropdown{
+        padding: 15px 32px;
+      }
+       span{
+        padding: 15px 8px;
+      }
+        
+    }
+
 
     span{
       display: flex;
@@ -36,18 +56,20 @@
     }
 
     &:first-child {
-      padding: 16px 32px;
+   
+      flex-shrink: 0;
+      // width: 100%;
     }
 
     
     @media screen and (min-width: 1366px) {
       font-size: 12px;
       line-height: 12px;
-      padding: 12px 8px;
+      
     }
 
     @media screen and (min-width: 1600px) {
-      padding: 15px 8px;
+     
       font-size: 14px;
       line-height: 16px;
     }
@@ -56,6 +78,14 @@
   &__dropdown{
     display: flex;
     align-items: center;
+    svg{
+      transition: $transition;
+    }
+    &.js-active{
+      svg{
+        transform: rotate(180deg);
+      }
+    }
   }
 
   &__body{
@@ -71,30 +101,28 @@
   &__items {
     padding: 0 16px;
     background-color: #fff;
-    display: grid;
-    grid-gap: 8px;
-    grid-template-columns: repeat(2, 1fr);
-
-    &:nth-child(n + 8){
-      display: none;
-    }
+    // display: grid;
+    // grid-gap: 8px;
+    // grid-template-columns: repeat(2, 1fr);
+   @include for-1024(){
+    display: flex;
+    gap: 8px;
+    align-items: center;
+   }
+   
 
     @media screen and (min-width: 600px) {
-      &:nth-child(n + 6){
-        display: none;
-      }
+  
     }
 
     @media screen and (min-width: 1024px) {
-      &:nth-child(n + 6){
-        display: grid;
-      }
+    
       padding: 0;
       transition: 800ms;
-      display: grid;
-      grid-gap: 0;
+      // display: grid;
+      // grid-gap: 0;
       border-bottom: 2px solid rgba(79, 86, 89, 0.1);
-      grid-template-columns: minmax(180px, 2fr)  repeat(7, 1fr) minmax(180px, 1fr);
+      // grid-template-columns: minmax(180px, 2fr)  repeat(7, 1fr) minmax(180px, 1fr);
       &:hover{
         background: #F5F5F5;
       }
@@ -109,6 +137,15 @@
   }
 
   &__item {
+  @include for-1024(){
+    &:first-child,&:last-child{
+      flex-shrink: 0;
+      width: auto;
+    }
+   &:not(:last-child):not(:first-child){
+    width: 100%;
+   }
+  }
     span{
       display: none;
       @media screen and (min-width: 1024px) {
@@ -120,11 +157,14 @@
       font-family: 'PF Din Text Cond Pro';
       display: flex;
       align-items: center;
-      padding: 20px 8px;
+      
       font-size: 12px;
       line-height: 12px;
       font-weight: 300;
       letter-spacing: 0.05em;
+      span{
+        padding: 20px 8px;
+      }
     }
 
 
@@ -186,10 +226,14 @@
     }
 
     &:first-child {
-      padding: 16px 0px 12px;
+        span{
+          padding: 16px 0px 12px;
+        }
 
       @media screen and (min-width: 1024px) {
+      span{
         padding: 16px 32px;
+      }
         white-space: nowrap;
       }
     }
@@ -215,7 +259,9 @@
     }
 
     @media screen and (min-width: 1366px) {
-      padding: 18px 8px;
+        span{
+          padding: 18px 8px;
+        }
       font-size: 14px;
       line-height: 16px;
     }
@@ -494,3 +540,29 @@
     }
   }
 }
+
+.p-list{
+  @include for-1024(){
+    // width: 100%;
+    // display: table !important;
+
+    &__header{
+      width: 100%;
+      gap: 8px;
+      // display: table-header-group !important;
+      // width: 100% !important;
+      &[style="width: auto; top: 0px;"]{
+        width: 100% !important;
+      }
+    }
+    &__head{
+      box-sizing: content-box;
+    }
+    &__item{
+      box-sizing: content-box;
+    }
+   
+  }
+}
+
+

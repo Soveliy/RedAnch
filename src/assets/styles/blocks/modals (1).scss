@@ -117,6 +117,7 @@
 
   &__container--psr {
    position: relative !important;
+   height: auto !important;
   }
 
   &__icon {
@@ -361,7 +362,7 @@
     position: relative;
     z-index: 50;
 
-    border-bottom: 8px solid #EDEDED;
+
     @media screen and (min-width: 600px) {
       border: none;
     }    

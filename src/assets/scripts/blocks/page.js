@@ -11,7 +11,7 @@ const initPage = () => {
     if (!pageParalax) return;
 
     const setParalaxOffset = () => {
-        pageParalax.style.top = -(window.pageYOffset * 100 / (page.offsetHeight - document.documentElement.clientHeight) * document.documentElement.clientHeight / 100) +'px';
+        pageParalax.style.top = -(window.pageYOffset * 100 / (page.offsetHeight - document.documentElement.clientHeight) * document.documentElement.clientHeight / 60) +'px';
     };
 
     setParalaxOffset();

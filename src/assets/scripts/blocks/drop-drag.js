@@ -8,7 +8,8 @@ const dragDrop = () => {
    if (!jsDrags) return;
 
    jsDrags.forEach((jsDrag) => {
-      if (jsDrag.classList.contains('form-box-drag-js')) {
+      if (jsDrag.classList.contains('form-box-drag-js--order')) {
+
          /* getElementById */
          function $id(id) {
             return document.getElementById(id);
@@ -68,6 +69,7 @@ const dragDrop = () => {
          }
 
          function ParseFile(file) {
+            console.log(file)
             Output(
                "<p>Информация о файле: <strong>" + file.name +
                "</strong> тип: <strong>" + file.type +
