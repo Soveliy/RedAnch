@@ -26,19 +26,12 @@
 
     @include for-1024(){
       .p-list__dropdown{
-        padding: 12px 32px;
+        padding: 6px 0;
       }
-       span{
-        padding: 15px 8px;
-      }
+      
     }
     @include for-1600(){
-      .p-list__dropdown{
-        padding: 15px 32px;
-      }
-       span{
-        padding: 15px 8px;
-      }
+    
         
     }
 
@@ -88,24 +81,66 @@
     }
   }
 
-  &__body{
-    display: grid;
-    grid-gap: 8px;
-    grid-template-columns: repeat(1, 1fr);
-
-    @media screen and (min-width: 1024px) {
-      grid-gap: 0px;
-    }
-  }
 
   &__items {
-    padding: 0 16px;
+    position: relative;
+    padding: 16px 12px 0;
     background-color: #fff;
-    // display: grid;
-    // grid-gap: 8px;
-    // grid-template-columns: repeat(2, 1fr);
-   @include for-1024(){
     display: flex;
+    flex-wrap: wrap;
+    @include for-1024(){
+      flex-wrap: nowrap;
+    }
+    & + &{
+      margin-top: 8px;
+      @include for-1024(){
+        margin-top: 1px;
+      }
+    }
+    a{
+      width: 100%;
+      margin-bottom: 8px;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+      font-family: $DM;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+      color: #150F0F;
+      @include for-600(){
+        font-size: 28px;
+        line-height: 32px;
+      }
+      @include for-1024(){
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 300;
+        letter-spacing: .05em;
+        margin-bottom: 0;
+        margin-left: 24px;
+        box-sizing: border-box;
+        &:after{
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: calc(100% - 170px);
+        }
+      }
+      @include for-1366(){
+        font-size: 16px;
+        line-height: 20px;
+      }
+      @include for-1600(){
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: .05em;
+      }
+      
+    }
+   @include for-1024(){
+ 
     gap: 8px;
     align-items: center;
    }
@@ -118,7 +153,7 @@
     @media screen and (min-width: 1024px) {
     
       padding: 0;
-      transition: 800ms;
+      transition: $transition;
       // display: grid;
       // grid-gap: 0;
       border-bottom: 2px solid rgba(79, 86, 89, 0.1);
@@ -137,6 +172,38 @@
   }
 
   &__item {
+    &:not(:first-child):not(:last-child){
+      width: 50%;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 16px;
+      font-family: $DM;
+      letter-spacing: 0.05em;
+      color: #150F0F;
+      padding: 4px;
+      box-sizing: border-box;
+      @include for-600(){
+        font-size: 16px;
+        line-height: 20px;
+      }
+      @include for-1024(){
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 300;
+        letter-spacing: .05em;
+        width: 100%;
+      }
+      @include for-1366(){
+        font-size: 16px;
+        line-height: 20px;
+      }
+      @include for-1600(){
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: .05em;
+      }
+    }
+ 
   @include for-1024(){
     &:first-child,&:last-child{
       flex-shrink: 0;
@@ -146,12 +213,7 @@
     width: 100%;
    }
   }
-    span{
-      display: none;
-      @media screen and (min-width: 1024px) {
-        display: block;
-      }
-    }
+
 
     @media screen and (min-width: 1024px) {
       font-family: 'PF Din Text Cond Pro';
@@ -162,39 +224,11 @@
       line-height: 12px;
       font-weight: 300;
       letter-spacing: 0.05em;
-      span{
-        padding: 20px 8px;
-      }
+    
     }
 
 
-    &.mobile-title{
-      grid-column: span 2;
 
-      &:before{
-        content: attr(data-title); 
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 28px;
-        letter-spacing: 0.03em;
-        color: #150F0F;
-      }
-
-      @media screen and (min-width: 1024px) {
-        grid-column: auto;
-        &:before{
-          display: none;
-        }
-      }
-    }
-
-    &:nth-child(2){
-      display: none;
-
-      @media screen and (min-width: 1024px) {
-        display: block;
-      }
-    }
     
     &:before{
       content: attr(data-text); 
@@ -205,50 +239,34 @@
       line-height: 16px;
       letter-spacing: 0.05em;
       color: rgba(79, 86, 89, 0.7);
+      @include for-600(){
+        font-size: 18px;
+        line-height: 20px;
+      }
 
       @media screen and (min-width: 1024px) {
         display: none;
       }
     }
 
-    &:after{
-      content: attr(data-num); 
-      font-family: 'PF Din Text Cond Pro';
-      font-weight: 300;
-      font-size: 14px;
-      line-height: 16px;
-      letter-spacing: 0.05em;
-      color: #150F0F;
-      
-      @media screen and (min-width: 1024px) {
-        display: none;
-      }
-    }
+   
 
     &:first-child {
         span{
           padding: 16px 0px 12px;
         }
 
-      @media screen and (min-width: 1024px) {
-      span{
-        padding: 16px 32px;
-      }
-        white-space: nowrap;
-      }
+     
     }
 
     &:last-child{
-      margin-left: -16px;
-      margin-right: -16px;
-      span{
-        display: block;
-      }
+    
       padding: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      grid-column: span 2;
+      width: calc(100% + 24px);
+      margin: 0 -12px;
       @media screen and (min-width: 1024px) {
         margin: 0;
         grid-column:auto;
@@ -258,38 +276,32 @@
       }
     }
 
-    @media screen and (min-width: 1366px) {
-        span{
-          padding: 18px 8px;
-        }
-      font-size: 14px;
-      line-height: 16px;
-    }
+   
 
-    @media screen and (min-width: 1600px) {
-      font-size: 20px;
-      line-height: 24px;
-    }
+   
   }
 
   &__options {
-    margin-top: 10px;
+    margin-top: 14px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    @include for-600(){
+      margin-top: 8px;
+    }
     @media screen and (min-width: 1024px) {
       margin: 0;
-      transition: 800ms;
+      transition: $transition;
       height: 100%;
       display: flex;
-      align-items: center;
+      align-items: stretch;
       opacity: 0;
     }
   }
 
   &__option {
-    padding: 16px;
+    padding: 17px 10px;
     flex-grow: 10;
     width: auto;
     height: 100%;
@@ -301,6 +313,11 @@
 
     @media screen and (min-width: 600px) {
       width: 100%;
+    }
+    @include for-1024(){
+      padding: 12px;
+      height: 54px;
+      box-sizing: border-box;
     }
 
 
@@ -362,6 +379,17 @@
   &__box{
     display: flex;
     align-items: flex-start;
+    &--desktop{
+      display: none;
+      @include for-1024(){
+        display: block;
+      }
+    }
+    &--mobile{
+      @include for-1024(){
+        display: none;
+      }
+    }
   }
 
   &__icon {
@@ -386,7 +414,15 @@
     text-transform: uppercase;
     color: #150F0F;
     margin-left: 6px;
-
+    @include for-600(){
+      font-size: 28px;
+      line-height: 28px;
+    }
+    &--mobile{
+      @include for-1024(){
+        display: none;
+      }
+    }
     @media screen and (min-width: 1024px) {
       .mobi{
         display: none;
@@ -404,142 +440,6 @@
   display: block;
 }
 
-.p-mobile {
-  display: none;
-
-  &__block {
-    background: #FFFFFF;
-    margin-bottom: 8px;
-
-    &:last-child{
-      margin-bottom: 0;
-    }
-  }
-
-  &__title {
-    font-family: 'PF Din Text Cond Pro';
-    padding: 16px 16px 0;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 28px;
-    letter-spacing: 0.03em;
-    color: #150F0F;
-    margin-bottom: 12px;
-
-    @media screen and (min-width: 600px) {
-      font-size: 28px;
-      line-height: 32px;
-    }
-  }
-
-  &__content {
-    padding: 0 16px 16px;
-
-    font-family: 'PF Din Text Cond Pro';
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.05em;
-    color: rgba(79, 86, 89, 0.7);
-    border-bottom: 1px solid #EDEDED;
-
-    @media screen and (min-width: 600px) {
-      font-size: 16px;
-      line-height: 20px;
-    }
-  }
-
-  &__items {
-    display: grid;
-    grid-gap: 8px 10px;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  &__item {
-
-    
-  }
-
-  &__text {
-    display: inline;
-  }
-
-  &__info {
-    color: #150F0F;
-    display: inline;
-  }
-
-  &__options {
-    transition: 800ms;
-    height: 100%;
-    display: flex;
-    align-items: center;
-  
-  }
-
-  &__option {
-    cursor: pointer;
-    height: 100%;
-    flex-grow: 10;
-    padding: 18px 8px;
-    background: #FFFFFF;
-    border-left: 1px solid rgba(79, 86, 89, 0.1);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &:first-child{
-      border-left: none;
-    }
-
-    @media screen and (min-width: 600px) {
-      flex-grow: 0;
-      width: 50%;
-    }
-  }
-
-  &__box{
-    display: flex;
-    align-items: flex-start;
-  }
-
-  &__button {
-    border: none;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__text-button {
-    font-family: 'TT Bluescreens';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 24px;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    margin-left: 8px;
-
-    @media screen and (min-width: 600px) {
-      font-size: 28px;
-      line-height: 32px;
-    }
-  }
-
-  &__icon {
-    width: 24px;
-    height: 24px;
-    fill:#DD2B1C;
-
-    span{
-      display: flex;
-      align-items: flex-start;
-    }
-  }
-}
 
 .p-list{
   @include for-1024(){
@@ -557,6 +457,16 @@
     }
     &__head{
       box-sizing: content-box;
+     padding-top: 12px;
+     padding-bottom: 12px;
+      &:first-child{
+        margin-left: 24px;
+      }
+      &.js-sort-active{
+        svg{
+          transform: rotate(180deg);
+        }
+      }
     }
     &__item{
       box-sizing: content-box;
@@ -564,5 +474,3 @@
    
   }
 }
-
-

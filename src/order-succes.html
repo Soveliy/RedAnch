@@ -1,0 +1,30 @@
+@@include('./assets/templates/template-header-light.html', { 'lang': 'ru', 'title': 'Red Anchor | Все категории' })
+
+
+
+   <main class="page__main main">
+     <div class="empty-page">
+      <div class="container">
+         <div class="empty-page__title title title--ms-44 title--ts-90 title--ds-80  title--dl-144">
+            Ваш заказ <span>№123456</span> офомлен
+         </div>
+         <div class="empty-page__desc">
+            В ближайшее время мы свяжемся с вами для уточнения деталей
+         </div>
+      </div>
+      <div class="empty-page__footer empty-page__footer--js">
+         <a href="#" class="ButtonBox ButtonBox--grey">
+            <div class="ButtonBox__container">
+               <div class="ButtonBox__text">Перейти в каталог</div>
+               <svg class="ButtonBox__icon">
+                  <use xlink:href="./assets/images/svg-sprite/svg-sprite.svg#arrow-se"></use>
+               </svg>
+            </div>
+         </a>
+      </div>
+     </div>
+   </main>
+   @@include('./assets/templates/template-main-footer.html', { 'lang': 'ru', 'title': 'Red Anchor | Контакты' })
+<!-- footer-black -->
+@@include('./assets/block-mixin/_footer-light.html')
+@@include('./assets/templates/template-footer-light.html')

@@ -47,7 +47,7 @@
       }
 
       function handleResize () {
-        if ($(window).width() > 1366) {
+        if ($(window).width() > 1024) {
           $unitBlockButton.off('click').on('click', handleUnitBlock)
           $('#modal-accessories').removeAttr('style')
         } else {
@@ -59,11 +59,13 @@
 
       $(window).on('resize', throttle(handleResize, 150))
       
-      if ($(window).width() > 1366) {
+      if ($(window).width() > 1024) {
+        handleUnitBlock();
         $unitBlockButton.on('click', handleUnitBlock)
       }
+     
     };
-
+    
 initUnitBlock();
     
   //! Modal-button-click

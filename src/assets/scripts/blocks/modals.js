@@ -163,3 +163,41 @@ $('.label-link--modal').click(function () {
       },
    });
 });
+
+
+
+
+
+$('.content__information').click(function () {
+   $('#reference-modal').arcticmodal({
+      afterOpen: function (data, el) {
+         $('body').css('overflow', 'hidden');
+         $('#reference-modal').addClass('is-active');
+      },
+      beforeClose: function (data, el) {
+         setTimeout(() => {
+            $('body').css('overflow', 'auto');
+            $('.b-modal#reference-modal').removeClass('is-active');
+         }, 100);
+      },
+   });
+});
+
+
+$('.form-order-btn-found').click(function () {
+   $('#form-found-modal').arcticmodal({
+      afterOpen: function (data, el) {
+         $('body').css('overflow', 'hidden');
+         $('#form-found-modal').addClass('is-active');
+      },
+      beforeClose: function (data, el) {
+         setTimeout(() => {
+            $('body').css('overflow', 'auto');
+            $('.b-modal#form-found-modal').removeClass('is-active');
+         }, 100);
+      },
+   });
+});
+
+
+

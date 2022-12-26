@@ -267,4 +267,42 @@
 <path d="M5.5 4V2H1.5V22H23.5V2H19.5V4H21.5V20H3.5V4H5.5Z" />
 <path d="M4.5 18H9.5L9.5 16L4.5 16L4.5 18Z"/>
 </symbol>
+
+
+<symbol id="fastOrder" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 24C7.2 24 6.5 23.3 6.5 22.5C6.5 21.7 7.2 21 8 21C8.8 21 9.5 21.7 9.5 22.5C9.5 23.3 8.8 24 8 24Z" fill="#DD2B1C"/>
+<path d="M21 24C20.2 24 19.5 23.3 19.5 22.5C19.5 21.7 20.2 21 21 21C21.8 21 22.5 21.7 22.5 22.5C22.5 23.3 21.8 24 21 24Z" fill="#DD2B1C"/>
+<path d="M4.4 2L4.8 0L8.2 0L7.9 2L4.4 2Z" fill="#DD2B1C"/>
+<path d="M5.1 20L5.4 18L24.5 18L24.1 20L5.1 20Z" fill="#DD2B1C"/>
+<path d="M9.2 16L9.6 14L22.1 14L21.8 16L9.2 16Z" fill="#DD2B1C"/>
+<path d="M11.6 4L12 2L24.5 2L24.1 4L11.6 4Z" fill="#DD2B1C"/>
+<path d="M8.3 0L10.3 0L6.5 20H4.5L8.3 0Z" fill="#DD2B1C"/>
+<path d="M11.6 4H13.6L11.6 14H9.6L11.6 4Z" fill="#DD2B1C"/>
+<path d="M22.1 4H24.1L22.1 14H20.1L22.1 4Z" fill="#DD2B1C"/>
+<path d="M5.3 6L0.5 6L0.9 4L5.7 4L5.3 6Z" fill="#DD2B1C"/>
+<path d="M4.6 10H0.5L0.9 8H5L4.6 10Z" fill="#DD2B1C"/>
+<path d="M3.8 14H0.5L0.9 12H4.2L3.8 14Z" fill="#DD2B1C"/>
+</symbol>
+
+
+<symbol id="inOrderMob" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_4279_133724)">
+<path d="M6.5 24C5.7 24 5 23.3 5 22.5C5 21.7 5.7 21 6.5 21C7.3 21 8 21.7 8 22.5C8 23.3 7.3 24 6.5 24Z" fill="#DD2B1C"/>
+<path d="M19.5 24C18.7 24 18 23.3 18 22.5C18 21.7 18.7 21 19.5 21C20.3 21 21 21.7 21 22.5C21 23.3 20.3 24 19.5 24Z" fill="#DD2B1C"/>
+<path d="M3 2L3 0L0 0L0 2L3 2Z" fill="#DD2B1C"/>
+<path d="M23 20V18L4 18V20L23 20Z" fill="#DD2B1C"/>
+<path d="M20.5137 15.9844V13.9844L7.51367 13.9844V15.9844L20.5137 15.9844Z" fill="#DD2B1C"/>
+<path d="M20.5137 3.98438V1.98438L7.51367 1.98437V3.98437L20.5137 3.98438Z" fill="#DD2B1C"/>
+<path d="M3 20H5L5 0H3L3 20Z" fill="#DD2B1C"/>
+<path d="M7.52148 14H9.52148L9.52148 4H7.52148L7.52148 14Z" fill="#DD2B1C"/>
+<path d="M18.5273 14H20.5273L20.5273 4H18.5273L18.5273 14Z" fill="#DD2B1C"/>
+</g>
+<defs>
+<clipPath id="clip0_4279_133724">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</symbol>
+
+
 </svg>

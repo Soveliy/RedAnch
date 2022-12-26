@@ -1,4 +1,4 @@
-@@include('./assets/templates/template-header.html', { 'lang': 'ru', 'title': 'Red Anchor | Все категории' })
+@@include('./assets/templates/template-header-light.html', { 'lang': 'ru', 'title': 'Red Anchor | Все категории' })
 
 <!-- PAGE -->
 <div class="body__page page page--light js-page modal-filter">
@@ -27,7 +27,7 @@
                               <use href="./assets/images/svg-sprite/svg-sprite.svg#arrow"></use>
                            </svg>
                         </span>
-                        Якорные смычки
+                        Продукция
                      </li>
 
                      <li class="site-navigation__list pc">
@@ -43,20 +43,57 @@
                         <div class="about-product__description">
                            Цепи без распорок для крепления отбойных устройств причальных сооружений
                         </div>
-
-                        <div class="about-product__text pc">
-                           <div class="description description--light text" data-max-lines="8">
+                        <div class="about-product__images">
+                           <!-- slider Swiper -->
+                           <div class="swiper swiper-product mySwiper">
+   
+                              <div class="swiper-wrapper swiper-product__wrapper">
+                                 <div class="swiper-slide swiper-product__slide">
+                                    <a href="./assets/images/content/about-product/product-chain5.png"
+                                       data-fancybox="preview">
+                                       <picture class="about-product-img picture">
+                                          <source srcset="./assets/images/content/about-product/product-chain6.png"
+                                             media="(min-width: 1920px)" />
+                                          <source srcset="./assets/images/content/about-product/product-chain5.png"
+                                             media="(min-width: 1600px)" />
+                                          <source srcset="./assets/images/content/about-product/circuit-analysis4.png"
+                                             media="(min-width: 1366px)" />
+                                          <source srcset="./assets/images/content/about-product/circuit-analysis3.png"
+                                             media="(min-width: 1024px)" />
+                                          <source srcset="./assets/images/content/about-product/product-chain2.png"
+                                             media="(min-width: 600px)" />
+                                          <source srcset="./assets/images/content/about-product/product-chain1.png"
+                                             media="(min-width: 320px)" />
+                                          <img src="./assets/images/content/about-product/product-chain5.png" alt="" />
+                                       </picture>
+                                    </a>
+                                 </div>
+                              
+                              </div>
+   
+                              <div class="swiper-button-next swiper-product__next">
+                                 <span>
+                                    <svg>
+                                       <use href="./assets/images/svg-sprite/svg-sprite.svg#arrow-slider"></use>
+                                    </svg>
+                                 </span>
+                              </div>
+                              <div class="swiper-button-prev swiper-product__prev">
+                                 <span>
+                                    <svg>
+                                       <use href="./assets/images/svg-sprite/svg-sprite.svg#arrow-slider"></use>
+                                    </svg>
+                                 </span>
+                              </div>
+                           </div>
+   
+                        </div>
+                        <div class="about-product__text">
+                           <div class="description description--light text">
                               <div class="description__container text-dropdown">
                                  <div class="sub-categories-head__description text js-text" data-max-lines="5">
                                     <div class="description__content text__content js-text__content ui-color-black-100">
-                                       <p class="pc">
-                                          Предназначена для комплектации якорных канатов, бриделей, цепных строп,
-                                          устройств отбойных сооружений, упряжек ковшовых экскаваторов. Предназначена
-                                          для комплектации якорных канатов, бриделей, цепных строп, устройств отбойных
-                                          сооружений, упряжек ковшовых экскаваторов. Предназначена для комплектации
-                                          якорных канатов, бриделей, цепных строп,
-
-                                       </p>
+                                      
 
                                        <p>
                                           Предназначена для комплектации якорных канатов, бриделей, цепных строп,
@@ -77,122 +114,13 @@
                            </div>
                         </div>
                      </div>
-                     <div class="about-product__images">
-                        <!-- slider Swiper -->
-                        <div class="swiper swiper-product mySwiper">
-
-                           <div class="swiper-wrapper swiper-product__wrapper">
-                              <div class="swiper-slide swiper-product__slide">
-                                 <a href="./assets/images/content/about-product/product-chain5.png"
-                                    data-fancybox="preview">
-                                    <picture class="about-product-img picture">
-                                       <source srcset="./assets/images/content/about-product/product-chain6.png"
-                                          media="(min-width: 1920px)" />
-                                       <source srcset="./assets/images/content/about-product/product-chain5.png"
-                                          media="(min-width: 1600px)" />
-                                       <source srcset="./assets/images/content/about-product/circuit-analysis4.png"
-                                          media="(min-width: 1366px)" />
-                                       <source srcset="./assets/images/content/about-product/circuit-analysis3.png"
-                                          media="(min-width: 1024px)" />
-                                       <source srcset="./assets/images/content/about-product/product-chain2.png"
-                                          media="(min-width: 600px)" />
-                                       <source srcset="./assets/images/content/about-product/product-chain1.png"
-                                          media="(min-width: 320px)" />
-                                       <img src="./assets/images/content/about-product/product-chain5.png" alt="" />
-                                    </picture>
-                                 </a>
-                              </div>
-                              <div class="swiper-slide swiper-product__slide">
-                                 <a href="./assets/images/content/about-product/product-chain5.png"
-                                    data-fancybox="preview">
-                                    <picture class="about-product-img picture">
-                                       <source srcset="./assets/images/content/about-product/product-chain6.png"
-                                          media="(min-width: 1920px)" />
-                                       <source srcset="./assets/images/content/about-product/product-chain5.png"
-                                          media="(min-width: 1600px)" />
-                                       <source srcset="./assets/images/content/about-product/circuit-analysis4.png"
-                                          media="(min-width: 1366px)" />
-                                       <source srcset="./assets/images/content/about-product/circuit-analysis3.png"
-                                          media="(min-width: 1024px)" />
-                                       <source srcset="./assets/images/content/about-product/product-chain2.png"
-                                          media="(min-width: 600px)" />
-                                       <source srcset="./assets/images/content/about-product/product-chain1.png"
-                                          media="(min-width: 320px)" />
-                                       <img src="./assets/images/content/about-product/product-chain5.png" alt="" />
-                                    </picture>
-                                 </a>
-                              </div>
-                           </div>
-
-                           <div class="swiper-button-next swiper-product__next">
-                              <span>
-                                 <svg>
-                                    <use href="./assets/images/svg-sprite/svg-sprite.svg#arrow-slider"></use>
-                                 </svg>
-                              </span>
-                           </div>
-                           <div class="swiper-button-prev swiper-product__prev">
-                              <span>
-                                 <svg>
-                                    <use href="./assets/images/svg-sprite/svg-sprite.svg#arrow-slider"></use>
-                                 </svg>
-                              </span>
-                           </div>
-                        </div>
-
-                     </div>
+                    
                   </div>
 
-                  <div class="about-product__text mobi">
-                     <div class="description description--light text" data-max-lines="8">
-                        <div class="description__container text-dropdown">
-                           <div class="sub-categories-head__description text js-text" data-max-lines="5">
-                              <div class="description__content text__content js-text__content ui-color-black-100">
-                                 <p class="pc">
-                                    Предназначена для комплектации якорных канатов, бриделей, цепных строп, устройств
-                                    отбойных сооружений, упряжек ковшовых экскаваторов. Предназначена для комплектации
-                                    якорных канатов, бриделей, цепных строп, устройств отбойных сооружений, упряжек
-                                    ковшовых экскаваторов. Предназначена для комплектации якорных канатов, бриделей,
-                                    цепных строп,
-
-                                 </p>
-
-                                 <p>
-                                    Предназначена для комплектации якорных канатов, бриделей, цепных строп, устройств
-                                    отбойных сооружений, упряжек ковшовых экскаваторов. Предназначена для комплектации
-                                    якорных канатов, бриделей, цепных строп, устройств отбойных сооружений, упряжек
-                                    ковшовых экскаваторов. Предназначена для комплектации якорных канатов, бриделей,
-                                    цепных строп,
-                                 </p>
-                              </div>
-
-                              <button
-                                 class="sub-categories-head__more-button text__more-button js-text__more-button pointer more-button brief brief--medium brief--ms-14 brief--ts-16 brief--dl-20 ui-color-red-100"
-                                 type="button" data-opening-text="Подробнее" data-closing-text="Свернуть">
-                                 Подробнее
-                              </button>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
+            
                </div>
 
-               <div style="display: none">
-                  <a data-fancybox="preview" href="./assets/images/content/about-product/product-chain6.png">
-                     <img src="./assets/images/content/about-product/product-chain6.png" alt="" />
-                  </a>
-                  <a data-fancybox="preview" href="./assets/images/content/about-product/circuit-analysis4.png">
-                     <img src="./assets/images/content/about-product/circuit-analysis4.png" alt="" />
-                  </a>
-
-                  <a data-fancybox="preview" href="./assets/images/content/about-product/circuit-analysis4.png">
-                     <img src="./assets/images/content/about-product/circuit-analysis4.png" alt="" />
-                  </a>
-
-                  <a data-fancybox="preview" href="./assets/images/content/about-product/circuit-analysis4.png">
-                     <img src="./assets/images/content/about-product/circuit-analysis4.png" alt="" />
-                  </a>
-               </div>
+         
 
                <!-- / site-navigation -->
                <div class="page__container">
@@ -212,7 +140,7 @@
 
                               <div class="sidebar__block sidebar__block--ms-hidden sidebar__block--ds-visible">
                                  <!-- UNIT BLOCK -->
-                                 <div class="unit-block js-unit-block block-dropdown mobile unit-block--closed">
+                                 <div class="unit-block js-unit-block block-dropdown mobile">
                                     <button
                                        class="unit-block__button js-unit-block__button unit unit--button ui-background-light"
                                        type="button">
@@ -637,1014 +565,672 @@
                            <!-- catalog-table -->
                            <div class="table-wrapper">
                               <div class="p-list" data-sticke-wrapper>
-                                 <div class="p-list__header" data-sticke-element>
+                                 <div class="p-list__header" data-sticke-element="" style="top: 0px; width: auto;">
+
+                                    <div class="p-list__head" style="width: 75.8125px;">
+                                       <a href="/catalog/yakornye-tsepi-i-komplektuyushchie/komplektuyushchie-yakornykh-tsepey/yakornye-smychki/smychki-yakornye-s-rasporkami/?sort=property_PRODUCT_CODE&amp;order=desc" onclick="BX.ajax.insertToNode('/catalog/yakornye-tsepi-i-komplektuyushchie/komplektuyushchie-yakornykh-tsepey/yakornye-smychki/smychki-yakornye-s-rasporkami/?sort=property_PRODUCT_CODE&amp;order=desc&amp;bxajaxid=83defc73ab34fe0cc295b8965811d07b', 'comp_83defc73ab34fe0cc295b8965811d07b'); return false;" class="p-list__dropdown  js-order-asc">
+                                          Код                            <span>
+                                          <svg class="p-list__arrow">
+                                             <use href="./assets/images/svg-sprite/svg-sprite.svg#arrow-red"></use>
+                                          </svg>
+                                       </span>
+                                       </a>
+                                    </div>
                                     <div class="p-list__head">
-                                       <div class="p-list__dropdown">
-                                          Код
-                                          <span>
+                                       <a href="/catalog/yakornye-tsepi-i-komplektuyushchie/komplektuyushchie-yakornykh-tsepey/yakornye-smychki/smychki-yakornye-s-rasporkami/?sort=property_CALIBER&amp;order=desc" onclick="BX.ajax.insertToNode('/catalog/yakornye-tsepi-i-komplektuyushchie/komplektuyushchie-yakornykh-tsepey/yakornye-smychki/smychki-yakornye-s-rasporkami/?sort=property_CALIBER&amp;order=desc&amp;bxajaxid=83defc73ab34fe0cc295b8965811d07b', 'comp_83defc73ab34fe0cc295b8965811d07b'); return false;" class="p-list__dropdown  js-order-asc">
+                                          Калибр, мм                            <span>
+                                          <svg class="p-list__arrow">
+                                             <use href="./assets/images/svg-sprite/svg-sprite.svg#arrow-red"></use>
+                                          </svg>
+                                       </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-list__head">
+                                    <a href="/catalog/yakornye-tsepi-i-komplektuyushchie/komplektuyushchie-yakornykh-tsepey/yakornye-smychki/smychki-yakornye-s-rasporkami/?sort=property_CATEGORY&amp;order=desc" onclick="BX.ajax.insertToNode('/catalog/yakornye-tsepi-i-komplektuyushchie/komplektuyushchie-yakornykh-tsepey/yakornye-smychki/smychki-yakornye-s-rasporkami/?sort=property_CATEGORY&amp;order=desc&amp;bxajaxid=83defc73ab34fe0cc295b8965811d07b', 'comp_83defc73ab34fe0cc295b8965811d07b'); return false;" class="p-list__dropdown  js-order-asc">
+                                       Категория                            <span>
+                                       <svg class="p-list__arrow">
+                                          <use href="./assets/images/svg-sprite/svg-sprite.svg#arrow-red"></use>
+                                       </svg>
+                                    </span>
+                                    </a>
+                                    </div>
+                                    <div class="p-list__head">
+                                       <a href="/catalog/yakornye-tsepi-i-komplektuyushchie/komplektuyushchie-yakornykh-tsepey/yakornye-smychki/smychki-yakornye-s-rasporkami/?sort=property_THEORETICAL_MASS&amp;order=desc" onclick="BX.ajax.insertToNode('/catalog/yakornye-tsepi-i-komplektuyushchie/komplektuyushchie-yakornykh-tsepey/yakornye-smychki/smychki-yakornye-s-rasporkami/?sort=property_THEORETICAL_MASS&amp;order=desc&amp;bxajaxid=83defc73ab34fe0cc295b8965811d07b', 'comp_83defc73ab34fe0cc295b8965811d07b'); return false;" class="p-list__dropdown  js-order-asc">
+                                          Теоретическая масса, кг                            <span>
+                                          <svg class="p-list__arrow">
+                                             <use href="./assets/images/svg-sprite/svg-sprite.svg#arrow-red"></use>
+                                          </svg>
+                                       </span>
+                                       </a>
+                                    </div>
+                                    <div class="p-list__head">
+                                       <a href="/catalog/yakornye-tsepi-i-komplektuyushchie/komplektuyushchie-yakornykh-tsepey/yakornye-smychki/smychki-yakornye-s-rasporkami/?sort=property_TRIAL_LOAD&amp;order=desc" onclick="BX.ajax.insertToNode('/catalog/yakornye-tsepi-i-komplektuyushchie/komplektuyushchie-yakornykh-tsepey/yakornye-smychki/smychki-yakornye-s-rasporkami/?sort=property_TRIAL_LOAD&amp;order=desc&amp;bxajaxid=83defc73ab34fe0cc295b8965811d07b', 'comp_83defc73ab34fe0cc295b8965811d07b'); return false;" class="p-list__dropdown  js-order-asc">
+                                          Пробная нагрузка, кН                            <span>
+                                          <svg class="p-list__arrow">
+                                             <use href="./assets/images/svg-sprite/svg-sprite.svg#arrow-red"></use>
+                                          </svg>
+                                       </span>
+                                       </a>
+                                    </div>
+                                       <div class="p-list__head">
+                                          <a href="/catalog/yakornye-tsepi-i-komplektuyushchie/komplektuyushchie-yakornykh-tsepey/yakornye-smychki/smychki-yakornye-s-rasporkami/?sort=property_BREAKING_LOAD&amp;order=desc" onclick="BX.ajax.insertToNode('/catalog/yakornye-tsepi-i-komplektuyushchie/komplektuyushchie-yakornykh-tsepey/yakornye-smychki/smychki-yakornye-s-rasporkami/?sort=property_BREAKING_LOAD&amp;order=desc&amp;bxajaxid=83defc73ab34fe0cc295b8965811d07b', 'comp_83defc73ab34fe0cc295b8965811d07b'); return false;" class="p-list__dropdown  js-order-asc">
+                                             Разрушающая нагрузка, кН                            <span>
                                              <svg class="p-list__arrow">
                                                 <use href="./assets/images/svg-sprite/svg-sprite.svg#arrow-red"></use>
                                              </svg>
                                           </span>
+                                          </a>
                                        </div>
                                     </div>
-                                    <div class="p-list__head"><span>Тип формы звена</span></div>
-                                    <div class="p-list__head"><span>Температурная зона эксплуатации</span></div>
-                                    <div class="p-list__head"><span>Калибр, мм</span></div>
-                                    <div class="p-list__head"><span>Шаг, мм</span></div>
-                                    <div class="p-list__head"><span>Тип формы звена</span></div>
-                                    <div class="p-list__head"><span>Температурная зона эксплуатации</span></div>
-                                    <div class="p-list__head"><span>Калибр, мм</span></div>
-                                    <div class="p-list__head"></div>
-                                 </div>
 
                                  <div class="p-list__body">
-                                    <!-- mobile -->
-                                    <a href="#" class="p-list__items">
-                                       <div class="p-list__item mobile-title" data-title="3-K1-0.50">
-                                          <span>УЗОБ-120-W(-50) УЗОБ-120-W(-50)</span>
+                                    <div class="p-list__items" data-entity="items-row">
+
+                                       <a
+                                          href="/catalog/yakornye-tsepi-i-komplektuyushchie/komplektuyushchie-yakornykh-tsepey/yakornye-smychki/smychki-yakornye-s-rasporkami/sya-97-3/"
+                                          class="p-list__item"
+                                          target="_self">
+                                          3-K1-0.50
+                                       </a>
+
+                                       <div class="p-list__item" data-text="Категория:">
+                                          0.5
                                        </div>
-                                       <div class="p-list__item"><span>12</span></div>
-                                       <div class="p-list__item" data-text="Категория: " data-num="0.5"><span>2</span>
+                        
+                                       <div class="p-list__item" data-text="Размер С, мм:">
+                                         83.0
                                        </div>
-                                       <div class="p-list__item" data-text="Размер С, мм: " data-num="83.0">
-                                          <span>2</span>
+
+                                       <div class="p-list__item" data-text="Пробная нагрузка:">
+                                          25
                                        </div>
-                                       <div class="p-list__item" data-text="Пробная нагрузка: " data-num="25">
-                                          <span>2</span>
+
+                                       <div class="p-list__item" data-text="Размер S, мм:">
+                                          22
                                        </div>
-                                       <div class="p-list__item" data-text="Размер S, мм: " data-num="22"><span>2</span>
+
+                                       <div class="p-list__item" data-text="Разрушающая нагрузка:">
+                                         22
                                        </div>
-                                       <div class="p-list__item" data-text="Разрушающая нагрузка: " data-num="22">
-                                          <span>2</span>
-                                       </div>
-                                       <div class="p-list__item" data-text="Теоретическая масса, кг: " data-num="0.27">
-                                          <span>2</span>
-                                       </div>
+                                       <div class="p-list__item" data-text="Теоретическая масса, кг:">
+                                          0.27
+                                        </div>
+
                                        <div class="p-list__item">
                                           <div class="p-list__options">
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-s">
-                                                         </use>
-                                                      </svg>
+                                                <div class="p-list__option" onclick="getModalFastOrder(444);">
+                                                   <button class="p-list__button" type="button">
+                                                      <span class="p-list__box p-list__box--desktop">
+                                                            <svg class="p-list__icon">
+                                                               <use
+                                                                  href="./assets/images/svg-sprite/svg-sprite.svg#order-s"></use>
+                                                            </svg>
+                                                      </span>
+                                                      <span class="p-list__box p-list__box--mobile">
+                                                         <svg class="p-list__icon">
+                                                            <use
+                                                               href="./assets/images/svg-sprite/svg-sprite.svg#fastOrder"></use>
+                                                         </svg>
                                                    </span>
-                                                   <span class="p-list__text ">
-                                                      <p class="mobi">Быстрый заказ</p>
+                                                      <span class="p-list__text p-list__text--mobile">
+                                                        Быстрый заказ
                                                    </span>
-                                                </button>
-                                             </div>
+                                                   </button>
+                                                </div>
 
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-l">
-                                                         </use>
-                                                      </svg>
+                                                <div class="p-list__option" onclick="getModalBasketAdd(444);">
+                                                   <button class="p-list__button" type="button">
+                                                      <span class="p-list__box p-list__box--desktop">
+                                                            <svg class="p-list__icon">
+                                                               <use
+                                                                  href="./assets/images/svg-sprite/svg-sprite.svg#order-l"></use>
+                                                            </svg>
+                                                      </span>
+                                                      <span class="p-list__box p-list__box--mobile">
+                                                         <svg class="p-list__icon">
+                                                            <use
+                                                               href="./assets/images/svg-sprite/svg-sprite.svg#inOrderMob"></use>
+                                                         </svg>
                                                    </span>
-                                                   <span class="p-list__text">
-                                                      В заказ
-                                                   </span>
-                                                </button>
-                                             </div>
+                                                      <span class="p-list__text">
+                                                            В заказ
+                                                      </span>
+                                                   </button>
+                                                </div>
 
                                           </div>
                                        </div>
-                                    </a>
 
-                                    <a href="#" class="p-list__items">
-                                       <div class="p-list__item mobile-title" data-title="3-K1-0.63">
-                                          <span>УЗОБ-120-W(-50)</span>
+                                    </div>
+                                    <div class="p-list__items" data-entity="items-row">
+
+                                       <a
+                                          href="/catalog/yakornye-tsepi-i-komplektuyushchie/komplektuyushchie-yakornykh-tsepey/yakornye-smychki/smychki-yakornye-s-rasporkami/sya-97-3/"
+                                          class="p-list__item"
+                                          target="_self">
+                                        Длинный тайтл очень длинный (нет)
+                                       </a>
+
+                                       <div class="p-list__item" data-text="Категория:">
+                                          0.5
                                        </div>
-                                       <div class="p-list__item"><span>12</span></div>
-                                       <div class="p-list__item" data-text="Категория: " data-num="0.63"><span>2</span>
+                        
+                                       <div class="p-list__item" data-text="Размер С, мм:">
+                                         83.0
                                        </div>
-                                       <div class="p-list__item" data-text="Размер С, мм: " data-num="88.5">
-                                          <span>2</span>
+
+                                       <div class="p-list__item" data-text="Пробная нагрузка:">
+                                          25
                                        </div>
-                                       <div class="p-list__item" data-text="Пробная нагрузка: " data-num="25">
-                                          <span>2</span>
+
+                                       <div class="p-list__item" data-text="Размер S, мм:">
+                                          22
                                        </div>
-                                       <div class="p-list__item" data-text="Размер S, мм:" data-num=" 22"><span>2</span>
+
+                                       <div class="p-list__item" data-text="Разрушающая нагрузка:">
+                                         22
                                        </div>
-                                       <div class="p-list__item" data-text="Разрушающая нагрузка:" data-num=" 22">
-                                          <span>2</span>
-                                       </div>
-                                       <div class="p-list__item" data-text="Теоретическая масса, кг:" data-num=" 0.44">
-                                          <span>2</span>
-                                       </div>
+                                       <div class="p-list__item" data-text="Теоретическая масса, кг:">
+                                          0.27
+                                        </div>
+
                                        <div class="p-list__item">
                                           <div class="p-list__options">
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-s">
-                                                         </use>
-                                                      </svg>
+                                                <div class="p-list__option" onclick="getModalFastOrder(444);">
+                                                   <button class="p-list__button" type="button">
+                                                      <span class="p-list__box p-list__box--desktop">
+                                                            <svg class="p-list__icon">
+                                                               <use
+                                                                  href="./assets/images/svg-sprite/svg-sprite.svg#order-s"></use>
+                                                            </svg>
+                                                      </span>
+                                                      <span class="p-list__box p-list__box--mobile">
+                                                         <svg class="p-list__icon">
+                                                            <use
+                                                               href="./assets/images/svg-sprite/svg-sprite.svg#fastOrder"></use>
+                                                         </svg>
                                                    </span>
-                                                   <span class="p-list__text ">
-                                                      <p class="mobi">Быстрый заказ</p>
+                                                      <span class="p-list__text p-list__text--mobile">
+                                                        Быстрый заказ
                                                    </span>
-                                                </button>
-                                             </div>
+                                                   </button>
+                                                </div>
 
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-l">
-                                                         </use>
-                                                      </svg>
+                                                <div class="p-list__option" onclick="getModalBasketAdd(444);">
+                                                   <button class="p-list__button" type="button">
+                                                      <span class="p-list__box p-list__box--desktop">
+                                                            <svg class="p-list__icon">
+                                                               <use
+                                                                  href="./assets/images/svg-sprite/svg-sprite.svg#order-l"></use>
+                                                            </svg>
+                                                      </span>
+                                                      <span class="p-list__box p-list__box--mobile">
+                                                         <svg class="p-list__icon">
+                                                            <use
+                                                               href="./assets/images/svg-sprite/svg-sprite.svg#inOrderMob"></use>
+                                                         </svg>
                                                    </span>
-                                                   <span class="p-list__text">
-                                                      В заказ
-                                                   </span>
-                                                </button>
-                                             </div>
+                                                      <span class="p-list__text">
+                                                            В заказ
+                                                      </span>
+                                                   </button>
+                                                </div>
 
                                           </div>
                                        </div>
-                                    </a>
 
-                                    <a href="#" class="p-list__items">
-                                       <div class="p-list__item mobile-title" data-title="3-K1-2.50">
-                                          <span>УЗОБ-120-W(-50)</span>
+                                    </div>
+                                    <div class="p-list__items" data-entity="items-row">
+
+                                       <a
+                                          href="/catalog/yakornye-tsepi-i-komplektuyushchie/komplektuyushchie-yakornykh-tsepey/yakornye-smychki/smychki-yakornye-s-rasporkami/sya-97-3/"
+                                          class="p-list__item"
+                                          target="_self">
+                                          3-K1-0.50
+                                       </a>
+
+                                       <div class="p-list__item" data-text="Категория:">
+                                          0.5
                                        </div>
-                                       <div class="p-list__item"><span>12</span></div>
-                                       <div class="p-list__item" data-text="Категория: " data-num="2.50"><span>2</span>
+                        
+                                       <div class="p-list__item" data-text="Размер С, мм:">
+                                         83.0
                                        </div>
-                                       <div class="p-list__item" data-text="Размер С, мм: " data-num="154.0">
-                                          <span>2</span>
+
+                                       <div class="p-list__item" data-text="Пробная нагрузка:">
+                                          25
                                        </div>
-                                       <div class="p-list__item" data-text="Пробная нагрузка: " data-num="50">
-                                          <span>2</span>
+
+                                       <div class="p-list__item" data-text="Размер S, мм:">
+                                          22
                                        </div>
-                                       <div class="p-list__item" data-text="Размер S, мм: " data-num="3400">
-                                          <span>2</span>
+
+                                       <div class="p-list__item" data-text="Разрушающая нагрузка:">
+                                         22
                                        </div>
-                                       <div class="p-list__item" data-text="Разрушающая нагрузка: " data-num="38">
-                                          <span>2</span>
-                                       </div>
-                                       <div class="p-list__item" data-text="Теоретическая масса, кг: " data-num="-">
-                                          <span>2</span>
-                                       </div>
+                                       <div class="p-list__item" data-text="Теоретическая масса, кг:">
+                                          0.27
+                                        </div>
+
                                        <div class="p-list__item">
                                           <div class="p-list__options">
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-s">
-                                                         </use>
-                                                      </svg>
+                                                <div class="p-list__option" onclick="getModalFastOrder(444);">
+                                                   <button class="p-list__button" type="button">
+                                                      <span class="p-list__box p-list__box--desktop">
+                                                            <svg class="p-list__icon">
+                                                               <use
+                                                                  href="./assets/images/svg-sprite/svg-sprite.svg#order-s"></use>
+                                                            </svg>
+                                                      </span>
+                                                      <span class="p-list__box p-list__box--mobile">
+                                                         <svg class="p-list__icon">
+                                                            <use
+                                                               href="./assets/images/svg-sprite/svg-sprite.svg#fastOrder"></use>
+                                                         </svg>
                                                    </span>
-                                                   <span class="p-list__text ">
-                                                      <p class="mobi">Быстрый заказ</p>
+                                                      <span class="p-list__text p-list__text--mobile">
+                                                        Быстрый заказ
                                                    </span>
-                                                </button>
-                                             </div>
+                                                   </button>
+                                                </div>
 
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-l">
-                                                         </use>
-                                                      </svg>
+                                                <div class="p-list__option" onclick="getModalBasketAdd(444);">
+                                                   <button class="p-list__button" type="button">
+                                                      <span class="p-list__box p-list__box--desktop">
+                                                            <svg class="p-list__icon">
+                                                               <use
+                                                                  href="./assets/images/svg-sprite/svg-sprite.svg#order-l"></use>
+                                                            </svg>
+                                                      </span>
+                                                      <span class="p-list__box p-list__box--mobile">
+                                                         <svg class="p-list__icon">
+                                                            <use
+                                                               href="./assets/images/svg-sprite/svg-sprite.svg#inOrderMob"></use>
+                                                         </svg>
                                                    </span>
-                                                   <span class="p-list__text">
-                                                      В заказ
-                                                   </span>
-                                                </button>
-                                             </div>
+                                                      <span class="p-list__text">
+                                                            В заказ
+                                                      </span>
+                                                   </button>
+                                                </div>
 
                                           </div>
                                        </div>
-                                    </a>
 
-                                    <a href="#" class="p-list__items">
-                                       <div class="p-list__item mobile-title" data-title="3-K1-2.50">
-                                          <span>УЗОБ-120-W(-50)</span>
+                                    </div>
+                                    <div class="p-list__items" data-entity="items-row">
+
+                                       <a
+                                          href="/catalog/yakornye-tsepi-i-komplektuyushchie/komplektuyushchie-yakornykh-tsepey/yakornye-smychki/smychki-yakornye-s-rasporkami/sya-97-3/"
+                                          class="p-list__item"
+                                          target="_self">
+                                          3-K1-0.50
+                                       </a>
+
+                                       <div class="p-list__item" data-text="Категория:">
+                                          0.5
                                        </div>
-                                       <div class="p-list__item"><span>12</span></div>
-                                       <div class="p-list__item" data-text="Категория: " data-num="0.5"><span>2</span>
+                        
+                                       <div class="p-list__item" data-text="Размер С, мм:">
+                                         83.0
                                        </div>
-                                       <div class="p-list__item" data-text="Размер С, мм: " data-num="83.0">
-                                          <span>2</span>
+
+                                       <div class="p-list__item" data-text="Пробная нагрузка:">
+                                          25
                                        </div>
-                                       <div class="p-list__item" data-text="Пробная нагрузка: " data-num="140">
-                                          <span>2</span>
+
+                                       <div class="p-list__item" data-text="Размер S, мм:">
+                                          22
                                        </div>
-                                       <div class="p-list__item" data-text="Размер S, мм: " data-num="22
-                                    "><span>2</span></div>
-                                       <div class="p-list__item" data-text="Разрушающая нагрузка: " data-num="22">
-                                          <span>2</span>
+
+                                       <div class="p-list__item" data-text="Разрушающая нагрузка:">
+                                         22
                                        </div>
-                                       <div class="p-list__item" data-text="Теоретическая масса, кг: " data-num="27">
-                                          <span>2</span>
-                                       </div>
+                                       <div class="p-list__item" data-text="Теоретическая масса, кг:">
+                                          0.27
+                                        </div>
+
                                        <div class="p-list__item">
                                           <div class="p-list__options">
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-s">
-                                                         </use>
-                                                      </svg>
+                                                <div class="p-list__option" onclick="getModalFastOrder(444);">
+                                                   <button class="p-list__button" type="button">
+                                                      <span class="p-list__box p-list__box--desktop">
+                                                            <svg class="p-list__icon">
+                                                               <use
+                                                                  href="./assets/images/svg-sprite/svg-sprite.svg#order-s"></use>
+                                                            </svg>
+                                                      </span>
+                                                      <span class="p-list__box p-list__box--mobile">
+                                                         <svg class="p-list__icon">
+                                                            <use
+                                                               href="./assets/images/svg-sprite/svg-sprite.svg#fastOrder"></use>
+                                                         </svg>
                                                    </span>
-                                                   <span class="p-list__text ">
-                                                      <p class="mobi">Быстрый заказ</p>
+                                                      <span class="p-list__text p-list__text--mobile">
+                                                        Быстрый заказ
                                                    </span>
-                                                </button>
-                                             </div>
+                                                   </button>
+                                                </div>
 
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-l">
-                                                         </use>
-                                                      </svg>
+                                                <div class="p-list__option" onclick="getModalBasketAdd(444);">
+                                                   <button class="p-list__button" type="button">
+                                                      <span class="p-list__box p-list__box--desktop">
+                                                            <svg class="p-list__icon">
+                                                               <use
+                                                                  href="./assets/images/svg-sprite/svg-sprite.svg#order-l"></use>
+                                                            </svg>
+                                                      </span>
+                                                      <span class="p-list__box p-list__box--mobile">
+                                                         <svg class="p-list__icon">
+                                                            <use
+                                                               href="./assets/images/svg-sprite/svg-sprite.svg#inOrderMob"></use>
+                                                         </svg>
                                                    </span>
-                                                   <span class="p-list__text">
-                                                      В заказ
-                                                   </span>
-                                                </button>
-                                             </div>
+                                                      <span class="p-list__text">
+                                                            В заказ
+                                                      </span>
+                                                   </button>
+                                                </div>
 
                                           </div>
                                        </div>
-                                    </a>
 
-                                    <a href="#" class="p-list__items">
-                                       <div class="p-list__item mobile-title" data-title="3-K1-2.50">
-                                          <span>УЗОБ-120-W(-50)</span>
+                                    </div>
+                                    <div class="p-list__items" data-entity="items-row">
+
+                                       <a
+                                          href="/catalog/yakornye-tsepi-i-komplektuyushchie/komplektuyushchie-yakornykh-tsepey/yakornye-smychki/smychki-yakornye-s-rasporkami/sya-97-3/"
+                                          class="p-list__item"
+                                          target="_self">
+                                          3-K1-0.50
+                                       </a>
+
+                                       <div class="p-list__item" data-text="Категория:">
+                                          0.5
                                        </div>
-                                       <div class="p-list__item"><span>12</span></div>
-                                       <div class="p-list__item" data-text="Категория: " data-num="0.5"><span>2</span>
+                        
+                                       <div class="p-list__item" data-text="Размер С, мм:">
+                                         83.0
                                        </div>
-                                       <div class="p-list__item" data-text="Размер С, мм: " data-num="83.0">
-                                          <span>2</span>
+
+                                       <div class="p-list__item" data-text="Пробная нагрузка:">
+                                          25
                                        </div>
-                                       <div class="p-list__item" data-text="Пробная нагрузка: " data-num="25">
-                                          <span>2</span>
+
+                                       <div class="p-list__item" data-text="Размер S, мм:">
+                                          22
                                        </div>
-                                       <div class="p-list__item" data-text="Размер S, мм: " data-num="22
-                                    "><span>2</span></div>
-                                       <div class="p-list__item" data-text="Разрушающая нагрузка: " data-num="22">
-                                          <span>2</span>
+
+                                       <div class="p-list__item" data-text="Разрушающая нагрузка:">
+                                         22
                                        </div>
-                                       <div class="p-list__item" data-text="Теоретическая масса, кг: " data-num="0.27">
-                                          <span>2</span>
-                                       </div>
+                                       <div class="p-list__item" data-text="Теоретическая масса, кг:">
+                                          0.27
+                                        </div>
+
                                        <div class="p-list__item">
                                           <div class="p-list__options">
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-s">
-                                                         </use>
-                                                      </svg>
+                                                <div class="p-list__option" onclick="getModalFastOrder(444);">
+                                                   <button class="p-list__button" type="button">
+                                                      <span class="p-list__box p-list__box--desktop">
+                                                            <svg class="p-list__icon">
+                                                               <use
+                                                                  href="./assets/images/svg-sprite/svg-sprite.svg#order-s"></use>
+                                                            </svg>
+                                                      </span>
+                                                      <span class="p-list__box p-list__box--mobile">
+                                                         <svg class="p-list__icon">
+                                                            <use
+                                                               href="./assets/images/svg-sprite/svg-sprite.svg#fastOrder"></use>
+                                                         </svg>
                                                    </span>
-                                                   <span class="p-list__text ">
-                                                      <p class="mobi">Быстрый заказ</p>
+                                                      <span class="p-list__text p-list__text--mobile">
+                                                        Быстрый заказ
                                                    </span>
-                                                </button>
-                                             </div>
+                                                   </button>
+                                                </div>
 
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-l">
-                                                         </use>
-                                                      </svg>
+                                                <div class="p-list__option" onclick="getModalBasketAdd(444);">
+                                                   <button class="p-list__button" type="button">
+                                                      <span class="p-list__box p-list__box--desktop">
+                                                            <svg class="p-list__icon">
+                                                               <use
+                                                                  href="./assets/images/svg-sprite/svg-sprite.svg#order-l"></use>
+                                                            </svg>
+                                                      </span>
+                                                      <span class="p-list__box p-list__box--mobile">
+                                                         <svg class="p-list__icon">
+                                                            <use
+                                                               href="./assets/images/svg-sprite/svg-sprite.svg#inOrderMob"></use>
+                                                         </svg>
                                                    </span>
-                                                   <span class="p-list__text">
-                                                      В заказ
-                                                   </span>
-                                                </button>
-                                             </div>
+                                                      <span class="p-list__text">
+                                                            В заказ
+                                                      </span>
+                                                   </button>
+                                                </div>
 
                                           </div>
                                        </div>
-                                    </a>
 
-                                    <a href="#" class="p-list__items">
-                                       <div class="p-list__item mobile-title" data-title="3-K1-2.50">
-                                          <span>УЗОБ-120-W(-50)</span>
+                                    </div>
+                                    <div class="p-list__items" data-entity="items-row">
+
+                                       <a
+                                          href="/catalog/yakornye-tsepi-i-komplektuyushchie/komplektuyushchie-yakornykh-tsepey/yakornye-smychki/smychki-yakornye-s-rasporkami/sya-97-3/"
+                                          class="p-list__item"
+                                          target="_self">
+                                          3-K1-0.50
+                                       </a>
+
+                                       <div class="p-list__item" data-text="Категория:">
+                                          0.5
                                        </div>
-                                       <div class="p-list__item"><span>12</span></div>
-                                       <div class="p-list__item" data-text="Категория: " data-num="0.5"><span>2</span>
+                        
+                                       <div class="p-list__item" data-text="Размер С, мм:">
+                                         83.0
                                        </div>
-                                       <div class="p-list__item" data-text="Размер С, мм: " data-num="83.0">
-                                          <span>2</span>
+
+                                       <div class="p-list__item" data-text="Пробная нагрузка:">
+                                          25
                                        </div>
-                                       <div class="p-list__item" data-text="Пробная нагрузка: " data-num="25">
-                                          <span>2</span>
+
+                                       <div class="p-list__item" data-text="Размер S, мм:">
+                                          22
                                        </div>
-                                       <div class="p-list__item" data-text="Размер S, мм: " data-num="22
-                                    "><span>2</span></div>
-                                       <div class="p-list__item" data-text="Разрушающая нагрузка: " data-num="22">
-                                          <span>2</span>
+
+                                       <div class="p-list__item" data-text="Разрушающая нагрузка:">
+                                         22
                                        </div>
-                                       <div class="p-list__item" data-text="Теоретическая масса, кг: " data-num="0.27">
-                                          <span>2</span>
-                                       </div>
+                                       <div class="p-list__item" data-text="Теоретическая масса, кг:">
+                                          0.27
+                                        </div>
+
                                        <div class="p-list__item">
                                           <div class="p-list__options">
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-s">
-                                                         </use>
-                                                      </svg>
+                                                <div class="p-list__option" onclick="getModalFastOrder(444);">
+                                                   <button class="p-list__button" type="button">
+                                                      <span class="p-list__box p-list__box--desktop">
+                                                            <svg class="p-list__icon">
+                                                               <use
+                                                                  href="./assets/images/svg-sprite/svg-sprite.svg#order-s"></use>
+                                                            </svg>
+                                                      </span>
+                                                      <span class="p-list__box p-list__box--mobile">
+                                                         <svg class="p-list__icon">
+                                                            <use
+                                                               href="./assets/images/svg-sprite/svg-sprite.svg#fastOrder"></use>
+                                                         </svg>
                                                    </span>
-                                                   <span class="p-list__text ">
-                                                      <p class="mobi">Быстрый заказ</p>
+                                                      <span class="p-list__text p-list__text--mobile">
+                                                        Быстрый заказ
                                                    </span>
-                                                </button>
-                                             </div>
+                                                   </button>
+                                                </div>
 
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-l">
-                                                         </use>
-                                                      </svg>
+                                                <div class="p-list__option" onclick="getModalBasketAdd(444);">
+                                                   <button class="p-list__button" type="button">
+                                                      <span class="p-list__box p-list__box--desktop">
+                                                            <svg class="p-list__icon">
+                                                               <use
+                                                                  href="./assets/images/svg-sprite/svg-sprite.svg#order-l"></use>
+                                                            </svg>
+                                                      </span>
+                                                      <span class="p-list__box p-list__box--mobile">
+                                                         <svg class="p-list__icon">
+                                                            <use
+                                                               href="./assets/images/svg-sprite/svg-sprite.svg#inOrderMob"></use>
+                                                         </svg>
                                                    </span>
-                                                   <span class="p-list__text">
-                                                      В заказ
-                                                   </span>
-                                                </button>
-                                             </div>
+                                                      <span class="p-list__text">
+                                                            В заказ
+                                                      </span>
+                                                   </button>
+                                                </div>
 
                                           </div>
                                        </div>
-                                    </a>
 
-                                    <a href="#" class="p-list__items">
-                                       <div class="p-list__item mobile-title" data-title="3-K1-2.50">
-                                          <span>УЗОБ-120-W(-50)</span>
+                                    </div>
+                                    <div class="p-list__items" data-entity="items-row">
+
+                                       <a
+                                          href="/catalog/yakornye-tsepi-i-komplektuyushchie/komplektuyushchie-yakornykh-tsepey/yakornye-smychki/smychki-yakornye-s-rasporkami/sya-97-3/"
+                                          class="p-list__item"
+                                          target="_self">
+                                          3-K1-0.50
+                                       </a>
+
+                                       <div class="p-list__item" data-text="Категория:">
+                                          0.5
                                        </div>
-                                       <div class="p-list__item"><span>12</span></div>
-                                       <div class="p-list__item" data-text="Категория: " data-num="0.5"><span>2</span>
+                        
+                                       <div class="p-list__item" data-text="Размер С, мм:">
+                                         83.0
                                        </div>
-                                       <div class="p-list__item" data-text="Размер С, мм: " data-num="83.0">
-                                          <span>2</span>
+
+                                       <div class="p-list__item" data-text="Пробная нагрузка:">
+                                          25
                                        </div>
-                                       <div class="p-list__item" data-text="Пробная нагрузка: " data-num="25">
-                                          <span>2</span>
+
+                                       <div class="p-list__item" data-text="Размер S, мм:">
+                                          22
                                        </div>
-                                       <div class="p-list__item" data-text="Размер S, мм: " data-num="22
-                                    "><span>2</span></div>
-                                       <div class="p-list__item" data-text="Разрушающая нагрузка: " data-num="22">
-                                          <span>2</span>
+
+                                       <div class="p-list__item" data-text="Разрушающая нагрузка:">
+                                         22
                                        </div>
-                                       <div class="p-list__item" data-text="Теоретическая масса, кг: " data-num="0.27">
-                                          <span>2</span>
-                                       </div>
+                                       <div class="p-list__item" data-text="Теоретическая масса, кг:">
+                                          0.27
+                                        </div>
+
                                        <div class="p-list__item">
                                           <div class="p-list__options">
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-s">
-                                                         </use>
-                                                      </svg>
+                                                <div class="p-list__option" onclick="getModalFastOrder(444);">
+                                                   <button class="p-list__button" type="button">
+                                                      <span class="p-list__box p-list__box--desktop">
+                                                            <svg class="p-list__icon">
+                                                               <use
+                                                                  href="./assets/images/svg-sprite/svg-sprite.svg#order-s"></use>
+                                                            </svg>
+                                                      </span>
+                                                      <span class="p-list__box p-list__box--mobile">
+                                                         <svg class="p-list__icon">
+                                                            <use
+                                                               href="./assets/images/svg-sprite/svg-sprite.svg#fastOrder"></use>
+                                                         </svg>
                                                    </span>
-                                                   <span class="p-list__text ">
-                                                      <p class="mobi">Быстрый заказ</p>
+                                                      <span class="p-list__text p-list__text--mobile">
+                                                        Быстрый заказ
                                                    </span>
-                                                </button>
-                                             </div>
+                                                   </button>
+                                                </div>
 
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-l">
-                                                         </use>
-                                                      </svg>
+                                                <div class="p-list__option" onclick="getModalBasketAdd(444);">
+                                                   <button class="p-list__button" type="button">
+                                                      <span class="p-list__box p-list__box--desktop">
+                                                            <svg class="p-list__icon">
+                                                               <use
+                                                                  href="./assets/images/svg-sprite/svg-sprite.svg#order-l"></use>
+                                                            </svg>
+                                                      </span>
+                                                      <span class="p-list__box p-list__box--mobile">
+                                                         <svg class="p-list__icon">
+                                                            <use
+                                                               href="./assets/images/svg-sprite/svg-sprite.svg#inOrderMob"></use>
+                                                         </svg>
                                                    </span>
-                                                   <span class="p-list__text">
-                                                      В заказ
-                                                   </span>
-                                                </button>
-                                             </div>
+                                                      <span class="p-list__text">
+                                                            В заказ
+                                                      </span>
+                                                   </button>
+                                                </div>
 
                                           </div>
                                        </div>
-                                    </a>
-                                    <!-- pc -->
-                                    <a href="#" class="p-list__items">
-                                       <div class="p-list__item">УЗОБ-120-W(-50)</div>
-                                       <div class="p-list__item">12</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
+
+                                    </div>
+                                  
+                                    <!-- <div class="p-list__items" data-entity="items-row">
+
+                                       <a
+                                          href="/catalog/yakornye-tsepi-i-komplektuyushchie/komplektuyushchie-yakornykh-tsepey/yakornye-smychki/smychki-yakornye-s-rasporkami/sya-97-3/"
+                                          class="p-list__item"
+                                          target="_self">
+                                          СЯ-97-3
+                                       </a>
+
+                                       <div class="p-list__item" data-text="Калибр, мм">
+                                          97
+                                       </div>
+                        
+                                       <div class="p-list__item" data-text="Категория">
+                                          3
+                                       </div>
+
+                                       <div class="p-list__item" data-text="Теоретическая масса, кг ">
+                                          1029.4
+                                       </div>
+
+                                       <div class="p-list__item" data-text="Пробная нагрузка, кН">
+                                          4680
+                                       </div>
+
+                                       <div class="p-list__item" data-text="Разрушающая нагрузка, кН">
+                                          6690
+                                       </div>
+
                                        <div class="p-list__item">
                                           <div class="p-list__options">
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-s">
-                                                         </use>
-                                                      </svg>
-                                                   </span>
-                                                </button>
-                                             </div>
+                                                <div class="p-list__option" onclick="getModalFastOrder(444);">
+                                                   <button class="p-list__button" type="button">
+                                                      <span class="p-list__box">
+                                                            <svg class="p-list__icon">
+                                                               <use
+                                                                  href="./assets/images/svg-sprite/svg-sprite.svg#order-s"></use>
+                                                            </svg>
+                                                      </span>
+                                                   </button>
+                                                </div>
 
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-l">
-                                                         </use>
-                                                      </svg>
-                                                   </span>
-                                                   <span class="p-list__text">
-                                                      В заказ
-                                                   </span>
-                                                </button>
-                                             </div>
+                                                <div class="p-list__option" onclick="getModalBasketAdd(444);">
+                                                   <button class="p-list__button" type="button">
+                                                      <span class="p-list__box">
+                                                            <svg class="p-list__icon">
+                                                               <use
+                                                                  href="./assets/images/svg-sprite/svg-sprite.svg#order-l"></use>
+                                                            </svg>
+                                                      </span>
+                                                      <span class="p-list__text">
+                                                            В заказ
+                                                      </span>
+                                                   </button>
+                                                </div>
 
                                           </div>
                                        </div>
-                                    </a>
 
-                                    <a href="#" class="p-list__items">
-                                       <div class="p-list__item">УЗОБ-120-W(-50)</div>
-                                       <div class="p-list__item">12</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">
-                                          <div class="p-list__options">
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-s">
-                                                         </use>
-                                                      </svg>
-                                                   </span>
-                                                </button>
-                                             </div>
-
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-l">
-                                                         </use>
-                                                      </svg>
-                                                   </span>
-                                                   <span class="p-list__text">
-                                                      В заказ
-                                                   </span>
-                                                </button>
-                                             </div>
-
-                                          </div>
-                                       </div>
-                                    </a>
-
-                                    <a href="#" class="p-list__items">
-                                       <div class="p-list__item">УЗОБ-120-W(-50)</div>
-                                       <div class="p-list__item">12</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">
-                                          <div class="p-list__options">
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-s">
-                                                         </use>
-                                                      </svg>
-                                                   </span>
-                                                </button>
-                                             </div>
-
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-l">
-                                                         </use>
-                                                      </svg>
-                                                   </span>
-                                                   <span class="p-list__text">
-                                                      В заказ
-                                                   </span>
-                                                </button>
-                                             </div>
-
-                                          </div>
-                                       </div>
-                                    </a>
-
-                                    <a href="#" class="p-list__items">
-                                       <div class="p-list__item">УЗОБ-120-W(-50)</div>
-                                       <div class="p-list__item">12</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">
-                                          <div class="p-list__options">
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-s">
-                                                         </use>
-                                                      </svg>
-                                                   </span>
-                                                </button>
-                                             </div>
-
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-l">
-                                                         </use>
-                                                      </svg>
-                                                   </span>
-                                                   <span class="p-list__text">
-                                                      В заказ
-                                                   </span>
-                                                </button>
-                                             </div>
-
-                                          </div>
-                                       </div>
-                                    </a>
-
-                                    <a href="#" class="p-list__items">
-                                       <div class="p-list__item">УЗОБ-120-W(-50)</div>
-                                       <div class="p-list__item">12</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">
-                                          <div class="p-list__options">
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-s">
-                                                         </use>
-                                                      </svg>
-                                                   </span>
-                                                </button>
-                                             </div>
-
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-l">
-                                                         </use>
-                                                      </svg>
-                                                   </span>
-                                                   <span class="p-list__text">
-                                                      В заказ
-                                                   </span>
-                                                </button>
-                                             </div>
-
-                                          </div>
-                                       </div>
-                                    </a>
-
-                                    <a href="#" class="p-list__items">
-                                       <div class="p-list__item">УЗОБ-120-W(-50)</div>
-                                       <div class="p-list__item">12</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">
-                                          <div class="p-list__options">
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-s">
-                                                         </use>
-                                                      </svg>
-                                                   </span>
-                                                </button>
-                                             </div>
-
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-l">
-                                                         </use>
-                                                      </svg>
-                                                   </span>
-                                                   <span class="p-list__text">
-                                                      В заказ
-                                                   </span>
-                                                </button>
-                                             </div>
-
-                                          </div>
-                                       </div>
-                                    </a>
-
-                                    <a href="#" class="p-list__items">
-                                       <div class="p-list__item">УЗОБ-120-W(-50)</div>
-                                       <div class="p-list__item">12</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">
-                                          <div class="p-list__options">
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-s">
-                                                         </use>
-                                                      </svg>
-                                                   </span>
-                                                </button>
-                                             </div>
-
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-l">
-                                                         </use>
-                                                      </svg>
-                                                   </span>
-                                                   <span class="p-list__text">
-                                                      В заказ
-                                                   </span>
-                                                </button>
-                                             </div>
-
-                                          </div>
-                                       </div>
-                                    </a>
-
-                                    <a href="#" class="p-list__items">
-                                       <div class="p-list__item">УЗОБ-120-W(-50)</div>
-                                       <div class="p-list__item">12</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">
-                                          <div class="p-list__options">
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-s">
-                                                         </use>
-                                                      </svg>
-                                                   </span>
-                                                </button>
-                                             </div>
-
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-l">
-                                                         </use>
-                                                      </svg>
-                                                   </span>
-                                                   <span class="p-list__text">
-                                                      В заказ
-                                                   </span>
-                                                </button>
-                                             </div>
-
-                                          </div>
-                                       </div>
-                                    </a>
-
-                                    <a href="#" class="p-list__items">
-                                       <div class="p-list__item">УЗОБ-120-W(-50)</div>
-                                       <div class="p-list__item">12</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">
-                                          <div class="p-list__options">
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-s">
-                                                         </use>
-                                                      </svg>
-                                                   </span>
-                                                </button>
-                                             </div>
-
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-l">
-                                                         </use>
-                                                      </svg>
-                                                   </span>
-                                                   <span class="p-list__text">
-                                                      В заказ
-                                                   </span>
-                                                </button>
-                                             </div>
-
-                                          </div>
-                                       </div>
-                                    </a>
-
-                                    <a href="#" class="p-list__items">
-                                       <div class="p-list__item">УЗОБ-120-W(-50)</div>
-                                       <div class="p-list__item">12</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">
-                                          <div class="p-list__options">
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-s">
-                                                         </use>
-                                                      </svg>
-                                                   </span>
-                                                </button>
-                                             </div>
-
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-l">
-                                                         </use>
-                                                      </svg>
-                                                   </span>
-                                                   <span class="p-list__text">
-                                                      В заказ
-                                                   </span>
-                                                </button>
-                                             </div>
-
-                                          </div>
-                                       </div>
-                                    </a>
-
-                                    <a href="#" class="p-list__items">
-                                       <div class="p-list__item">УЗОБ-120-W(-50)</div>
-                                       <div class="p-list__item">12</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">
-                                          <div class="p-list__options">
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-s">
-                                                         </use>
-                                                      </svg>
-                                                   </span>
-                                                </button>
-                                             </div>
-
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-l">
-                                                         </use>
-                                                      </svg>
-                                                   </span>
-                                                   <span class="p-list__text">
-                                                      В заказ
-                                                   </span>
-                                                </button>
-                                             </div>
-
-                                          </div>
-                                       </div>
-                                    </a>
-
-                                    <a href="#" class="p-list__items">
-                                       <div class="p-list__item">УЗОБ-120-W(-50)</div>
-                                       <div class="p-list__item">12</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">
-                                          <div class="p-list__options">
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-s">
-                                                         </use>
-                                                      </svg>
-                                                   </span>
-                                                </button>
-                                             </div>
-
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-l">
-                                                         </use>
-                                                      </svg>
-                                                   </span>
-                                                   <span class="p-list__text">
-                                                      В заказ
-                                                   </span>
-                                                </button>
-                                             </div>
-
-                                          </div>
-                                       </div>
-                                    </a>
-
-                                    <a href="#" class="p-list__items">
-                                       <div class="p-list__item">УЗОБ-120-W(-50)</div>
-                                       <div class="p-list__item">12</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">
-                                          <div class="p-list__options">
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-s">
-                                                         </use>
-                                                      </svg>
-                                                   </span>
-                                                </button>
-                                             </div>
-
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-l">
-                                                         </use>
-                                                      </svg>
-                                                   </span>
-                                                   <span class="p-list__text">
-                                                      В заказ
-                                                   </span>
-                                                </button>
-                                             </div>
-
-                                          </div>
-                                       </div>
-                                    </a>
-
-                                    <a href="#" class="p-list__items">
-                                       <div class="p-list__item">УЗОБ-120-W(-50)</div>
-                                       <div class="p-list__item">12</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">
-                                          <div class="p-list__options">
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-s">
-                                                         </use>
-                                                      </svg>
-                                                   </span>
-                                                </button>
-                                             </div>
-
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-l">
-                                                         </use>
-                                                      </svg>
-                                                   </span>
-                                                   <span class="p-list__text">
-                                                      В заказ
-                                                   </span>
-                                                </button>
-                                             </div>
-
-                                          </div>
-                                       </div>
-                                    </a>
-
-                                    <a href="#" class="p-list__items">
-                                       <div class="p-list__item">УЗОБ-120-W(-50)</div>
-                                       <div class="p-list__item">12</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">2</div>
-                                       <div class="p-list__item">
-                                          <div class="p-list__options">
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-s">
-                                                         </use>
-                                                      </svg>
-                                                   </span>
-                                                </button>
-                                             </div>
-
-                                             <div class="p-list__option">
-                                                <button class="p-list__button" type="button">
-                                                   <span class="p-list__box">
-                                                      <svg class="p-list__icon">
-                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#order-l">
-                                                         </use>
-                                                      </svg>
-                                                   </span>
-                                                   <span class="p-list__text">
-                                                      В заказ
-                                                   </span>
-                                                </button>
-                                             </div>
-
-                                          </div>
-                                       </div>
-                                    </a>
+                                    </div> -->
 
                                  </div>
                               </div>
@@ -1779,7 +1365,7 @@
                </div>
 
                <!-- SECTION / MANAGER -->
-               <div class="page__section main__manager manager ui-background-black-80">
+               <div class="main__manager manager ui-background-black-80">
                   <div class="page__container">
 
                      <div class="manager__bar page__box ui-color-white-100">
@@ -1886,5 +1472,6 @@
 @@include('./assets/block-mixin/_footer-black.html')
 
 </div>
+
 <!-- / PAGE -->
 @@include('./assets/templates/template-footer.html')

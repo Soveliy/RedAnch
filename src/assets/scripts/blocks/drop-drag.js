@@ -9,7 +9,7 @@ const dragDrop = () => {
 
    jsDrags.forEach((jsDrag) => {
       if (jsDrag.classList.contains('form-box-drag-js--order')) {
-
+         console.log(jsDrag)
          /* getElementById */
          function $id(id) {
             return document.getElementById(id);

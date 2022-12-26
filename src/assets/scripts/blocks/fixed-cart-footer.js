@@ -18,10 +18,11 @@ const cartFooterFixed = () => {
       let buttonFixeditem = document.querySelector('.order-footer').offsetHeight;
       elementFooter.style.marginBottom = buttonFixeditem + "px";
    }
-
-
-
-
+   const footerForEmptyPage = document.querySelector('.empty-page__footer--js');
+   if (footerForEmptyPage){
+      let elementFooter = document.querySelector('.page__footer');
+      elementFooter.style.marginBottom = footerForEmptyPage.offsetHeight + "px";
+   }
 
 };
 

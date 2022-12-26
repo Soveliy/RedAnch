@@ -13,11 +13,30 @@
     }
 
     &__picture {
-        margin-bottom: 16px;
-
+        picture{
+            display: flex;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            justify-content: center;
+            img{
+                height: auto;
+                width: auto;
+                max-height: 100%;
+            }
+        }
+        // margin-bottom: 16px;
+        @include for-600(){
+            margin-bottom: 10px;
+        }
         @media screen and (min-width: 1024px) {
             margin-bottom: 32px;
             transition: transform cubic-bezier(.5, 0, 0, 1) .8s;
+            height: 200px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         @media screen and (min-width: 1600px) {
@@ -35,15 +54,35 @@
     &__image {
         width: 100%;
         height: auto;
+        max-height: 83px;
+        @include for-1024(){
+            max-height: 200px;
+        }
     }
 
     &__name {
-        margin-top: auto;
+        margin-top: -6px;
         padding-right: 24px;
         letter-spacing: 0.03em;
-
+        position: relative;
+        z-index: 500;
+        @include for-600(){
+            display: flex;
+            align-items: flex-end;
+            height: 100%;
+        }
         @media screen and (min-width: 1024px) {
             padding-right: 32px;
+            font-size: 20px;
+            line-height: 24px;
+        }
+        @include for-1366(){
+            font-size: 24px;
+            line-height: 28px;
+        }
+        @include for-1600(){
+            font-size: 36px;
+            line-height: 40px;
         }
     }
 

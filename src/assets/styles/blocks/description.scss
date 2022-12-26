@@ -17,9 +17,13 @@
         letter-spacing: 0.03em;
         font-family: 'PF Din Text Cond Pro', serif;
         font-weight: 300;
-        line-height: 28px;
-        font-size: 18px;
+        line-height: 24px;
+        font-size: 16px;
 
+        @include for-600(){
+            font-size: 18px;
+            line-height: 28px;
+        }
         @media screen and (min-width: 1024px) {
             line-height: 32px;
             font-size: 20px;
@@ -31,8 +35,8 @@
         }
 
         @media screen and (min-width: 1600px) {
-            line-height: 46px;
-            font-size: 32px;
+            line-height: 40px;
+            font-size: 24px;
         }
 
         p:not(:first-child) {

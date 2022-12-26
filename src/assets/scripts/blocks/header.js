@@ -77,7 +77,7 @@ $(".header__productionButton").click(function(){
     function compareWidth(){
       let widthTitle = 0;
       $(".p-list__items").each(function () {
-        let currentWidth = parseInt($(this).find(".mobile-title").width());
+        let currentWidth = parseInt($(this).find("a.p-list__item").width());
         if(currentWidth > widthTitle) {
           widthTitle = currentWidth;
         };
@@ -85,11 +85,12 @@ $(".header__productionButton").click(function(){
 
       let buttonsWidth = $(".p-list__item:last-child").width();
       // $(".p-list__head:last-child").css("min-width", buttonsWidth + "px")
-     $(".mobile-title").css("width", widthTitle  + "px")
+     $("a.p-list__item").css("width", widthTitle  + "px")
 
 
      $('.p-list__head').each(function (index, value){
       let widthHeadCell = $(".p-list__item").eq(index).width();
+        console.log(widthHeadCell)
       $(".p-list__head").eq(index).css("width", widthHeadCell + "px")
     })
     }
@@ -101,3 +102,40 @@ $(".header__productionButton").click(function(){
 
       compareWidth()
     });
+
+    $( "form" ).each(function( ) {
+      $($(this)).validate({
+        rules:{
+           name:{
+             required: true,
+             minlength: 4,
+             maxlength: 16,
+           },
+           pswd:{
+             required: true,
+             minlength: 6,
+             maxlength: 16,
+           },
+        },
+        messages:{
+          login:{
+            required: "Это поле обязательно для заполнения",
+            minlength: "Логин должен быть минимум 4 символа",
+            maxlength: "Максимальное число символов - 16",
+        },
+          pswd:{
+          required: "Это поле обязательно для заполнения",
+          minlength: "Пароль должен быть минимум 6 символа",
+          maxlength: "Пароль должен быть максимум 16 символов",
+          },
+        }
+     });
+    });
+  
+  $(".print,.print-link").click(function(e){
+    e.preventDefault();
+    window.print()
+  })
+  
+  
+  

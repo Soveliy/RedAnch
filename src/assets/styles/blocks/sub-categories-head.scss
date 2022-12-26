@@ -44,12 +44,12 @@
     }
 
     &__description {
-        margin-top: 16px;
-        line-height: 28px;
+        margin-top: 0;
+        line-height: 24px;
         letter-spacing: 0.03em;
         font-family: 'PF Din Text Cond Pro', serif;
         font-weight: 300;
-        font-size: 18px;
+        font-size: 16px;
 
         @media screen and (min-width: 600px) {
             max-width: 430px;
@@ -59,7 +59,9 @@
             max-width: 548px;
             line-height: 24px;
             font-size: 16px;
-            margin-left: 165px;
+            margin-left: 75px;
+
+
         }
 
         @media screen and (min-width: 1366px) {

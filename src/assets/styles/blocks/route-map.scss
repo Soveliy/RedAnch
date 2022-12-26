@@ -6,6 +6,32 @@
     &__container{
         cursor: pointer;
     }
+    &__zoom{
+        height: 56px;
+        width: 56px;
+        border: 4px solid rgba(79, 86, 89, 0.4);
+        position: absolute;
+        z-index: 50;
+        background-position: center;
+        background-repeat: no-repeat;
+        right: 32px;
+        background-color: rgba(255, 255, 255, 0.4);
+        box-sizing: border-box;
+        &-in{
+            bottom: 291px;
+            background-image: url(../images/icon-plus.svg);
+        }
+        &-out{
+            bottom: 227px;
+            background-image: url(../images/icon-minus.svg);
+        }
+    }
+    &__wrap{
+        height: 480px;
+        > div{
+            height: 100%;
+        }
+    }
     .label-link{
         max-width: 1920px;
         margin: 0 auto;
@@ -19,6 +45,39 @@
     margin-right: -50vw;
     @media screen and (min-width: 1024px) {
         display: block;
+        margin-top: -45px;
+        
+    }
+    @include for-1600(){
+        margin-top: -75px;
     }
 }
 
+.contact-section__content .modal-content{
+    background-color: transparent;
+   .policy{
+        margin: 0;
+        border-top: 0;
+       @include for-1024(){
+        width: calc(100% - 226px);
+       }
+       @include for-1600(){
+        width: calc(100% - 367px);
+       }
+       @include for-1920(){
+        width: calc(100% - 446px);
+       }
+    }
+     .button-bottom{
+        @include for-1024(){
+            width: 226px;
+            flex-shrink: 0;
+        }
+        @include for-1600(){
+            width: 367px;
+        }
+        @include for-1920(){
+            width: 446px;
+        }
+    }
+}

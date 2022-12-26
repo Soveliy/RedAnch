@@ -533,17 +533,107 @@
                                                           </div>
 
                                                           <div class="route-map">
-                                                                  КАРТА
+                                                                <div class="route-map--js route-map__wrap">
+                                                                    
+                                                                                <div id="map"></div>
+                                                                                <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;" type="text/javascript"></script>
+                                                                                <script>
+                                                                                     
+                                                                                 ymaps.ready(function () {
+                                                                                        var myMap = new ymaps.Map('map', {
+                                                                                                center: [55.792721, 37.780203],
+                                                                                                zoom: 15,
+                                                                                                controls:[],
+                                                                                            }),
+                                
+                                                                                            // Создаём макет содержимого.
+                                                                                            MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                                                                                                '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+                                                                                            ),
+                                
+                                                                                            myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                                                                                                hintContent: 'Собственный значок метки',
+                                                                                                balloonContent: 'Это красивая метка'
+                                                                                            }, {
+                                                                                                // Опции.
+                                                                                                // Необходимо указать данный тип макета.
+                                                                                                iconLayout: 'default#image',
+                                                                                                // Своё изображение иконки метки.
+                                                                                                iconImageHref: './assets/images/pin.svg',
+                                                                                                // Размеры метки.
+                                                                                                iconImageSize: [41, 54],
+                                                                                                // Смещение левого верхнего угла иконки относительно
+                                                                                                // её "ножки" (точки привязки).
+                                                                                                iconImageOffset: [-5, -38]
+                                                                                            });
+
+
+                                                                                                  // Создадим пользовательский макет ползунка масштаба.
+                                                                                                ZoomLayout = ymaps.templateLayoutFactory.createClass("<div>" +
+                                                                                                "<div id='zoom-in' class='route-map__zoom-in route-map__zoom'><i class='icon-plus'></i></div><br>" +
+                                                                                                "<div id='zoom-out' class='route-map__zoom-out route-map__zoom'><i class='icon-minus'></i></div>" +
+                                                                                                "</div>", {
+
+                                                                                                // Переопределяем методы макета, чтобы выполнять дополнительные действия
+                                                                                                // при построении и очистке макета.
+                                                                                                build: function () {
+                                                                                                        // Вызываем родительский метод build.
+                                                                                                        ZoomLayout.superclass.build.call(this);
+
+                                                                                                        // Привязываем функции-обработчики к контексту и сохраняем ссылки
+                                                                                                        // на них, чтобы потом отписаться от событий.
+                                                                                                        this.zoomInCallback = ymaps.util.bind(this.zoomIn, this);
+                                                                                                        this.zoomOutCallback = ymaps.util.bind(this.zoomOut, this);
+
+                                                                                                        // Начинаем слушать клики на кнопках макета.
+                                                                                                        $('#zoom-in').bind('click', this.zoomInCallback);
+                                                                                                        $('#zoom-out').bind('click', this.zoomOutCallback);
+                                                                                                },
+
+                                                                                                clear: function () {
+                                                                                                        // Снимаем обработчики кликов.
+                                                                                                        $('#zoom-in').unbind('click', this.zoomInCallback);
+                                                                                                        $('#zoom-out').unbind('click', this.zoomOutCallback);
+
+                                                                                                        // Вызываем родительский метод clear.
+                                                                                                        ZoomLayout.superclass.clear.call(this);
+                                                                                                },
+
+                                                                                                zoomIn: function () {
+                                                                                                        var map = this.getData().control.getMap();
+                                                                                                        map.setZoom(map.getZoom() + 1, {checkZoomRange: true});
+                                                                                                },
+
+                                                                                                zoomOut: function () {
+                                                                                                        var map = this.getData().control.getMap();
+                                                                                                        map.setZoom(map.getZoom() - 1, {checkZoomRange: true});
+                                                                                                }
+                                                                                                }),
+                                                                                                zoomControl = new ymaps.control.ZoomControl({options: {layout: ZoomLayout}});
+
+                                                                                        myMap.controls.add(zoomControl);
+                                                                                                                        
+                                                                                                
+                                                                                                
+                                
+                                                                                        myMap.geoObjects
+                                                                                            .add(myPlacemark)
+                                                                                          
+                                                                                    });
+                                
+                                                                                </script>
+                                                                          
+                                                                </div>
 
                                                                 <div class="route-map__container ui-background-black-80">
                                                                         
                                                                         <div class="label-link label-link--flex label-link--modal">
-                                                                                <div class="label-link__title title title--ms-28 title--ts-40 title--tm-44  title--dm-60 ui-color-white-100">
+                                                                                <div class="label-link__title title title--ms-28 title--ts-40 title--tm-44  title--dm-44 title--dl-60 ui-color-white-100">
                                                                                         Кемерово, ул. Проездная, д. 22
                                                                                 </div>
                                                                                 <div class="label-link__box ">
-                                                                                        <div class="label-link__title title title--ms-28 title--ts-40 title--tm-44  title--dm-60 ui-color-white-100">
-                                                                                                Построить маршрут
+                                                                                        <div class="label-link__title title title--ms-28 title--ts-40 title--tm-44  title--dm-44 title--dl-60 ui-color-white-100">
+                                                                                                Как проехать
                                                                                         </div>
                                                                                         <svg class="label-link__icon">
                                                                                                 <use href="./assets/images/svg-sprite/svg-sprite.svg#arrow-se"></use>
@@ -899,7 +989,7 @@
                                                                                 </div>
 
                                                                                 <div class="defaultModal__container ui-background-white-100 container--w100 textarea-big">
-                                                                                        <textarea id="account-obout" class="defaultModal__textarea textarea defaultModal__input add__text" name="coment" placeholder=""></textarea>
+                                                                                        <textarea id="account-obout" class="defaultModal__textarea textarea defaultModal__input add__text" name="coment" placeholder=" "></textarea>
                                                                                         <label class="defaultModal__input-placeholder" for="coment">Комментарий</label>
                                                                                         <!--<label class="defaultModal__input-placeholder" for="phone"></label>-->
                                                                                 </div>

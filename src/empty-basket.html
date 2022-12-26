@@ -1,0 +1,30 @@
+@@include('./assets/templates/template-header-light.html', { 'lang': 'ru', 'title': 'Red Anchor | Все категории' })
+
+
+
+   <main class="page__main main">
+     <div class="empty-page">
+      <div class="container">
+         <div class="empty-page__title title title--ms-44 title--ts-90 title--ds-80  title--dl-144">
+            в вашем заказе нет товаров
+         </div>
+         <div class="empty-page__desc">
+            Выберите нужный вам товар из каталога и добавьте его в заказ.
+
+            <div class="linkLabel empty-page__linkLabel">
+               <a href="#" class="linkLabel__box linkLabel__box--grey linkLabel__box--default">
+               Перейти в каталог
+               <svg>
+                       <use xlink:href="./assets/images/svg-sprite/svg-sprite.svg#arrow-se"></use>
+               </svg>
+               </a>
+            </div>
+         </div>
+      </div>
+     </div>
+   </main>
+
+<!-- footer-black -->
+@@include('./assets/block-mixin/_footer-light.html')
+@@include('./assets/templates/template-main-footer.html', { 'lang': 'ru', 'title': 'Red Anchor | Контакты' })
+@@include('./assets/templates/template-footer-light.html')

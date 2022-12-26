@@ -79,11 +79,17 @@
     &__desc {
         margin-bottom: 16px;
         letter-spacing: 0.06em;
+        @include for-600(){
+            letter-spacing: .05em;
+        }
     }
 
     &__name {
         margin-top: auto;
         letter-spacing: 0.05em;
+        @include for-600(){
+            margin-bottom: -3px;
+        }
     }
 
     &__icon {

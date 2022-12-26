@@ -23,6 +23,16 @@
   @media screen and (min-width: 600px) {
     height: auto;
   }
+  &--big{
+    .modal-content{
+      background: #f5f5f5;
+      padding-bottom: 184px;
+      @include for-1600(){
+        padding-bottom: 200px;
+      }
+    }
+    max-width: 100%;
+  }
 }
 
 /* modal */
@@ -134,7 +144,12 @@
     height: 100%;
     width: 100%;
   }
-  
+  &__box{
+    max-width: 1080px;
+    margin: 0 auto;
+
+   
+  }
   &__container--psr {
    position: relative !important;
    height: auto !important;
@@ -190,7 +205,15 @@
     box-sizing: border-box;
     padding: 16px 16px 32px;
     background: #ededed;
-
+    &--flex{
+      @include for-1024(){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 140px;
+        box-sizing: border-box;
+      }
+    }
     @media screen and (min-width: 600px) {
       padding: 32px 32px 16px;
       background: #f5f5f5;
@@ -220,7 +243,18 @@
 
       color: #150f0f;
       margin-bottom: 8px;
-
+      &--big{
+        @include for-1024(){
+          font-size: 80px;
+          line-height: 80px;
+          letter-spacing: .04em;
+          font-weight: 700;
+        }
+        @include for-1600(){
+          font-size: 104px;
+          line-height: 104px;
+        }
+      }
       &--1366{
         span{
           display: block;
@@ -1432,5 +1466,149 @@ label.error{
 .defaultModal__container--order .defaultModal__input-placeholder{
   @include for-1600(){
     font-size: 30px;
+  }
+}
+
+.form{
+  &__box{
+    &-item{
+      display: flex;
+      .form-box__block{
+        margin-bottom: 0;
+        width: 100%;
+      }
+      &--wrap{
+        margin-left: -4px;
+        margin-right: -4px;
+      }
+      .defaultModal__container{
+        // padding: 0 4px;
+        margin-bottom: 0;
+      }
+      .order-card__label{
+        margin-right: 0;
+      }
+      margin-bottom: 0;
+      & + &{
+        margin-top: 8px;
+      }
+      .modal-form__name{
+        background: rgba(79,86,89,.05);
+        height: 100%;
+        padding: 0 32px;
+        flex-shrink: 0;
+        width: auto;
+        @include for-1600(){
+          font-size: 32px;
+        }
+      }
+      .order-card__counter{
+        margin-right: 0;
+      }
+      .counter{
+        width: 100%;
+        flex-shrink: 1;
+      }
+      .counter__btn{
+        opacity: 1;
+        width: 64px;
+        flex-shrink: 0;
+        background-color: #fff;
+        margin: 0;
+        flex-shrink: 0;
+        span{
+    
+          width: 24px;
+          height: 4px;
+          background: rgba(79, 86, 89, 0.7);
+      }
+    }
+    .order-card__details{
+      width: 100%;
+      flex-shrink: 1;
+      .unit-choice{
+        width: 100%;
+        justify-content: center;
+      }
+    }
+    .counter__btn--up span::after{
+        height: 24px;
+        width: 4px;
+        background: rgba(79, 86, 89, 0.7);
+    }
+    .counter input[type=text].counter__input{
+        width: 100%;
+        margin: 0;
+        height: 96px;
+        border: none;
+        font-size: 28px;
+        line-height: 32px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        
+        /* txt/black */
+        
+        color: #150F0F;
+        font-family: $TT;
+        font-weight: 700;
+        @include for-1600(){
+            font-size: 36x;
+            line-height: 40px;
+            width: 170px;
+        }
+    }
+    .unit-choice{
+        height: 100%;
+        flex-shrink: 0;
+        width: auto;
+        padding: 0 50px;
+        background-color: #fff;
+        @include for-1600(){
+            padding: 0 60px;
+        }
+        @include for-retina(){
+            padding: 0 90px;
+        }
+
+    }
+    .unit-choice__label{
+        height: 100%;
+       
+        flex: auto;    
+    }
+    .unit-choice__custom{
+        width: auto;
+        height: 100%;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 1;
+        /* identical to box height, or 100% */
+        
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        
+        /* txt/black */
+        
+        color: #150F0F;
+        font-family: $TT;        
+        background: transparent;
+        @include for-1600(){
+            font-size: 36px;
+        }
+    }
+    .unit-choice__label + .unit-choice__label{
+        margin-left: 50px;
+    }
+    }
+    &-itemWrap{
+      display: flex;
+      align-items: center;
+      &--w50{
+        width: 50%;
+        padding: 0 4px;
+        box-sizing: border-box;
+    
+      }
+    }
   }
 }

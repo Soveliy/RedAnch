@@ -8,12 +8,11 @@
 @@include('./plugins/swiper-bundle.min.js');
 @@include('./libraries/jquery.arcticmodal.js');
 @@include('./libraries/jquery.validate.min.js');
-
+@@include('./libraries/simplebar.min.js');
 @@include('./libraries/jquery.mask.min.js');
 // Blocks
 
 document.addEventListener('DOMContentLoaded', () => {
-   @@include('./blocks/main-page.js');
    @@include('./blocks/tabs.js');
    @@include('./blocks/bricks.js');
    @@include('./blocks/page.js');

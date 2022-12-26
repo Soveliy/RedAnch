@@ -14,7 +14,7 @@
     text-align: left;
 
     @media screen and (min-width: 1024px) {
-        padding: 32px;
+        padding: 32px 32px 32px 27px;
     }
 
     &__box {
@@ -47,7 +47,7 @@
         }
 
         @media screen and (min-width: 1366px) {
-            margin-right: 16px;        
+            margin-right: 9px;        
         }
     }
 

@@ -9,6 +9,13 @@
 
     @media screen and (min-width: 600px) {
         padding-bottom: 0;
+        padding-top: 40px;
+    }
+    @include for-1366(){
+        padding-top: 0;
+    }
+    @include for-1600(){
+        padding-top: 10px;
     }
 
     &__bar {
@@ -22,10 +29,17 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-top: 16px;
     }
 
     &__media {
         flex: 0 0 auto;
+        @include for-1366(){
+            margin-left: -170px;
+        }
+        @include for-1600(){
+            margin-left: -130px;
+        }
     }
 
     &__info {
@@ -35,12 +49,11 @@
             max-width: 410px;
         }
 
+ 
         @media screen and (min-width: 1600px) {
             max-width: 538px;
-        }
-
-        @media screen and (min-width: 1600px) {
-            max-width: 538px;
+            margin-top: -50px;
+            margin-left: 20px;
         }
     }
     
@@ -53,7 +66,7 @@
 
     &__picture {
         width: 250px;
-        margin-left: -88px;
+        margin-left: -91px;
 
         @media screen and (min-width: 600px) {
             width: 390px;
@@ -112,6 +125,14 @@
 
         @media screen and (min-width: 1024px) {
             margin-bottom: 16px;
+        }
+        @include for-1366(){
+            font-size: 28px;
+            line-height: 32px;
+        }
+        @include for-1600(){
+            font-size: 36px;
+            line-height: 40px;
         }
     }
 

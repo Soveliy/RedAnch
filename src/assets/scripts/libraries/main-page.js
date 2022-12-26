@@ -1,9 +1,4 @@
 var Animations = function() {
-    var smoothDuration = 550;// 1.5с - время которое требуется что бы закончить анимация при скроле мышкой.чем больше тем долшье продолжительнсоть анимации
-    var scrollTime = .3;			//Scroll time
-    var scrollDistance = 120;		//Distance
-    var offset_value_1 = 10;
-    var sklr;
     var controller;
     var initIntro = false;
     var loaded = $.Deferred();
@@ -16,6 +11,8 @@ var Animations = function() {
     var isTablet = winw < 1024;
     var isRetina = winw > 1920;
     var desktopLoadedFunc = false;
+    let scene5;
+    let controllerAnch = new ScrollMagic.Controller();
   
     if (isTablet){
       jQuery(function($){
@@ -208,12 +205,7 @@ var Animations = function() {
         managerWrap.addClass('bottom');
       }
     };
-  
 
-
-   
-
- 
     var initAnimationsPage = function() {
         // sequention_5();
       sequention_mob();
@@ -380,13 +372,15 @@ var Animations = function() {
   
   
   
+    const debounceTime = 300;
+    let resizeSceneTimeout;
+
     window.addEventListener('resize', function() {
-   
+      clearTimeout(resizeSceneTimeout);
+      resizeSceneTimeout = setTimeout(() => sequention_5(), debounceTime);
+
       FixedFooter();
-      controllerAnch.destroy(true);
       heroAnimationAnch();
-      sequention_5();
-      // sequention_5();
       winw = window.innerWidth || e.clientWidth || g.clientWidth;
       isTablet = winw < 1280;
       if (isTablet) {
@@ -402,7 +396,7 @@ var Animations = function() {
   if ($("body").hasClass("main-page")){
      isMain = true
   }
-  console.log(isMain)
+    console.log(isMain)
    if (isMain){
     var sequention_mob = function() {
 
@@ -444,6 +438,9 @@ var Animations = function() {
 
     };
     var sequention_5 = function() {
+      console.log('sequention_5 timeout');
+      controllerAnch?.destroy();
+      scene_5.wrap.className = 'c-manager frameImage ';
       controllerAnch = new ScrollMagic.Controller();
       var duration_scene_5 = $(scene_5.target).outerHeight() + $(scene_5.target_2).outerHeight() - $(scene_5.wrap).outerHeight();
       var offset_scene_5 = duration_scene_5 / scene_5.count;
@@ -452,11 +449,11 @@ var Animations = function() {
       for (var i = 1, l = scene_5.count; i <= l; i++) {
 
           
-        window.addEventListener('resize', function() {
+        // window.addEventListener('resize', function() {
 
-          scene5.destroy(true)
-        })
-        var scene5 = new ScrollMagic.Scene({
+        //   scene5.destroy(true)
+        // })
+        const scene5 = new ScrollMagic.Scene({
           triggerElement: scene_5.target,
           offset: ((i*1.1) * offset_scene_5) + offset_top_scene_5 - 300,
           reverse: true,
@@ -476,6 +473,7 @@ var Animations = function() {
                 $("#preloadImagesContainer").removeClass('frame_' + (this.index - 1))
                 $("#preloadImagesContainer").addClass('frame_' + this.index);
                 $("#preloadImagesContainer").removeClass('frame_' + (this.index + 1))
+                // scene_5.wrap.className = 'c-manager frame_' + this.index;
                 // defaultImageCount = defaultImageCount + 1;
               }
         });

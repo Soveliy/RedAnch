@@ -9,7 +9,7 @@
       margin-bottom: 16px;
 
       @media screen and (min-width: 600px) {
-        margin-bottom: 24px;
+        margin-bottom: 60px;
       }
 
       @media screen and (min-width: 1024px) {
@@ -54,11 +54,11 @@
   .main__layout{
     margin-bottom: 40px;
     @media screen and (min-width: 600px) {
-      margin-bottom: 80px;
+      margin-bottom: 60px;
     }
 
     @media screen and (min-width: 1366px) {
-      margin-bottom: 128px;
+      margin-bottom: 98px;
     }
 
     @media screen and (min-width: 1600px) {
@@ -135,12 +135,15 @@
   /*text-dropdown*/
   //? text-dropdown
   .text-dropdown {
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 16px;
+    line-height: 24px;
     padding: 16px;
-
+    @include for-600(){
+      padding: 16px 0;
+    }
       .description__container {
          padding: 0 16px;
+         
       }
 
     .sub-categories-head__description{
@@ -150,14 +153,14 @@
       font-size: 18px;
       line-height: 22px;
       // width: 1110px;
+
     }
 
     @media screen and (min-width: 1024px) {
       padding: 40px 0;
     }
 
-    font-size: 24px;
-    line-height: 40px;
+
   }
 
   /*tabs*/
@@ -185,7 +188,7 @@
   //? about-product
   .about-product {
     &__description {
-      margin-bottom: 16px;
+      margin-bottom: 0;
       background: #ededed;
       padding: 14px 16px 16px;
       font-family: 'TT Bluescreens';
@@ -233,21 +236,7 @@
 
   /*site-navigation*/
   //? site-navigation
-  .site-navigation {
-    margin: 4px 0 14px;
 
-    @media screen and (min-width: 600px) {
-      margin: 4px 0 24px;
-    }
-
-    @media screen and (min-width: 1024px) {
-      margin: 40px 0 8px;
-    }
-
-    @media screen and (min-width: 1920px) {
-      margin: 24px auto 8px;
-    }
-  }
 
   /*sidebar__block--ms-hidden*/
   //? sidebar__block--ms-hidden
@@ -504,7 +493,7 @@
   left: 0;
 
   @media screen and (min-width: 1600px) {
-    bottom: -35px;
+    bottom: -18px;
   }
 }
 
@@ -518,7 +507,7 @@
 
 .properties-table {
   background: #f5f5f5;
-  padding: 16px;
+  padding: 3px 12px;
   width: 100%;
   color: #50575a;
   overflow-x: scroll;
@@ -530,6 +519,9 @@
   text-align: left;
   max-width: 1080px;
   margin: 0 auto;
+  table{
+    margin: 0 auto;
+  }
   @media screen and (min-width: 600px) {
     font-size: 18px;
     line-height: 22px;
@@ -539,6 +531,8 @@
     width: 100%;
     font-size: 20px;
     line-height: 24px;
+    padding: 32px 0;
+    max-width: 1240px;
   }
 
   @media screen and (min-width: 1600px) {
@@ -549,6 +543,7 @@
   thead {
     white-space: nowrap;
     tr{
+      padding: 10px 0;
       border-bottom: 1px solid rgba(79, 86, 89, 0.1);
     }
     th {
@@ -592,11 +587,13 @@
     width: 100%;
     display: flex;
     align-items: center;
-    padding: 12px 0;
-
+    padding: 6px 0;
+    @include for-600(){
+      padding: 8px 0;
+    }
     &:not(:last-child){
       border-bottom: 1px solid rgba(79, 86, 89, 0.1);
-      padding-bottom: 8px;
+      // padding-bottom: 8px;
     }
 
   }
@@ -683,6 +680,12 @@
   .bb {
     border-bottom: 2px solid rgba(79, 86, 89, 0.1);
     padding-bottom: 24px;
+    @include for-1600(){
+      margin: 0 -40px;
+      padding-left: 40px;
+      padding-right: 40px;
+      box-sizing: border-box;
+    }
   }
 
   .radio {
@@ -765,7 +768,7 @@
       padding-bottom: 48px;
 
       @media screen and (min-width: 1600px) {
-        padding-bottom: 60px;
+        padding-bottom: 47px;
       }
     }
   }
@@ -777,6 +780,9 @@
     @media screen and (min-width: 1024px) {
       padding: 32px;
     }
+    @include for-1600(){
+      padding: 32px 40px;
+    }
   }
 
   &__head-title {
@@ -787,7 +793,11 @@
     font-size: 20px;
     line-height: 24px;
     margin-bottom: 16px;
-
+    @include for-1600(){
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: .03em;
+    }
     span {
       margin-left: 8px;
       cursor: pointer;
@@ -837,9 +847,18 @@
     color: #dd2b1c;
     border: none;
     background: transparent;
+    &:after{
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      bottom: -8px;
+      border-bottom: 2px dashed rgba(79, 86, 89, 0.4);
+    }
+    // border-bottom: 2px dashed rgba(79, 86, 89, 0.4);
 
     b {
-      border-bottom: 2px dashed rgba(79, 86, 89, 0.4);
+     
       padding-bottom: 8px;
     }
 
@@ -850,7 +869,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-
+      @include for-1600(){
+        margin-left: 0;
+      }
       svg {
         width: 12px;
         height: 12px;
@@ -858,8 +879,8 @@
     }
 
     @media screen and (min-width: 1600px) {
-      font-size: 20px;
-      line-height: 24px;
+      font-size: 16px;
+      line-height: 20px;
     }
   }
 
@@ -1006,9 +1027,9 @@
           fill: #dd2b1c;
         }
 
-        .filter__button-text {
-          color: #dd2b1c;
-        }
+        // .filter__button-text {
+        //   color: #dd2b1c;
+        // }
 
         .filter__button-inner {
           &::after {
@@ -1035,6 +1056,9 @@
         font-size: 28px;
         line-height: 28px;
         flex-grow: 10;
+        @include for-1366(){
+
+        }
       }
 
       .filter__button-img {
@@ -1120,9 +1144,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 24px 16px;
+    padding: 15px 16px;
     background: #f5f5f5;
     flex-grow: 10;
+    width: 50%;
+    @include for-600(){
+      padding: 16px;
+    }
 
     a{
       display: flex;
@@ -1137,6 +1165,7 @@
     }
 
     &:hover {
+     @include for-1024(){
       .menu-mobile__text {
         color: #dd2b1c;
       }
@@ -1145,6 +1174,7 @@
           fill: #dd2b1c;
         }
       }
+     }
     }
 
     &:first-child {
@@ -1168,7 +1198,7 @@
   }
 
   &__text {
-    transition: 800ms;
+    transition: $transition;
     font-family: 'TT Bluescreens';
     font-style: normal;
     font-weight: 700;
@@ -1177,7 +1207,10 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: #150f0f;
-
+    @include for-600(){
+      font-size: 28px;
+      line-height: 32px;
+    }
     @media screen and (min-width: 1024px) {
       font-family: 'PF Din Text Cond Pro';
       font-style: normal;
@@ -1194,14 +1227,19 @@
     display: flex;
     align-items: flex-start;
     margin-right: 8px;
-
+    @include for-600(){
+      margin-right: 4px;
+    }
     svg {
       transition: 800ms;
 
       width: 18px;
       height: 21px;
       fill: #dd2b1c;
-
+      @include for-600(){
+        height: 24px;
+        width: 24px;
+      }
       @media screen and (min-width: 1024px) {
         fill: rgba(79, 86, 89, 0.4);
       }
@@ -1527,7 +1565,7 @@
 
   @media screen and (min-width: 1920px) {
     max-width: 1920px;
-    margin: 40px auto 16px;
+    margin: 40px 0 16px;
   }
 
   .pc {
@@ -1639,18 +1677,9 @@
     margin: 0 auto;
   }
 
-  .pc {
-    display: none;
-    @media screen and (min-width: 1024px) {
-      display: block;
-    }
-  }
+ 
 
-  .mobi {
-    @media screen and (min-width: 1024px) {
-      display: none;
-    }
-  }
+
 
   &__inner {
     @media screen and (min-width: 600px) {
@@ -1817,8 +1846,12 @@
 .filter {
    .filter__button-text {
       @media screen and (min-width: 1366px) {
-         font-size: 36px;
-         line-height: 36px;
+         font-size: 28px;
+         line-height: 28px;
+      }
+      @include for-1600(){
+        font-size: 36px;
+        line-height: 36px;
       }
    }
 }
