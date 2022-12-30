@@ -7,7 +7,7 @@
     position: relative;
     overflow: hidden;
     padding: 16px 56px 16px 16px;
-
+    align-items: flex-end;
     @media screen and (min-width: 600px) {
         width: 100%;
         padding: 16px 48px 16px 16px;

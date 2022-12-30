@@ -16,7 +16,7 @@
         @media screen and (min-width: 1024px) {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-end;
         }
     }
 
@@ -118,6 +118,12 @@
         
         @media screen and (min-width: 1024px) {
             flex: 0 0 auto;
+            a{
+                transition: $transition;
+                &:hover{
+                    opacity: .8;
+                }
+            }
         }
     }
 }

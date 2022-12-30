@@ -2,7 +2,7 @@
 
 // Bricks
 
-const initBricks = () => {
+window.initBricks = function (){
 
     const brickSections = document.querySelectorAll('.js-bricks');
     if (!brickSections) return;
@@ -44,4 +44,4 @@ const initBricks = () => {
 
 };
 
-initBricks();
+window.initBricks();

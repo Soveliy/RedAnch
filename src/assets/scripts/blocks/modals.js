@@ -43,7 +43,7 @@ $('.order-ready').click(function () {
    });
 });
 
-$('.order-technical').click(function () {
+$('.order-technical,.label--modal').click(function () {
    $('#technical-modal').arcticmodal({
       afterOpen: function (data, el) {
          $('body').css('overflow', 'hidden');

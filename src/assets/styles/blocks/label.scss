@@ -73,7 +73,33 @@
             padding: 16px 0;
         }
     }
+    &--modal,&--show-more{
+        padding: 16px;
+        position: relative;
+      
+        @media screen and (min-width: 1024px) {
+            cursor: pointer;
+            padding: 32px;
+            &:after{
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 4px;
+                background-color: #DD2B1C;
+                transition: $transition;
+            }
+            &:hover{
+                &:after{
+                    width: 100%;
+                }
+            }
+        }
+        
 
+      
+    }
     &--dark {
         background: #241A1A;
 
@@ -91,7 +117,9 @@
 
     &--light {
         background: #f5f5f5;
-
+        .specifications__desc{
+            color: #150F0F;
+        }
         @media screen and (min-width: 1024px) {
             transition: background-color .8s;
         }

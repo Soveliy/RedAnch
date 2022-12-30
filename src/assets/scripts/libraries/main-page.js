@@ -30,7 +30,7 @@ var Animations = function() {
     let scene_5 = {
       target: '#section_5',
       target_2: '.end_of_seq',
-      count: 338,
+      count: 749,
       src: './assets/images/chain/comp2/',
       type: '.png',
       wrap: document.querySelector('#preloadImagesContainer'),
@@ -131,10 +131,7 @@ var Animations = function() {
   
                 count++;
                 let counterPng;
-                if  (count > 25){
-                    counterPng = true
-                    console.log("more 5")
-                }
+               
 
                 if (allImgsCount === counterPng && !isTablet) {
                   allImageLoaded.resolve();
@@ -144,7 +141,7 @@ var Animations = function() {
               if (!isTablet) {
                 image.classList.add('is-visible');
               }
-              if (i > 25){
+              if (i > 40){
                 object.type = ".jpg"
               }
               image.src = object.src + i + object.type;
@@ -447,12 +444,6 @@ var Animations = function() {
       var offset_top_scene_5 = $(scene_5.wrap).outerHeight();
 
       for (var i = 1, l = scene_5.count; i <= l; i++) {
-
-          
-        // window.addEventListener('resize', function() {
-
-        //   scene5.destroy(true)
-        // })
         const scene5 = new ScrollMagic.Scene({
           triggerElement: scene_5.target,
           offset: ((i*1.1) * offset_scene_5) + offset_top_scene_5 - 300,
@@ -466,7 +457,7 @@ var Animations = function() {
             //  .addIndicators() // add indicators (requires plugin)
             .addTo(controllerAnch);
         
-            scene5.index = i + 23;
+            scene5.index = i + 39;
           scene5.on('start', function(event) {
             if (this.index <= scene_5.count) {
                 console.log("start")
@@ -682,7 +673,7 @@ var Animations = function() {
         $(".c-manager").removeClass('frame_' + (defaultImageCount - 1))
         $(".c-manager").addClass('frame_' + defaultImageCount);
         defaultImageCount = defaultImageCount + 1;
-        if(defaultImageCount == 26) {
+        if(defaultImageCount == 40) {
           clearInterval(interVal);
         }
       }

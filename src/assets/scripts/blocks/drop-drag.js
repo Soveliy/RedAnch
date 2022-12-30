@@ -5,19 +5,19 @@
 const dragDrop = () => {
 
    const jsDrags = document.querySelectorAll('.form-box__window');
-   if (!jsDrags) return;
+   if (!jsDrags?.length) return;
 
    jsDrags.forEach((jsDrag) => {
       if (jsDrag.classList.contains('form-box-drag-js--order')) {
          console.log(jsDrag)
          /* getElementById */
-         function $id(id) {
-            return document.getElementById(id);
+         function $class(classElem) {
+            return jsDrag.querySelector(classElem);
          }
 
          /* вывод сообщений */
          function Output(msg) {
-            let m = $id("messages");
+            let m = $class(".messagesCst");
             m.innerHTML = msg + m.innerHTML;
          }
 
@@ -27,9 +27,9 @@ const dragDrop = () => {
          }
          /* инициализация */
          function Init() {
-            let fileselect = $id("fileselect"),
-               filedrag = $id("filedrag"),
-               submitbutton = $id("submitbutton");
+            let fileselect = $class(".file-select"),
+               filedrag = $class(".filedrag"),
+               submitbutton = $class(".submitbutton");
 
             /* выбор файла */
             fileselect.addEventListener("change", FileSelectHandler, false);

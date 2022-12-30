@@ -366,7 +366,8 @@
     color: #DD2B1C;
     flex-shrink: 0;
     margin-left: 16px;
-
+    cursor: pointer;
+    transition: $transition;
     @media screen and (min-width: 600px) {
       font-size: 28px;
       line-height: 32px;
@@ -375,6 +376,9 @@
     @media screen and (min-width: 1024px) {
       font-size: 36px;
       line-height: 36px;
+      &:hover{
+        opacity: .8;
+      }
     }
 
     @media screen and (min-width: 1366px) {
