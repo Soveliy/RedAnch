@@ -19,7 +19,10 @@
 }
 
 .bricks {
-
+    &__head{
+        position: relative;
+        z-index: 500;
+    }
     &__inner {
         position: relative;
         z-index: 100;

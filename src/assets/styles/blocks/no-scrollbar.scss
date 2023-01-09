@@ -3,7 +3,7 @@
 
 // no-scrollbar.scss
 
-.no-scrollbar {
+.no-scrollbar,.tabs__head {
 
     &::-webkit-scrollbar {
         display: none;

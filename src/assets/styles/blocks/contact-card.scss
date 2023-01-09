@@ -14,10 +14,12 @@
 
         @media screen and (min-width: 1366px) {
             letter-spacing: .06em;
+            max-width: 80%;
         }
 
         @media screen and (min-width: 1600px) {
             letter-spacing: .05em;
+            max-width: inherit;
         }
     }
 

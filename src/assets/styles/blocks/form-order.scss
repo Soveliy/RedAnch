@@ -28,15 +28,15 @@
    display: flex;
    flex-direction: column;
    font-family: $TT;
-   margin-bottom: 25px;
+   margin-bottom: 33px;
    &__title {
       font-weight: 700;
       font-size: 44px;
       text-transform: uppercase;
       line-height: 44px;
       color: #150F0F;
-      margin-bottom: 8px;
-      letter-spacing: 0.03em;
+      margin-bottom: 5px;
+      letter-spacing: 0.04em;
       @media screen and (min-width: 1024px) {
          font-size: 80px;
          line-height: 80px;
@@ -46,6 +46,7 @@
          font-size: 120px;
          line-height: 120px;
          margin-bottom: 0;
+        
       }
 
       @media screen and (min-width: 1600px) {
@@ -56,13 +57,11 @@
    @include for-1024(){
       padding-right: 90px;
       box-sizing: border-box;
-   }
-   @media screen and (min-width: 1366px) {
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-end;
-      padding-right: 0;
    }
+
    &__result{
       @include for-1024(){
          margin-bottom: 15px;
@@ -162,8 +161,7 @@
    &__tipe-delivery {
       background: rgba(79, 86, 89, 0.05);
       padding: 16px 24px;
-      margin-top: 4px;
-      margin-bottom: 4px;
+      margin: -4px 0;
       @media screen and (min-width: 1366px) {
          padding: 16px 32px;
          margin-top: 8px;
@@ -216,8 +214,9 @@
          padding: 0;
          @media screen and (min-width: 1360px)  {
             margin-top: 26px;
-            font-size: 28px;
-            line-height: 32px;
+            font-size: 28px !important;
+            line-height: 32px !important;
+            letter-spacing: .03em;
          }
          @include for-1600(){
             font-size: 36px !important;
@@ -276,6 +275,10 @@
       font-size: 18px;
       line-height: 22px;
       letter-spacing: .03em;
+      margin-right: -20px;
+      @include for-1024(){
+         margin-right: 0;
+      }
       @media screen and (min-width: 1366px) {
          font-size: 24px;
          line-height: 28px;
@@ -384,7 +387,10 @@
    font-family: $TT;
    color: #fff;
    cursor: pointer;
-   z-index: 9999;
+   z-index: 5000;
+   span{
+      letter-spacing: .05em;
+   }
    &__icon {
       width: 16px;
       height: 16px;
@@ -395,12 +401,12 @@
 
    &__line {
       position: absolute;
-      left: 50%;
+      left: 16px;
       bottom: 0;
-      transform: translateX(-50%);
+      // transform: translateX(-50%);
 
       height: 2px;
-      width: 95%;
+      width: calc(100% - 32px);
       background: rgba(255, 255, 255, 0.2);
       &::after {
          content: '';
@@ -628,8 +634,12 @@
 }
 
 .container--w30 + .container--w70{
-   margin-top: 8px;
+   margin-top: 4px;
    @include for-1366(){
       margin-top: 0;
    }
+}
+
+.form-order__box{
+
 }

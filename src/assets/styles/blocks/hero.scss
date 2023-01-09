@@ -169,6 +169,7 @@
                 display: block;
                 height: 100%;
                 object-position: bottom;
+                transform: scale(1.05);
             }
         }
         @include for-retina(){
@@ -214,6 +215,7 @@
             display: block;
             height: 100%;
             object-position: bottom;
+            transform: scale(1.05);
         
         }
     }
@@ -258,12 +260,12 @@
             display: flex;
             flex-direction: column;
             align-items: flex-end;
-            padding-top: 280px;
+            padding-top: 183px;
             height: 100%;
             padding-right: 32px;
             box-sizing: border-box;
             z-index: 700;
-            &:not(:hover){
+            &:hover{
                 & + picture img{
                     will-change: filter;
                     filter: blur(20px);
@@ -339,7 +341,8 @@
             box-sizing: border-box;
             padding-bottom: 16px;
             z-index: 750;
-            &:not(:hover){
+            padding-top: 110px;
+            &:hover{
                 & + picture img{
                     filter: blur(20px);
                 }

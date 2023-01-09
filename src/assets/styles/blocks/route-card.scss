@@ -62,5 +62,9 @@
 
     &__value {
         order: 3;
+        min-width: 100px;
+        @include for-600(){
+            min-width: auto;
+        }
     }
 }

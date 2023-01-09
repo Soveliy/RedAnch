@@ -4,7 +4,9 @@
 
 .requisite-card {
     padding: 16px 16px 4px;
-
+    @include for-600(){
+        padding: 13px 16px 5px;
+    }
     @media screen and (min-width: 1366px) {
         padding: 25px 32px 5px;
     }
@@ -75,7 +77,28 @@
     }
 
     &__property {
-
+        font-size: 16px;
+        line-height: 20px;
+        /* identical to box height, or 125% */
+        
+        letter-spacing: 0.03em;
+        
+        /* txt/black */
+        
+        color: #150F0F;
+        font-family: $DM;
+        @include for-600(){
+            font-size: 18px;
+            line-height: 22px;
+            /* identical to box height, or 122% */
+            
+            letter-spacing: 0.03em;
+            
+            /* ui/gray 1 */
+            
+            color: #50575A;
+            
+        }
         @media screen and (min-width: 1366px) {
             order: 1;
             flex: 0 0 auto;
@@ -85,7 +108,7 @@
     &__value {
 
         @media screen and (min-width: 600px) {
-            margin-top: 2px;
+            margin-top: 1px;
         }
 
         @media screen and (min-width: 1366px) {

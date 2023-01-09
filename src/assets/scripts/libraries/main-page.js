@@ -481,11 +481,11 @@ var Animations = function() {
         document.documentElement.style.setProperty('--vh', `${vh}px`);
         
         // We listen to the resize event
-        window.addEventListener('resize', () => {
-          // We execute the same script as before
-          let vh = window.innerHeight * 0.01;
-          document.documentElement.style.setProperty('--vh', `${vh}px`);
-        });
+        // window.addEventListener('resize', () => {
+        //   // We execute the same script as before
+        //   let vh = window.innerHeight * 0.01;
+        //   document.documentElement.style.setProperty('--vh', `${vh}px`);
+        // });
       }
       // let mobileParam = $(window).height() - 
       
@@ -505,9 +505,10 @@ var Animations = function() {
       tl.to(parallaxElem, 1, { y: -100, ease: "cubic-bezier(.5,0,0,1)" });
       var scene = new ScrollMagic.Scene({
         triggerElement: ".aboutUs__preview ",
-        triggerHook: 0.4,
-        duration: "100%",
+        triggerHook: 1,
+        duration: "135%",
       })
+          // .addIndicators()
         .setTween(tl)
         .addTo(controller);
 

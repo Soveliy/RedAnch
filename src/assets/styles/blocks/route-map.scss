@@ -3,8 +3,30 @@
 // Route Map
 
 .route-map {
+    &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        height: 210px; 
+        width: 100%;
+        top: 0;
+        background: rgb(237,237,237);
+        background: linear-gradient(180deg, rgba(237,237,237,1) 50%, rgba(237,237,237,0.2) 100%);
+        z-index: 50;
+    }
     &__container{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 600;
+        width: 100%;
         cursor: pointer;
+        .label-link__icon{
+            margin-left: 68px;
+            @include for-1600(){
+                margin-left: 24px;
+            }
+        }
     }
     &__zoom{
         height: 56px;
@@ -18,17 +40,31 @@
         background-color: rgba(255, 255, 255, 0.4);
         box-sizing: border-box;
         cursor: pointer;
+        @include for-1600(){
+            right: 56px;
+        }
         &-in{
-            bottom: 291px;
+            bottom: 243px;
             background-image: url(../images/icon-plus.svg);
+            @include for-1600(){
+                bottom: 535px
+            }
         }
         &-out{
-            bottom: 227px;
+            bottom: 179px;
             background-image: url(../images/icon-minus.svg);
+            @include for-1600(){
+                bottom: 470px;
+            }
+            
         }
     }
     &__wrap{
-        height: 480px;
+        // height: 1090px;
+        height: 785px;
+        @include for-1600(){
+            height: 980px;
+        }
         > div{
             height: 100%;
         }
@@ -44,13 +80,17 @@
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    @media screen and (min-width: 1024px) {
+
+    @include for-1024() {
         display: block;
-        margin-top: -45px;
+        margin-top: -255px;
+        margin-top: -255px;
+       
         
     }
     @include for-1600(){
-        margin-top: -75px;
+        margin-top: -265px;
+        margin-bottom: -265px;
     }
 }
 
@@ -60,18 +100,19 @@
         margin: 0;
         border-top: 0;
        @include for-1024(){
-        width: calc(100% - 226px);
+        width: calc(100% - 234px);
        }
        @include for-1600(){
-        width: calc(100% - 367px);
+        width: calc(100% - 375px);
        }
        @include for-1920(){
-        width: calc(100% - 446px);
+        width: calc(100% - 454px);
        }
     }
      .button-bottom{
         @include for-1024(){
             width: 226px;
+            margin-left: 8px;
             flex-shrink: 0;
         }
         @include for-1600(){
