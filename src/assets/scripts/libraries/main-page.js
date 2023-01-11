@@ -19,6 +19,9 @@ var Animations = function() {
         $(document).mouseup( function(e){ // событие клика по веб-документу
           var div = $( ".choice-box__wrapper--active" ); // тут указываем ID элемента
           if (div.is(e.target) ) { 
+
+            
+                  $(".isBigZindex").parent().removeClass("isBigZindex")
                   $(".js-choice-box").removeClass("choice-box--active")
                   $(".choice-box__wrapper").removeClass("choice-box__wrapper--active")
                   

@@ -76,14 +76,10 @@ const dragDrop = () => {
 
          // выбор файла
          function FileSelectHandler(e) {
-            // debugger;
-            console.log("eto ono", e.currentTarget)
-            // if (( e.target.files || e.dataTransfer.files).length){
-            //    clearInputValue(e);
-            // }
+
+            $(e.currentTarget).closest(".filedrag").removeClass("isError")
             FileDragHover(e);
             console.log(e.currentTarget.value)
-            // проходимся по объекту FileList 
             let files = e.target.files || e.dataTransfer.files;
             console.log(files)
             if (files.length > 1){
@@ -91,28 +87,18 @@ const dragDrop = () => {
                filesDataTransfer.items.add(files[0]);
                e.target.files = filesDataTransfer.files;
                files = e.target.files;
-               // files = e.dataTransfer.files.items;
-               // console.log(e.target.files)
-               // const newFiles = e.target.files;
-               // for (let i = 0; i < newFiles.length; i++) {
-               //    ParseFile(newFiles[i]);
-                  
-               // }
-               // return
             }
           
-            console.log("file ", fileselect.value)
+          
             if (files[0].size > 10485760){
-               // debugger;
+               $(e.currentTarget).closest(".filedrag").addClass("isError")
                Output(
-                  "<p>Файл слишком большой</p>"
+                  "<div class='fileDrop__error'>Файл слишком большой</div>"
                )
-               // fileselect.value = null;
-               // $(".fileselect").val("");
+            
                clearInputValue(e);
-               console.log(files)
                return
-               // e.currentTarget.value = null
+              
             }
             
             // парсим все объекты типа File
@@ -120,26 +106,29 @@ const dragDrop = () => {
               
               
                ParseFile(file);
+               
             }
+           $(e.currentTarget).closest(".filedrag").addClass("isLoaded")
          }
 
          function ParseFile(file) {
-            console.log(file.size)
-            // TODO:
             
-            // 10485760
-            // file.size
-            fileBtn.classList.add("test")
+          
            
             Output(
-               "<p>Информация о файле: <strong>" + file.name +
-               "</strong> тип: <strong>" + file.type +
-               "</strong> размер: <strong>" + file.size +
-               "</strong> bytes</p>"
+               "<div class='fileDrop__msg'>" + file.name +"</div>"
             );
          }
+        
+        
       }
    })
+
+   
 };
+$('body').on('click', '.fileDrop__button--clear', function() {
+   $(this).closest(".fileDrop").removeClass("isLoaded")
+   $(this).closest(".fileDrop").find("input").val("");
+});
 
 dragDrop();

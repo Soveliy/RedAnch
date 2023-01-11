@@ -1307,7 +1307,7 @@ body{
         .img_#{$side}{
             opacity: 1;
             z-index: #{$side};
-                @media (max-width:1024px){
+                @media (max-width:1023px){
              
                 }
        
@@ -1324,7 +1324,7 @@ body{
 //     // left: 50%;
 //     transform:translate3d(0,0,0);
 
-//     @media (max-width:1024px){
+//     @media (max-width:1023px){
 //         left: auto;
 //         transform: none;
 //     }
@@ -2673,7 +2673,7 @@ body{
 .catalog-menu{
     // display: none;
     width: 100%;
-    @media (max-width:1024px){
+    @media (max-width:1023px){
         left: 16px;
         width: 100vw;
     }
@@ -2872,7 +2872,7 @@ body{
             }
 
         & + &{
-            @media (max-width:1024px){
+            @media (max-width:1023px){
                 margin-top: 0;
                 .catalog-menu__main-link {
                     border-top: 2px solid rgba(79, 86, 89, 0.4);
@@ -3021,7 +3021,7 @@ body{
             // @include for-1600(){
             //     margin-top: 30px;
             // }
-            @media (max-width:1024px){
+            @media (max-width:1023px){
                 .submenu-list__link{
                     border-top: 2px solid rgba(79,86,89,.4);
                 }
@@ -3042,7 +3042,7 @@ body{
         display: block;
         
         padding: 16px 40px 16px 0;
-        @media (max-width:1024px){
+        @media (max-width:1023px){
             &:after{
                 content: '';
                 position: absolute;
@@ -3118,7 +3118,7 @@ body{
     left: 0;
     z-index: 5000;
     display: none;
-    @media (max-width:1024px){
+    @media (max-width:1023px){
         display: none !important;
     }
 }
@@ -3128,7 +3128,7 @@ body{
 }
 
 #preloadImages{
-    @media (max-width:1024px){
+    @media (max-width:1023px){
     
             display: none;
         
@@ -3142,7 +3142,7 @@ body.anchor-hidden{
         opacity: 0;
     }
 }
-@media (max-width:1024px){
+@media (max-width:1023px){
     // .c-manager img{
     //     max-height: 500px;
     // }
@@ -3301,7 +3301,7 @@ body, html{
 
 
   
-@media (max-width:1024px){
+@media (max-width:1023px){
     #mobile-anchor.c-manager{
         img{
             // height: 500px;
@@ -4699,8 +4699,34 @@ body.sequantion-end{
             opacity: 1;
         }
     }
+    &.isLoaded{
+        .fileDrop__button--upload{
+            display: none;
+        }
+        .fileDrop__button--clear{
+            display: flex;
+        }
+        .fileDrop__head,.fileDrop__formats,.fileDrop__maxValue{
+            display: none;
+        }
+        .fileDrop__buttons{
+            position: relative;
+            z-index: 1000;
+        }
+        .fileDrop__message{
+            display: block;
+        }
+    }
+    &.isError{
+        .fileDrop__maxValue{
+            color: #DD2B1C;
+        }
+    }
     @include for-1024(){
         padding: 32px;
+    }
+    &__message{
+        display: none;
     }
     &__label{
         position: absolute;
@@ -4812,6 +4838,7 @@ body.sequantion-end{
         border: none;
         outline: none;
         background: rgba(79, 86, 89, 0.1);
+        cursor: pointer;
        
         svg{
             height: 16px;
@@ -4854,6 +4881,7 @@ body.sequantion-end{
         font-size: 16px;
         line-height: 20px;
         transition: $transition;
+        z-index: 1010;
         @include for-1366(){
             font-size: 20px;
             line-height: 24px;
@@ -4863,5 +4891,33 @@ body.sequantion-end{
             line-height: 28px;
         }       
         
+    }
+    &__msg{
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 28px;
+        /* or 140% */
+        
+        letter-spacing: 0.03em;
+        
+        /* txt/black */
+        
+        color: #150F0F;
+        font-family: $DM;
+        @include for-600(){
+            font-size: 24px;
+            line-height: 28px;
+            max-width: 300px;
+        }      
+        @include for-1366(){
+            font-size: 28px;
+            line-height: 32px;
+            max-width: 320px;
+        } 
+        @include for-1600(){
+            font-size: 36px;
+            line-height: 40px;
+            max-width: 360px;
+        }
     }
 }
