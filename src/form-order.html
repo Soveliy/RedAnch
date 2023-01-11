@@ -338,36 +338,42 @@
 
                   <!-- form-box__block-->
                   <div class="form-box__block form-box__block--drop">
-                     <div class="form-box__window form-box-drag-js form-box-drag-js--order 123123">
-
-                        <fieldset>
-                           <input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="300000" />
-                           <div class="filedrag">
-                              <label for="fileselect" class="drag-drop__title">Выберите файл <span>или перетащите его
-                                    сюда</span>
-                                 <input class="file-input" type="file" id="fileselect" name="fileselect[]" multiple="multiple" />
-                                 <span class="drag-drop__custom">
-                                    <svg class="icon">
-                                       <use xlink:href="./assets/images/svg-sprite/svg-sprite.svg#plus"></use>
-                                    </svg>
-                                 </span>
-                              </label>
-                              <div class="drag-drop__desc">
-                                 <span>Принимаемые форматы: gif, jpg, jpeg, png, bmp, tif, txt, rtf, html, pdf,
-                                    doc,
-                                    docx, odt, ppt, pptx.</span>
-                                 <span>
+                     <div class="form-box__window form-box-drag-js form-box-drag-js--order">
+                        <div class="fileDrop filedrag">
+                           <label for="file" class="fileDrop__label"></label>
+                           <input class="fileselect" type="file" name="fileselect[]" id="file">
+                           <div class="fileDrop__wrap">
+                              
+                                 <div class="fileDrop__head">
+                                    <span class="fileDrop__title">Выберите файл </span>
+                                    <span class="fileDrop__desc">или перетащите его сюда</span>
+                                 </div>
+                                 <div class="fileDrop__formats">
+                                    Принимаемые форматы: gif, jpg, jpeg, png, bmp, tif, txt, rtf, html, pdf, doc, docx, odt, ppt, pptx.
+                                 </div>
+                                 <div class="fileDrop__maxValue">
                                     Максимальный размер файла: 10 мб
-                                 </span>
+                                 </div>
+                                 <div class="fileDrop__message messagesCst"></div>
+                           </div>
+                           <div class="fileDrop__buttons">
+                              <button class="drag-drop__custom fileDrop__button fileDrop__button--upload">
+                                 <svg class="icon">
+                                    <use xlink:href="./assets/images/svg-sprite/svg-sprite.svg#plus"></use>
+                                 </svg>
+                              </button>
+                              <button class="fileDrop__button fileDrop__button--clear">
+                                 <svg class="icon">
+                                    <use xlink:href="./assets/images/svg-sprite/svg-sprite.svg#clear"></use>
+                                 </svg>
+                              </button>
+                           </div>
+                           <div class="fileDrop__hover">
+                              <div class="fileDrop__hover-text">
+                                 Загрузите файл <br> или картинку
                               </div>
-                              <!-- <div id="filedrag">Или перетащите их сюда</div> -->
                            </div>
-
-                           <div class="messages"></div>
-                           <div class="submitbutton">
-                              <button type="submit">Загрузить файлы</button>
-                           </div>
-                        </fieldset>
+                        </div>
                      </div>
                   </div>
 
@@ -379,7 +385,7 @@
                            <div class="filedrag">
                               <label for="file2" class="drag-drop__title">Выберите файл <span>или перетащите его
                                     сюда</span>
-                                 <input type="file" class="file-input" id="file2" name="fileselect[]" multiple="multiple" />
+                                 <input type="file" class="fileselect" id="file2" name="fileselect[]" />
                                  <span class="drag-drop__custom">
                                     <svg class="icon">
                                        <use xlink:href="./assets/images/svg-sprite/svg-sprite.svg#plus"></use>
@@ -397,10 +403,8 @@
                               <!-- <div id="filedrag">Или перетащите их сюда</div> -->
                            </div>
 
-                           <div class="messages"></div>
-                           <div class="submitbutton">
-                              <button type="submit">Загрузить файлы</button>
-                           </div>
+                           <div class="messagesCst"></div>
+                         
                         </fieldset>
                      </div>
                   </div>

@@ -18,13 +18,14 @@
     }
     &__bg{
         @include for-1024(){
-            will-change: transform;
+         
+            // will-change: transform;
             left: 50%;
             width: 0;
             height: 100vh;
             background-color: #110101;
-            transition: .3s;
-            position: absolute;
+            // transition: .3s;
+            position: fixed;
             opacity: 1;
             z-index: 720;
             &.end{
@@ -169,7 +170,7 @@
                 display: block;
                 height: 100%;
                 object-position: bottom;
-                transform: scale(1.05);
+                transform: scale(1.1);
             }
         }
         @include for-retina(){
@@ -199,6 +200,7 @@
             }
         }
         @include for-1024(){
+            position: fixed;
             width: 50%;
             height: 100%;
             left: auto;
@@ -215,7 +217,7 @@
             display: block;
             height: 100%;
             object-position: bottom;
-            transform: scale(1.05);
+            transform: scale(1.1);
         
         }
     }
@@ -267,20 +269,20 @@
             z-index: 700;
             &:hover{
                 & + picture img{
-                    will-change: filter;
-                    filter: blur(20px);
+                    // will-change: filter;
+                  
                 }
             }
             &:hover{
-                .linkLabel__box{
-                    &:after{
-                        width: 100%;
-                    }
-                }
+                // .linkLabel__box{
+                //     &:after{
+                //         width: 100%;
+                //     }
+                // }
             }
         }
         @include for-1366(){
-            padding-top: 280px;
+            padding-top: 208px;
         }
         @include for-1600(){
             padding-top: 265px;
@@ -330,6 +332,19 @@
             }
         }
     }
+    &__shadow{
+      @include for-1024(){
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background-color: #110101;
+        z-index: 800;
+        pointer-events: none;
+        opacity: 0;
+      }
+    }
     &__left{
         @include for-1024(){
             width: 50%;
@@ -342,11 +357,7 @@
             padding-bottom: 16px;
             z-index: 750;
             padding-top: 110px;
-            &:hover{
-                & + picture img{
-                    filter: blur(20px);
-                }
-            }
+          
             &:hover{
                 .hero__title span:after{
                     width: 100%;
@@ -366,6 +377,9 @@
                    
                 // }
             }
+        }
+        @include for-1366(){
+            padding-top: 130px;
         }
         @include for-1600(){
             padding-left: 48px;
@@ -446,4 +460,26 @@
 
 .page__index{
     overflow: hidden;
+}
+
+.hero__content{
+    &.isHoverRight{
+        .hero__picture-big{
+            img{
+                filter: blur(20px);
+            }
+        }
+    }
+    &.isHoverLeft{
+        .hero__picture{
+            img{
+                filter: blur(20px);
+            }
+        }
+        .linkLabel__box{
+            &:after{
+                width: 100%;
+            }
+        }
+    }
 }

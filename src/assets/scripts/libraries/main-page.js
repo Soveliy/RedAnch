@@ -45,8 +45,9 @@ var Animations = function() {
       target: '#mobile-secvention',
       target_2: '#categoriesMain',
       count: 10,
-      src: './assets/images/mobile_anch2/',
-      type: '.png',
+      // src: './assets/images/mobile_anch2/',
+      src: '/local/templates/.default/frontend/dist/assets/images/mobile_anch2/',
+      type: '.jpg',
       wrap: document.querySelector('#mobile-anchor'),
       // canvas: document.querySelector('#section_5_canvas'),
       images: {},
@@ -435,9 +436,12 @@ var Animations = function() {
 
     };
     var sequention_5 = function() {
-      console.log('sequention_5 timeout');
+      // console.log('sequention_5 timeout');
+      // let lastIndex;
+      // console.log(lastIndex)
       controllerAnch?.destroy();
-      scene_5.wrap.className = 'c-manager frameImage ';
+      // console.log("qq")
+     
       controllerAnch = new ScrollMagic.Controller();
       var duration_scene_5 = $(scene_5.target).outerHeight() + $(scene_5.target_2).outerHeight() - $(scene_5.wrap).outerHeight();
       var offset_scene_5 = duration_scene_5 / scene_5.count;
@@ -456,15 +460,17 @@ var Animations = function() {
           .setClassToggle(".hero__bg", "end") // add class toggle
             //  .addIndicators() // add indicators (requires plugin)
             .addTo(controllerAnch);
-        
+           
             scene5.index = i + 39;
           scene5.on('start', function(event) {
             if (this.index <= scene_5.count) {
                 console.log("start")
-                $("#preloadImagesContainer").removeClass('frame_' + (this.index - 1))
-                $("#preloadImagesContainer").addClass('frame_' + this.index);
-                $("#preloadImagesContainer").removeClass('frame_' + (this.index + 1))
-                // scene_5.wrap.className = 'c-manager frame_' + this.index;
+                // $("#preloadImagesContainer").removeClass('frame_' + (this.index - 1))
+                // $("#preloadImagesContainer").addClass('frame_' + this.index);
+                // $("#preloadImagesContainer").removeClass('frame_' + (this.index + 1))
+                scene_5.wrap.className = 'frameImage c-manager frame_' + this.index;
+                // lastIndex = 'frame_' + (this.index + 1);
+             
                 // defaultImageCount = defaultImageCount + 1;
               }
         });
@@ -473,128 +479,14 @@ var Animations = function() {
  
 
     window.addEventListener('load', function() {
-      
-
-      if(isTablet){
-        let vh = window.innerHeight * 0.01;
-        // Then we set the value in the --vh custom property to the root of the document
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-        
-        // We listen to the resize event
-        // window.addEventListener('resize', () => {
-        //   // We execute the same script as before
-        //   let vh = window.innerHeight * 0.01;
-        //   document.documentElement.style.setProperty('--vh', `${vh}px`);
-        // });
-      }
-      // let mobileParam = $(window).height() - 
-      
-      // $("body").overlayScrollbars({ });
-      controller = new ScrollMagic.Controller();
-   
-        if(!isTablet){
-          setTimeout(() => {
-            sequention_5();
-          }, 100);
-        }
-            
-
-        
-      var tl = new TimelineMax();
-      let parallaxElem = $(".video-gallery img");
-      tl.to(parallaxElem, 1, { y: -100, ease: "cubic-bezier(.5,0,0,1)" });
-      var scene = new ScrollMagic.Scene({
-        triggerElement: ".aboutUs__preview ",
-        triggerHook: 1,
-        duration: "135%",
-      })
-          // .addIndicators()
-        .setTween(tl)
-        .addTo(controller);
-
-
-       if(!isTablet){
-          var iconsTimeline = new TimelineMax();
-          let iconsPallax = $(".checks__title");
-          iconsTimeline.to(iconsPallax, 1, { y: 200, ease: "cubic-bezier(.5,0,0,1)" });
-          var iconsScene = new ScrollMagic.Scene({
-            triggerElement: ".checks__title",
-            triggerHook: 0.4,
-            duration: "100%",
-          })
-            .setTween(iconsTimeline)
-            .addTo(controller);
-
-            $(".tizers__item-container--w60").each(function() {
-              var tizersItemTimeline = new TimelineMax();
-              var child = $(this).find(".tizers-item");
-              let parallaxY;
-              if (!isTablet){
-                parallaxY = 100
-              } else {
-                parallaxY = 30
-              }
-              tizersItemTimeline.to(child, 1, { y: parallaxY, ease: "cubic-bezier(.5,0,0,1)" });
-            
-              var scene = new ScrollMagic.Scene({
-                triggerElement: this,
-                triggerHook: 1,
-                duration: "100%"
-              })
-                .setTween(tizersItemTimeline)
-                .addTo(controller);
-            });
-       }
-
-
-        var mobile_anchTest = new TimelineMax();
-        let firstAnchMob = $(".hero__mobile-anch");
-        let mobileParam = $('.tech__title').offset().top - $(window).height();
-        console.log(mobileParam)
-        mobile_anchTest.to(firstAnchMob, 1, { y: - mobileParam + 80, ease: "cubic-bezier(.5,0,0,1)" });
-        let durationAnch = $("#mobile-secvention").offset().top
-
-        var sceneMobAnch = new ScrollMagic.Scene({
-          triggerElement: ".hero",
-          triggerHook: 0,
-          duration: durationAnch - 100,
-        })
-            .setClassToggle("body", "anchor-hidden") // add class toggle
-          .setTween(mobile_anchTest)
-          // .addIndicators()
-          .addTo(controller);
-
-
-          // var sceneDev = new ScrollMagic.Scene({triggerElement: "#section_5", duration: 300})
-					// 	.setPin(".hero__mobile-anch")
-					// 	.addIndicators({name: "1 (duration: 300)"}) // add indicators (requires plugin)
-					// 	.addTo(controller);
-      
-        heroAnimationAnch();
-        
-
-        var bgRight = new TimelineMax();
-        let bgRightElem = $(".hero__bg")
-        bgRight.to(bgRightElem, 1, { scaleX: 1, width: "100%",  ease: "cubic-bezier(.5,0,0,1)",
-     
-        },
-         );
-      
-      
-
-        var sceneBgRight = new ScrollMagic.Scene({
-          // triggerElement: ".triger_dev",
-          
-          duration: 1950,
-        })
-       
-        // .addIndicators()
-        .setTween(bgRight)
-        .addTo(controller);
-  
-      // var rellax = new Rellax('.parallaxEffect', {center: true});
       let preloader = new TimelineMax();
-      preloader.to("#theGradientWhite stop", 0.25, {
+      const mediaFiles = document.querySelectorAll('img, video');
+      let elemsLoaded = 0
+      console.log(mediaFiles)
+      let defaultImageCount = 1;
+     
+      if(isTablet){
+        preloader.to("#theGradientWhite stop", 0.25, {
           attr: { offset: "0%" },
           repeat: false,
           yoyo: true,
@@ -643,6 +535,262 @@ var Animations = function() {
           opacity:0,
         }, "=-2")
 
+      } else{
+        Array.from(mediaFiles).forEach((file, index) => {
+          file.onload = () => {
+            elemsLoaded++
+  
+        
+            console.log(elemsLoaded)
+            if(elemsLoaded === 50) {
+              preloader.to("#theGradientWhite stop", 0.6, {
+                attr: { offset: "50%" },
+                repeat: false,
+                yoyo: true,
+                repeatDelay: 0.5,
+                ease: "cubic-bezier(.5,0,0,1)"
+              });
+            }
+            if(elemsLoaded === 100) {
+              preloader.to("#theGradientWhite stop", 0.6, {
+                attr: { offset: "0%" },
+                repeat: false,
+                yoyo: true,
+                repeatDelay: 0.5,
+                ease: "cubic-bezier(.5,0,0,1)"
+              });
+              preloader.to("#theGradientRed stop", 0.6, {
+                attr: { offset: "50%" },
+                repeat: false,
+                yoyo: true,
+                repeatDelay: 0.5,
+                ease: "cubic-bezier(.5,0,0,1)"
+              },"=-0.3");
+            }
+            if(elemsLoaded === 150) {
+              preloader.to("#theGradientRed stop", 0.6, {
+                attr: { offset: "0%" },
+                repeat: false,
+                yoyo: true,
+                repeatDelay: 0.5,
+                ease: "cubic-bezier(.5,0,0,1)"
+              },"=-0.3");
+
+                preloader.to("#theGradientWhiteTop stop", 0.6, {
+                  attr: { offset: "50%" },
+                  repeat: false,
+                  yoyo: true,
+                  repeatDelay: 0.5,
+                  ease: "cubic-bezier(.5,0,0,1)",
+                  onComplete: function() {
+                    // $("body").addClass('mainAnimatedClass');
+                  }
+                },"=-0.3");
+                }
+                if(elemsLoaded === 200) {
+               
+  
+                    preloader.to("#theGradientWhiteTop stop", 0.6, {
+                      attr: { offset: "0%" },
+                      repeat: false,
+                      yoyo: true,
+                      repeatDelay: 0.5,
+                      ease: "cubic-bezier(.5,0,0,1)",
+                      onComplete: function() {
+                        $("body").addClass('mainAnimatedClass');
+                      }
+                     },"=-0.3");
+                     preloader.from( $('.hero__title'), .8, {
+                      delay: 1,
+                      ease:"cubic-bezier(.5,0,0,1)",
+                      y: '100',
+                      opacity:0,
+                    } );
+                    preloader.from( $('.hero__desc'), .8, {
+                      delay: 1,
+                      ease:"cubic-bezier(.5,0,0,1)",
+                      y: '100',
+                      opacity:0,
+                    }, "=-2");
+                    preloader.from( $('.hero__linkLabel'), .8, {
+                      delay: 1,
+                      ease:"cubic-bezier(.5,0,0,1)",
+                      y: '100',
+                      opacity:0,
+                    }, "=-2")
+                    preloader.from( $('header'), .8, {
+                      delay: 1,
+                      ease:"cubic-bezier(.5,0,0,1)",
+                      y: '-100',
+                      opacity:0,
+                    }, "=-2")
+                    let interVal = setInterval(preloaderAnch, 100);
+                    function preloaderAnch() {
+                      $(".c-manager").removeClass('frame_' + (defaultImageCount - 1))
+                      $(".c-manager").addClass('frame_' + defaultImageCount);
+                      defaultImageCount = defaultImageCount + 1;
+                      if(defaultImageCount == 40) {
+                        clearInterval(interVal);
+                      }
+                    }
+                    }
+                
+                  
+            
+          }
+      })
+      }
+  
+
+      if(isTablet){
+        let vh = window.innerHeight * 0.01;
+        // Then we set the value in the --vh custom property to the root of the document
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+        
+        // We listen to the resize event
+        // window.addEventListener('resize', () => {
+        //   // We execute the same script as before
+        //   let vh = window.innerHeight * 0.01;
+        //   document.documentElement.style.setProperty('--vh', `${vh}px`);
+        // });
+      }
+      // let mobileParam = $(window).height() - 
+      
+      // $("body").overlayScrollbars({ });
+      controller = new ScrollMagic.Controller();
+   
+        if(!isTablet){
+          setTimeout(() => {
+            sequention_5();
+          }, 100);
+        }
+            
+
+        
+      var tl = new TimelineMax();
+      let parallaxElem = $(".video-gallery img");
+      tl.to(parallaxElem, 1, { y: -100, ease: "cubic-bezier(.5,0,0,1)" });
+      var scene = new ScrollMagic.Scene({
+        triggerElement: ".aboutUs__preview ",
+        triggerHook: 1,
+        duration: "135%",
+      })
+          // .addIndicators()
+        .setTween(tl)
+        .addTo(controller);
+
+
+       if(!isTablet){
+          var iconsTimeline = new TimelineMax();
+          let iconsPallax = $(".checks__title");
+          iconsTimeline.to(iconsPallax, 1, { y: 200, ease: "cubic-bezier(.5,0,0,1)" });
+          var iconsScene = new ScrollMagic.Scene({
+            triggerElement: ".checks__title",
+            triggerHook: 1,
+            duration: "130%",
+          })
+          // .addIndicators()
+            .setTween(iconsTimeline)
+            .addTo(controller);
+
+            $(".tizers__item-container--w60").each(function() {
+              var tizersItemTimeline = new TimelineMax();
+              var child = $(this).find(".tizers-item");
+              let parallaxY;
+              if (!isTablet){
+                parallaxY = 100
+              } else {
+                parallaxY = 30
+              }
+              tizersItemTimeline.to(child, 1, { y: parallaxY, ease: "cubic-bezier(.5,0,0,1)" });
+            
+              var scene = new ScrollMagic.Scene({
+                triggerElement: this,
+                triggerHook: 1,
+                duration: "120%"
+              })
+                .setTween(tizersItemTimeline)
+                .addTo(controller);
+            });
+       }
+
+
+        var mobile_anchTest = new TimelineMax();
+        let firstAnchMob = $(".hero__mobile-anch");
+     
+        let mobileParam = $('.tech__title').offset().top - $(window).height();
+    
+        // mobile_anchTest.to(firstAnchMob, 1, { y: - 700, ease: "cubic-bezier(.5,0,0,1)" });
+        // mobile_anchTest.to(firstAnchMob, 1, { y: - $(window).height()*.5 });
+        mobile_anchTest.to(firstAnchMob, 1, { y: - $(firstAnchMob).height()*.5, ease: "cubic-bezier(.5,0,0,1)" });
+        let durationAnch = $("#mobile-secvention").offset().top
+
+        var sceneMobAnch = new ScrollMagic.Scene({
+          triggerElement: ".hero",
+          triggerHook: 0,
+          duration: durationAnch,
+        })
+            .setClassToggle("body", "anchor-hidden") // add class toggle
+          .setTween(mobile_anchTest)
+          // .addIndicators()
+          .addTo(controller);
+
+
+          // var sceneDev = new ScrollMagic.Scene({triggerElement: "#section_5", duration: 300})
+					// 	.setPin(".hero__mobile-anch")
+					// 	.addIndicators({name: "1 (duration: 300)"}) // add indicators (requires plugin)
+					// 	.addTo(controller);
+      
+        heroAnimationAnch();
+        
+
+        var bgRight = new TimelineMax();
+        let bgRightElem = $(".hero__bg")
+        bgRight.to(bgRightElem, 1, { scaleX: 1, width: "100%",  ease: "cubic-bezier(.5,0,0,1)",
+        },
+         );
+      
+      
+
+        var sceneBgRight = new ScrollMagic.Scene({
+          // triggerElement: ".triger_dev",
+          
+          duration: 1950,
+        })
+       
+        // .addIndicators()
+        .setTween(bgRight)
+        .addTo(controller);
+
+        var bgLeft = new TimelineMax();
+        let bgLeftElem = $(".hero__shadow")
+        bgLeft.to(bgLeftElem, 1, { opacity: 1,  ease: "cubic-bezier(.5,0,0,1)",
+        },
+         );
+         var sceneBgLeft = new ScrollMagic.Scene({
+          // triggerElement: ".triger_dev",
+          
+          duration: 1000,
+        })
+       
+        // .addIndicators()
+        .setTween(bgLeft)
+        .addTo(controller);
+       
+     
+    
+        // preloader.to("#theGradientWhiteTop stop", 0.25, {
+        //   attr: { offset: "0%" },
+        //   repeat: false,
+        //   yoyo: true,
+        //   repeatDelay: 0.5,
+        //   ease: "cubic-bezier(.5,0,0,1)",
+        //   onComplete: function() {
+        //     // $("body").addClass('mainAnimatedClass');
+        //   }
+        // },"=-0.13");
+        
+
 
 
         
@@ -651,15 +799,15 @@ var Animations = function() {
         
     
 
-       for (var i = 0; i < 41; i++) {
-        function timeout(val) {
-          setTimeout(function() {
-            $(".frameImage").removeClass('frameImage' + (i - 1))
-            $(".frameImage").addClass('frameImage' + i)
-          }, 100);
-        }
-        timeout(i);
-      }
+      //  for (var i = 0; i < 41; i++) {
+      //   function timeout(val) {
+      //     setTimeout(function() {
+      //       $(".frameImage").removeClass('frameImage' + (i - 1))
+      //       $(".frameImage").addClass('frameImage' + i)
+      //     }, 100);
+      //   }
+      //   timeout(i);
+      // }
        
      
       
@@ -668,16 +816,7 @@ var Animations = function() {
 
         initAnimationsPage();
 
-        let defaultImageCount = 1;
-      let interVal = setInterval(preloaderAnch, 100);
-      function preloaderAnch() {
-        $(".c-manager").removeClass('frame_' + (defaultImageCount - 1))
-        $(".c-manager").addClass('frame_' + defaultImageCount);
-        defaultImageCount = defaultImageCount + 1;
-        if(defaultImageCount == 40) {
-          clearInterval(interVal);
-        }
-      }
+       
 
       if(isTablet){
         setLoadImages();
@@ -719,28 +858,15 @@ var Animations = function() {
            
             .addTo(controller);
         });
-        // setTimeout(() => {
-         
-        // }, 5000);
-        $(window).one('scroll',function() {
-            // setLoadImages();
-            // sequention_5();
-         });
+
       
 
 
     
         FixedFooter();
 
-        new ScrollMagic.Scene({triggerElement: "#categoriesMain",offset:120})
-        .setClassToggle("#preloadImages", "hidden") // add class toggle
-        // .setClassToggle("#mobile-secvention", "hidden") // add class toggle
-              //  .addIndicators() // add indicators (requires plugin)
-        .addTo(controller);
-
-        new ScrollMagic.Scene({triggerElement: "#categoriesMain",offset:0})
-        .setClassToggle("#mobile-anchor", "hidden") // add class toggle
-              //  .addIndicators() // add indicators (requires plugin)
+        new ScrollMagic.Scene({triggerElement: "#categoriesMain",offset:0, triggerHook: 0,})
+        .setClassToggle("body", "sequantion-end") // add class toggle
         .addTo(controller);
 
         let cstHeight = $("#section_5").outerHeight()
@@ -849,3 +975,11 @@ $(".print").click(function(e){
 
 
 
+$(".hero__left").hover(function(){
+  $(".hero__content").toggleClass("isHoverLeft")
+  $(".hero__content").removeClass("isHoverRight")
+});
+$(".hero__right").hover(function(){
+  $(".hero__content").toggleClass("isHoverRight")
+  $(".hero__content").removeClass("isHoverLeft")
+});

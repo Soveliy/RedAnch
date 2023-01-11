@@ -75,7 +75,7 @@
 
 //! b-modal
 .b-modal {
-  border-radius: 3px;
+
   background-color: #fff;
   transform: translateY(150%);
   opacity: 0;
@@ -204,7 +204,7 @@
   &__head {
     position: relative;
     box-sizing: border-box;
-    padding: 16px 16px 32px;
+    padding: 16px 16px 25px;
     background: #ededed;
     &--flex{
       @include for-1024(){
@@ -237,7 +237,7 @@
       font-weight: 700;
       /* identical to box height, or 100% */
 
-      letter-spacing: 0.05em;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
 
       /* txt/black */
@@ -283,15 +283,15 @@
       color: #150f0f;
 
       &--1366{
-        font-size: 14px;
-        line-height: 16px;
+        font-size: 16px;
+        line-height: 20px;
 
         @media screen and (min-width: 600px) {
           font-size: 20px;
           line-height: 24px;
         }
         @media screen and (min-width: 1366px) {
-          max-width: 350px;
+          max-width: 270px;
          
         }
       }
@@ -299,10 +299,17 @@
     &-close {
       position: absolute;
       right: 19px;
-      top: 25px;
+      top: 29px;
       z-index: 599;
       cursor: pointer;
-  
+      svg{
+        height: 16px;
+        width: 16px;
+        @include for-1366(){
+          height: 24px;
+          width: 24px;
+        }
+      }
       @media screen and (min-width: 600px) {
         top: 32px;
         right: 32px;
@@ -356,9 +363,9 @@
 
       position: relative;
 
-      .defaultModal__input:focus~.defaultModal__input-placeholder, .defaultModal__input:not(:placeholder-shown)~.defaultModal__input-placeholder {
-        transform: translateY(-80%);
-      }
+      // .defaultModal__input:focus~.defaultModal__input-placeholder, .defaultModal__input:not(:placeholder-shown)~.defaultModal__input-placeholder {
+      //   transform: translateY(-80%);
+      // }
     }
 
 
@@ -422,7 +429,7 @@
       }
 
       &.btn-fixed{
-
+        margin-bottom: 0;
         @media screen and (min-width: 600px) {
           height: 96px;
         }
@@ -442,7 +449,7 @@
         max-width: calc(70% - 8px)!important;
       }
       @include for-1600(){
-        max-width: calc(80% - 8px)!important;
+        max-width: calc(70% - 8px)!important;
       }
     }
     &--w30I{
@@ -452,7 +459,7 @@
         max-width: calc(30% - 8px)!important;
       }
       @include for-1600(){
-        max-width: calc(20% - 8px)!important;
+        max-width: calc(30% - 8px)!important;
       }
     }
     &--w50 {
@@ -564,9 +571,11 @@
         // top: 60%;
       }
     }
-
-    &:focus ~ .defaultModal__input-placeholder,
-    &:not(:placeholder-shown):focus ~ .defaultModal__input-placeholder {
+    &:hover ~ .defaultModal__input-placeholder{
+      color: #150F0F;
+    }
+    &:not(textarea):focus ~ .defaultModal__input-placeholder,
+    &:not(textarea):not(:placeholder-shown) ~ .defaultModal__input-placeholder {
       font-size: 14px;
       line-height: 16px;
       transform: translateY(-110%);
@@ -574,6 +583,31 @@
         transform: translateY(-170%);
         font-size: 16px;
         line-height: 20px;
+      }
+      @include for-1600(){
+        font-size: 20px;
+        line-height: 24px;
+      }
+    
+    }
+
+    
+  }
+
+  textarea.defaultModal__input{
+    &:focus ~ .defaultModal__input-placeholder,
+    &:not(:placeholder-shown) ~ .defaultModal__input-placeholder {
+      font-size: 14px;
+      line-height: 16px;
+      transform: translateY(-110%);
+      @media screen and (min-width: 600px) {
+        transform: translateY(-100%);
+        font-size: 16px;
+        line-height: 20px;
+      }
+      @include for-1600(){
+        font-size: 20px;
+        line-height: 24px;
       }
     
     }
@@ -592,7 +626,7 @@
       margin-bottom: 8px;
     }
   }
-
+  
   .container--w30{
     width: 100%;
 
@@ -620,24 +654,24 @@
   }
 
 }
-.defaultModal__input:focus ~ .defaultModal__input-placeholder,
-.defaultModal__input:not(:placeholder-shown) ~ .defaultModal__input-placeholder {
-  font-size: 14px;
-  line-height: 16px;
-  transform: translateY(-110%);
+// .defaultModal__input:focus ~ .defaultModal__input-placeholder,
+// .defaultModal__input:not(:placeholder-shown) ~ .defaultModal__input-placeholder {
+//   font-size: 14px;
+//   line-height: 16px;
+//   transform: translateY(-110%);
 
-  @media screen and (min-width: 600px) {
-    transform: translateY(-150%);
-    font-size: 16px;
-    line-height: 20px;
-  }
-  z-index: 70;
-  @include for-1600(){
-    transform: translateY(-140%);
-    font-size: 20px;
-    line-height: 24px;
-  }
-}
+//   @media screen and (min-width: 600px) {
+//     transform: translateY(-150%);
+//     font-size: 16px;
+//     line-height: 20px;
+//   }
+//   z-index: 70;
+//   @include for-1600(){
+//     transform: translateY(-140%);
+//     font-size: 20px;
+//     line-height: 24px;
+//   }
+// }
 
 .policy-checkbox {
   input {
@@ -1470,7 +1504,7 @@ label.error{
 
 .defaultModal__container--order .defaultModal__input-placeholder{
   @include for-1600(){
-    font-size: 30px;
+    font-size: 24px;
   }
 }
 
@@ -1615,5 +1649,11 @@ label.error{
     
       }
     }
+  }
+}
+
+@media (max-width:1024px){
+  .container--w70 + .container--w100{
+    margin-top: 4px;
   }
 }

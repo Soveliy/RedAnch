@@ -107,6 +107,7 @@
       letter-spacing: 0.03em;
       white-space: nowrap;
       color: #150F0F;
+      padding-left: 4px;
       @include for-600(){
         font-size: 28px;
         line-height: 32px;
@@ -118,6 +119,7 @@
         letter-spacing: .05em;
         margin-bottom: 0;
         margin-left: 24px;
+        padding-left: 0;
         box-sizing: border-box;
         &:after{
           content: '';

@@ -23,10 +23,13 @@ function throttle(func, ms) {
     }, ms);
   }
 }
-
+let scrollPos  = 0;
 window.addEventListener('scroll', function () {
+  
+
   const { scrollY } = window;
   const headerHeight = document.querySelector('.header').offsetHeight
+  const headerHeightTop = document.querySelector('.header-top').offsetHeight
   const element = document.querySelector('[data-sticke-element]') 
   if (element){
     const wrapper = element.parentElement
@@ -36,9 +39,16 @@ window.addEventListener('scroll', function () {
     if (scrollY + headerHeight > startOffset) {
         element.classList.add('fixed')
         element.style.width = wrapper.clientWidth + 'px'
-        element.style.top = headerHeight + 4 + 'px'
+       
         wrapper.style.display = 'block'
         wrapper.style.paddingTop = element.clientHeight + 'px'
+        var st = $(this).scrollTop();
+        if (st > scrollPos){
+          element.style.top = headerHeight - headerHeightTop + 4 + 'px'
+        } else {
+          element.style.top = headerHeight  + 4 + 'px'
+        }
+        scrollPos = st;
     } else {
         element.classList.remove('fixed')
         element.style.top = 0
@@ -53,5 +63,19 @@ window.addEventListener('scroll', function () {
         element.classList.remove('stopped')
     }
   }
- 
+
 })
+
+
+// $(window).scroll(function() {
+//   let scrolled = $(window).scrollTop();
+
+//   if ( scrolled > 100 && scrolled > scrollPrev ) {
+//     header.addClass('header--out');
+ 
+//   } else {
+//     header.removeClass('header--out');
+  
+//   }
+//   scrollPrev = scrolled;
+// });

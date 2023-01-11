@@ -200,7 +200,7 @@
             left: 32px;
          }
          @include for-1600(){
-            font-size: 24px;
+            font-size: 20px;
             line-height: 24px;
             top: 26px;
          }
@@ -469,22 +469,22 @@
       font-size: 0 !important;
    }
 
-   &__custom {
-      cursor: pointer;
-      width: 56px;
-      height: 56px;
-      background: rgba(79, 86, 89, 0.1);
+   // &__custom {
+   //    cursor: pointer;
+   //    width: 56px;
+   //    height: 56px;
+   //    background: rgba(79, 86, 89, 0.1);
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+   //    display: flex;
+   //    align-items: center;
+   //    justify-content: center;
 
-      .icon {
-         width: 24px;
-         height: 24px;
-         fill: #DD2B1C;
-      }
-   }
+   //    .icon {
+   //       width: 24px;
+   //       height: 24px;
+   //       fill: #DD2B1C;
+   //    }
+   // }
 
       fieldset {
          outline: none;
@@ -556,9 +556,9 @@
             margin-left: 5px;
             color: rgba(79, 86, 89, 0.7);
          }
-         .drag-drop__custom{
-            margin-left: auto;
-         }
+         // .drag-drop__custom{
+         //    margin-left: auto;
+         // }
 
          @include for-1600(){
             font-size: 36px;
@@ -569,10 +569,10 @@
    }
    
 
-   .drag-drop__custom {
-      display: flex;
-      margin-left: auto;
-   }
+   // .drag-drop__custom {
+   //    display: flex;
+   //    margin-left: auto;
+   // }
 
    .drag-drop__desc {
       max-width: 505px;
@@ -612,15 +612,15 @@
 
 .form-box__window{
    position: relative;
-   .drag-drop__custom{
-      position: absolute;
-      top: 55px;
-      right: 32px;
-      @include for-1600(){
-         top: 67px;
-         right: 40px;
-      }
-   }
+   // .drag-drop__custom{
+   //    position: absolute;
+   //    top: 55px;
+   //    right: 32px;
+   //    @include for-1600(){
+   //       top: 67px;
+   //       right: 40px;
+   //    }
+   // }
 }
 .form-order__box.page__box{
    @include for-1600(){

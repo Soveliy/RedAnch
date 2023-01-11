@@ -24,7 +24,11 @@ catalogItems.forEach((catalogItem) => {
       if (btnOpenCatalog.classList.contains('cat-header__btn--active')) {
          btnOpenCatalog.firstElementChild.innerText = "Скрыть";
       } else {
-         btnOpenCatalog.firstElementChild.innerText = "Показать ещё 2";
+     
+
+         
+         let listLenght = btnOpenCatalog.parentElement.nextElementSibling.children.length
+         btnOpenCatalog.firstElementChild.innerText = "Показать ещё " + listLenght;
       }
 
       if (subList.classList.contains('active')) {

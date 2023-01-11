@@ -77,6 +77,12 @@
       @include for-600(){
          top: 70px;
       }
+      @include for-1024(){
+         top: 50px;
+      }
+      @include for-1366(){
+         top: 70px;
+      }
       @include for-1600(){
          top: 105px;
       }
@@ -289,6 +295,7 @@
       width: 100%;
       @include for-1024(){
          align-items: flex-end;
+         padding: 15px 36px;
       }
       &--result {
          display: none;
@@ -420,25 +427,25 @@
          &--result {
             display: flex;
             gap: 24px;
-            font-size: 24px;
-            line-height: 24px;
+            font-size: 36px;
+            line-height: 36px;
             .result-list {
                font-weight: 700;
-               font-size: 44px;
-               line-height: 44px;
+               font-size: 36px;
+               line-height: 36px;
                color: #fff;
                &__name {
                   opacity: 0.4;
                   font-weight: 700;
-                  font-size: 24px;
-                  line-height: 24px;
+                  font-size: 36px;
+                  line-height: 36px;
                   color: #fff;
                }
                &__count {
                   margin-right: 8px;
                   font-weight: 700;
-                  font-size: 24px;
-                  line-height: 24px;
+                  font-size: 36px;
+                  line-height: 36px;
                   color: #fff;
                }
             }
@@ -446,6 +453,8 @@
 
          &--link {
             width: min-content;
+            padding-left: 32px;
+            padding-right: 32px;
             &:hover {
                .order-footer__icon {
                   fill: #FFF;
@@ -510,6 +519,9 @@
          font-size: 40px;
       }
       @include for-1024(){
+         font-size: 36px;
+      }
+      @include for-1366(){
          font-size: 44px;
       }
       @include for-1600(){
@@ -944,6 +956,11 @@
       line-height: 20px;
       color: #150F0F;
       padding: 8px;
+      white-space: nowrap;
+      position: relative;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      letter-spacing: .03em;
    }
 
    &__btn {
@@ -956,6 +973,7 @@
       padding: 0;
       margin-left: auto;
       margin-right: 0;
+      flex-shrink: 0;
       .icon {
          width: 24px;
          height: 24px;

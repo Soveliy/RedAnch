@@ -301,10 +301,10 @@ body{
         // width: 130%;
         // height: 120%;
         // margin-bottom: -25%;
-        width: calc(100% + 100px);
+        // width: calc(100% + 100px);
         height: calc(100% + 100px);
-        margin-left: -50px;
-        position: absolute;
+        // margin-left: -50px;
+        // position: absolute;
         top: 0;
         left: 0;
     }
@@ -323,6 +323,12 @@ body{
         align-items: center;
         justify-content: center;
         z-index: 5;
+        @include for-1024(){
+            transition: $transition;
+            &:hover{
+                opacity: .5;
+            }
+        }
         @include for-1366(){
             height: 96px;
             width: 96px;
@@ -392,12 +398,16 @@ body{
     &__video-gallery{
        margin-bottom: 10px;
        width: 100%;
-
+       width: 232px;
        img{
-        width: 100%;
+        // width: 100%;
+       }
+       @include for-600(){
+        width: 422px;
        }
        @include for-1024(){
         margin-bottom: 30px;
+        width: auto;
        }
        @include for-1366(){
         margin-bottom: 47px;
@@ -471,11 +481,15 @@ body{
     }
     &__preview{
         height: 160px;
+       
         @include for-600(){
             height: 340px;
+          
+
         }
         @include for-1024(){
             height: 400px;
+            width: auto;
         }
         @include for-1366(){
             height: 550px;
@@ -614,6 +628,12 @@ body{
         }
     }
     &-item{
+        @include for-1024(){
+          transition: $transition;
+          &:hover{
+            opacity: .8;
+          }
+        }
         &--row{
             display: flex;
             align-items: center;
@@ -634,6 +654,7 @@ body{
                 font-size: 36px;
                 line-height: 36px;
                 max-width: 67%;
+                transition: $transition;
             }
             @include for-1366(){
                 font-size: 44px;
@@ -947,7 +968,11 @@ body{
     padding: 24px 0;
     background: linear-gradient(180deg, #C52518 0%, #8C0D03 100%);
     @include for-1024(){
-        padding: 82px 0 0;
+        padding: 82px 0;
+    }
+    @include for-1600(){
+        padding-bottom: 0;
+        margin-bottom: -80px;
     }
     &__items{
         margin-top: 0;
@@ -1005,15 +1030,15 @@ body{
         }
         &__picture{
             width: calc(100% + 30px);
-            margin: -33px -15px -60px;
+            margin: -10px -15px -60px;
             overflow: visible;
             @include for-1024(){
                 width: calc(100% + 64px);
-                margin: 65px -32px -150px;
+                margin: 65px -32px -135px;
             }
             @include for-1600(){
                 width: calc(100% + 96px);
-                margin: 40px -48px 0;
+                margin: 60px -48px 0;
             }
             @include for-retina(){
                 width: 100vw;
@@ -1032,12 +1057,15 @@ body{
     &__title{
         @include for-1024(){
             letter-spacing: 3.4px;
+            margin-bottom: 32px;
         }
         @include for-1366(){
             letter-spacing: 3px;
+            margin-bottom: 40px;
         }
         @include for-1600(){
             letter-spacing: 4px;
+            margin-bottom: 56px;
         }
     }
     &__how-link{
@@ -1064,7 +1092,8 @@ body{
             text-transform: uppercase;
             font-family: $TT;
             transition: $transition;
-            margin-top: 82px;
+            // margin-top: 82px;
+            margin-top: 0;
             svg{
                 transition: $transition;
             }
@@ -1177,9 +1206,7 @@ body{
 #preloadImages{
     pointer-events: none;
 }
-#preloadImages.hidden{
-    display: none;
-}
+
 #mobile-anchor [class*="img_"]{
     opacity: 0 !important;
 }
@@ -1224,7 +1251,7 @@ body{
         justify-content: center;
         will-change: transform;
     img{
-        height: 550px;
+        // height: 550px;
         // @include for-1920(){
         //     height: auto;
         // }
@@ -1259,11 +1286,12 @@ body{
    @include for-1024(){
     left: 0;
     width: 100%;
+    display: flex;
+    justify-content: center;
    }
    
     z-index: -1;
-    display: flex;
-    justify-content: center;
+  
     transition: 0;
     // transform: translate3d(0,0,0);
     top: 0;
@@ -1937,7 +1965,7 @@ body{
                 opacity: 1;
         }
         @include for-1366(){
-            height: 456px;
+            height: 472px;
         }
         @include for-1600(){
             height: 460px;
@@ -2875,10 +2903,19 @@ body{
         padding: 0 24px 0 20px;
         box-sizing: border-box;
         border-left: 4px solid transparent;
+        img{
+            @include for-1024(){
+                width: 32px;
+            }
+            @include for-1366(){
+                width: 40px;
+            }
+        }
         @include for-1024(){
             opacity: .7;
             font-size: 16px;
             line-height: 20px;
+          
         }
         @include for-1366(){
             font-size: 20px;
@@ -3132,7 +3169,7 @@ body.anchor-hidden{
 }
 .hero__mobile-anch{
     opacity: 0;
-    transition: .4s;
+    // transition: .4s;
     position: fixed !important
 }
 // .hero__mobile-anchor{
@@ -3380,9 +3417,15 @@ body, html{
     position: relative;
     overflow: hidden;
 }
+
 .page__index + .footer{
     margin: 0;
     padding: 0;
+    .page__box{
+        @include for-1600(){
+            padding: 0 32px;
+        }
+    }
     .help:hover{
         .help__box:after{
             width: 100%;
@@ -3391,9 +3434,15 @@ body, html{
     .help__box{
         overflow: visible;
         padding: 16px 0;
-        @include for-1600(){
+        @include for-600(){
+            padding: 32px 0;
+        }
+        @include for-1024(){
             padding: 28px 0;
         }
+        // @include for-1600(){
+        //     padding: 28px 0;
+        // }
         &:after{
            @media (max-width:1023px){
             display: none;
@@ -3412,36 +3461,90 @@ body, html{
            
         }
     }
+    .help__desc{
+        max-width: 200px;
+        @include for-600(){
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: .03em;
+            max-width: 275px;
+        }
+        @include for-1024(){
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: -5px;
+            max-width: inherit;
+        }
+        @include for-1600(){
+            font-size: 32px;
+            line-height: 36px;
+            margin-bottom: 6px;
+        }
+    }
     .help__name{
-        letter-spacing: .02em;
+        letter-spacing: .03em;
         margin-right: 20px;
-        margin-bottom: -17px;
+        margin-bottom: 9px;
+        font-size: 96px;
+        line-height: 80px;
+        @include for-600(){
+            font-size: 180px;
+            line-height: 150px;
+        }
+        @include for-1024(){
+            font-size: 136px;
+            line-height: 96px;
+            /* identical to box height, or 71% */
+            
+            letter-spacing: 0.02em;
+            margin-bottom: 0;
+            margin-right: 16px;
+        }
         @include for-1366(){
-            line-height: 1;
-            margin-bottom: -22px;
+            font-size: 192px;
+            line-height: 136px;
+            /* identical to box height, or 71% */
+            
+            letter-spacing: 0.02em;
+            margin-right: 8px;
+        }
+        @include for-1600(){
+            font-size: 232px;
+            line-height: 188px;
+            margin-right: 20px;
         }
     }
     .help__icon{
-        margin-left: 85px;
+        // margin-left: 85px;
+        right: 0;
+        @include for-600(){
+            height: 24px;
+            width: 24px;
+            fill: rgba( #fff, .2);
+            // position: static;
+            // margin-left: 20px;
+            top: -8px;
+            right: 1px;
+        }
+        @include for-1024(){
+            margin-left: 50px;
+        }
         @include for-1366(){
-            margin-bottom: 7px;
+            margin-bottom: 1px;
         }
         @include for-1600(){
             margin-left: 25px;
+            margin-bottom: 14px;
         }
     }
-    .main__help  {
-        margin: 0 0 16px 0;
-        padding: 16px 0 0;
-
-        @include for-1024(){
-            padding: 40px 0;
-        }
-        @include for-1600(){
-            padding: 72px 0 100px;
-        }
-       
+    .help__sub-box{
+        position: relative;
+      padding-right: 40px;
+      @include for-1024(){
+        padding-right: 0;
+      }
     }
+   
     .footer__box {
         padding-bottom: 16px;
     }
@@ -4488,6 +4591,12 @@ body, html{
         width: 100%;
         margin: 0 auto;
       }
+      @include for-1600(){
+        max-width: 1248px;
+      }
+      @include for-1920(){
+        max-width: 1514px;
+      }
     }
 }
 
@@ -4517,4 +4626,242 @@ body, html{
 
 body.main-page{
     background-color: #110101;
+}
+
+.p-list__dropdown {
+
+    span{
+        display: none;
+    }
+    &.js-sort-active {
+        span{
+            display: flex;
+            svg{
+                transform: rotate(180deg);
+            }   
+        }
+    }
+}
+
+.main-page .main__help {
+    padding: 0;
+    margin-bottom: 16px;
+    @include for-600(){
+        margin-bottom: 32px;
+    }
+    @include for-1024(){
+        padding: 74px 0 65px;
+        margin-bottom: 0;
+    }
+    @include for-1366(){
+        padding: 74px 0 107px;
+    }
+}
+
+
+body.sequantion-end{
+   #preloadImages,.hero__picture ,.hero__bg,#mobile-anchor{
+    display: none;
+   }
+}
+
+.dbI{
+    display: block !important;
+}
+
+
+.form-box__block fieldset{
+    position: relative;
+
+    .filedrag{
+    
+        &:before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 500;
+            pointer-events: none;
+        }
+    }
+}
+.fileDrop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 16px 20px;
+    background: #FFFFFF;
+    &.isHover{
+        .fileDrop__hover{
+            opacity: 1;
+        }
+    }
+    @include for-1024(){
+        padding: 32px;
+    }
+    &__label{
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        cursor: pointer;
+    }
+    &__head{
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 22px;
+        /* identical to box height, or 122% */
+        
+        letter-spacing: 0.03em;
+        font-family: $DM;
+        margin-bottom: 2px;
+        @include for-1024(){
+            font-size: 24px;
+            line-height: 28px;
+            margin-bottom: 8px;
+        }
+        @include for-1366(){
+            font-size: 28px;
+            line-height: 32px;
+        }
+        @include for-1600(){
+            font-size: 36px;
+            line-height: 40px;
+        }
+    }
+    &__title{
+        color: #150F0F;
+    }
+    &__desc{
+        display: none;
+        @include for-1024(){
+            display: inline;
+            color: rgba(79, 86, 89, 0.7);
+        }
+    }
+    &__formats{
+        display: none;
+        @include for-1024(){
+            display: block;
+            font-size: 16px;
+            line-height: 20px;
+            /* or 125% */
+            
+            letter-spacing: 0.03em;
+            
+            /* txt/gray 1 70% */
+            
+            color: rgba(79, 86, 89, 0.7);
+            font-family: $DM;
+            margin-bottom: 4px;
+            font-weight: 300;
+            max-width: 380px;
+        }
+        @include for-1366(){
+            font-size: 20px;
+            line-height: 24px;
+            max-width: 505px;
+        }
+        @include for-1600(){
+            font-size: 24px;
+            line-height: 28px;
+            max-width: 565px;
+        }
+      
+    }
+    &__maxValue{
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 14px;
+        /* identical to box height, or 117% */
+        
+        letter-spacing: 0.05em;
+        
+        /* txt/gray 1 70% */
+        
+        color: rgba(79, 86, 89, 0.7);
+        font-family: $DM;
+        @include for-1024(){
+            font-size: 14px;
+            line-height: 16px;
+        }
+        @include for-1366(){
+            font-size: 16px;
+            line-height: 20px;
+        }
+        @include for-1600(){
+            font-size: 20px;
+            line-height: 24px;
+        }
+        
+    }
+    &__buttons{
+        margin-left: 8px;
+        flex-shrink: 0;
+    }
+    &__button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 32px;
+        width: 32px;
+        border: none;
+        outline: none;
+        background: rgba(79, 86, 89, 0.1);
+       
+        svg{
+            height: 16px;
+            width: 16px;
+            fill: #DD2B1C;
+            @include for-1024(){
+                height: 24px;
+                width: 24px;
+            }
+        }
+        @include for-1024(){
+            height: 56px;
+            width: 56px;   
+        }
+        &--clear{
+            display: none;
+        }
+    }
+    &__hover{
+        position: absolute;
+        pointer-events: none;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(21, 15, 15, 0.8);
+        color: #fff;
+       
+        font-weight: 300;
+        
+        text-align: center;
+        letter-spacing: 0.03em;
+        
+        color: #FFFFFF;
+        font-family: $DM;
+        font-size: 16px;
+        line-height: 20px;
+        transition: $transition;
+        @include for-1366(){
+            font-size: 20px;
+            line-height: 24px;
+        }
+        @include for-1600(){
+            font-size: 24px;
+            line-height: 28px;
+        }       
+        
+    }
 }
