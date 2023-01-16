@@ -26,7 +26,7 @@
         margin-bottom: 30px;
       }
 
-      @media screen and (min-width: 1366px) {
+      @media screen and (min-width: 1340px) {
         font-size: 80px;
         line-height: 80px;
       }
@@ -129,7 +129,7 @@
   .print{
     display: none;
 
-    @media screen and (min-width: 1366px) {
+    @media screen and (min-width: 1340px) {
       display: block;
     }
   }

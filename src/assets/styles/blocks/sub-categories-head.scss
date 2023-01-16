@@ -20,16 +20,17 @@
     &__title {
         max-width: 250px;
         letter-spacing: 0.03em;
-    
+        margin-bottom: 16px;
         @media screen and (min-width: 600px) {
             max-width: 430px;
         }
     
         @media screen and (min-width: 1024px) {
             max-width: 712px; 
+            margin-bottom: 40px;
         }
 
-        @media screen and (min-width: 1366px) {
+        @media screen and (min-width: 1340px) {
             max-width: 968px;
             letter-spacing: 0.02em;
         }
@@ -64,7 +65,7 @@
 
         }
 
-        @media screen and (min-width: 1366px) {
+        @media screen and (min-width: 1340px) {
             max-width: 744px;
             line-height: 36px;
             font-size: 24px;
@@ -84,7 +85,7 @@
                 margin-top: 24px;
             }
     
-            @media screen and (min-width: 1366px) {
+            @media screen and (min-width: 1340px) {
                 margin-top: 36px;
             }
     
@@ -97,7 +98,7 @@
     &__more-button {
         margin-top: 8px;
 
-        @media screen and (min-width: 1366px) {
+        @media screen and (min-width: 1340px) {
             margin-top: 16px;
         }
 

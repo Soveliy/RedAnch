@@ -57,7 +57,7 @@
                                           <source srcset="./assets/images/content/about-product/product-chain5.png"
                                              media="(min-width: 1600px)" />
                                           <source srcset="./assets/images/content/about-product/circuit-analysis4.png"
-                                             media="(min-width: 1366px)" />
+                                             media="(min-width: 1340px)" />
                                           <source srcset="./assets/images/content/about-product/circuit-analysis3.png"
                                              media="(min-width: 1024px)" />
                                           <source srcset="./assets/images/content/about-product/product-chain2.png"
@@ -130,8 +130,98 @@
                      <!-- about-product -->
 
                      <!-- menu-mobile -->
-                     @@include('./assets/block-mixin/_menu-mobile.html')
-
+                     <div class="menu-mobile">
+                        <ul class="menu-mobile__inner">
+                          <li class="menu-mobile__item menu-mobile__item--sort">
+                            <a>
+                              <span class="menu-mobile__icon">
+                                <svg>
+                                  <use href="./assets/images/svg-sprite/svg-sprite.svg#sorting"></use>
+                                </svg>
+                              </span>
+                              <div class="menu-mobile__text">Сортировка</div>
+                            </a>
+                            <div class="sortMenu">
+                              <div class="sortMenu__container">
+                                
+                                <div class="sortMenu__wrap">
+                                  <div class="sortMenu__title">
+                                    Сортировать по значению:
+                                  </div>
+                                  <ul class="sortMenu__list">
+                                    <li class="sortMenu__item">
+                                      <a href="#" class="sortMenu__item-link isActive">
+                                        Материал
+                                        <svg>
+                                          <use href="./assets/images/svg-sprite/svg-sprite.svg#sortMobile"></use>
+                                        </svg>
+                                      </a>
+                                    </li>
+                                    <li class="sortMenu__item">
+                                      <a href="#" class="sortMenu__item-link">
+                                        Нагрузка пробная
+                                      </a>
+                                    </li>
+                                    <li class="sortMenu__item">
+                                      <a href="#" class="sortMenu__item-link">
+                                        Нагрузка разрушающая
+                                      </a>
+                                    </li>
+                                    <li class="sortMenu__item">
+                                      <a href="#" class="sortMenu__item-link">
+                                        Теоретическая масса
+                                      </a>
+                                    </li>
+                                   
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="menu-mobile__item sorting-button pc">
+                            <a data-fancybox data-src="#modal-accessories" href="javascript:;">
+                              <div class="menu-mobile__text pc">Якорные цепи и комплектующие</div>
+                      
+                              <span class="menu-mobile__icon pc">
+                                <svg>
+                                  <use href="./assets/images/svg-sprite/svg-sprite.svg#arrow-red"></use>
+                                </svg>
+                              </span>
+                      
+                              <span class="menu-mobile__icon mobi">
+                                <svg>
+                                  <use href="./assets/images/svg-sprite/svg-sprite.svg#sorting"></use>
+                                </svg>
+                              </span>
+                              <div class="menu-mobile__text mobi">Сортировка</div>
+                            </a>
+                          </li>
+                      
+                          <li class="menu-mobile__item">
+                            <a data-fancybox data-src="#modal-filter" href="javascript:;">
+                              <div class="menu-mobile__text filters-button pc">Открыть фильтр</div>
+                              <span class="menu-mobile__icon">
+                                <svg>
+                                  <use href="./assets/images/svg-sprite/svg-sprite.svg#filters"></use>
+                                </svg>
+                              </span>
+                              <div class="menu-mobile__text filters-button mobi">Фильтры</div>
+                            </a>
+                          </li>
+                      
+                          <li class="menu-mobile__item pc">
+                            <a href="#">
+                              <div class="menu-mobile__text filters-button">Скачать каталог</div>
+                              <span class="menu-mobile__icon">
+                                <svg>
+                                  <use href="./assets/images/svg-sprite/svg-sprite.svg#download-catalog"></use>
+                                </svg>
+                              </span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      
                      <div class="page__row">
 
                         <div class="page__sidebar">
@@ -225,7 +315,9 @@
                                  <div class="filter__inner">
 
                                     <div class="filter__head bb">
-
+                                       <div class="filter__head-mainTitle">
+                                          Фильтр
+                                       </div>
                                        <div class="filter__head-title">
                                           Материал
 

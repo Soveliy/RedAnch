@@ -55,7 +55,7 @@
     }
 
     
-    @media screen and (min-width: 1366px) {
+    @media screen and (min-width: 1340px) {
       font-size: 12px;
       line-height: 12px;
       
@@ -194,6 +194,8 @@
         font-weight: 300;
         letter-spacing: .05em;
         width: 100%;
+        padding-left: 0;
+        padding-right: 0;
       }
       @include for-1366(){
         font-size: 16px;

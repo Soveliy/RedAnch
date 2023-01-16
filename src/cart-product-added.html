@@ -1,0 +1,102 @@
+@@include('./assets/templates/template-header.html', { 'lang': 'ru', 'title': 'Red Anchor | Все категории' })
+
+<div class="cart-product block-wrapper page">
+  <main class="main page__main">
+    
+
+    <!-- nav-wrap -->
+    <div class="nav-wrap">
+      <!--site-navigation-->
+      @@include('./assets/block-mixin/3.7.cart-product/_site-navigation.html')
+
+      <!--print-->
+      @@include('./assets/block-mixin/3.7.cart-product/_print.html')
+    </div>
+
+    <!--about-product-->
+    @@include('./assets/block-mixin/3.7.cart-product/_about-product.html')
+  
+    <!-- tabs -->
+    @@include('./assets/block-mixin/3.7.cart-product/_tabs.html')
+    
+    <!-- addition -->
+    @@include('./assets/block-mixin/3.7.cart-product/_addition.html')
+    
+    <!-- other-products -->
+    @@include('./assets/block-mixin/3.7.cart-product/_other-product.html')
+
+    <!-- help -->
+    @@include('./assets/block-mixin/3.7.cart-product/_help.html')
+
+    <!-- manager -->
+    @@include('./assets/block-mixin/3.7.cart-product/_manager.html')
+
+  </main>
+
+  
+</div>
+
+<div class="card-added isTrue">
+  <div class="detailBottom">
+    <div class="detailBottom__added-to-cart">
+      <svg class="detailBottom__icon">
+        <use xlink:href="./assets/images/svg-sprite/svg-sprite.svg#isTrue"></use>
+      </svg>
+      Товар успешно добавлен в заказ
+    </div>
+    <a href="#" class="ButtonBox detailBottom__ButtonBox ButtonBox--red">
+      <div class="ButtonBox__container">
+          <div class="ButtonBox__text">Перейти в заказ</div>
+          <svg class="ButtonBox__icon">
+            <use xlink:href="./assets/images/svg-sprite/svg-sprite.svg#arrow-se"></use>
+          </svg>
+      </div>
+    </a>
+  </div>
+</div>
+<div class="empty-page__footer empty-page__footer--js">
+  <div class="detailBottom">
+    <div class="detailBottom__item">
+      <div class="detailBottom__title">
+        Количество:
+      </div>
+      <div class="counter detailBottom__counter">
+        <button type="button" class="counter__btn counter__btn--down">
+          <span></span>
+        </button>
+        <input type="text" class="counter__input" min="1" max="100" value="1">
+        <button type="button" class="counter__btn counter__btn--up">
+          <span></span>
+        </button>
+    </div>
+    </div>
+     <div class="detailBottom__item">
+      <div class="detailBottom__title">
+        Ед. Измерения:
+      </div>
+      <div class="detailBottom__unit-choice unit-choice">
+        <label class="unit-choice__label">
+          <input type="radio" name="unit" class="unit-choice__input">
+          <span class="unit-choice__custom">м</span>
+        </label>
+        <label class="unit-choice__label">
+          <input type="radio" name="unit" class="unit-choice__input">
+          <span class="unit-choice__custom">шт.</span>
+        </label>
+    </div>
+     </div>
+
+  
+    <button class="ButtonBox detailBottom__ButtonBox ButtonBox--red">
+      <div class="ButtonBox__container">
+          <div class="ButtonBox__text">добавить в заказ</div>
+          <svg class="ButtonBox__icon">
+            <use xlink:href="./assets/images/svg-sprite/svg-sprite.svg#arrow-se"></use>
+          </svg>
+      </div>
+    </button>
+  </div>
+</div>
+<!-- footer-black -->
+@@include('./assets/block-mixin/_footer-black.html')
+@@include('./assets/templates/template-footer.html')

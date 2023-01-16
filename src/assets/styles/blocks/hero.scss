@@ -69,6 +69,13 @@
         position: relative;
         z-index: 10;
         letter-spacing: 1.5px;
+        @media (max-width:1023px){
+            color: #fff;
+        }
+        @media (max-width:339px){
+            font-size: 44px;
+            line-height: 44px;
+        }
         span{
             position: relative;
             // &::after{
@@ -83,6 +90,7 @@
             //     transition: $transition;
             // }
         }
+       
         @include for-600(){
             letter-spacing: 2.6px;
         }
@@ -333,7 +341,10 @@
         }
     }
     &__shadow{
+
+        display: none;
       @include for-1024(){
+        display: block;
         position: absolute;
         left: 0;
         top: 0;

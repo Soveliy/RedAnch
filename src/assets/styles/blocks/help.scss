@@ -21,11 +21,11 @@
 
         @media screen and (min-width: 1024px) {
             display: flex;
-            align-items: center;
+            align-items: flex-end;
             padding: 44px 0 56px;
         }
 
-        @media screen and (min-width: 1366px) {
+        @media screen and (min-width: 1340px) {
             padding: 84px 0;
         }
 
@@ -81,7 +81,7 @@
             line-height: 1;
         }
 
-        @media screen and (min-width: 1366px) {
+        @media screen and (min-width: 1340px) {
             line-height: 136px;
         }
         
@@ -101,6 +101,12 @@
     &__sub-box {
         display: flex;
         align-items: flex-end;
+        @include for-1024(){
+            padding-bottom: 10px;
+        }
+        @include for-1600(){
+            padding-bottom: 0;
+        }
     }
 
     &__desc {
@@ -111,7 +117,7 @@
             letter-spacing: 0.03em;
         }
 
-        @media screen and (min-width: 1366px) {
+        @media screen and (min-width: 1340px) {
             margin-right: 69px;
         }
 
@@ -137,6 +143,7 @@
             height: 24px;
             fill: rgba(79, 86, 89, 0.2);
             transition: fill cubic-bezier(.5, 0, 0, 1) .8s;
+            margin-bottom: 5px;
         }
 
         .help:hover & {

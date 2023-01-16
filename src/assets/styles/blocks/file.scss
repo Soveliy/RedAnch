@@ -9,14 +9,14 @@ input[type=file]{
     position: relative;
     overflow: hidden;
     padding: 16px 56px 16px 16px;
-    align-items: flex-end;
+    // align-items: flex-end;
    
     @media screen and (min-width: 600px) {
         width: 100%;
         padding: 16px 48px 16px 16px;
     }
 
-    @media screen and (min-width: 1366px) {
+    @media screen and (min-width: 1340px) {
       display: flex;
       padding: 32px;
       margin-top: 32px;
@@ -58,7 +58,7 @@ input[type=file]{
             height: 100px;
         }
 
-        @media screen and (min-width: 1366px) {
+        @media screen and (min-width: 1340px) {
             width: 88px;
             height: 116px;
         }
@@ -73,17 +73,21 @@ input[type=file]{
         flex: 1 1 auto;
         display: flex;
         flex-direction: column;
-
+        justify-content: space-between;
         @media screen and (min-width: 1024px) {
             max-width: 72px;
         }
     }
 
     &__desc {
-        margin-bottom: 16px;
+        // margin-bottom: 16px;
         letter-spacing: 0.06em;
         @include for-600(){
             letter-spacing: .05em;
+            margin-top: -3px;
+        }
+        @include for-1600(){
+            margin-top: -5px;
         }
     }
 

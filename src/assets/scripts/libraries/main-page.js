@@ -33,7 +33,7 @@ var Animations = function() {
     let scene_5 = {
       target: '#section_5',
       target_2: '.end_of_seq',
-      count: 749,
+      count: 781,
       src: './assets/images/chain/comp2/',
       type: '.png',
       wrap: document.querySelector('#preloadImagesContainer'),
@@ -45,8 +45,8 @@ var Animations = function() {
 
 
     let scene_cst = {
-      target: '#mobile-secvention',
-      target_2: '#categoriesMain',
+      target: '#mobile-wrap',
+      target_2: '.partners',
       count: 10,
       // src: './assets/images/mobile_anch2/',
       src: '/local/templates/.default/frontend/dist/assets/images/mobile_anch2/',
@@ -409,9 +409,11 @@ var Animations = function() {
       for (var i = 1, l = scene_cst.count; i <= l; i++) {
         var scene_for_cst = new ScrollMagic.Scene({
           triggerElement: scene_cst.target,
-          offset: (i * offset_scene_cst) + offset_top_scene_cst + 200,
+          offset: (i * offset_scene_cst) + offset_top_scene_cst - 200,
+  
+        
           reverse: true,
-          triggerHook: 1,
+          triggerHook: .5,
         })
             // .addIndicators() // add indicators (requires plugin)
             .addTo(controller)
@@ -627,7 +629,7 @@ var Animations = function() {
                       y: '-100',
                       opacity:0,
                     }, "=-2")
-                    let interVal = setInterval(preloaderAnch, 100);
+                    let interVal = setInterval(preloaderAnch, 60);
                     function preloaderAnch() {
                       $(".c-manager").removeClass('frame_' + (defaultImageCount - 1))
                       $(".c-manager").addClass('frame_' + defaultImageCount);
@@ -685,12 +687,12 @@ var Animations = function() {
 
        if(!isTablet){
           var iconsTimeline = new TimelineMax();
-          let iconsPallax = $(".checks__title");
-          iconsTimeline.to(iconsPallax, 1, { y: 200, ease: "cubic-bezier(.5,0,0,1)" });
+          let iconsPallax = $(".checks__title div");
+          iconsTimeline.to(iconsPallax, 1, { y: 250, ease: "cubic-bezier(.5,0,0,1)" });
           var iconsScene = new ScrollMagic.Scene({
-            triggerElement: ".checks__title",
+            triggerElement: ".checks__title div",
             triggerHook: 1,
-            duration: "130%",
+            duration: "150%",
           })
           // .addIndicators()
             .setTween(iconsTimeline)
@@ -873,10 +875,15 @@ var Animations = function() {
         .addTo(controller);
 
         let cstHeight = $("#section_5").outerHeight()
-        new ScrollMagic.Scene({triggerElement: "#mobile-secvention"})
-        .setClassToggle("#section_5", "pinned") // add class toggle
-  
+        new ScrollMagic.Scene({triggerElement: "#mobile-wrap",
+        triggerHook: .5,})
+        // .setClassToggle("#section_5", "pinned") // add class toggle
+        // .addIndicators()
+        .setClassToggle("body", "pinnedTest") // add class toggle
         .addTo(controller);
+       
+        
+
         
       });
    }
