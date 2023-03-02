@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <symbol id="41" width="200" height="200" xmlns="http://www.w3.org/2000/svg">      
+            <image href="41.jpg"/>
+    </symbol>
+     <symbol id="42" width="200" height="200" xmlns="http://www.w3.org/2000/svg">      
+            <image
+                href=
+                "42.webp"/>
+    </symbol>
+     <symbol id="43" width="200" height="200" xmlns="http://www.w3.org/2000/svg">      
+            <image
+                href=
+                "43.webp"/>
+    </symbol>
+     <symbol id="arrow-se" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M16 0v16H0v-2h12.582L.105 1.524 1.52.109 14 12.59V0h2z"/>
+    </symbol>
+
+</svg>

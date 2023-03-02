@@ -1310,6 +1310,7 @@ body{
     width: 100%;
     display: flex;
     justify-content: center;
+    // display: none;
    }
    
     z-index: -1;
@@ -1319,15 +1320,17 @@ body{
     top: 0;
     z-index: 700;
                 height: 100vh;
-              
-                opacity: 0;
+                visibility: hidden;
+                // opacity: 0;
+                // opacity: 1;
 }
 
-@for $i from 1 to 1000 {
+@for $i from 1 to 790 {
     $side: $i;
     .c-manager.frame_#{$side}{
         .img_#{$side}{
-            opacity: 1;
+        //   opacity: 1;
+        visibility: visible;
             z-index: #{$side};
                 @media (max-width:1023px){
              
