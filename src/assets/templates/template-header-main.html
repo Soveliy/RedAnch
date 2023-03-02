@@ -12,6 +12,237 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="./assets/styles/style.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+        <script data-skip-moving="true">
+         
+            var winw = window.innerWidth || e.clientWidth || g.clientWidth;
+                       var isTablet = winw < 1024;
+                       let preloader = new TimelineMax();
+                       
+               // setTimeout(() => {
+                setTimeout(() => {
+                   preloader.to("#theGradientWhiteNew stop", 0.6, {
+                                   attr: { offset: "50%" },
+                                   repeat: false,
+                                   yoyo: true,
+                                   repeatDelay: 0.5,
+                                   ease: "cubic-bezier(.5,0,0,1)"
+                                   });
+                                  
+                }, 300);
+               
+            document.addEventListener("DOMContentLoaded", function(event) {
+                       let vh = window.innerHeight * 0.01;
+                       document.documentElement.style.setProperty('--vh', `${vh}px`);
+                       
+                       const mediaFiles = document.querySelectorAll('img, video');
+                       let elemsLoaded = 0
+                   
+                       let defaultImageCount = 1;
+                       const pageBody =  document.querySelector("body");
+                       const header = document.querySelector("header");
+                       const preloadImages = document.querySelector("#preloadImagesContainer");
+                       const heroTitle = document.querySelector(".hero__title")
+                       const heroDesc = document.querySelector(".hero__desc")
+                       // const heroLinkLabel = querySelector(".hero__linkLabel")
+                       if(isTablet){
+                           
+                       
+                           preloader.to("#theGradientWhiteNew stop", 0.25, {
+                               attr: { offset: "0%" },
+                               repeat: false,
+                               yoyo: true,
+                               repeatDelay: 0.5,
+                               ease: "cubic-bezier(.5,0,0,1)"
+                           });
+                           preloader.to("#theGradientRedNew stop", 0.25, {
+                               attr: { offset: "0%" },
+                               repeat: false,
+                               yoyo: true,
+                               repeatDelay: 0.5,
+                               ease: "cubic-bezier(.5,0,0,1)"
+                           },"=-0.13");
+                           preloader.to("#theGradientWhiteTopNew stop", 0.25, {
+                               attr: { offset: "0%" },
+                               repeat: false,
+                               yoyo: true,
+                               repeatDelay: 0.5,
+                               ease: "cubic-bezier(.5,0,0,1)",
+                               onComplete: function() {
+                               // $("body").addClass('mainAnimatedClass');
+                               pageBody.classList.add("mainAnimatedClass");
+                               }
+                           },"=-0.13");
+                           preloader.from( heroTitle, .8, {
+                               delay: 1,
+                               ease:"cubic-bezier(.5,0,0,1)",
+                               y: '100',
+                               opacity:0,
+                           } );
+                           preloader.from( heroDesc, .8, {
+                               delay: 1,
+                               ease:"cubic-bezier(.5,0,0,1)",
+                               y: '100',
+                               opacity:0,
+                           }, "=-2");
+                           // preloader.from( $('.hero__linkLabel'), .8, {
+                           //   delay: 1,
+                           //   ease:"cubic-bezier(.5,0,0,1)",
+                           //   y: '100',
+                           //   opacity:0,
+                           // }, "=-2")
+                           preloader.to( header, .8, {
+                               delay: 1,
+                               ease:"cubic-bezier(.5,0,0,1)",
+                               y: '0',
+                               opacity:1,
+                           }, "=-2")
+                       
+   
+                       } else{
+                       
+            
+                           Array.from(mediaFiles).forEach((file, index) => {
+                              
+                               file.onload = () => {
+                               elemsLoaded++
+   
+                                 
+                               if(elemsLoaded === 10) {
+                                  
+                               }
+                               if(elemsLoaded === 25) {
+                                   preloader.to("#theGradientWhiteNew stop", 0.6, {
+                                   attr: { offset: "0%" },
+                                   repeat: false,
+                                   yoyo: true,
+                                   repeatDelay: 0.5,
+                                   ease: "cubic-bezier(.5,0,0,1)"
+                                   });
+                                   preloader.to("#theGradientRedNew stop", 0.6, {
+                                   attr: { offset: "50%" },
+                                   repeat: false,
+                                   yoyo: true,
+                                   repeatDelay: 0.5,
+                                   ease: "cubic-bezier(.5,0,0,1)"
+                                   },"=-0.3");
+                               }
+                               if(elemsLoaded === 40) {
+                                   preloader.to("#theGradientRedNew stop", 0.6, {
+                                   attr: { offset: "0%" },
+                                   repeat: false,
+                                   yoyo: true,
+                                   repeatDelay: 0.5,
+                                   ease: "cubic-bezier(.5,0,0,1)"
+                                   },"=-0.3");
+                                  
+                                       preloader.to("#theGradientWhiteTopNew stop", 0.6, {
+                                           attr: { offset: "50%" },
+                                           repeat: false,
+                                           yoyo: true,
+                                           repeatDelay: 0.5,
+                                           ease: "cubic-bezier(.5,0,0,1)",
+                                           onComplete: function() {
+                                           // $("body").addClass('mainAnimatedClass');
+                                           }
+                                       },"=-0.3");
+                                 
+                                   
+                                   }
+                                   if(elemsLoaded === 60) {
+                                   
+                                    
+                                           preloader.to("#theGradientWhiteTopNew stop", 0.6, {
+                                           attr: { offset: "0%" },
+                                           repeat: false,
+                                           yoyo: true,
+                                           repeatDelay: 0.5,
+                                           ease: "cubic-bezier(.5,0,0,1)",
+                                           onComplete: function() {
+                                           pageBody.classList.add("mainAnimatedClass");
+                                           }
+                                       },"=-0.3");
+                                       preloader.from( heroTitle, .8, {
+                                           delay: 1,
+                                           ease:"cubic-bezier(.5,0,0,1)",
+                                           y: '100',
+                                           opacity:0,
+                                       } );
+                                       preloader.from( heroDesc, .8, {
+                                           delay: 1,
+                                           ease:"cubic-bezier(.5,0,0,1)",
+                                           y: '100',
+                                           opacity:0,
+                                       }, "=-2");
+                                       // preloader.from( $('.hero__linkLabel'), .8, {
+                                       //   delay: 1,
+                                       //   ease:"cubic-bezier(.5,0,0,1)",
+                                       //   y: '100',
+                                       //   opacity:0,
+                                       // }, "=-2")
+   
+                                   
+                                           preloader.to( header, .8, {
+                                               delay: 1,
+                                               ease:"cubic-bezier(.5,0,0,1)",
+                                               y: '0',
+                                               opacity:1,
+                                           }, "=-2")
+                                       
+                                       
+                                        
+                                            setTimeout(() => {
+                                               let interVal = setInterval(preloaderAnch, 100);
+                                               function preloaderAnch() {
+                                                   preloadImages.className = 'c-manager frameImage frame_' + defaultImageCount;
+                                                       // $(".c-manager").removeClass('frame_' + (defaultImageCount - 1))
+                                                       // $(".c-manager").addClass('frame_' + defaultImageCount);
+                                                       defaultImageCount = defaultImageCount + 1;
+                                                       if(defaultImageCount == 21) {
+                                                       clearInterval(interVal);
+                                                       }
+                                                   }
+                                            }, 800);
+                                                  
+                                       
+                                      
+                                   
+                                       }
+                               
+                                   
+                           
+                           }
+                         
+                       })
+                       }
+                   });
+               // }, 1000);
+                     
+                 
+           </script>
+           <style>
+               .preloader {
+                   position: fixed;
+                   top: 0;
+                   left: 0;
+                   display: -webkit-box;
+                   display: -ms-flexbox;
+                   display: flex;
+                   -webkit-box-pack: center;
+                   -ms-flex-pack: center;
+                   justify-content: center;
+                   -webkit-box-align: center;
+                   -ms-flex-align: center;
+                   align-items: center;
+                   width: 100%;
+                   height: calc(var(--vh,1vh) * 100);
+                   background: #110101;
+                   z-index: 9000;
+                   -webkit-transition: .3s;
+                   -o-transition: .3s;
+                   transition: .3s;
+               }
+           </style>
         <!-- / Styles -->
 
     </head>
@@ -20,33 +251,33 @@
     <!-- Body -->
     <body class="body main-page html__body">
         <div class="preloader">
-            <svg class="preloader__img" width="24" height="48" viewBox="0 0 24 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <linearGradient id="theGradientRed" x1="0%" y1="0%" x2="0%" y2="100%">
+            <svg class="preloader__icon" width="24" height="48" viewBox="0 0 24 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <linearGradient id="theGradientRedNew" x1="0%" y1="0%" x2="0%" y2="100%">
                     <stop offset="100%" stop-color="rgba(255, 255, 255, 0.15)"/>
                     <stop offset="100%" stop-color="#DD2B1C"/>
                 </linearGradient>
-                <linearGradient id="theGradientWhite" x1="0%" y1="0%" x2="0%" y2="100%">
+                <linearGradient id="theGradientWhiteNew" x1="0%" y1="0%" x2="0%" y2="100%">
                     <stop offset="100%" stop-color="rgba(255, 255, 255, 0.15)"/>
                     <stop offset="100%" stop-color="#fff"/>
                 </linearGradient>
-                <linearGradient id="theGradientWhiteTop" x1="0%" y1="0%" x2="0%" y2="100%">
+                <linearGradient id="theGradientWhiteTopNew" x1="0%" y1="0%" x2="0%" y2="100%">
                     <stop offset="100%" stop-color="rgba(255, 255, 255, 0.15)"/>
                     <stop offset="100%" stop-color="#fff"/>
                 </linearGradient>
                 <g  clip-path="url(#clip0_2606_134870)">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.70849 9.03125C2.61764 9.16585 0.150391 11.5349 0.150391 14.4962V33.9331C0.150391 36.8675 2.61764 39.2634 5.70849 39.3711V9.03125Z" fill="url(#theGradientRed)"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.209 39.3755C21.3269 39.2947 23.8484 36.8718 23.8484 33.9374V14.5005C23.8484 11.5392 21.3269 9.14326 18.209 9.0625V39.3755Z" fill="url(#theGradientRed)"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.683 15.7407V15.8484C13.8696 17.2752 10.2094 17.1406 9.3418 15.8484V1.1765C10.1552 -0.250305 13.8154 -0.1157 14.683 1.1765V15.7407Z" fill="url(#theGradientWhiteTop)"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.683 46.7251V46.8328C13.8696 48.2596 10.2094 48.125 9.3418 46.8328V32.1609C10.1552 30.7341 13.8154 30.8687 14.683 32.1609V46.7251Z" fill="url(#theGradientWhite)"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.70849 9.03125C2.61764 9.16585 0.150391 11.5349 0.150391 14.4962V33.9331C0.150391 36.8675 2.61764 39.2634 5.70849 39.3711V9.03125Z" fill="url(#theGradientRedNew)"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.209 39.3755C21.3269 39.2947 23.8484 36.8718 23.8484 33.9374V14.5005C23.8484 11.5392 21.3269 9.14326 18.209 9.0625V39.3755Z" fill="url(#theGradientRedNew)"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.683 15.7407V15.8484C13.8696 17.2752 10.2094 17.1406 9.3418 15.8484V1.1765C10.1552 -0.250305 13.8154 -0.1157 14.683 1.1765V15.7407Z" fill="url(#theGradientWhiteTopNew)"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.683 46.7251V46.8328C13.8696 48.2596 10.2094 48.125 9.3418 46.8328V32.1609C10.1552 30.7341 13.8154 30.8687 14.683 32.1609V46.7251Z" fill="url(#theGradientWhiteNew)"/>
                 </g>
                 <defs>
-                <!-- <clipPath id="clip0_2606_134870">
-                <rect class="preloader__overlay" width="23.698" height="47.6968" fill="white" transform="translate(0.150391 0.15625)"/>
-                </clipPath> -->
-               
+                    <!-- <clipPath id="clip0_2606_134870">
+                    <rect class="preloader__overlay" width="23.698" height="47.6968" fill="white" transform="translate(0.150391 0.15625)"/>
+                    </clipPath> -->
+    
                 </defs>
             </svg>
-           
+    
         </div>
                 <!-- HEADER -->
                 <header class="page__header header header--dark">

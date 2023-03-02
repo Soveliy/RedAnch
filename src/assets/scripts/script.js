@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
    });
    @@include('./blocks/text.js');
    @@include('./blocks/header.js');
-
+   @@include('./blocks/secondPhase.js');
 
 
 });
