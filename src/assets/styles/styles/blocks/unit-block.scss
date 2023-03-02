@@ -1,0 +1,63 @@
+// unit-block.scss
+
+// Unit Block
+
+.unit-block {
+
+    &__button {
+
+        @media screen and (min-width: 1024px) {
+            width: 100%;
+            position: relative;
+            padding: 12px 56px 12px 32px;
+            border: 0;
+            border-radius: 0;
+            border-bottom: 2px solid rgba(79, 86, 89, 0.1);
+            box-shadow: none;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        @media screen and (min-width: 1340px) {
+            padding: 32px 64px 32px 32px;
+        }
+
+        @media screen and (min-width: 1600px) {
+            padding: 32px 64px 40px 32px;
+        }
+    }
+
+    &__icon {
+
+        @media screen and (min-width: 1024px) {
+            position: absolute;
+            right: 32px;  
+            top: 50%;
+            transform: translateY(-50%); 
+            display: block;
+            width: 16px;
+            height: 16px;
+            fill: rgba(80, 87, 90, .4);
+            transition: transform .4s;
+        }
+
+        @media screen and (min-width: 1600px) {
+            right: 40px;
+        }
+
+        .unit-block--closed & {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+    }
+
+    &__content {
+
+        @media screen and (min-width: 1024px) {
+            position: relative;
+            overflow: hidden;
+            height: auto;
+            transition: height .4s;
+        }
+    }
+}

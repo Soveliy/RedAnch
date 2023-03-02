@@ -1,0 +1,40 @@
+// fonts.scss
+
+// Fonts
+
+// PF Din Text Cond Pro
+
+// PF Din Text Cond Pro Light
+
+@font-face {
+  font-family: 'PF Din Text Cond Pro';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('./../fonts/PFDinTextCondPro/PFDinTextCondPro-Light.woff2') format('woff2'),
+       url('./../fonts/PFDinTextCondPro/PFDinTextCondPro-Light.woff') format('woff');
+}
+
+// PF Din Text Cond Pro Medium
+
+@font-face {
+  font-family: 'PF Din Text Cond Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('./../fonts/PFDinTextCondPro/PFDinTextCondPro-Medium.woff2') format('woff2'),
+       url('./../fonts/PFDinTextCondPro/PFDinTextCondPro-Medium.woff') format('woff');
+}
+
+// TT Bluescreens
+
+// TT Bluescreens Bold
+
+@font-face {
+  font-family: 'TT Bluescreens';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./../fonts/TTBluescreens/TTBluescreens-Bold.woff2') format('woff2'),
+       url('./../fonts/TTBluescreens/TTBluescreens-Bold.woff') format('woff');
+}

@@ -1,0 +1,16 @@
+
+// no-scrollbar.scss
+
+// no-scrollbar.scss
+
+.no-scrollbar,.tabs__head {
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    
+    & {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+}

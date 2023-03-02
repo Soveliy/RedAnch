@@ -1,0 +1,1037 @@
+// title.scss
+
+// Title
+
+.title {
+   text-transform: uppercase;
+   font-family: 'TT Bluescreens';
+   font-weight: 700;
+
+   &--db{
+      display: block;
+   }
+
+   &--ms {
+
+      &-24 {
+         font-size: 24px;
+      }
+
+      &-28 {
+         font-size: 28px;
+      }
+
+      &-32 {
+         font-size: 32px;
+      }
+
+      &-36 {
+         font-size: 36px;
+      }
+
+      &-40 {
+         font-size: 40px;
+      }
+
+      &-44 {
+         font-size: 44px;
+      }
+
+      &-48 {
+         font-size: 48px;
+      }
+
+      &-52 {
+         font-size: 52px;
+      }
+
+      &-56 {
+         font-size: 56px;
+      }
+
+      &-60 {
+         font-size: 60px;
+      }
+
+      &-64 {
+         font-size: 64px;
+      }
+
+      &-80 {
+         font-size: 80px;
+      }
+
+      &-88 {
+         font-size: 88px;
+      }
+
+      &-90 {
+         font-size: 90px;
+      }
+
+      &-104 {
+         font-size: 104px;
+      }
+
+      &-114 {
+         font-size: 114px;
+      }
+
+      &-120 {
+         font-size: 120px;
+      }
+      &-130{
+         font-size: 130px;
+      }
+      &-144 {
+         font-size: 144px;
+      }
+
+      &-152 {
+         font-size: 152px;
+      }
+
+      &-200 {
+         font-size: 200px;
+      }
+   }
+
+   &--ts {
+
+      &-24 {
+
+         @media screen and (min-width: 600px) {
+            font-size: 24px;
+         }
+      }
+
+      &-28 {
+
+         @media screen and (min-width: 600px) {
+            font-size: 28px;
+         }
+      }
+
+      &-32 {
+         
+         @media screen and (min-width: 600px) {
+            font-size: 32px;
+         }
+      }
+
+      &-36 {
+
+         @media screen and (min-width: 600px) {
+            font-size: 36px;
+         }
+      }
+
+      &-40 {
+
+         @media screen and (min-width: 600px) {
+            font-size: 40px;
+         }
+      }
+
+      &-44 {
+
+         @media screen and (min-width: 600px) {
+            font-size: 44px;
+         }
+      }
+
+      &-48 {
+
+         @media screen and (min-width: 600px) {
+            font-size: 48px;
+         }
+      }
+
+      &-52 {
+
+         @media screen and (min-width: 600px) {
+            font-size: 52px;
+         }
+      }
+
+      &-56 {
+
+         @media screen and (min-width: 600px) {
+            font-size: 56px;
+         }
+      }
+
+      &-60 {
+
+         @media screen and (min-width: 600px) {
+            font-size: 60px;
+         }
+      }
+
+      &-64 {
+
+         @media screen and (min-width: 600px) {
+            font-size: 64px;
+         }
+      }
+
+      &-80 {
+
+         @media screen and (min-width: 600px) {
+            font-size: 80px;
+         }
+      }
+
+      &-88 {
+
+         @media screen and (min-width: 600px) {
+            font-size: 88px;
+         }
+      }
+
+      &-90 {
+
+         @media screen and (min-width: 600px) {
+            font-size: 90px;
+         }
+      }
+
+      &-104 {
+
+         @media screen and (min-width: 600px) {
+            font-size: 104px;
+         }
+      }
+
+      &-114 {
+
+         @media screen and (min-width: 600px) {
+            font-size: 114px;
+         }
+      }
+
+      &-120 {
+
+         @media screen and (min-width: 600px) {
+            font-size: 120px;
+         }
+      }
+
+      &-144 {
+
+         @media screen and (min-width: 600px) {
+            font-size: 144px;
+         }
+      }
+
+      &-152 {
+
+         @media screen and (min-width: 600px) {
+            font-size: 152px;
+         }
+      }
+
+      &-172 {
+
+         @media screen and (min-width: 600px) {
+            font-size: 172px;
+         }
+      }
+      &-180 {
+
+         @media screen and (min-width: 600px) {
+            font-size: 180px;
+         }
+      }
+
+      &-200 {
+
+         @media screen and (min-width: 600px) {
+            font-size: 200px;
+         }
+      }
+   }
+
+   &--tm {
+
+      &-24 {
+
+         @media screen and (min-width: 800px) {
+            font-size: 24px;
+         }
+      }
+
+      &-28 {
+
+         @media screen and (min-width: 800px) {
+            font-size: 28px;
+         }
+      }
+
+      &-32 {
+
+         @media screen and (min-width: 800px) {
+            font-size: 32px;
+         }
+      }
+
+      &-36 {
+
+         @media screen and (min-width: 800px) {
+            font-size: 36px;
+         }
+      }
+
+      &-40 {
+
+         @media screen and (min-width: 800px) {
+            font-size: 40px;
+         }
+      }
+
+      &-44 {
+
+         @media screen and (min-width: 800px) {
+            font-size: 44px;
+         }
+      }
+
+      &-48 {
+
+         @media screen and (min-width: 800px) {
+            font-size: 48px;
+         }
+      }
+
+      &-52 {
+
+         @media screen and (min-width: 800px) {
+            font-size: 52px;
+         }
+      }
+
+      &-56 {
+
+         @media screen and (min-width: 800px) {
+            font-size: 56px;
+         }
+      }
+
+      &-60 {
+
+         @media screen and (min-width: 800px) {
+            font-size: 60px;
+         }
+      }
+
+      &-64 {
+
+         @media screen and (min-width: 800px) {
+            font-size: 64px;
+         }
+      }
+
+      &-80 {
+
+         @media screen and (min-width: 800px) {
+            font-size: 80px;
+         }
+      }
+
+      &-88 {
+
+         @media screen and (min-width: 800px) {
+            font-size: 88px;
+         }
+      }
+
+      &-90 {
+
+         @media screen and (min-width: 800px) {
+            font-size: 90px;
+         }
+      }
+
+      &-104 {
+
+         @media screen and (min-width: 800px) {
+            font-size: 104px;
+         }
+      }
+
+      &-114 {
+
+         @media screen and (min-width: 800px) {
+            font-size: 114px;
+         }
+      }
+
+      &-120 {
+
+         @media screen and (min-width: 800px) {
+            font-size: 120px;
+         }
+      }
+
+      &-144 {
+
+         @media screen and (min-width: 800px) {
+            font-size: 144px;
+         }
+      }
+
+      &-152 {
+
+         @media screen and (min-width: 800px) {
+            font-size: 152px;
+         }
+      }
+
+      &-172 {
+
+         @media screen and (min-width: 800px) {
+            font-size: 172px;
+         }
+      }
+
+      &-200 {
+
+         @media screen and (min-width: 800px) {
+            font-size: 200px;
+         }
+      }
+   }
+
+   &--ds {
+
+      &-24 {
+
+         @media screen and (min-width: 1024px) {
+            font-size: 24px;
+         }
+      }
+
+      &-28 {
+
+         @media screen and (min-width: 1024px) {
+            font-size: 28px;
+         }
+      }
+
+      &-32 {
+
+         @media screen and (min-width: 1024px) {
+            font-size: 32px;
+         }
+      }
+
+      &-36 {
+
+         @media screen and (min-width: 1024px) {
+            font-size: 36px;
+         }
+      }
+
+      &-40 {
+
+         @media screen and (min-width: 1024px) {
+            font-size: 40px;
+         }
+      }
+
+      &-44 {
+
+         @media screen and (min-width: 1024px) {
+            font-size: 44px;
+         }
+      }
+
+      &-48 {
+
+         @media screen and (min-width: 1024px) {
+            font-size: 48px;
+         }
+      }
+
+      &-52 {
+
+         @media screen and (min-width: 1024px) {
+            font-size: 52px;
+         }
+      }
+
+      &-56 {
+
+         @media screen and (min-width: 1024px) {
+            font-size: 56px;
+         }
+      }
+
+      &-60 {
+
+         @media screen and (min-width: 1024px) {
+            font-size: 60px;
+         }
+      }
+
+      &-64 {
+
+         @media screen and (min-width: 1024px) {
+            font-size: 64px;
+         }
+      }
+
+      &-80 {
+
+         @media screen and (min-width: 1024px) {
+            font-size: 80px;
+         }
+      }
+
+      &-88 {
+
+         @media screen and (min-width: 1024px) {
+            font-size: 88px;
+         }
+      }
+
+      &-90 {
+
+         @media screen and (min-width: 1024px) {
+            font-size: 90px;
+         }
+      }
+
+      &-104 {
+
+         @media screen and (min-width: 1024px) {
+            font-size: 104px;
+         }
+      }
+
+      &-114 {
+
+         @media screen and (min-width: 1024px) {
+            font-size: 114px;
+         }
+      }
+
+      &-120 {
+
+         @media screen and (min-width: 1024px) {
+            font-size: 120px;
+         }
+      }
+      &-136 {
+         @media screen and (min-width: 1024px) {
+            font-size: 136px;
+         }
+      }
+      &-144 {
+
+         @media screen and (min-width: 1024px) {
+            font-size: 144px;
+         }
+      }
+
+      &-152 {
+
+         @media screen and (min-width: 1024px) {
+            font-size: 152px;
+         }
+      }
+
+      &-172 {
+
+         @media screen and (min-width: 1024px) {
+            font-size: 172px;
+         }
+      }
+
+      &-200 {
+
+         @media screen and (min-width: 1024px) {
+            font-size: 200px;
+         }
+      }
+      &-248 {
+
+         @media screen and (min-width: 1024px) {
+            font-size: 248px;
+         }
+      }
+   }
+
+   &--dm {
+
+      &-24 {
+
+         @media screen and (min-width: 1340px) {
+            font-size: 24px;
+         }
+      }
+
+      &-28 {
+
+         @media screen and (min-width: 1340px) {
+            font-size: 28px;
+         }
+      }
+
+      &-32 {
+
+         @media screen and (min-width: 1340px) {
+            font-size: 32px;
+         }
+      }
+
+      &-36 {
+
+         @media screen and (min-width: 1340px) {
+            font-size: 36px;
+         }
+      }
+
+      &-40 {
+
+         @media screen and (min-width: 1340px) {
+            font-size: 40px;
+         }
+      }
+
+      &-44 {
+
+         @media screen and (min-width: 1340px) {
+            font-size: 44px;
+         }
+      }
+
+      &-48 {
+
+         @media screen and (min-width: 1340px) {
+            font-size: 48px;
+         }
+      }
+
+      &-52 {
+
+         @media screen and (min-width: 1340px) {
+            font-size: 52px;
+         }
+      }
+
+      &-56 {
+
+         @media screen and (min-width: 1340px) {
+            font-size: 56px;
+         }
+      }
+
+      &-60 {
+
+         @media screen and (min-width: 1340px) {
+            font-size: 60px;
+         }
+      }
+
+      &-64 {
+
+         @media screen and (min-width: 1340px) {
+            font-size: 64px;
+         }
+      }
+
+      &-80 {
+
+         @media screen and (min-width: 1340px) {
+            font-size: 80px;
+         }
+      }
+
+      &-88 {
+
+         @media screen and (min-width: 1340px) {
+            font-size: 88px;
+         }
+      }
+
+      &-90 {
+
+         @media screen and (min-width: 1340px) {
+            font-size: 90px;
+         }
+      }
+
+      &-104 {
+
+         @media screen and (min-width: 1340px) {
+            font-size: 104px;
+         }
+      }
+
+      &-114 {
+
+         @media screen and (min-width: 1340px) {
+            font-size: 114px;
+         }
+      }
+
+      &-120 {
+
+         @media screen and (min-width: 1340px) {
+            font-size: 120px;
+         }
+      }
+
+      &-144 {
+
+         @media screen and (min-width: 1340px) {
+            font-size: 144px;
+         }
+      }
+
+      &-152 {
+
+         @media screen and (min-width: 1340px) {
+            font-size: 152px;
+         }
+      }
+
+      &-172 {
+
+         @media screen and (min-width: 1340px) {
+            font-size: 172px;
+         }
+      }
+      &-192 {
+
+         @media screen and (min-width: 1340px) {
+            font-size: 192px;
+         }
+      }
+      &-200 {
+
+         @media screen and (min-width: 1340px) {
+            font-size: 200px;
+         }
+      }
+      &-280 {
+
+         @media screen and (min-width: 1340px) {
+            font-size: 280px;
+         }
+      }
+   }
+
+   &--dl {
+
+      &-24 {
+
+         @media screen and (min-width: 1600px) {
+            font-size: 24px;
+         }
+      }
+
+      &-28 {
+
+         @media screen and (min-width: 1600px) {
+            font-size: 28px;
+         }
+      }
+
+      &-32 {
+
+         @media screen and (min-width: 1600px) {
+            font-size: 32px;
+         }
+      }
+
+      &-36 {
+
+         @media screen and (min-width: 1600px) {
+            font-size: 36px;
+         }
+      }
+
+      &-40 {
+
+         @media screen and (min-width: 1600px) {
+            font-size: 40px;
+         }
+      }
+
+      &-44 {
+
+         @media screen and (min-width: 1600px) {
+            font-size: 44px;
+         }
+      }
+
+      &-48 {
+
+         @media screen and (min-width: 1600px) {
+            font-size: 48px;
+         }
+      }
+
+      &-52 {
+
+         @media screen and (min-width: 1600px) {
+            font-size: 52px;
+         }
+      }
+
+      &-56 {
+
+         @media screen and (min-width: 1600px) {
+            font-size: 56px;
+         }
+      }
+
+      &-60 {
+
+         @media screen and (min-width: 1600px) {
+            font-size: 60px;
+         }
+      }
+
+      &-64 {
+
+         @media screen and (min-width: 1600px) {
+            font-size: 64px;
+         }
+      }
+
+      &-80 {
+
+         @media screen and (min-width: 1600px) {
+            font-size: 80px;
+         }
+      }
+
+      &-88 {
+
+         @media screen and (min-width: 1600px) {
+            font-size: 88px;
+         }
+      }
+
+      &-90 {
+
+         @media screen and (min-width: 1600px) {
+            font-size: 90px;
+         }
+      }
+
+      &-104 {
+
+         @media screen and (min-width: 1600px) {
+            font-size: 104px;
+         }
+      }
+
+      &-114 {
+
+         @media screen and (min-width: 1600px) {
+            font-size: 114px;
+         }
+      }
+
+      &-120 {
+
+         @media screen and (min-width: 1600px) {
+            font-size: 120px;
+         }
+      }
+
+      &-144 {
+
+         @media screen and (min-width: 1600px) {
+            font-size: 144px;
+         }
+      }
+
+      &-152 {
+
+         @media screen and (min-width: 1600px) {
+            font-size: 152px;
+         }
+      }
+
+      &-172 {
+
+         @media screen and (min-width: 1600px) {
+            font-size: 172px;
+         }
+      }
+
+      &-200 {
+
+         @media screen and (min-width: 1600px) {
+            font-size: 200px;
+         }
+      }
+      &-232 {
+
+         @media screen and (min-width: 1600px) {
+            font-size: 232px;
+         }
+      }
+      &-312 {
+
+         @media screen and (min-width: 1600px) {
+            font-size: 312px;
+         }
+      }
+   }
+
+   &--dxl {
+
+      &-24 {
+
+         @media screen and (min-width: 1920px) {
+            font-size: 24px;
+         }
+      }
+
+      &-28 {
+
+         @media screen and (min-width: 1920px) {
+            font-size: 28px;
+         }
+      }
+
+      &-32 {
+
+         @media screen and (min-width: 1920px) {
+            font-size: 32px;
+         }
+      }
+
+      &-36 {
+
+         @media screen and (min-width: 1920px) {
+            font-size: 36px;
+         }
+      }
+
+      &-40 {
+
+         @media screen and (min-width: 1920px) {
+            font-size: 40px;
+         }
+      }
+
+      &-44 {
+
+         @media screen and (min-width: 1920px) {
+            font-size: 44px;
+         }
+      }
+
+      &-48 {
+
+         @media screen and (min-width: 1920px) {
+            font-size: 48px;
+         }
+      }
+
+      &-52 {
+
+         @media screen and (min-width: 1920px) {
+            font-size: 52px;
+         }
+      }
+
+      &-56 {
+
+         @media screen and (min-width: 1920px) {
+            font-size: 56px;
+         }
+      }
+
+      &-60 {
+
+         @media screen and (min-width: 1920px) {
+            font-size: 60px;
+         }
+      }
+
+      &-64 {
+
+         @media screen and (min-width: 1920px) {
+            font-size: 64px;
+         }
+      }
+
+      &-80 {
+
+         @media screen and (min-width: 1920px) {
+            font-size: 80px;
+         }
+      }
+
+      &-88 {
+
+         @media screen and (min-width: 1920px) {
+            font-size: 88px;
+         }
+      }
+
+      &-90 {
+
+         @media screen and (min-width: 1920px) {
+            font-size: 90px;
+         }
+      }
+
+      &-104 {
+
+         @media screen and (min-width: 1920px) {
+            font-size: 104px;
+         }
+      }
+
+      &-114 {
+
+         @media screen and (min-width: 1920px) {
+            font-size: 114px;
+         }
+      }
+
+      &-120 {
+
+         @media screen and (min-width: 1920px) {
+            font-size: 120px;
+         }
+      }
+
+      &-144 {
+
+         @media screen and (min-width: 1920px) {
+            font-size: 144px;
+         }
+      }
+
+      &-152 {
+
+         @media screen and (min-width: 1920px) {
+            font-size: 152px;
+         }
+      }
+
+      &-172 {
+
+         @media screen and (min-width: 1920px) {
+            font-size: 172px;
+         }
+      }
+
+      &-200 {
+
+         @media screen and (min-width: 1920px) {
+            font-size: 200px;
+         }
+      }
+   }
+}

@@ -1,0 +1,68 @@
+// contact-section.scss
+
+// Contact Section
+
+.contact-section {
+
+
+    &__sidebar,
+    &__content {
+        flex: 0 0 auto;
+        width: 100%;
+        padding-left: 4px;
+        padding-right: 4px;
+
+        @media screen and (min-width: 1340px) {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    }
+
+    &__sidebar {
+        letter-spacing: .03em;
+        line-height: 24px;
+        font-family: 'PF Din Text Cond Pro', sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        color: #150F0F;
+
+        @media screen and (min-width: 600px) {
+            line-height: 28px;
+            font-size: 18px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            width: 248px;
+        }
+
+        @media screen and (min-width: 1340px) {
+            width: 334px;
+            line-height: 32px;
+            font-size: 20px; 
+        }
+
+        @media screen and (min-width: 1600px) {
+            width: 384px;
+            line-height: 40px;
+            font-size: 24px;
+        }
+
+        @media screen and (min-width: 1920px) {
+            width: 464px;
+        }
+    }
+
+    &__content {
+        margin-top: 16px;
+
+        @media screen and (min-width: 600px) {
+            margin-top: 12px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            flex: 1 1 0;
+            width: auto;
+            margin: 0;
+        }
+    }
+}

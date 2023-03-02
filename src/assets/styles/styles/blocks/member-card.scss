@@ -1,0 +1,142 @@
+// member-card.scss
+
+// Member Card
+
+.member-card {
+
+    &__box {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width: 1024px) {
+            flex-direction: row;
+        }
+    }
+
+    &__picture {
+
+        @media screen and (min-width: 1024px) {
+            flex: 0 0 auto;
+            width: 168px;
+        }
+
+        @media screen and (min-width: 1340px) {
+            width: 200px;
+        }
+
+        @media screen and (min-width: 1600px) {
+            width: 240px;
+        }
+
+        &::before {
+            content: ' ';
+            display: block;
+            padding-top: 100%;
+
+            @media screen and (min-width: 1024px) {
+                padding-top: 120%;
+            }
+        }
+    }
+
+    &__info {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        padding:20px 16px 16px 16px;
+
+        @media screen and (min-width: 600px) {
+            padding-top: 20px;
+        }
+
+        @media screen and (min-width: 1024px) {   
+            padding: 16px 32px 16px 16px;
+        }
+
+        @media screen and (min-width: 1340px) {
+            padding: 24px 32px 24px 24px;
+        }
+
+        @media screen and (min-width: 1600px) {
+            padding: 24px 40px;
+        }
+    }
+
+    &__title {
+        letter-spacing: .05em;
+
+        @media screen and (min-width: 1340px) {
+            letter-spacing: .06em;
+        }
+
+        @media screen and (min-width: 1600px) {
+            letter-spacing: .05em;
+        }
+
+    }
+
+    &__breaker {
+        display: inline;
+
+        @media screen and (min-width: 1024px) {
+            display: block;
+        }
+    }
+
+    &__text {
+        margin-top: 2px; 
+        margin-bottom: auto;
+        letter-spacing: .05em;
+
+        @media screen and (min-width: 1024px) {
+            margin-top: 4px;
+        }
+
+        @media screen and (min-width: 1340px) {
+            margin-top: 8px;
+        }
+    } 
+
+    &__list {
+        margin-top: 12px;
+
+        @media screen and (min-width: 1024px) {
+            margin-top: 14px;
+        }
+
+        @media screen and (min-width: 1340px) {
+            margin-top: 20px;
+        }
+
+        @media screen and (min-width: 1600px) {
+            margin-top: 36px;
+        }
+    }
+
+    &__item {
+
+        &:not(:first-child) {
+            margin-top: 2px;
+
+            @media screen and (min-width: 1024px) {
+                margin-top: 4px;
+            }
+        }
+    }
+
+    &__link {
+        letter-spacing: .03em;
+
+        @media screen and (min-width: 1024px) {
+            transition: color .4s;
+        }
+
+        &:hover {
+
+            @media screen and (min-width: 1340px) {
+                color: #DD2B1C;
+            }
+        }
+    }
+}

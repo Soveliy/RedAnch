@@ -1,0 +1,100 @@
+// label-link.scss
+
+// Label Link
+
+.label-link {
+    display: block;
+    padding: 0 16px;
+    &--flex{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    @media screen and (min-width: 1024px) {
+        padding: 0 32px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        padding: 0 48px;
+    }
+
+    &__box {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 0;
+
+        @media screen and (min-width: 1024px) {
+            padding: 24px 0;
+        }
+
+        @media screen and (min-width: 1340px) {
+            padding: 30px 0;
+        }
+
+        @media screen and (min-width: 1600px) {
+            padding: 34px 0;
+        }
+
+        &::before,
+        &::after {
+            content:  ' ';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            display: block;
+            width: 100%;
+            height: 4px;
+        }
+
+        &::before {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        &::after {
+            left: -100%;
+            background: #dd2b1c;
+
+            @media screen and (min-width: 1024px) {
+                transition: all cubic-bezier(.5, 0, 0, 1) .8s;
+            }
+
+            .label-link:hover & {
+
+                @media screen and (min-width: 1024px) {
+                    left: 0;
+                }
+            }
+        }
+    }
+
+    &__title {
+        letter-spacing: 0.05em;
+    }
+
+    &__icon {
+        display: block;
+        width: 16px;
+        height: 16px;
+        margin-left: 8px;
+        fill: rgba(255, 255, 255, 0.4);
+
+        @media screen and (min-width: 600px) {
+            width: 24px;
+            height: 24px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            transition: fill cubic-bezier(.5, 0, 0, 1) .8s;
+        }
+
+        .label-link:hover & {
+
+            @media screen and (min-width: 1024px) {
+                fill: #dd2b1c;
+            }
+        }
+    }
+}

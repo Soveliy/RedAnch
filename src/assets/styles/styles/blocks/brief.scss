@@ -1,0 +1,407 @@
+// brief.scss
+
+// Brief
+
+.brief {
+    font-family: 'PF Din Text Cond Pro', sans-serif;
+
+    &--light {
+        font-weight: 300;
+    }
+
+    &--medium {
+        font-weight: 500;
+    }
+
+    &--ms {
+
+        &-12 {
+            line-height: 14px;
+            font-size: 12px;
+        }
+
+        &-14 {
+            line-height: 16px;
+            font-size: 14px;
+        }
+
+        &-16 {
+            line-height: 20px;
+            font-size: 16px;
+        }
+
+        &-18 {
+            line-height: 22px;
+            font-size: 18px;
+        }
+
+        &-20 {
+            line-height: 24px;
+            font-size: 20px;
+        }
+
+        &-24 {
+            line-height: 28px;
+            font-size: 24px;
+        }
+
+        &-32 {
+            line-height: 36px;
+            font-size: 32px;
+        }
+    }
+
+    &--ts {
+
+        &-12 {
+
+            @media screen and (min-width: 600px) {
+                line-height: 14px;
+                font-size: 12px;
+            }
+        }
+
+        &-14 {
+
+            @media screen and (min-width: 600px) {
+                line-height: 16px;
+                font-size: 14px;
+            }
+        }
+
+        &-16 {
+
+            @media screen and (min-width: 600px) {
+                line-height: 20px;
+                font-size: 16px;
+            }
+        }
+
+        &-18 {
+
+            @media screen and (min-width: 600px) {
+                line-height: 22px;
+                font-size: 18px;
+            }
+        }
+
+        &-20 {
+
+            @media screen and (min-width: 600px) {
+                line-height: 24px;
+                font-size: 20px;
+            }
+        }
+
+        &-24 {
+
+            @media screen and (min-width: 600px) {
+                line-height: 28px;
+                font-size: 24px;
+            }
+        }
+
+        &-32 {
+
+            @media screen and (min-width: 600px) {
+                line-height: 36px;
+                font-size: 32px;
+            }
+        }
+    }
+
+    &--tm {
+
+        &-12 {
+            
+            @media screen and (min-width: 800px) {
+                line-height: 14px;
+                font-size: 12px;
+            }
+        }
+
+        &-14 {
+
+            @media screen and (min-width: 800px) {
+                line-height: 16px;
+                font-size: 14px;
+            }
+        }
+
+        &-16 {
+
+            @media screen and (min-width: 800px) {
+                line-height: 20px;
+                font-size: 16px;
+            }
+        }
+
+        &-18 {
+
+            @media screen and (min-width: 800px) {
+                line-height: 22px;
+                font-size: 18px;
+            }
+        }
+
+        &-20 {
+
+            @media screen and (min-width: 800px) {
+                line-height: 24px;
+                font-size: 20px;
+            }
+        }
+
+        &-24 {
+
+            @media screen and (min-width: 800px) {
+                line-height: 28px;
+                font-size: 24px;
+            }
+        }
+
+        &-32 {
+
+            @media screen and (min-width: 800px) {
+                line-height: 36px;
+                font-size: 32px;
+            }
+        }
+    }
+
+    &--ds {
+
+        &-12 {
+
+            @media screen and (min-width: 1024px) {
+                line-height: 14px;
+                font-size: 12px;
+            }
+        }
+
+        &-14 {
+
+            @media screen and (min-width: 1024px) {
+                line-height: 16px;
+                font-size: 14px;
+            }
+        }
+
+        &-16 {
+
+            @media screen and (min-width: 1024px) {
+                line-height: 20px;
+                font-size: 16px;
+            }
+        }
+
+        &-18 {
+
+            @media screen and (min-width: 1024px) {
+                line-height: 22px;
+                font-size: 18px;
+            }
+        }
+
+        &-20 {
+
+            @media screen and (min-width: 1024px) {
+                line-height: 24px;
+                font-size: 20px;
+            }
+        }
+
+        &-24 {
+
+            @media screen and (min-width: 1024px) {
+                line-height: 28px;
+                font-size: 24px;
+            }
+        }
+
+        &-32 {
+
+            @media screen and (min-width: 1024px) {
+                line-height: 36px;
+                font-size: 32px;
+            }
+        }
+    }
+
+    &--dm {
+
+        &-12 {
+
+            @media screen and (min-width: 1340px) {
+                line-height: 14px;
+                font-size: 12px;
+            }
+        }
+
+        &-14 {
+
+            @media screen and (min-width: 1340px) {
+                line-height: 16px;
+                font-size: 14px;
+            }
+        }
+
+        &-16 {
+
+            @media screen and (min-width: 1340px) {
+                line-height: 20px;
+                font-size: 16px;
+            }
+        }
+
+        &-18 {
+
+            @media screen and (min-width: 1340px) {
+                line-height: 22px;
+                font-size: 18px;
+            }
+        }
+
+        &-20 {
+
+            @media screen and (min-width: 1340px) {
+                line-height: 24px;
+                font-size: 20px;
+            }
+        }
+
+        &-24 {
+
+            @media screen and (min-width: 1340px) {
+                line-height: 28px;
+                font-size: 24px;
+            }
+        }
+
+        &-32 {
+
+            @media screen and (min-width: 1340px) {
+                line-height: 36px;
+                font-size: 32px;
+            }
+        }
+    }
+
+    &--dl {
+
+        &-12 {
+
+            @media screen and (min-width: 1600px) {
+                line-height: 14px;
+                font-size: 12px;
+            }
+        }
+
+        &-14 {
+
+            @media screen and (min-width: 1600px) {
+                line-height: 16px;
+                font-size: 14px;
+            }
+        }
+
+        &-16 {
+
+            @media screen and (min-width: 1600px) {
+                line-height: 20px;
+                font-size: 16px;
+            }
+        }
+
+        &-18 {
+
+            @media screen and (min-width: 1600px) {
+                line-height: 22px;
+                font-size: 18px;
+            }
+        }
+
+        &-20 {
+
+            @media screen and (min-width: 1600px) {
+                line-height: 24px;
+                font-size: 20px;
+            }
+        }
+
+        &-24 {
+
+            @media screen and (min-width: 1600px) {
+                line-height: 28px;
+                font-size: 24px;
+            }
+        }
+
+        &-32 {
+
+            @media screen and (min-width: 1600px) {
+                line-height: 36px;
+                font-size: 32px;
+            }
+        }
+    }
+
+    &--dxl {
+
+        &-12 {
+
+            @media screen and (min-width: 1920px) {
+                line-height: 14px;
+                font-size: 12px;
+            }
+        }
+
+        &-14 {
+
+            @media screen and (min-width: 1920px) {
+                line-height: 16px;
+                font-size: 14px;
+            }
+        }
+
+        &-16 {
+
+            @media screen and (min-width: 1920px) {
+                line-height: 20px;
+                font-size: 16px;
+            }
+        }
+
+        &-18 {
+
+            @media screen and (min-width: 1920px) {
+                line-height: 22px;
+                font-size: 18px;
+            }
+        }
+
+        &-20 {
+
+            @media screen and (min-width: 1920px) {
+                line-height: 24px;
+                font-size: 20px;
+            }
+        }
+
+        &-24 {
+
+            @media screen and (min-width: 1920px) {
+                line-height: 28px;
+                font-size: 24px;
+            }
+        }
+
+        &-32 {
+
+            @media screen and (min-width: 1920px) {
+                line-height: 36px;
+                font-size: 32px;
+            }
+        }
+    }
+}

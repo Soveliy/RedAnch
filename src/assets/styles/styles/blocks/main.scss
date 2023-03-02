@@ -1,0 +1,97 @@
+// main.scss
+
+// Main
+
+.main {
+    // padding-top: 84px;
+
+    // @media screen and (min-width: 600px) {
+    //     padding-top: 88px;
+    // }
+
+    // @media screen and (min-width: 1024px) {
+    //     padding-top: 100px;
+    // }
+
+    // @media screen and (min-width: 1340px) {
+    //     padding-top: 124px;
+    // }
+
+    // @media screen and (min-width: 1600px) {
+    //     padding-top: 140px;
+    // }
+
+    &__layout {
+        margin-bottom: 80px;
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: 96px;
+        }
+
+        @media screen and (min-width: 1340px) {
+            margin-bottom: 48px;
+        }
+
+        @media screen and (min-width: 1600px) {
+            margin-bottom: 128px;
+        }
+    }
+
+    &__tabs {
+        margin-bottom: 80px;
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: 128px;
+        }
+
+        @media screen and (min-width: 1340px) {
+            margin-bottom: 80px;
+        }
+
+        @media screen and (min-width: 1600px) {
+            margin-bottom: 160px;
+        }
+    }
+
+    &__help {
+        margin-bottom: 40px;
+
+        @media screen and (min-width: 600px) {
+            margin-bottom: 80px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            margin-bottom: 128px;
+        }
+
+        @media screen and (min-width: 1600px) {
+            margin-bottom: 160px;
+        }
+    }
+
+    &__title {
+        
+        &--contacts {
+            // margin-top: 16px;
+            position: relative;
+            z-index: 600;
+            .title{
+                letter-spacing: .03em;
+            }
+          
+            @include for-600(){
+                margin-top: 11px;
+            }
+            @include for-1024(){
+                margin-top: 2px;
+            }
+            @media screen and (min-width: 1024px) {
+             
+              
+                // .title{
+                //     letter-spacing: .03em;
+                // }
+            }
+        }
+    }
+}
