@@ -502,7 +502,232 @@
         
     }
 }
+.landReviews{
+    padding: 40px 0;
+    &__title{
+        font-family: $TT;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+       
+    }
+    &__slider{
+        position: relative;
+        margin: 0 -15px;
+    }
+    &__pagination{
+        display: flex;
+        position: absolute;
+        right: 13px;
+        left: auto;
+        width: auto;
+        bottom: 65px;
+        z-index: 50;
+        .swiper-pagination-bullet{
+            height: 8px;
+            width: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            transition: $transition;
+            opacity: 1;
+            & + &{
+                margin-left: 10px;
+            }
+            &.swiper-pagination-bullet-active{
+                background-color: #fff;
+            }
+        }
+    }
+    &__arrow{
+        height: 24px;
+        width: 24px;
+        & + &{
+            margin-left: 18px;
+        }
+        svg{
+            height: 100%;
+            width: 100%;
+        }
+    }
+    &__arrows{
+        display: flex;
+        margin-bottom: 8px;
 
-.ourClients{
+    }
+    &__head{
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 16px;
+    }
     
+   
+}
+.ReviewsItem{
+    padding: 0 15px;
+    box-sizing: border-box;
+    &__desc{
+        position: relative;
+        font-family: $DM;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 20px;
+        /* or 143% */
+        
+        letter-spacing: 0.05em;
+    }
+    &__descContent{
+        position: relative;
+        overflow: hidden;
+        height: 100px;
+        &--full{
+            &:after{
+                content: '';
+                position: absolute;
+                height: 25px;
+                background: linear-gradient(180deg, rgba(36, 26, 26, 0) 0%, #241A1A 100%);
+                bottom: 0;
+                left: 0;
+                width: 100%;
+            }
+        }
+    }
+    &__quotes{
+        position: absolute;
+        width: 43px;
+        height: 50px;
+        pointer-events: none;
+        &--left{
+            top: 0;
+            left: -15px;
+        }
+        &--right{
+            bottom: 0;
+            right: -15px;
+        }
+    }
+    &__author{
+        display: flex;
+        align-items: center;
+        margin-top: 16px;
+        &Image{
+            height: 48px;
+            width: 61px;
+            flex-shrink: 0;
+            margin-right: 8px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 8px;
+            box-sizing: border-box;
+            img{
+                max-width: 100%;
+            }
+        }
+        &Org{
+            font-family: $DM;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 0.03em;
+            color: rgba(255, 255, 255, 0.6);
+        }
+    }
+    &__showmore{
+        display: inline-flex;
+        font-family: $DM;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        /* identical to box height, or 117% */
+        
+        letter-spacing: 0.05em;
+        
+        /* txt/primary */
+        
+        color: #DD2B1C;
+        box-sizing: border-box;
+        padding-bottom: 6px;
+        border-bottom: 2px dotted rgba(255, 255, 255, 0.4);
+        margin-top: 8px;
+    }
+}
+.ourClients{
+    position: relative;
+    overflow: hidden;
+    padding: 40px 0;
+    &__title{
+        font-family: $TT;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+    }
+    &__slider{
+        overflow: visible;
+    }
+    &__link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 120px;
+        background-color: #fff;
+    }
+    &__image{
+        max-width: 64px;
+    }
+    &__swiper-slide{
+        width: 120px;
+    }
+    &__linkLabelNew{
+        margin-top: 27px;
+    }
+}
+
+.prodcats{
+    padding: 40px 0;
+    &__title{
+        font-family: $TT;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+    }
+    &__row{
+        margin: -4px 0;
+    }
+    &__itemContainer{
+        padding: 4px 0;
+        box-sizing: border-box;
+    }
+    &Item{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 16px;
+        &__picture{
+            margin-bottom: 16px;
+        }
+        &__image{
+            height: auto;
+            width: auto;
+            max-height: 100%;
+        }
+        &__name{
+            letter-spacing: 0.03em;
+            font-family: $DM;
+            font-weight: 300;
+            padding-right: 32px;
+            box-sizing: border-box;
+        }
+        &__icon{
+            position: absolute;
+            right: 21px;
+            bottom: 17px;
+            display: block;
+            width: 16px;
+            height: 16px;
+            fill: rgba(79,86,89,.1);
+            stroke: transparent;
+        }
+    }
 }

@@ -45,13 +45,50 @@ window.addEventListener('load', function() {
     
 
     
-      const swiperReviews = new Swiper(".ourClients__slider", {
-        slidesPerView: 2,
-        spaceBetween: 30,
-        centeredSlides: true,
+      const swiperClients = new Swiper(".ourClients__slider", {
+        slidesPerView: "auto",
+        spaceBetween: 16,
+        // centeredSlides: true,
        
         
       });
+
+      const swiperReviews = new Swiper(".landReviews__slider", {
+        slidesPerView: 1,
+        // spaceBetween: 16,
+        // centeredSlides: true,
+        navigation: {
+          nextEl: ".landReviews__arrow--next",
+          prevEl: ".landReviews__arrow--prev",
+        },
+        pagination: {
+          el: ".landReviews__pagination",
+          clickable:true,
+        },
+        
+        
+      });
+      function calcHeightReview(){
+        // fore
+        var line_height=20;
+        let limitHeight = line_height*5;
+
+       
+        // height=product_prod_text_in.height();	
+        // var count_rov=height/line_height;
+        $(".ReviewsItem__desc").each(function() {
+          var textIn= $(this).find(".ReviewsItem__descContent").height();
+          console.log(textIn)
+          if (textIn > limitHeight){
+            $(this).find(".ReviewsItem__descContent").addClass("ReviewsItem__descContent--full")
+            $(this).find(".ReviewsItem__showmore").addClass(".ReviewsItem__showmore--active")
+          }
+        });
       
+       
+       
+      }
+      calcHeightReview();
+     
       
 });
