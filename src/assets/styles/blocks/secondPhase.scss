@@ -1,3 +1,21 @@
+.about-link{
+    display: flex;
+    align-items: center;
+    font-family: $TT;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    /* identical to box height, or 100% */
+    
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #fff;
+    &__icon{
+        height: 24px;
+        width: 24px;
+        margin-right: 24px;
+    }
+}
 .land-hero{
     position: relative;
     &__content{
@@ -9,6 +27,11 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        @include for-1024(){
+            height: calc(100vh - 100px);
+            justify-content: center;
+            padding-bottom: 50px;
+        }
     }
     &__picture{
         position: absolute;
@@ -32,6 +55,12 @@
             object-fit: cover;
         }
     }
+    &__about-link{
+        display: none;
+        @include for-1024(){
+            display: flex;
+        }
+    }
     &__title{
         letter-spacing: 0.03em;
         text-transform: uppercase;
@@ -41,6 +70,45 @@
     }
     &__bottom{
         display: none;
+        @include for-600(){
+            display: block;
+        }
+        @include for-1024(){
+            position: absolute;
+            bottom: 24px;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 110px 0 32px;
+            align-items: flex-end;
+        }
+        &Desc{
+            position: relative;
+            font-family: $DM;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            color: #fff;
+            max-width: 188px;
+            padding-top: 10px;
+            letter-spacing: .05em;
+            &:before{
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 2px;
+                width: 32px;
+                background-color: #fff;
+                @include for-1024(){
+                    height: 4px;
+                }
+            }
+            @include for-1024(){
+               padding-top: 20px;
+            }
+        }
     }
     &__desc{
         font-family: $DM;
@@ -54,19 +122,44 @@
         /* txt/white */
         
         color: #FFFFFF;
+        max-width: 422px;
+        @include for-600(){
+            margin: auto 0 24px;
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 28px;
+        }
+        @include for-1024(){
+            margin: 16px 0 0 83px;
+            max-width: 495px;
+            font-size: 20px;
+            line-height: 32px;
+        }
     }
 }
 .main{
     &--lands{
         padding-top: 84px;
+        @include for-1024(){
+            padding-top: 100px;
+        }
     }
 }
 .numeral{
     padding: 10px 0;
+    @include for-600(){
+        padding: 36px 0;
+    }
+    @include for-1024(){
+        padding: 60px 0 ;
+    }
     &__row{
         display: flex;
         flex-wrap: wrap;
         margin: -8px;
+        @include for-1024(){
+            padding: 0 8.3%;
+        }
     }
     &__item{
         &Value{
@@ -80,6 +173,14 @@
             /* txt/primary */
             
             color: #DD2B1C;
+            @include for-600(){
+                font-size: 160px;
+                line-height: 150px;
+            }
+            @include for-1024(){
+                font-size: 208px;
+                line-height: 176px;
+            }
             
         }
         &Name{
@@ -92,6 +193,16 @@
             letter-spacing: 0.03em;
             text-transform: uppercase;
             color: #FFFFFF;
+            @include for-600(){
+                font-size: 40px;
+                line-height: 40px;
+                letter-spacing: .05em;
+            }
+            @include for-1024(){
+                font-size: 64px;
+                line-height: 96px;
+                letter-spacing: .03em;
+            }
             
         }
         &Desc{
@@ -106,6 +217,14 @@
             /* txt/white */
 
             color: #FFFFFF;
+            @include for-600(){
+                font-size: 18px;
+                line-height: 22px;
+            }
+            @include for-1024(){
+                font-size: 24px;
+                line-height: 28px;
+            }
         }
 
         &Container{
@@ -116,6 +235,12 @@
             }
             &--w50{
                 width: 50%;
+                @include for-600(){
+                    width: 46%;
+                }
+                @include for-1024(){
+                    width: 50%;
+                }
             }
             &--w100{
                 width: 100%;
@@ -125,9 +250,19 @@
 }
 .advancher{
     padding: 46px 0 98px;
+    @include for-600(){
+        padding: 41px 0 98px;
+    }
+    @include for-1024(){
+        padding: 51px 0 160px;
+    }
     color: #fff;
     &__blend{
         position: relative;
+        @include for-1024(){
+            padding: 0 8.3%;
+            box-sizing: border-box;
+        }
       
     }
     &__title{
@@ -144,6 +279,13 @@
         letter-spacing: -0.02em;
         text-transform: uppercase;
         background-position: 100%;
+        @include for-600(){
+            font-size:148px;
+            letter-spacing: 0.03em;
+        }
+        @include for-1024(){
+            font-size: 210px;
+        }
 
     }
     &__desc{
@@ -155,6 +297,20 @@
         color: #FFFFFF;
         margin-top: 10px;
         max-width: 288px;
+        @include for-600(){
+            max-width: 422px;
+            font-size: 20px;
+            line-height: 28px;
+        }
+        @include for-1024(){
+            position: absolute;
+            bottom: 8px;
+            right: 11.4%;
+            font-size: 24px;
+            line-height: 36px;
+            max-width: 349px;
+            z-index: 600;
+        }
         
     }   
 
@@ -164,12 +320,16 @@
     overflow: hidden;
     background: rgba(36, 26, 26, 0.9);
     padding: 40px 0;
+    @include for-600(){
+        padding: 40px 0 134px;
+    }
 
     &__title{
         font-family: $TT;
         font-weight: 700;
         letter-spacing: 0.03em;
         text-transform: uppercase;
+        max-width: 70%;
     }
 
     &__row{
@@ -179,6 +339,19 @@
         top: -40px;
         left: -105px;
         position: absolute;
+        @include for-600(){
+            max-width: 450px;
+            top: -197px;
+            left: -93px;
+            position: absolute;
+            width: 74%;
+        }
+        
+        img{
+            @include for-600(){
+                width: 100%;
+            }
+        }
 
     }
     &__content{
@@ -189,6 +362,10 @@
         width: 53%;
         margin-left: auto;
         margin-top: 24px;
+        @include for-600(){
+            width: 51%;
+            
+        }
     }
 }
 
@@ -258,6 +435,10 @@
         /* or 125% */
         
         letter-spacing: 0.03em;
+        @include for-600(){
+            font-size: 18px;
+            line-height: 22px;
+        }
         &--head{
             color: rgba(#fff, .6);
         }
@@ -348,6 +529,12 @@
         margin: -25px -15px 25px;
         position: relative;
         z-index: 1;
+        img{
+            width: 100%;
+        }
+        @include for-600(){
+            margin: -50px -15px 15px;
+        }
         &:before{
             content: '';
             position: absolute; 
@@ -365,6 +552,11 @@
         letter-spacing: 0.03em;
         color: #DD2B1C;
         margin-bottom: 16px;
+        @include for-600(){
+            font-size: 20px;
+            line-height: 28px;
+            max-width: 422px;
+        }
     }
     &__desc{
         font-family: $DM;
@@ -378,6 +570,12 @@
         /* txt/white */
         
         color: #FFFFFF;
+        @include for-600(){
+            font-size: 20px;
+            line-height: 28px;
+            max-width: 422px;
+        }
+
         
     }  
     &__linkLabelNew{
@@ -456,6 +654,9 @@
             font-size: 28px;
             letter-spacing: 0.05em;
             padding-bottom: 17px;
+            @include for-600(){
+                font-size: 40px;
+            }
             svg{
                 margin-bottom: 5px;
             }
@@ -468,6 +669,9 @@
     position: relative;
     overflow: hidden;
     padding: 40px 0;
+    @include for-600(){
+        padding: 80px 0;
+    }
     &__row{
         // display: flex;
         position: relative;
@@ -478,6 +682,9 @@
         font-weight: 700;
         letter-spacing: 0.03em;
         text-transform: uppercase;
+        @include for-600(){
+            max-width: 70%;
+        }
     }
     &__desc{
         font-family: $DM;
@@ -487,6 +694,11 @@
         letter-spacing: 0.03em;
         margin: 16px 0 34px;
         max-width: 184px;
+        @include for-600(){
+            font-size: 20px;
+            line-height: 28px;
+            max-width: 365px;
+        }
     }
     &__content{
         position: relative;
@@ -499,6 +711,11 @@
         transform: translateY(-50%);
         right: -128px;
         max-width: 80%;
+        @include for-600(){
+            transform: none;
+            top: 31px;
+            right: -109px;
+        }
         
     }
 }
@@ -509,6 +726,9 @@
         font-weight: 700;
         letter-spacing: 0.03em;
         text-transform: uppercase;
+        @include for-600(){
+            max-width: 70%;
+        }
        
     }
     &__slider{
@@ -523,6 +743,10 @@
         width: auto;
         bottom: 65px;
         z-index: 50;
+        @include for-600(){
+            right: 12px;
+            bottom: 0;
+        }
         .swiper-pagination-bullet{
             height: 8px;
             width: 8px;
@@ -540,6 +764,10 @@
     &__arrow{
         height: 24px;
         width: 24px;
+        @include for-600(){
+            height: 40px;
+            width: 40px;
+        }
         & + &{
             margin-left: 18px;
         }
@@ -551,12 +779,19 @@
     &__arrows{
         display: flex;
         margin-bottom: 8px;
+        @include for-600(){
+            margin-bottom: 13px;
+        }
 
     }
     &__head{
         display: flex;
         align-items: flex-end;
         margin-bottom: 16px;
+        justify-content: space-between;
+        @include for-600(){
+            margin-bottom: 26px;
+        }
     }
     
    
@@ -573,11 +808,19 @@
         /* or 143% */
         
         letter-spacing: 0.05em;
+        @include for-600(){
+            font-size: 16px;
+            line-height: 24px;
+            max-width: 85%;
+        }
     }
     &__descContent{
         position: relative;
         overflow: hidden;
         height: 100px;
+        @include for-600(){
+            height: auto;
+        }
         &--full{
             &:after{
                 content: '';
@@ -595,6 +838,10 @@
         width: 43px;
         height: 50px;
         pointer-events: none;
+        @include for-600(){
+            width: 69px;
+            height: 80px;
+        }
         &--left{
             top: 0;
             left: -15px;
@@ -608,6 +855,10 @@
         display: flex;
         align-items: center;
         margin-top: 16px;
+        @include for-600(){
+            max-width: 50%;
+            margin-top: 23px;
+        }
         &Image{
             height: 48px;
             width: 61px;
@@ -648,6 +899,9 @@
         padding-bottom: 6px;
         border-bottom: 2px dotted rgba(255, 255, 255, 0.4);
         margin-top: 8px;
+        @include for-600(){
+            display: none;
+        }
     }
 }
 .ourClients{
@@ -669,12 +923,19 @@
         justify-content: center;
         height: 120px;
         background-color: #fff;
+        @include for-600(){
+            height: 168px;
+        }
     }
     &__image{
         max-width: 64px;
     }
     &__swiper-slide{
         width: 120px;
+        @include for-600(){
+            width: 168px;
+        }
+        
     }
     &__linkLabelNew{
         margin-top: 27px;
@@ -692,10 +953,19 @@
     }
     &__row{
         margin: -4px 0;
+        @include for-600(){
+            margin: -4px;
+            display: flex;
+            flex-wrap: wrap;
+        }
     }
     &__itemContainer{
         padding: 4px 0;
         box-sizing: border-box;
+        @include for-600(){
+            width: 50%;
+            padding: 4px;
+        }
     }
     &Item{
         position: relative;
@@ -704,8 +974,12 @@
         justify-content: space-between;
         box-sizing: border-box;
         padding: 16px;
+        height: 100%;
         &__picture{
             margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         &__image{
             height: auto;
@@ -730,4 +1004,175 @@
             stroke: transparent;
         }
     }
+}
+
+.manager{
+  
+    &__position{
+        letter-spacing: .03em;
+        margin-bottom: 8px;
+        
+    }
+    &--new{
+        padding: 24px 0;
+        &.manager{
+            @include for-600(){
+                padding-top: 48px;
+            }
+        }
+      
+        .manager__name , .manager__sub-title,.manager__item a{
+            letter-spacing: .03em;
+        }
+        .manager__title{
+            letter-spacing: .03em;
+            margin-bottom: 15px;
+            @include for-600(){
+                margin-bottom: 5px;
+            }
+        }
+        .manager__picture {
+         
+            margin-left: -54px;
+            margin-right: -43px;
+            @include for-600(){
+                margin-left: -90px;
+                margin-right: -43px;
+                // margin-bottom: 28px;
+                width: 420px;
+            }
+        }
+        .manager__info{
+            padding-right: 10px;
+            padding-bottom: 30px;
+        }
+        .manager__label-link{
+            bottom: -27px;
+            background: rgba(21, 15, 15, 1);
+            @include for-600(){
+                bottom: 0;
+            }
+        }
+        .manager__sub-list{
+            margin-right: -10px;
+        }
+        .manager__media{
+            @include for-600(){
+                width: 51.4%;
+            }
+            
+        }
+        .manager__name {
+            @include for-600(){
+                margin-bottom: 17px;
+            }
+        }
+    }
+}
+.newFooter{
+    position: relative;
+    overflow: hidden;
+    &--land-padding{
+        padding-top: 52px;
+        padding-right: 22.7%;
+        @include for-600(){
+            padding-top: 21px;
+            padding-right: 28.7%;
+        }
+    }
+    &__seeAlso{
+        margin: 32px 0 39px;
+        @include for-600(){
+            margin: 41px 0 57px;
+        }
+    }
+    &__picture{
+        position: absolute;
+        right: -58px;
+        top: 0;
+        width: 149px;
+        @include for-600(){
+            right: 12px;
+            width: 173px;
+        }
+    }
+}
+.newQuestions{
+    &__link{
+        position: relative;
+        font-family: $TT;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        line-height: 96%;
+        color: rgba(#fff,.44);
+        display: block;
+        padding-bottom: 15px;
+        padding-right: 20px;
+        @include for-600(){
+            max-width: 325px;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            width: 100%;
+            background-color: rgba(#fff, .2);
+        }
+    }
+    &__icon{
+        position: absolute;
+        bottom: 22px;
+        right: 0;
+        height: 16px;
+        width: 16px;
+        fill: rgba(255, 255, 255, 0.2);;
+    }
+}
+
+.seeAlso{
+        &__title{
+            font-family: $DM;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 16px;
+            color: #FFFFFF;
+            
+            letter-spacing: 0.05em;
+            margin-bottom: 13px;
+            @include for-600(){
+                font-size: 16px;
+                line-height: 20px;
+                margin-bottom: 12px;
+            }
+        }
+        &__list{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        &__link{
+            font-family: $TT;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 1;
+            /* identical to box height, or 100% */
+            
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            
+            /* txt/white */
+            
+            color: #FFFFFF;
+            @include for-600(){
+                font-size: 40px;
+        
+            }
+        }
+        &__item + &__item{
+            margin-top: 12px;
+        }
 }
