@@ -34,8 +34,10 @@ window.addEventListener('load', function() {
           $(this).next().addClass("js-active")
           $(this).parent().siblings().find(".accordeonItem__body").removeClass("js-active")
         } else {
-          $(this).next().slideToggle(800);
+        
           $(this).parent().siblings().find(".accordeonItem__body").hide(800);
+          $(this).next().slideToggle(800);
+         
         } 
       });
 
@@ -93,5 +95,12 @@ window.addEventListener('load', function() {
       }
       calcHeightReview();
      
+
+      
+
+
+
+  
+
       
 });
