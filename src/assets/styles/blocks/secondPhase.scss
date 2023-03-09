@@ -1184,12 +1184,23 @@
     @include for-1024(){
         padding: 69px 0;
     }
+    &__linkLabelNew{
+        display: none;
+        @include for-1024(){
+            display: block;
+            margin-top: 32px;
+            margin-left: 16.6%;
+        }
+    }
     &__title{
         font-family: $TT;
         font-weight: 700;
         letter-spacing: 0.03em;
         text-transform: uppercase;
         margin-bottom: 16px;
+        @include for-1024(){
+            margin-left: 8.3%;
+        }
     }
     &__row{
         margin: -4px 0;
@@ -1197,6 +1208,11 @@
             margin: -4px;
             display: flex;
             flex-wrap: wrap;
+        }
+        @include for-1024(){
+            padding: 0 8.3%;
+            box-sizing: border-box;
+            margin-left: 8.3%;
         }
     }
     &__itemContainer{
@@ -1259,8 +1275,15 @@
             @include for-600(){
                 padding-top: 48px;
             }
+            @include for-1024(){
+                padding-top: 28px;
+            }
         }
-      
+        .manager__info{
+            @include for-1024(){
+                width: 50%;
+            }
+        }
         .manager__name , .manager__sub-title,.manager__item a{
             letter-spacing: .03em;
         }
@@ -1280,6 +1303,11 @@
                 margin-right: -43px;
                 // margin-bottom: 28px;
                 width: 420px;
+            }
+            @include for-1024(){
+                width: 100%;
+                margin-left: -40px;
+                margin-right: 0;
             }
         }
         .manager__info{
