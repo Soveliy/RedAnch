@@ -31,6 +31,15 @@
     &.container--lit{
         max-width: 696px;
         margin: 0 auto;
+        @include for-1366(){
+            max-width: 917px;
+        }
+        @include for-1600(){
+            max-width: 1083px;
+        }
+        @include for-1920(){
+            max-width: 1301px;
+        }
     }
 }
 .land-hero{
@@ -82,6 +91,31 @@
             @include for-1024(){
                 padding-bottom: 112px;
             }
+            @include for-1366(){
+                padding-bottom: 0;
+            }
+            @include for-1600(){
+                padding:0 48px;
+                .land-hero__title{
+                    letter-spacing: .02em;
+                }
+                .land-hero__desc{
+                    margin: 16px 0 0 128px;
+                    max-width: 736px;
+                }
+                .land-hero__bottom {
+                    bottom: 16px;
+                    padding: 0 75px 0 48px;
+                }
+            }
+            @include for-1920(){
+                padding: 179px 48px 170px;
+                justify-content: flex-start;
+                .land-hero__desc{
+                    margin-left: 155px;
+                    max-width: 900px;
+                }
+            }
             .land-hero__desc{
               
                 @include for-600(){
@@ -92,6 +126,7 @@
                     margin-top: 16px;
                     margin-bottom: 0;
                 }
+               
             }
            
         }
@@ -1867,6 +1902,40 @@
         margin-bottom: 8px;
         
     }
+    &.manager--white{
+        .label-link__title{
+           @include for-1024(){
+            color: #150F0F;
+            
+           }
+        }
+        .manager__title {
+            br{
+                @include for-1024(){
+                    display: block;
+                }
+            }
+        }
+        .label-link__box::before{
+            @include for-1024(){
+                background: rgba(79, 86, 89, 0.2);
+            }
+        }
+        .label-link__icon{
+            @include for-1024(){
+                fill: rgba(79, 86, 89, 0.2);
+            }
+        }
+        .label-link{
+            @include for-1024(){
+                &:hover{
+                    .label-link__icon{
+                        fill: #dd2b1c;
+                    }
+                }
+            }
+        }
+    }
     &--new{
         padding: 24px 0;
         &.manager{
@@ -1911,7 +1980,7 @@
                 max-width: 260px;
             }
             @include for-1600(){
-                max-width: 290px;
+                max-width: 310px;
             }
         }
         .manager__item:not(:last-child){
@@ -2069,7 +2138,7 @@
             margin: 41px 0 57px;
         }
         @include for-1024(){
-            margin: 56px 0;
+            margin: 66px 0;
         }
         @include for-1366(){
             margin: 70px 0;
@@ -2100,6 +2169,7 @@
         }
         @include for-1920(){
             right: 134px;
+            top: -83px;
         }
     }
 }
@@ -2143,6 +2213,15 @@
             @include for-600(){
                 line-height: 99px;
                 max-width: 333px;
+            }
+            @include for-1024(){
+                max-width: 601px;
+                padding-bottom: 43px;
+            }
+            .newQuestions__icon{
+                @include for-1024(){
+                    bottom: 53px;
+                }
             }
 
         }
@@ -2249,7 +2328,7 @@
             margin-top: 12px;
             @include for-1024(){
                 margin-top: 0;
-                margin-left: 16px;
+                margin-left: 10px;
 
                 .seeAlso__link{
                     padding-left: 20px;
@@ -2280,6 +2359,16 @@
             @include for-1024(){
                 min-height: 158px;
             }
+            @include for-1366(){
+                min-height: 223px;
+            }
+            @include for-1600(){
+                min-height: 295px;
+                .category{
+                    padding: 32px 0;
+                }
+            }
+           
        
     }
 }
@@ -2287,6 +2376,15 @@
     padding-top: 40px;
     @include for-1024(){
         padding-top: 64px;
+    }
+    @include for-1366(){
+        padding-top: 90px;
+    }
+    @include for-1600(){
+        padding-top: 117px;
+    }
+    @include for-1920(){
+        padding-top: 93px;
     }
 }
 .section{
@@ -2296,25 +2394,51 @@
        @include for-1024(){
         padding: 32px 0;
        }
+       @include for-1366(){
+        padding: 45px 0;
+       }
+       @include for-1600(){
+        padding: 59px 0;
+       }
+       @include for-1920(){
+        padding: 44px 0;
+       }
     }
     &--padding-lit + &--padding-medium{
         padding-top: 26px;
         @include for-1024(){
             padding-top: 17px;
         }
+        @include for-1366(){
+            padding-top: 31px;
+        }
+        @include for-1600(){
+            padding-top: 62px;
+        }
+        @include for-1920(){
+            padding-top: 0;
+        }
     }
     &--padding-medium{
         padding: 27px 0;
+        @include for-1024(){
+            padding: 40px 0;
+        }
+        @include for-1600(){
+            padding: 80px 0;
+        }
+        @include for-1920(){
+            padding: 52px 0;
+        }
     }
     &__title{
         letter-spacing: 0.05em;
         margin-bottom: 16px;
-
-        & + .section__desc{
-           @include for-1024(){
-            padding-top: 16px;
-           }
+        
+        @include for-1024(){
+            margin-bottom: 32px;
         }
+
     }
     &__desc{
         font-family: $DM;
@@ -2330,6 +2454,14 @@
         @include for-1024(){
             line-height: 32px;
         }
+        @include for-1366(){
+            font-size: 24px;
+            line-height: 36px;
+        }
+        @include for-1600(){
+            font-size: 32px;
+            line-height: 46px;
+        }
 
     }
 
@@ -2343,6 +2475,18 @@
             max-width: 270px;
             margin-top: 25px;
         }
+        @include for-1600(){
+            max-width: 322px;
+            margin-top: 37px;
+
+            a {
+                svg{
+                   
+                        margin-left: 0;
+                    
+                }
+            }
+        }
         a{
             width: 100%;
         }
@@ -2355,6 +2499,9 @@
         @include for-1024(){
             margin-top: 0;
         }
+        @include for-1600(){
+            padding-top: 0;
+        }
         .manager__title {
             letter-spacing: .04em;
             @include for-600(){
@@ -2365,12 +2512,18 @@
             }
         }
     }
+    .search-element{
+        @include for-1600(){
+            padding-top: 0 !important;
+        }
+    }
     .search-box{
         padding: 0;
         margin-bottom: 16px;
-        @include for-1024(){
-            padding-top: 16px;
-        }
+        // @include for-1024(){
+        //     padding-top: 16px;
+        // }
+       
         .search-element__inner{
             @include for-1024(){
                 padding: 9px 32px;
@@ -2419,6 +2572,15 @@
             margin-right: 8px;
             margin-bottom: 0;
         }
+        @include for-1366(){
+            font-size: 16px;
+            line-height: 20px;
+            margin-right: 16px;
+        }
+        @include for-1600(){
+            font-size: 20px;
+            line-height: 24px;
+        }
     }
     &__list{
         padding: 0;
@@ -2448,6 +2610,14 @@
         @include for-1024(){
             font-size: 14px;
             line-height: 16px;
+        }
+        @include for-1366(){
+            font-size: 16px;
+            line-height: 20px;
+        }
+        @include for-1600(){
+            font-size: 20px;
+            line-height: 24px;
         }
 
         & + &{
@@ -2485,6 +2655,11 @@
         line-height: 28px;
         padding: 0 8px;
     }
+    @include for-1600(){
+        font-size: 36px;
+        line-height: 40px;
+    }
+
 }
 .manager--new + .text-contentNew{
     margin-top: 22px;
@@ -2494,6 +2669,29 @@
 }
 .text-contentNew{
     padding: 40px 0;
+    @include for-1024(){
+        padding: 64px 0;
+    }
+    @include for-1366(){
+        padding: 100px 0 160px;
+    }
+    @include for-1600(){
+        padding: 128px 0 112px;
+    }
+    &__container{
+        max-width: 632px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding-right: 75px;
+        @include for-1366(){
+            max-width: 857px;
+        }
+        @include for-1600(){
+            // max-width: 993px;
+            max-width: 66.4%;
+            padding-right: 135px;
+        }
+    }
     > *:first-child{
         margin-top: 0;
     }
@@ -2514,6 +2712,15 @@
         letter-spacing: .05em;
      
     }
+    @include for-1024(){
+        font-size: 80px;
+        margin-bottom: 40px;
+        letter-spacing: .04em;
+    }
+    @include for-1600(){
+        font-size: 104px;
+        margin-bottom: 40px;
+    }
    }
    h3{
     font-family: $DM;
@@ -2528,6 +2735,16 @@
         font-size: 28px;
         line-height: 32px;
     }
+    @include for-1366(){
+        font-size: 32px;
+        line-height: 36px;
+        margin-bottom: 20px;
+    }
+    @include for-1600(){
+        font-size: 40px;
+        line-height: 44px;
+        margin-bottom: 21px;
+    }
    }
    p{
     font-family: $DM;
@@ -2541,6 +2758,18 @@
         font-size: 18px;
         line-height: 28px;
     }
+    @include for-1024(){
+        font-size: 16px;
+        line-height: 24px;
+    }
+    @include for-1366(){
+        font-size: 20px;
+        line-height: 32px;
+    }
+    @include for-1600(){
+        font-size: 24px;
+        line-height: 40px;
+    }
    &.notes{
     font-size: 14px;
     line-height: 20px;
@@ -2549,6 +2778,18 @@
         font-size: 16px;
         line-height: 24px;
     }
+    @include for-1024(){
+        font-size: 14px;
+        line-height: 20px;
+    }
+    @include for-1366(){
+        font-size: 16px;
+        line-height: 24px;
+    }
+    @include for-1600(){
+        font-size: 20px;
+        line-height: 28px;
+    }
    }
    }
    p + h3{
@@ -2556,11 +2797,505 @@
     @include for-600(){
         margin-top: 31px;
     }
+    @include for-1366(){
+        margin-top: 34px;
+    }
    }
    p + p{
     margin-top: 23px;
     @include for-600(){
         margin-top: 26px;
     }
+    @include for-1366(){
+        margin-top: 34px;
+    }
+    @include for-1600(){
+        margin-top: 36px;
+    }
    }
+}
+
+.payment{
+    margin-top: 16px;
+    @include for-1024(){
+        margin-top: 64px;
+    }
+    &__grid{
+        padding: 0 8.3% 0 17%;
+        box-sizing: border-box;
+    }
+    &Item{
+        & + &{
+            margin-top: 8px;
+            @include for-1024(){
+                margin-top: 32px;
+            }
+            @include for-1366(){
+                margin-top: 28px;
+            }
+        }
+        padding: 24px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: flex-start;
+      
+        @include for-600(){
+            padding: 40px;
+        }
+        @include for-1024(){
+            padding: 64px;
+        }
+        &__row{
+            display: flex;
+            align-items: flex-start;
+            &--center{
+                @include for-1024(){
+                    align-items: center;
+                }
+            }
+        }
+        &__left{
+            margin-right: 16px;
+            @include for-600(){
+                margin-right: 24px;
+            }
+            flex-shrink: 0;
+            @include for-1024(){
+                display: flex;
+                margin-right: 62px;
+                max-width: 200px;
+            }
+            @include for-1366(){
+                max-width: 250px;
+                margin-right: 54px;
+                align-items: center;
+            }
+            @include for-1600(){
+                margin-right: 10.9%;
+            }
+        }
+        &__icon{
+            width: 40px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-shrink: 0;
+          
+            img{
+                max-width: 100%;
+                height: 100%;
+            }
+            @include for-1024(){
+                width: 72px;
+                height: 72px;
+                margin-right: 24px;
+            }
+            @include for-1366(){
+                height: 88px;
+                width: 88px;
+                margin-right: 24px;
+            }
+            @include for-1600(){
+
+            }
+        }
+        &__content{
+            width: 100%;
+            @include for-600(){
+                max-width: 86.8%;
+            }
+            @include for-1024(){
+                max-width: 50%;
+            }
+        }
+        &__title{
+            font-family: $TT;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 1;
+            /* or 100% */
+            
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            
+            /* txt/black */
+            
+            color: #150F0F;
+            margin-bottom: 12px;
+            @include for-600(){
+                font-size: 40px;
+                margin-bottom: 16px;
+              
+            }
+            @include for-1024(){
+                font-size: 32px;
+                letter-spacing: .05em;
+            }
+            @include for-1366(){
+                font-size: 36px;
+                letter-spacing: .06em;
+            }
+            @include for-1600(){
+                font-size: 44px;
+                letter-spacing: .05em;
+            }
+            &--mob{
+                @include for-1024(){
+                    display: none;
+                }
+            }
+            &--desk{
+                display: none;
+                @include for-1024(){
+                    display: block;
+                }
+            }
+            br{
+                @include for-600(){
+                    display: none;
+                }
+            }
+        }
+        &__subtitle{
+            font-family: $DM;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 20px;
+            /* or 125% */
+            
+            letter-spacing: 0.03em;
+            
+            /* txt/black */
+            
+            color: #150F0F;
+            b{
+                font-weight: 500;
+            }
+            @include for-600(){
+                font-size: 18px;
+                line-height: 22px;
+            }
+            @include for-1024(){
+                font-size: 16px;
+                line-height: 20px;
+            }
+            @include for-1366(){
+                font-size: 20px;
+                line-height: 24px;
+            }
+            @include for-1600(){
+                font-size: 24px;
+                line-height: 28px;
+            }
+        }
+        &__allert{
+            position: relative;
+            margin-top: 12px;
+            font-family: $TT;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 24px;
+            
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+
+            color: #DD2B1C;
+            padding-top: 14px;
+           
+            &:before{
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 2px;
+                width: 100%;
+                background-color: #DD2B1C;
+                @include for-600(){
+                    width: 80%;
+                }
+            }
+            box-sizing: border-box;
+            @include for-600(){
+                font-size: 28px;
+                line-height: 32px;
+             
+                padding-top: 18px;
+                margin-top: 16px;
+            }
+            @include for-1024(){
+                margin-top: 24px;
+                padding-top: 26px;
+                font-size: 24px;
+                line-height: 24px;
+                letter-spacing: .06em;
+            }
+            @include for-1366(){
+                margin-top: 32px;
+                padding-top: 34px;
+                font-size: 28px;
+            }
+            @include for-1600(){
+                font-size: 36px;
+                margin-top: 35px;
+                padding-top: 40px;
+            }
+        }
+        &__desc{
+            font-family: $DM;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 20px;
+            /* or 143% */
+            
+            letter-spacing: 0.05em;
+            
+            /* txt/black */
+            
+            color: #150F0F;
+            margin-top: 4px;
+            @include for-600(){
+                font-size: 16px;
+                line-height: 24px;
+            }
+            @include for-1024(){
+                font-size: 14px;
+                line-height: 20px;
+            }
+            @include for-1366(){
+                font-size: 16px;
+                line-height: 24px;
+                margin-top: 14px;
+            }
+            @include for-1600(){
+                font-size: 20px;
+                line-height: 28px;
+                margin-top: 19px;
+            }
+        }
+    }
+}
+.page-section{
+    padding-bottom: 40px;
+    @include for-1366(){
+        padding-bottom: 128px;
+    }
+    @include for-1600(){
+       padding-bottom: 160px; 
+    }
+}
+
+.deliveryTizers{
+    &__row{
+        display: flex;
+        flex-wrap: wrap;
+        margin: -12px 0;
+        @include for-600(){
+            margin: -20px -8px;
+        }
+    }
+    &__itemContainer{
+        width: 100%;
+        padding: 12px 0;
+        box-sizing: border-box;
+        @include for-600(){
+            padding: 20px 8px;
+            width: 50%;
+        }
+    }
+    &Item{
+        
+        display: flex;
+        align-items: center;
+        @include for-600(){
+            align-items: flex-start;
+        }
+        &__icon{
+            height: 40px;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            margin-right: 16px;
+            flex-shrink: 0;
+            img{
+                height: 100%;
+                max-width: 100%;
+            }
+            @include for-1024(){
+                width: 72px;
+                height: 72px;
+                margin-right: 16px;
+            }
+            @include for-1366(){
+                height: 88px;
+                width: 88px;
+                margin-right: 24px;
+            }
+        }
+        &__desc{
+            font-size: 18px;
+            line-height: 22px;
+            font-weight: 500;
+            font-family: $DM;
+            letter-spacing: .03em;
+            color: #150F0F;
+            @include for-600(){
+                font-size: 28px;
+                line-height: 32px;
+                letter-spacing: .05em;
+                font-family: $TT;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+            @include for-1024(){
+                font-size: 32px;
+                max-width: 60%;
+            }
+            @include for-1366(){
+                font-size: 36px;
+                line-height: 36px;
+                letter-spacing: 0.06em;
+            }
+            @include for-1600(){
+                font-size: 44px;
+                line-height: 44px;
+            }
+        }
+    }
+}
+.deliveryPage{
+    @include for-1024(){
+        padding: 0 8.3% 0 17%;
+        box-sizing: border-box;
+        margin-top: 65px;
+    }
+    &__desc{
+        margin: 8px 0 24px;
+        @include for-600(){
+            margin: 16px 0 40px;
+        }
+        @include for-1366(){
+            margin: 64px 0;
+        }
+        @include for-1600(){
+            margin: 64px 0 80px;
+        }
+        p{
+            font-size: 18px;
+            line-height: 28px;
+            font-family: $DM;
+            font-weight: 300;
+            color: #150F0F;
+            @include for-600(){
+                font-size: 20px;
+                line-height: 28px;
+            }
+            @include for-1024(){
+                max-width: 464px;
+                line-height: 32px;
+            }
+            @include for-1366(){
+                font-size: 24px;
+                line-height: 36px;
+                max-width: 635px;
+            }
+            @include for-1600(){
+                font-size: 32px;
+                line-height: 46px;
+            }
+            b{
+                font-weight: 500;
+            }
+        }
+        p + p{
+            margin-top: 8px;
+            @include for-1366(){
+                margin-top: 12px;
+            }
+        }
+    }
+   
+}
+
+.deliveryPrice{
+    padding: 48px 0 40px;
+    @include for-1024(){
+        padding: 130px 0 144px;
+    }
+    &__title{
+        letter-spacing: .04em;
+        margin-bottom: 16px;
+        @include for-600(){
+            margin-bottom: 24px;
+        }
+        @include for-1024(){
+            margin-bottom: 32px;
+            letter-spacing: .04em;
+        }
+        @include for-1600(){
+            margin-bottom: 48px;
+        }
+    }
+    &__desc{
+        @include for-1024(){
+            padding: 0 8.3% 0 17%;
+            box-sizing: border-box;
+        }
+        p{
+            font-family: $DM;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 28px;
+
+            letter-spacing: 0.03em;
+        
+            color: #150F0F;
+            @include for-600(){
+                font-size: 20px;
+                line-height: 28px;
+            }
+            @include for-1024(){
+                line-height: 32px;
+            }
+            @include for-1366(){
+                font-size: 24px;
+                line-height: 36px;
+            }
+            @include for-1600(){
+                max-width: 800px;
+                font-size: 32px;
+                line-height: 46px;
+            }
+        }
+        p + p{
+            margin-top: 12px;
+            @include for-1024(){
+                margin-top: 16px;
+            }
+            @include for-1366(){
+                margin-top: 32px;
+            }
+        }
+    }
+    &__linkLabelNew{
+        margin-top: 12px;
+        width: 100%;
+        @include for-600(){
+          
+                max-width: 350px;
+                margin-top: 30px;
+        }
+        @include for-1024(){
+            margin-top: 44px;
+        }
+        @include for-1366(){
+            max-width: 375px;
+            margin-top: 60px;
+        }
+        @include for-1600(){
+            max-width: 500px;
+        }
+        a{
+            width: 100%;
+        }
+    }
 }
