@@ -52,7 +52,12 @@ window.addEventListener('load', function() {
         slidesPerView: "auto",
         spaceBetween: 16,
         // centeredSlides: true,
-       
+        breakpoints: {
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 32,
+          },
+        },
         
       });
 

@@ -209,6 +209,12 @@
             font-size: 104px;
          }
       }
+      &-110 {
+
+         @media screen and (min-width: 600px) {
+            font-size: 110px;
+         }
+      }
 
       &-114 {
 
@@ -494,7 +500,13 @@
             font-size: 64px;
          }
       }
+      
+      &-72 {
 
+         @media screen and (min-width: 1024px) {
+            font-size: 72px;
+         }
+      }
       &-80 {
 
          @media screen and (min-width: 1024px) {
