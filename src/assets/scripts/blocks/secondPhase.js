@@ -6,6 +6,20 @@ window.addEventListener('load', function() {
     var winw = window.innerWidth || e.clientWidth || g.clientWidth;
     var isTablet = winw < 1024;
     var isMobile = winw < 600;
+
+    let aosOffset;
+    if (!isTablet){
+      aosOffset = 200
+    } else{
+      aosOffset = 100
+    }
+    AOS.init({
+      offset:aosOffset,
+      duration: 800, // values from 0 to 3000, with step 50ms
+      easing: 'cubic-bezier(.5,0,0,1)', // default easing for AOS animations
+      once: true, // whether animation should happen only once - while scrolling down
+    });
+  
       // Initial calculation
       calculateVh();
       window.addEventListener('resize', calculateVh);
@@ -26,6 +40,32 @@ window.addEventListener('load', function() {
         }
       });
 
+
+      var tl = new TimelineMax();
+      let parallaxElem = $(".land-hero__picture img");
+      tl.to(parallaxElem, 1, { 
+        y: -200,
+        ease: "cubic-bezier(.5,0,0,1)" ,
+        scrollTrigger:{
+          trigger:parallaxElem,
+          scrub:true,
+          start:"top top"
+        }
+      });
+
+      var tl2 = new TimelineMax();
+      let  aboutprod__picture = $(".about-prod__picture img");
+      tl2.to(aboutprod__picture, 1, { 
+        y: -100,
+        ease: "cubic-bezier(.5,0,0,1)" ,
+        scrollTrigger:{
+          trigger:aboutprod__picture,
+          scrub:true,
+          start:"top top"
+        }
+      });
+
+     
       $('.accordeon').on('click', '.accordeonItem__head:not(.js-active)', function() {
         $(this).parent().addClass('js-active').siblings().removeClass('js-active')
         if (isTablet){
