@@ -124,7 +124,7 @@ window.addEventListener('load', function() {
        
         // height=product_prod_text_in.height();	
         // var count_rov=height/line_height;
-        $(".ReviewsItem__desc").each(function() {
+        $(".landReviews:not(.landReviews--hero) .ReviewsItem__desc").each(function() {
           if (isMobile){
             var textIn= $(this).find(".ReviewsItem__descContent").height();
             console.log(textIn)

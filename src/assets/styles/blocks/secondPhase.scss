@@ -1462,6 +1462,27 @@
 .landReviews{
     background: rgba(36,26,26,.9);
     padding: 40px 0;
+    &--hero{
+        // min-height: 100vh;
+        // display: flex;
+        // align-items: center;
+        // position: relative;
+        // overflow: hidden;
+        padding: 24px 0 16px;
+        @include for-600(){
+            padding: 24px 0;
+        }
+        .landReviews__pagination{
+            left: 15px;
+            bottom: 0;
+        }
+        .landReviews__slider{
+            padding-bottom: 24px;
+        }
+        .container{
+            width: 100%;
+        }
+    }
     @include for-1024(){
         padding: 32px 0;
     }
@@ -1487,6 +1508,8 @@
     &__slider{
         position: relative;
         margin: 0 -15px;
+        // min-width: 1px;
+        // width: 100%;
         @include for-1024(){
             margin: 0;
             margin: 0 auto;
@@ -1608,10 +1631,13 @@
     &__descContent{
         position: relative;
         overflow: hidden;
-        height: 100px;
-        @include for-600(){
-            height: auto;
+        &:not(.ReviewsItem__descContent--all){
+            height: 100px;
+            @include for-600(){
+                height: auto;
+            }
         }
+      
         &--full{
             &:after{
                 content: '';
@@ -3633,4 +3659,60 @@
             top: -57px;
     }
    
+}
+
+.allReviews{
+    padding: 40px 0;
+    &__title{
+        font-family: $TT;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        
+        /* txt/black */
+        
+        color: #150F0F;
+        margin-bottom: 16px;
+    }
+    &__row{
+        display: flex;
+        flex-wrap: wrap;
+        margin: -4px;
+    }
+    &__item-container{
+        width: 50%;
+        padding: 4px;
+        box-sizing: border-box;
+        @include for-600(){
+            width: 33.3%;
+        }
+        @include for-1024(){
+            width: 25%;
+        }
+    }
+    &Item{
+        padding: 9px 16px 16px;
+        box-sizing: border-box;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        &__logo{
+            padding: 0 13px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+        }
+        &__name{
+            margin-top: 16px;
+            font-family: $DM;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 0.05em;
+            color: #50575A;
+        }
+    }
 }
