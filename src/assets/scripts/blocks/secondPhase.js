@@ -7,18 +7,7 @@ window.addEventListener('load', function() {
     var isTablet = winw < 1024;
     var isMobile = winw < 600;
 
-    let aosOffset;
-    if (!isTablet){
-      aosOffset = 200
-    } else{
-      aosOffset = 100
-    }
-    AOS.init({
-      offset:aosOffset,
-      duration: 800, // values from 0 to 3000, with step 50ms
-      easing: 'cubic-bezier(.5,0,0,1)', // default easing for AOS animations
-      once: true, // whether animation should happen only once - while scrolling down
-    });
+  
   
       // Initial calculation
       calculateVh();
@@ -116,6 +105,25 @@ window.addEventListener('load', function() {
         
         
       });
+
+
+      const swiperTextPage = new Swiper(".text-page__slider", {
+        pagination: {
+          el: ".text-page__sliderPagination",
+          type: "fraction",
+         
+            renderFraction: function (currentClass, totalClass) {
+                return '<span class="' + currentClass + '"></span>' +
+                      ' из ' +
+                      '<span class="' + totalClass + '"></span>';
+            }
+        },
+        navigation: {
+          nextEl: ".text-page__arrow--next",
+          prevEl: ".text-page__arrow--prev",
+        },
+        
+      });
       function calcHeightReview(){
         // fore
         var line_height=20;
@@ -142,10 +150,21 @@ window.addEventListener('load', function() {
      
 
       
-
+      let aosOffset;
+      if (!isTablet){
+        aosOffset = 200
+      } else{
+        aosOffset = 100
+      }
+      AOS.init({
+        offset:aosOffset,
+        duration: 800, // values from 0 to 3000, with step 50ms
+        easing: 'cubic-bezier(.5,0,0,1)', // default easing for AOS animations
+        once: true, // whether animation should happen only once - while scrolling down
+      });
 
 
   
-
+      $(".text-page__content table").wrapAll("<div class='text-page__content-scroll'></div>");
       
 });
