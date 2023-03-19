@@ -4,6 +4,7 @@ window.addEventListener('load', function() {
         document.documentElement.style.setProperty('--vhSection', vhSection + 'px');
     }
     var winw = window.innerWidth || e.clientWidth || g.clientWidth;
+
     var isTablet = winw < 1024;
     var isMobile = winw < 600;
 
@@ -11,7 +12,7 @@ window.addEventListener('load', function() {
   
       // Initial calculation
       calculateVh();
-      window.addEventListener('resize', calculateVh);
+      // window.addEventListener('resize', calculateVh);
 
       var gsapWithCSS = gsap.registerPlugin(CSSPlugin) || gsap
       TweenMaxWithCSS = gsapWithCSS.core.Tween;
@@ -19,7 +20,7 @@ window.addEventListener('load', function() {
 
 
       TL.to(".advancher__title", {
-        backgroundPosition: "100% 80%",
+        backgroundPosition: "100% 100%",
         ease: "none",
         scrollTrigger: {
           trigger: ".advancher__title",
@@ -33,7 +34,7 @@ window.addEventListener('load', function() {
       var tl = new TimelineMax();
       let parallaxElem = $(".land-hero__picture img");
       tl.to(parallaxElem, 1, { 
-        y: -200,
+        y: -100,
         ease: "cubic-bezier(.5,0,0,1)" ,
         scrollTrigger:{
           trigger:parallaxElem,
@@ -41,20 +42,363 @@ window.addEventListener('load', function() {
           start:"top top"
         }
       });
+      var DocImg = new TimelineMax();
+      let parallaxElemDoc = $(".standarts__picture img");
+      DocImg.to(parallaxElemDoc, 1, { 
+        y: -100,
+        ease: "none" ,
+        scrollTrigger:{
+          trigger:parallaxElemDoc,
+          scrub:true,
+          start: "top bottom",
+          end: "bottom top",
+        }
+      });
 
-      var tl2 = new TimelineMax();
+      
+
+      let tl2 = new TimelineMax();
       let  aboutprod__picture = $(".about-prod__picture img");
+
+ 
       tl2.to(aboutprod__picture, 1, { 
         y: -100,
-        ease: "cubic-bezier(.5,0,0,1)" ,
+        ease: "none" ,
         scrollTrigger:{
           trigger:aboutprod__picture,
           scrub:true,
           start:"top top"
         }
       });
+      
+      
+    
+      ScrollTrigger.matchMedia({
+        "(min-width: 320px) and (max-width: 599px)": function minWidth320pxAndMaxWidth599px() {
+          var chainBig = new TimelineMax();
+          let chainBigElem = $(".numeral__picture");
+          chainBig.to(chainBigElem, 1, { 
+            y: "35%",
+            ease: "none" ,
+           
+            scrollTrigger:{
+              trigger:chainBigElem,
+              scrub:true,
+              start:"top center"
+            }
+          });
+         
+        },
 
+        "(min-width: 600px) and (max-width: 1023px)": function minWidth600pxAndMaxWidth1023px() {
+          var chainBig = new TimelineMax();
+          let chainBigElem = $(".numeral__picture");
+          chainBig.to(chainBigElem, 1, { 
+            y: "60%",
+            ease: "none" ,
+           
+            scrollTrigger:{
+              trigger:chainBigElem,
+              scrub:true,
+              start:"top center"
+            }
+          });
+         
+        },
+        "(min-width: 1024px) and (max-width: 1365px)": function minWidth1024pxAndMaxWidth1366px() {
+          var chainBig = new TimelineMax();
+          let chainBigElem = $(".numeral__picture");
+          chainBig.to(chainBigElem, 1, { 
+            y: "10%",
+            ease: "none" ,
+           
+            scrollTrigger:{
+              trigger:chainBigElem,
+              scrub:true,
+              start:"top center",
+              endTrigger:".landParallaxSections"
+              // end:"center bottom"
+            }
+          });
+         
+        },
+        "(min-width: 1365px) and (max-width:1599ox)": function minWidth1365pxAndMaxWidth1600px() {
+          var chainBig = new TimelineMax();
+          let chainBigElem = $(".numeral__picture");
+          chainBig.to(chainBigElem, 1, { 
+            y: "6%",
+            ease: "none" ,
+           
+            scrollTrigger:{
+              trigger:chainBigElem,
+              scrub:true,
+              start:"top center",
+              // endTrigger:".landParallaxSections"
+              // end:"center bottom"
+            }
+          });
+
+          
+         
+        },
+        "(min-width: 1600px)  and (max-width:1919x)": function minWidth1365pxAndMaxWidth1919px() {
+          var chainBig = new TimelineMax();
+          let chainBigElem = $(".numeral__picture");
+          chainBig.to(chainBigElem, 1, { 
+            y: "35%",
+            ease: "none" ,
+           
+            scrollTrigger:{
+              trigger:chainBigElem,
+              scrub:true,
+              start:"top center",
+              // endTrigger:".landParallaxSections"
+              // end:"center bottom"
+            }
+          });
+
+          
+         
+        },
+        "(min-width: 1920px)": function minWidth1365pxAndMaxWidth2565px() {
+          var chainBig = new TimelineMax();
+          let chainBigElem = $(".numeral__picture");
+          chainBig.to(chainBigElem, 1, { 
+            y: "55%",
+            ease: "none" ,
+           
+            scrollTrigger:{
+              trigger:chainBigElem,
+              scrub:true,
+              start:"top center",
+              // endTrigger:".landParallaxSections"
+              // end:"center bottom"
+            }
+          });
+
+          
+         
+        },
      
+      });
+
+
+      
+      let SectionLeftTitleLine = new TimelineMax();
+      let  SectionLeftTitle = $(".default-section__content--left .default-section__title");
+
+      SectionLeftTitleLine.to(SectionLeftTitle, 1, { 
+        y: -70,
+        ease: "none" ,
+        
+        scrollTrigger:{
+          trigger:SectionLeftTitle,
+         
+          scrub:true,
+          start:"top center",
+          end:"bottom"
+        }
+      });
+      let SectionLeftDescLine = new TimelineMax();
+      let  SectionLeftDesc = $(".default-section__content--left .default-section__desc");
+
+      SectionLeftDescLine.to(SectionLeftDesc, 1, { 
+        y: -70,
+        ease: "none" ,
+        
+        scrollTrigger:{
+          trigger:SectionLeftTitle,
+         
+          scrub:true,
+          start:"top center",
+        }
+      });
+      
+
+      let SectionRightTitleLine = new TimelineMax();
+      let  SectionRightTitle = $(".default-section__content--right .default-section__title");
+
+      SectionRightTitleLine.to(SectionRightTitle, 1, { 
+        y: -70,
+        ease: "none" ,
+        
+        scrollTrigger:{
+          trigger:SectionRightTitle,
+         
+          scrub:true,
+          start:"top center",
+          end:"bottom"
+        }
+      });
+
+
+      let SectionRightDescLine = new TimelineMax();
+      let  SectionRightDesc = $(".default-section__content--right .default-section__desc");
+
+      SectionRightDescLine.to(SectionRightDesc, 1, { 
+        y: -70,
+        ease: "none" ,
+        
+        scrollTrigger:{
+          trigger:SectionRightTitle,
+         
+          scrub:true,
+          start:"top center",
+          end:"bottom"
+        }
+      });
+
+      let SectionRightBtnLine = new TimelineMax();
+      let  SectionRightBtn = $(".default-section__content--right .default-section__linkLabelNew");
+
+      SectionRightBtnLine.to(SectionRightBtn, 1, { 
+        y: -70,
+        ease: "none" ,
+        
+        scrollTrigger:{
+          trigger:SectionRightTitle,
+         
+          scrub:true,
+          start:"top center",
+          end:"bottom"
+        }
+      });
+
+
+
+      
+      let BigChainLine = new TimelineMax();
+      let   BigChain = $(".landParallaxSections__image");
+
+      BigChainLine.to(BigChain, 1, { 
+        y: "-30%",
+        ease: "none" ,
+        
+        scrollTrigger:{
+          trigger:".landParallaxSections",
+          // markers:true,
+          scrub:true,
+          start:"top center",
+          endTrigger:".triggerEnd "
+        }
+      });
+
+      // BigChainLine.to(BigChain, 1, { 
+      //   y: "-70%",
+      //   ease: "none" ,
+        
+      //   scrollTrigger:{
+      //     trigger:".triggerStart",
+        
+      //     scrub:true,
+      //     start:"top",
+      //     endTrigger:".triggerEndSecond"
+      //   }
+      // });
+      // BigChainLine.to(BigChain, 1, { 
+      //   y: "-70%",
+      //   ease: "none" ,
+      //    immediateRender: false,
+      //   scrollTrigger:{
+       
+      //     trigger:".triggerStart",
+      //     markers:true,
+      //     scrub:true,
+      //     start:"top center",
+      //     endTrigger:".triggerEndSecond "
+      //   }
+      // });
+
+
+
+      BigChainLine.fromTo(BigChain, {
+        y: "-25%",
+      }, {
+        y: "-70%",
+        scrollTrigger: {
+          trigger:".triggerStart",
+          // markers:true,
+          scrub:true,
+          start:"top center",
+          endTrigger:".triggerEndSecond "
+        }
+      });
+
+ 
+      // BigChainLine.to(BigChain, 1, { 
+      //   y: "-100%",
+      //   ease: "none" ,
+        
+      //   scrollTrigger:{
+      //     trigger:".triggerEnd",
+      //     markers:true,
+      //     scrub:true,
+      //     start:"top center",
+      //     endTrigger:".triggerEndSecond"
+      //   }
+      // });
+      
+
+
+      // let SectionRightTitleLine = new TimelineMax();
+      // let  SectionRightTitle = $(".default-section__content--right .default-section__title");
+
+      // SectionRightTitleLine.to(SectionRightTitle, 1, { 
+      //   y: -50,
+      //   ease: "none" ,
+        
+      //   scrollTrigger:{
+      //     trigger:SectionRightTitleLine,
+      //    
+      //     scrub:true,
+      //     start:"top center",
+      //     end:"bottom"
+      //   }
+      // });
+      // let SectionRightDescLine = new TimelineMax();
+      // let  SectionRighttDesc = $(".default-section__content--right .default-section__desc");
+
+      // SectionRightDescLine.to(SectionRighttDesc, 1, { 
+      //   y: -50,
+      //   ease: "none" ,
+        
+      //   scrollTrigger:{
+      //     trigger:SectionRightTitleLine,
+      //    
+      //     scrub:true,
+      //     start:"top center",
+      //   }
+      // });
+
+      // let SectionRighttBtnLine = new TimelineMax();
+      // let  SectionRighttBtn = $(".default-section__content--right .default-section__linkLabelNew");
+
+      // SectionRighttBtnLine.to(SectionRighttBtn, 1, { 
+      //   y: -50,
+      //   ease: "none" ,
+        
+      //   scrollTrigger:{
+      //     trigger:SectionRightTitleLine,
+      //    
+      //     scrub:true,
+      //     start:"top center",
+      //   }
+      // });
+      
+    
+
+      function FixedFooter(){
+      
+          let footerHeight = $(".footerFix").outerHeight();
+         
+          // $(".footerFix").height(footerHeight)
+          $(".main").css("margin-bottom" , footerHeight + "px")
+         
+        }
+        FixedFooter();
+        window.addEventListener('resize', function() {
+          FixedFooter();
+        });
       $('.accordeon').on('click', '.accordeonItem__head:not(.js-active)', function() {
         $(this).parent().addClass('js-active').siblings().removeClass('js-active')
         if (isTablet){
@@ -163,8 +507,22 @@ window.addEventListener('load', function() {
         once: true, // whether animation should happen only once - while scrolling down
       });
 
-
-  
+      $(".allReviewsItem").click(function(){
+        $('#reviewModal').arcticmodal({
+          afterOpen: function (data, el) {
+                        $('body').css('overflow', 'hidden');
+                        $('.b-modal#reviewModal').addClass('is-active');
+                    },
+                    beforeClose: function (data, el) {
+                        setTimeout(() => {
+                            $('body').css('overflow', 'auto');
+                            $('.b-modal').removeClass('is-active');
+                        }, 100);
+                    },
+        });
+        console.log("qq")
+      })
+   
       $(".text-page__content table").wrapAll("<div class='text-page__content-scroll'></div>");
       
 });

@@ -7,7 +7,9 @@
 .ui {
 
     &-background {
-
+        &-brown{
+            background: #241A1A;
+        }
         &-black {
             
             &-100 {
@@ -81,7 +83,11 @@
         &-light {
             background: rgb(245, 245, 245);
         }
-
+        &-brown{
+            &-90{
+                background: rgba(36,26,26,.9);
+            }
+        }
         &-dark {
             background: #241a1ae6;
         }
