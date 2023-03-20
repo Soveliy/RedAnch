@@ -768,7 +768,7 @@ body {
         letter-spacing: -0.02em;
         text-transform: uppercase;
         background-position: 100%;
-        background-size: contain;
+        background-size: cover;
         padding-bottom: 10px;
         @include for-600(){
             font-size:148px;

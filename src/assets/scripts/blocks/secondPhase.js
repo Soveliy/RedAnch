@@ -20,12 +20,13 @@ window.addEventListener('load', function() {
 
 
       TL.to(".advancher__title", {
-        backgroundPosition: "100% 150%",
+        backgroundPosition: "100% 100%",
         ease: "none",
         scrollTrigger: {
+          // markers:true,
           trigger: ".advancher__title",
-          start: "top bottom",
-          end: "bottom top",
+          start: "top center",
+          end: "bottom center",
           scrub: true
         }
       });
