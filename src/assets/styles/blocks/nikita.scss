@@ -1925,11 +1925,11 @@ body{
     }
     &__yourOrderInfo{
         // width: 100%;
-        margin-left: 2px;
+        // margin-left: 2px;
         padding-right: 16px;
         @include for-1024(){
             width: auto;
-            margin-left: 4px;
+            // margin-left: 4px;
             padding-right: 0;
         }
     }
@@ -2362,10 +2362,20 @@ body{
             z-index: 8000;
             @include for-1024(){
                 height: 100%;
+                // width: calc(100% + 250px);
                 width: calc(100% + 250px);
                 left: -250px;
                 background-color: #110101;
             }
+            // @include for-1366(){
+            //     width: calc(100% + 462px);
+            // }
+            // @include for-1600(){
+            //     width: calc(100% + 515px);
+            // }
+            // @include for-1920(){
+            //     width: calc(100% + 543px);
+            // }
         }
         // @include for-1366(){
         //     font-size: 28px;

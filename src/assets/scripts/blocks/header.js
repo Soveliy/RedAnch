@@ -19,13 +19,13 @@ $(".header__productionButton").click(function(){
   })
   $(".header-top__burger").click(function(){
     $(this).toggleClass("js-active")
-    $(".header__dropdown,.header__defaulButton ").removeClass("js-active")
+    $(".header__dropdown,.header__defaulButton,.dropdown-menu").removeClass("js-active")
     $(".header").removeClass("js-no-opacity")
     $(".header-top").removeClass("isBigIndex")
     $(".header__search-form.search-form").removeClass("js-active");
     $(".search-form__input").focus();
     $("body").removeClass("js-hidden")
-
+    $(".main-menu__item--parent").removeClass("js-active")
     if (isMobile){
       // $(".search-form__input-container").hide();
       // $(".search-form__input").removeClass("js-active")
@@ -39,11 +39,12 @@ $(".header__productionButton").click(function(){
       $(".catalog-menu__main-list-item").removeClass("js-active");
   }
   $(".bgShadow").click(function(){
-    $(".header__productionButton,.catalog-menu,.search-form__input,.search-form__input-container,.search-form__button,.search-form__dropdown").removeClass("js-active")
+    $(".header__productionButton,.catalog-menu,.search-form__input,.search-form__input-container,.search-form__button,.search-form__dropdown,.dropdown-menu").removeClass("js-active")
     $(".bgShadow").hide(500)
     $(".search-form__input").blur()
     $(".search-form__input").val("")
     $("body").removeClass("js-hidden")
+    $(".main-menu__item--parent").removeClass("js-active")
 
   })
 
@@ -79,14 +80,20 @@ $(".header__productionButton").click(function(){
   
   document.addEventListener('keydown', function (e) {
     if(e.keyCode === 27){
-      $(".header__productionButton,.catalog-menu,.search-form__input,.search-form__input-container,.search-form__button,.search-form__dropdown").removeClass("js-active")
+      $(".header__productionButton,.catalog-menu,.search-form__input,.search-form__input-container,.search-form__button,.search-form__dropdown,.dropdown-menu").removeClass("js-active")
       $(".bgShadow").hide(500)
       $(".search-form__input").blur()
       $(".search-form__input").val("")
       $("body").removeClass("js-hidden")
+      $(".main-menu__item--parent").removeClass("js-active")
     }
 });
-  
+  $(".main-menu__item--parent a").click(function(e){
+    $(this).parent().toggleClass("js-active")
+    $(this).closest(".main-menu__item--parent").find(".bgShadow").toggle(500)
+    e.preventDefault()
+   $(this).next().toggleClass("js-active")
+  })
   $(function() {
     let dataItem;
     $('ul.catalog-menu__main-list').on('click', 'li:not(.js-active)', function() {

@@ -24,6 +24,8 @@ const cartFooterFixed = () => {
       elementFooter.style.marginBottom = footerForEmptyPage.offsetHeight + "px";
    }
 
+     
+
 };
 
 cartFooterFixed();

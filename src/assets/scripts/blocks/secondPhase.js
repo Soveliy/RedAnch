@@ -20,7 +20,7 @@ window.addEventListener('load', function() {
 
 
       TL.to(".advancher__title", {
-        backgroundPosition: "100% 100%",
+        backgroundPosition: "100% 150%",
         ease: "none",
         scrollTrigger: {
           trigger: ".advancher__title",
@@ -45,7 +45,7 @@ window.addEventListener('load', function() {
       var DocImg = new TimelineMax();
       let parallaxElemDoc = $(".standarts__picture img");
       DocImg.to(parallaxElemDoc, 1, { 
-        y: -100,
+        y: "-20%",
         ease: "none" ,
         scrollTrigger:{
           trigger:parallaxElemDoc,
@@ -62,12 +62,12 @@ window.addEventListener('load', function() {
 
  
       tl2.to(aboutprod__picture, 1, { 
-        y: -100,
+        y: "-20%",
         ease: "none" ,
         scrollTrigger:{
           trigger:aboutprod__picture,
           scrub:true,
-          start:"top top"
+          start:"top center"
         }
       });
       
@@ -282,37 +282,8 @@ window.addEventListener('load', function() {
           endTrigger:".triggerEnd "
         }
       });
-
-      // BigChainLine.to(BigChain, 1, { 
-      //   y: "-70%",
-      //   ease: "none" ,
-        
-      //   scrollTrigger:{
-      //     trigger:".triggerStart",
-        
-      //     scrub:true,
-      //     start:"top",
-      //     endTrigger:".triggerEndSecond"
-      //   }
-      // });
-      // BigChainLine.to(BigChain, 1, { 
-      //   y: "-70%",
-      //   ease: "none" ,
-      //    immediateRender: false,
-      //   scrollTrigger:{
-       
-      //     trigger:".triggerStart",
-      //     markers:true,
-      //     scrub:true,
-      //     start:"top center",
-      //     endTrigger:".triggerEndSecond "
-      //   }
-      // });
-
-
-
       BigChainLine.fromTo(BigChain, {
-        y: "-25%",
+        y: "-30%",
       }, {
         y: "-70%",
         scrollTrigger: {
@@ -400,7 +371,7 @@ window.addEventListener('load', function() {
           FixedFooter();
         });
       $('.accordeon').on('click', '.accordeonItem__head:not(.js-active)', function() {
-        $(this).parent().addClass('js-active').siblings().removeClass('js-active')
+        $(this).parent().toggleClass('js-active').siblings().removeClass('js-active')
         if (isTablet){
           
           $("body").addClass("js-hidden")
@@ -408,8 +379,8 @@ window.addEventListener('load', function() {
           $(this).parent().siblings().find(".accordeonItem__body").removeClass("js-active")
         } else {
         
-          $(this).parent().siblings().find(".accordeonItem__body").hide(800);
-          $(this).next().slideToggle(800);
+          $(this).parent().siblings().find(".accordeonItem__body").removeClass("isOpen");
+          $(this).next().toggleClass("isOpen");
          
         } 
       });
@@ -419,7 +390,25 @@ window.addEventListener('load', function() {
         $(".accordeonItem__body,.accordeonItem").removeClass("js-active")
       })
     
+      $(".search-examples__item").click(function(){
+        $(".search-element__input--new").val("")
+        $(".search-element__input--new").val($(this).text())
+      })
+      const cartFooterFixedNew = () => {
+        const footerForEmptyPage = document.querySelector('.empty-page__footer--js');
+      if (footerForEmptyPage){
+        let elementFooterNew = document.querySelector('.newFooter');
+        if(elementFooterNew){
+           elementFooterNew.style.marginBottom = footerForEmptyPage.offsetHeight + "px";
+        }
+        }
+      };
 
+      cartFooterFixedNew();
+      
+      window.addEventListener('resize', function(event){
+        cartFooterFixedNew();
+       });
     
       const swiperClients = new Swiper(".ourClients__slider", {
         slidesPerView: "auto",
@@ -486,6 +475,27 @@ window.addEventListener('load', function() {
             }
           }
         });
+
+
+        $(".ReviewsItem__showmore").click(function(){
+          let reviewText = $(this).closest(".ReviewsItem").find(".ReviewsItem__descContent").text()
+          showModal(reviewText)
+          console.log(reviewText)
+        })
+
+        function showModal(reviewText){
+          $(".ReviewsItem__modalContent").html(reviewText)
+          $(".ReviewsItem__modal").addClass("js-active")
+          $("body").addClass("js-hidden")
+       
+        }
+
+
+        $(".ReviewsItem__modalBg").click(function(){
+          $("body").removeClass("js-hidden")
+          $(".ReviewsItem__modal").removeClass("js-active")
+          $(".ReviewsItem__modalContent").html('')
+        })
       
        
        
@@ -522,7 +532,7 @@ window.addEventListener('load', function() {
         });
         console.log("qq")
       })
-   
+    
       $(".text-page__content table").wrapAll("<div class='text-page__content-scroll'></div>");
       
 });
