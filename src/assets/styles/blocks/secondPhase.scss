@@ -2066,6 +2066,7 @@ body {
         display: flex;
         align-items: center;
         margin-top: 16px;
+      
         @include for-600(){
             max-width: 50%;
             margin-top: 23px;
@@ -2084,6 +2085,15 @@ body {
         @include for-1600(){
             margin-top: 80px;
             margin-right: -20.7%;
+        }
+          &--db{
+            display: block;
+            @include for-600(){
+                max-width: 100%;
+            }
+            @include for-1024(){
+                text-align: right;
+            }
         }
         &Image{
             height: 48px;
@@ -2130,6 +2140,110 @@ body {
                 font-size: 36px;
                 line-height: 36px;
             }
+        }
+        &Name{
+            font-family: $TT;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 1;
+           
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #DD2B1C;
+            margin-bottom: 4px;
+            @include for-600(){
+                font-size: 40px;
+            }
+            @include for-1024(){
+                font-size: 32px;
+            }
+            @include for-1366(){
+                font-size: 36px;
+              
+            }
+            @include for-1600(){
+                letter-spacing: .05em;
+                font-size: 44px;
+            }
+        }
+        &Position{
+                font-family: $DM;
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 16px;
+                letter-spacing: 0.05em;
+                color: #FFFFFF;
+                display: block;
+                margin-bottom: 4px;
+                @include for-600(){
+                    display: inline;
+                    margin-bottom: 0;
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+                @include for-1024(){
+                    font-size: 16px;
+                    line-height: 20px;
+                       letter-spacing: .03em;
+                }
+                @include for-1366(){
+                    letter-spacing: .05em;
+                }
+                @include for-1600(){
+                    font-size: 24px;
+                    line-height: 28px;
+                    letter-spacing: .03em;
+                }
+        }
+        &Surname{
+            display: none;
+            @include for-1366(){
+                display: inline;
+            }
+            @include for-1600(){
+                display: none;
+            }
+        }
+        &Organization{
+            font-family: $DM;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 0.05em;
+            color: rgba(255, 255, 255, 0.6);
+
+            @include for-600(){
+                 font-size: 18px;
+                line-height: 22px;
+                position: relative;
+                margin-left: 4px;
+                padding-left: 12px;
+                letter-spacing: .03em;
+                &:before{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    height: 4px;
+                    width: 4px;
+                    background: rgba(79, 86, 89, 0.4);
+                    margin-top: -2px;
+                }
+            }
+             @include for-1024(){
+                    font-size: 16px;
+                    line-height: 20px;
+                       letter-spacing: .03em;
+                }
+                @include for-1366(){
+                    letter-spacing: .05em;
+                }
+                @include for-1600(){
+                    font-size: 24px;
+                    line-height: 28px;
+                    letter-spacing: .03em;
+                }
+
         }
     }
     &__showmore{
@@ -4384,6 +4498,9 @@ body {
         @include for-1024(){
             margin-bottom: 40px;
         }
+        @include for-1366(){
+            margin-bottom: 60px;
+        }
     }
     &__row{
         display: flex;
@@ -5531,5 +5648,72 @@ body {
 .main-menu__item--parent{
     @media (max-width:1024px){
         display: none;
+    }
+}
+.detailBottom__ButtonBox--w100{
+    @include for-1024(){
+        width: 100%;
+    }
+}
+
+.landReviews--hero{
+    @include for-1024(){
+        height: calc(100vh - 100px);
+        padding: 60px 0 64px;
+    }
+    @include for-1366(){
+        padding: 45px 0 64px;
+    }
+    .landReviews__head{
+       @include for-1024(){
+        margin-bottom: 70px;
+       }
+    }
+    .ReviewsItem__quotes{
+        @include for-1024(){
+            width: 68px;
+            height: 80px;
+        }
+        @include for-1366(){
+            height: 108px;
+            width: 92px;
+        }
+    }
+    .ReviewsItem{
+        @include for-1024(){
+            padding: 0 14%;
+        }
+        @include for-1366(){
+            padding: 0 12%;
+        }
+    }
+    .ReviewsItem__desc{
+        @include for-1024(){
+            padding: 0 30px 0 25px;
+        }
+        @include for-1366(){
+            padding: 0 30px 0 70px;
+        }
+    }
+    .ReviewsItem__author{
+        @include for-1024(){
+          
+            margin-top: 54px;
+            margin-left: auto;
+            margin-right: 32px;
+        }
+        @include for-1366(){
+                
+            margin-top: 64px;
+          
+            margin-right: 64px;
+
+        }
+    }
+    .landReviews__pagination{
+        @include for-1024(){
+            left: 15%;
+            bottom: 10px;
+        }
     }
 }
