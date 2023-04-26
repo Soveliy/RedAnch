@@ -5717,3 +5717,17 @@ body {
         }
     }
 }
+
+.header--light .main-menu__link svg{
+    fill: #150f0f;
+}
+.header--light .dropdown-menu__list{
+    background-color: #f5f5f5;
+}
+.header--light .dropdown-menu__link{
+    color: #150f0f;
+}
+.header--light .dropdown-menu__link:hover{
+    color: #dd2b1c;
+}
+

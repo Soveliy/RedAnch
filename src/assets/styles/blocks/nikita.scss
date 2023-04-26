@@ -1478,15 +1478,30 @@ body{
     z-index: 700;
                 height: 100vh;
               
-                opacity: 0;
+                opacity: 1;
 }
 
-@for $i from 1 to 1000 {
+@for $i from 1 to 400 {
     $side: $i;
     .c-manager.frame_#{$side}{
         .img_#{$side}{
             opacity: 1;
-            z-index: #{$side};
+                @media (max-width:1023px){
+             
+                }
+       
+        }
+    }
+
+  }
+
+
+  @for $i from 1 to 800 {
+    $side: $i;
+    .c-manager.frame_#{$side}{
+        .img_#{$side}{
+            opacity: 1;
+            z-index: 600;
                 @media (max-width:1023px){
              
                 }
