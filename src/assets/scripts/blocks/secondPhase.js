@@ -377,6 +377,9 @@ window.addEventListener('load', function() {
           
           $("body").addClass("js-hidden")
           $(this).next().addClass("js-active")
+          let targetElement = $(this).parent().siblings().find(".accordeonItem__body")
+          console.log(targetElement)
+          bodyScrollLock.disableBodyScroll(targetElement);
           $(this).parent().siblings().find(".accordeonItem__body").removeClass("js-active")
         } else {
         
@@ -388,7 +391,9 @@ window.addEventListener('load', function() {
 
       $(".accordeonItem__bg").click(function(){
         $("body").removeClass("js-hidden")
+        bodyScrollLock.clearAllBodyScrollLocks();
         $(".accordeonItem__body,.accordeonItem").removeClass("js-active")
+        $(this).parent().siblings().find(".accordeonItem__body")
       })
     
       $(".search-examples__item").click(function(){

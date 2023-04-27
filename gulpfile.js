@@ -120,10 +120,10 @@ const images = () => {
     return gulp.src([
         srcFolder + '/assets/images/**/*.{jpeg,jpg,png,gif,svg}',
     ])
-    .pipe(gulpImagemin({
-        progressive: true,
-        optimizationLevel: 3,
-    }))
+    // .pipe(gulpImagemin({
+    //     progressive: true,
+    //     optimizationLevel: 3,
+    // }))
     .pipe(gulp.dest(distFolder + '/assets/images/'))
     .pipe(browserSync.stream());
 };
