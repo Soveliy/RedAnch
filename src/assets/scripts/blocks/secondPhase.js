@@ -24,13 +24,26 @@ window.addEventListener('load', function() {
         ease: "none",
         scrollTrigger: {
           // markers:true,
-          trigger: ".advancher__title",
-          start: "top center",
-          end: "bottom center",
+          trigger: ".advancher",
+          start: "top center+=300px",
+          end: "bottom center-=300px",
           scrub: true
         }
       });
 
+
+      
+      TL.to(".constructor__picture", {
+        top: "100px",
+        ease: "none",
+        scrollTrigger: {
+          // markers:true,
+          trigger: ".constructor",
+          start: "top center+=300px",
+          end: "bottom center-=300px",
+          scrub: true
+        }
+      });
 
       var tl = new TimelineMax();
       let parallaxElem = $(".land-hero__picture img");
@@ -110,7 +123,7 @@ window.addEventListener('load', function() {
           var chainBig = new TimelineMax();
           let chainBigElem = $(".numeral__picture");
           chainBig.to(chainBigElem, 1, { 
-            y: "10%",
+            y: "15%",
             ease: "none" ,
            
             scrollTrigger:{
@@ -127,7 +140,7 @@ window.addEventListener('load', function() {
           var chainBig = new TimelineMax();
           let chainBigElem = $(".numeral__picture");
           chainBig.to(chainBigElem, 1, { 
-            y: "6%",
+            y: "10%",
             ease: "none" ,
            
             scrollTrigger:{
@@ -146,7 +159,7 @@ window.addEventListener('load', function() {
           var chainBig = new TimelineMax();
           let chainBigElem = $(".numeral__picture");
           chainBig.to(chainBigElem, 1, { 
-            y: "35%",
+            y: "40%",
             ease: "none" ,
            
             scrollTrigger:{
@@ -165,7 +178,7 @@ window.addEventListener('load', function() {
           var chainBig = new TimelineMax();
           let chainBigElem = $(".numeral__picture");
           chainBig.to(chainBigElem, 1, { 
-            y: "55%",
+            y: "60%",
             ease: "none" ,
            
             scrollTrigger:{
@@ -272,29 +285,30 @@ window.addEventListener('load', function() {
       let   BigChain = $(".landParallaxSections__image");
 
       BigChainLine.to(BigChain, 1, { 
-        y: "-30%",
+        y: "-65%",
         ease: "none" ,
         
         scrollTrigger:{
-          trigger:".landParallaxSections",
+          trigger:".landParallaxSections .container",
           // markers:true,
           scrub:true,
           start:"top center",
-          endTrigger:".triggerEnd "
-        }
-      });
-      BigChainLine.fromTo(BigChain, {
-        y: "-30%",
-      }, {
-        y: "-70%",
-        scrollTrigger: {
-          trigger:".triggerStart",
-          // markers:true,
-          scrub:true,
-          start:"top center",
+          end:"bottom+=300",
           endTrigger:".triggerEndSecond "
         }
       });
+      // BigChainLine.fromTo(BigChain, {
+      //   y: "-30%",
+      // }, {
+      //   y: "-70%",
+      //   scrollTrigger: {
+      //     trigger:".triggerStart",
+      //     // markers:true,
+      //     scrub:true,
+      //     start:"top center",
+      //     endTrigger:".triggerEndSecond "
+      //   }
+      // });
 
  
       // BigChainLine.to(BigChain, 1, { 
@@ -539,6 +553,6 @@ window.addEventListener('load', function() {
         console.log("qq")
       })
     
-      $(".text-page__content table").wrapAll("<div class='text-page__content-scroll'></div>");
+      $(".text-page__content table").wrapAll("<div class='text-page__content-wrap'><div class='text-page__content-scroll'></div></div>");
       
 });

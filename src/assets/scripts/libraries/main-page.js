@@ -52,8 +52,8 @@ var Animations = function() {
     target: '#mobile-wrap',
     target_2: '.partners',
     count: 10,
-    src: './assets/images/mobile_anch2/',
-    // src: '/local/templates/.default/frontend/dist/assets/images/mobile_anch2/',
+    // src: './assets/images/mobile_anch2/',
+    src: '/local/templates/.default/frontend/dist/assets/images/mobile_anch2/',
     type: '.webp',
     wrap: document.querySelector('#mobile-anchor'),
     // canvas: document.querySelector('#section_5_canvas'),
@@ -73,10 +73,11 @@ var Animations = function() {
       if (isRetina){
         anchorRight.to(anchorRightElem, 1, { x: "35%", ease: "cubic-bezier(.5,0,0,1)", 
         scrollTrigger: {
-          trigger: anchorRightElem,
+          trigger: ".hero",
           start:"top",
           end:"+=600",
           scrub: true,
+  
         
 
         
@@ -86,11 +87,11 @@ var Animations = function() {
       } else {
         anchorRight.to(anchorRightElem, 1, { x: "28%", ease: "cubic-bezier(.5,0,0,1)",
         scrollTrigger: {
-          trigger: anchorRightElem,
+          trigger: ".hero",
           start:"top",
           end:"+=600",
           scrub: true,
-     
+ 
 
         
         }
@@ -476,12 +477,10 @@ if ($("body").hasClass("main-page")){
     // console.log("qq")
     var userAgent = navigator.userAgent.toLowerCase();
 	
-    var Mozila = /firefox/.test(userAgent);
+    // var Mozila = /firefox/.test(userAgent);
     var Chrome = /chrome/.test(userAgent);
     var Safari = /safari/.test(userAgent); 
-    if (Mozila){
-      console.log("mozila")
-    }
+
     controllerAnch = new ScrollMagic.Controller();
     var duration_scene_5 = $(scene_5.target).outerHeight() + $(scene_5.target_2).outerHeight() - $(scene_5.wrap).outerHeight();
     var offset_scene_5 = duration_scene_5 / scene_5.count;
@@ -581,7 +580,13 @@ if ($("body").hasClass("main-page")){
     
     // Initial calculation
     calculateVh();
+    function calculateVhSec() {
+      var vhSec = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vhsec', vhSec + 'px');
+    }
     
+    // Initial calculation
+    calculateVhSec();
     // Re-calculate on resize
     window.addEventListener('resize', calculateVh);
     
@@ -606,6 +611,7 @@ if ($("body").hasClass("main-page")){
       scrollTrigger:{
         trigger:parallaxElem,
         scrub:true,
+        // markers:true
       }
     });
 
@@ -679,12 +685,12 @@ if ($("body").hasClass("main-page")){
         let mobile_anchLast= new TimelineMax();
         let lastAnchMob = $("#mobile-anchor .img_10 img");
     
-        mobile_anchLast.to(lastAnchMob, 1, { y: "-69%",
+        mobile_anchLast.to(lastAnchMob, 1, { y: "-75%",
           scrollTrigger:{
             trigger:".partners__title",
             scrub:true,
             start:'-=300',
-            end:"+=750",
+            end:"+=900",
             ease: "none",
             // markers:true,
             onLeave: () => $("body").addClass('sequantion-end'),
@@ -883,11 +889,98 @@ if ($("body").hasClass("main-page")){
   
       FixedFooter();
       
+  
+      // we'd only like to use iScroll for mobile...
+      if (isMobile) {
+        // configure iScroll
+   
+      //   var myScroll = new IScroll('.content-wrapper__scroll',
+      //   {
+      //     // don't scroll horizontal
+      //     scrollX: false,
+      //     // but do scroll vertical
+      //     scrollY: true,
+      //     // show scrollbars
+      //     scrollbars: true,
+      //     // deactivating -webkit-transform because pin wouldn't work because of a webkit bug: https://code.google.com/p/chromium/issues/detail?id=20574
+      //     // if you dont use pinning, keep "useTransform" set to true, as it is far better in terms of performance.
+      //     useTransform: false,
+      //     // deativate css-transition to force requestAnimationFrame (implicit with probeType 3)
+      //     useTransition: false,
+      //     // set to highest probing level to get scroll events even during momentum and bounce
+      //     // requires inclusion of iscroll-probe.js
+      //     probeType: 3,
+      //     // pass through clicks inside scroll container
+      //     click: true,
+      //     // HWCompositing:false,
+      //     // bounce:false,
+      //     // momentum:false,
+      //     deceleration:0.00125,
+      //     // deceleration:0001,
+      //     // bounceTime:1000
+
+      //     bindToWrapper:true,
+      //   }
+      // );
+  
+  // overwrite scroll position calculation to use child's offset instead of container's scrollTop();
+      // controller.scrollPos(function () {
+      //   return -myScroll.y;
+        
+      // });
+
+
+    // thanks to iScroll 5 we now have a real onScroll event (with some performance drawbacks)
+      // myScroll.on("scroll", function () {
+      //   controller.update(true);
+      // });
+      
+        // add indicators to scrollcontent so they will be moved with it.
+        
+      }
+
       if (!isTablet){
         new ScrollMagic.Scene({triggerElement: "#categoriesMain",offset:0, triggerHook: 0,})
           .setClassToggle("body", "sequantion-end") // add class toggle
           .addTo(controller);
+        // new ScrollMagic.Scene({triggerElement: ".aboutUs",offset:0, triggerHook: 0,})
+        //   .setClassToggle(".aboutUs", "aboutUs-end") // add class toggle
+        //   .addTo(controller);
+
+        ScrollTrigger.create({
+          trigger: ".hero",
+          start: "top",
+          end: "+=1000",
+          onLeave: () => $(".hero").addClass("second-step")
+        });
+
+        ScrollTrigger.create({
+          trigger: ".hero",
+          start: "top",
+          end: "+=2000",
+          onLeave: () => $(".hero").addClass("third-step")
+        });
+
+
+              //  Вариант с пином элементов
+      let st = ScrollTrigger.create({
+        trigger: ".categoriesMain",
+        pin: ".categoriesMain__how-link",
+        start: "top center",
+        end: "bottom"
+      });
+        
       }
+
+      // let cstHeight = $("#section_5").outerHeight()
+      // new ScrollMagic.Scene({triggerElement: "#mobile-wrap",
+      // triggerHook: .5,})
+      // // .setClassToggle("#section_5", "pinned") // add class toggle
+     
+      // .setClassToggle("body", "pinnedTest") // add class toggle
+      // .addTo(controller);
+     
+      
 
       
     });
@@ -898,9 +991,11 @@ if ($("body").hasClass("main-page")){
     $( ".partners__item" ).mousemove(function(event) {
       $(this).siblings().addClass("isBigIndex")
       var target = this.getBoundingClientRect();
-      var x = event.clientX - target.left;
-      var y = event.clientY - target.top;
-      let pointerElem = $(this).find(".partners__item-picture") ;
+      // var x = event.clientX - target.left;
+      // var y = event.clientY - target.top;
+      var x = event.clientX ;
+      var y = event.clientY;
+      let pointerElem = $(".partners__item-picture") ;
      setTimeout(() => {
       $(pointerElem).css("left", x + "px").css("top", y +  'px')
      }, 200);
@@ -949,12 +1044,6 @@ if ($("body").hasClass("main-page")){
 };
 
 Animations();
-
-
-
-$(".print").click(function(e){
-window.print()
-})
 
 
 

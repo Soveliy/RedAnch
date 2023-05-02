@@ -32,10 +32,15 @@
                 }, 300);
                
             document.addEventListener("DOMContentLoaded", function(event) {
-                       let vh = window.innerHeight * 0.01;
+                       setTimeout(() => {
+                           let vh = window.innerHeight * 0.01;
                        document.documentElement.style.setProperty('--vh', `${vh}px`);
-                       
+                       }, 100);
+                    
+                           
+                    
                        const mediaFiles = document.querySelectorAll('img, video');
+                       console.log(mediaFiles)
                        let elemsLoaded = 0
                    
                        let defaultImageCount = 1;
@@ -101,18 +106,21 @@
    
                        } else{
                        
-            
-                           Array.from(mediaFiles).forEach((file, index) => {
+                       
+                           // Array.from(mediaFiles).forEach((file, index) => {
                               
-                               file.onload = () => {
-                               elemsLoaded++
+                               // file.onload = () => {
+                               // elemsLoaded++
+                               // console.log(file)
+                               // console.log(elemsLoaded++)
    
                                  
                                if(elemsLoaded === 10) {
                                   
                                }
-                               if(elemsLoaded === 25) {
-                                   preloader.to("#theGradientWhiteNew stop", 0.6, {
+                              
+                              setTimeout(() => {
+                               preloader.to("#theGradientWhiteNew stop", 0.6, {
                                    attr: { offset: "0%" },
                                    repeat: false,
                                    yoyo: true,
@@ -126,8 +134,10 @@
                                    repeatDelay: 0.5,
                                    ease: "cubic-bezier(.5,0,0,1)"
                                    },"=-0.3");
-                               }
-                               if(elemsLoaded === 40) {
+                                   console.log("test")
+                              }, 1000);
+                               // if(elemsLoaded === 50) {
+                                  setTimeout(() => {
                                    preloader.to("#theGradientRedNew stop", 0.6, {
                                    attr: { offset: "0%" },
                                    repeat: false,
@@ -147,11 +157,13 @@
                                            }
                                        },"=-0.3");
                                  
+                                  }, 2000);
                                    
-                                   }
-                                   if(elemsLoaded === 60) {
+                                   // }
+                                   // if(elemsLoaded === 60) {
                                    
                                     
+                                       setTimeout(() => {
                                            preloader.to("#theGradientWhiteTopNew stop", 0.6, {
                                            attr: { offset: "0%" },
                                            repeat: false,
@@ -161,19 +173,19 @@
                                            onComplete: function() {
                                            pageBody.classList.add("mainAnimatedClass");
                                            }
-                                       },"=-0.3");
-                                       preloader.from( heroTitle, .8, {
-                                           delay: 1,
-                                           ease:"cubic-bezier(.5,0,0,1)",
-                                           y: '100',
-                                           opacity:0,
-                                       } );
-                                       preloader.from( heroDesc, .8, {
-                                           delay: 1,
-                                           ease:"cubic-bezier(.5,0,0,1)",
-                                           y: '100',
-                                           opacity:0,
-                                       }, "=-2");
+                                           },"=-0.3");
+                                           preloader.from( heroTitle, .8, {
+                                               delay: 1,
+                                               ease:"cubic-bezier(.5,0,0,1)",
+                                               y: '100',
+                                               opacity:0,
+                                           } );
+                                           preloader.from( heroDesc, .8, {
+                                               delay: 1,
+                                               ease:"cubic-bezier(.5,0,0,1)",
+                                               y: '100',
+                                               opacity:0,
+                                           }, "=-2");
                                        // preloader.from( $('.hero__linkLabel'), .8, {
                                        //   delay: 1,
                                        //   ease:"cubic-bezier(.5,0,0,1)",
@@ -188,7 +200,7 @@
                                                y: '0',
                                                opacity:1,
                                            }, "=-2")
-                                       
+                                           
                                        
                                         
                                             setTimeout(() => {
@@ -204,17 +216,21 @@
                                                    }
                                             }, 800);
                                                   
+                                       }, 3000);
                                        
                                       
                                    
-                                       }
+                                       // }
                                
                                    
                            
-                           }
+                           // }
                          
-                       })
+                       // })
+                               
+                                   
                        }
+               
                    });
                // }, 1000);
                      
