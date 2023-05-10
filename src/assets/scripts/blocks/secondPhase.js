@@ -5,7 +5,7 @@ window.addEventListener('load', function() {
     }
     var winw = window.innerWidth || e.clientWidth || g.clientWidth;
 
-    var isTablet = winw < 1024;
+    var isTablet = winw < 1025;
     var isMobile = winw < 600;
 
   
@@ -32,18 +32,7 @@ window.addEventListener('load', function() {
       });
 
 
-      
-      TL.to(".constructor__picture", {
-        top: "100px",
-        ease: "none",
-        scrollTrigger: {
-          // markers:true,
-          trigger: ".constructor",
-          start: "top center+=300px",
-          end: "bottom center-=300px",
-          scrub: true
-        }
-      });
+   
 
       var tl = new TimelineMax();
       let parallaxElem = $(".land-hero__picture img");
@@ -88,7 +77,7 @@ window.addEventListener('load', function() {
       
     
       ScrollTrigger.matchMedia({
-        "(min-width: 320px) and (max-width: 599px)": function minWidth320pxAndMaxWidth599px() {
+        "(min-width: 320px) and (max-width: 568px)": function minWidth320pxAndMaxWidth599px() {
           var chainBig = new TimelineMax();
           let chainBigElem = $(".numeral__picture");
           chainBig.to(chainBigElem, 1, { 
@@ -101,10 +90,24 @@ window.addEventListener('load', function() {
               start:"top center"
             }
           });
+
+
+             
+          TL.to(".constructor__picture", {
+            top: "100px",
+            ease: "none",
+            scrollTrigger: {
+              // markers:true,
+              trigger: ".constructor",
+              start: "top center+=300px",
+              end: "bottom center-=300px",
+              scrub: true
+            }
+          });
          
         },
 
-        "(min-width: 600px) and (max-width: 1023px)": function minWidth600pxAndMaxWidth1023px() {
+        "(min-width: 568px) and (max-width: 1023px)": function minWidth600pxAndMaxWidth1023px() {
           var chainBig = new TimelineMax();
           let chainBigElem = $(".numeral__picture");
           chainBig.to(chainBigElem, 1, { 
@@ -117,13 +120,26 @@ window.addEventListener('load', function() {
               start:"top center"
             }
           });
+
+             
+          TL.to(".constructor__picture", {
+            top: "-100px",
+            ease: "none",
+            scrollTrigger: {
+              // markers:true,
+              trigger: ".constructor",
+              start: "top center+=300px",
+              end: "bottom center-=300px",
+              scrub: true
+            }
+          });
          
         },
         "(min-width: 1024px) and (max-width: 1365px)": function minWidth1024pxAndMaxWidth1366px() {
           var chainBig = new TimelineMax();
           let chainBigElem = $(".numeral__picture");
           chainBig.to(chainBigElem, 1, { 
-            y: "15%",
+            y: "35%",
             ease: "none" ,
            
             scrollTrigger:{
@@ -134,13 +150,24 @@ window.addEventListener('load', function() {
               // end:"center bottom"
             }
           });
+          TL.to(".constructor__picture", {
+            top: "100px",
+            ease: "none",
+            scrollTrigger: {
+              // markers:true,
+              trigger: ".constructor",
+              start: "top center+=300px",
+              end: "bottom center-=300px",
+              scrub: true
+            }
+          });
          
         },
-        "(min-width: 1365px) and (max-width:1599ox)": function minWidth1365pxAndMaxWidth1600px() {
+        "(min-width: 1365px) and (max-width:1599px)": function minWidth1365pxAndMaxWidth1600px() {
           var chainBig = new TimelineMax();
           let chainBigElem = $(".numeral__picture");
           chainBig.to(chainBigElem, 1, { 
-            y: "10%",
+            y: "50%",
             ease: "none" ,
            
             scrollTrigger:{
@@ -149,6 +176,17 @@ window.addEventListener('load', function() {
               start:"top center",
               // endTrigger:".landParallaxSections"
               // end:"center bottom"
+            }
+          });
+          TL.to(".constructor__picture", {
+            top: "100px",
+            ease: "none",
+            scrollTrigger: {
+              // markers:true,
+              trigger: ".constructor",
+              start: "top center+=300px",
+              end: "bottom center-=300px",
+              scrub: true
             }
           });
 
@@ -170,6 +208,18 @@ window.addEventListener('load', function() {
               // end:"center bottom"
             }
           });
+          TL.to(".constructor__picture", {
+            top: "150px",
+            ease: "none",
+            scrollTrigger: {
+              // markers:true,
+              trigger: ".constructor",
+              start: "top center+=300px",
+              end: "bottom center-=300px",
+              scrub: true
+            }
+          });
+
 
           
          
@@ -189,6 +239,19 @@ window.addEventListener('load', function() {
               // end:"center bottom"
             }
           });
+
+          TL.to(".constructor__picture", {
+            top: "150px",
+            ease: "none",
+            scrollTrigger: {
+              // markers:true,
+              trigger: ".constructor",
+              start: "top center+=300px",
+              end: "bottom center-=300px",
+              scrub: true
+            }
+          });
+
 
           
          
@@ -550,7 +613,7 @@ window.addEventListener('load', function() {
                         }, 100);
                     },
         });
-        console.log("qq")
+       
       })
     
       $(".text-page__content table").wrapAll("<div class='text-page__content-wrap'><div class='text-page__content-scroll'></div></div>");

@@ -121,7 +121,7 @@ body {
         }
         
         &--end-mob{
-            justify-content: flex-end;
+            justify-content:center;
             gap: 8px;
             @include for-1024(){
                 padding-bottom: 112px;
@@ -182,7 +182,36 @@ body {
            
         }
     }
-   
+    &--gradiend-new{
+       
+        .land-hero__picture{
+            &:before{
+                height: 100px;
+                bottom: 0;
+                @include for-1024(){
+                    height: 18%;
+                }
+                @include for-1366(){
+                    height: 72%;
+                }
+                @include for-1600(){
+                    height: 65%;
+                }
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                left: 0;
+                height: 100%;
+                top: 0;
+                background: linear-gradient(270deg, rgba(17,1,1,0) 0%, rgba(17,1,1,1) 100%);
+                opacity: 0.6;
+             
+                width: 65%;
+
+            }
+        }
+    }
     &__picture{
         position: absolute;
         top: 0;
@@ -468,7 +497,7 @@ body {
             height:calc(100% + 2px);
             width: 100%;
             // background: linear-gradient(180deg, rgba(17, 1, 1, 0) 0%, #110101 100%);
-            background: linear-gradient(180deg, rgba(17,1,1,1) 0%, rgba(255,255,255,0) 50%, rgba(17,1,1,1) 100%);
+            background: linear-gradient(180deg, rgba(17,1,1,1) 0%, rgba(255,255,255,0) 0%, rgba(17,1,1,1) 100%);
             transform: matrix(1, 0, 0, -1, 0, 0);
         }
         &:after{
@@ -511,6 +540,16 @@ body {
             width: 100%;
             background: linear-gradient(180deg, rgba(17, 1, 1, 0) 0%, #110101 100%);
             // transform: matrix(1, 0, 0, -1, 0, 0);
+        }
+        &:before{
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            margin-top: -2px;
+            bottom: -100vh;
+            height: 100vh;
+            background-color: #110101;
         }
     }
     &__desc{
@@ -760,7 +799,8 @@ body {
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
-        font-size: 84px;
+        // font-size: 84px;
+        font-size: 34.1vw;
         line-height: 70%;
         font-family: $TT;
         font-weight: 700;
@@ -769,8 +809,10 @@ body {
         background-position: 100%;
         background-size: cover;
         padding-bottom: 10px;
+        
         @include for-600(){
-            font-size:148px;
+            // font-size:148px;
+            font-size: 30.6vw;
             letter-spacing: 0.03em;
             
         }
@@ -831,19 +873,27 @@ body {
 }
 .constructor{
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
     background: rgba(36, 26, 26, 0.9);
     padding: 40px 0;
     z-index: 100;
+    min-height: 616px;
     @include for-600(){
         padding: 40px 0 134px;
+        min-height: 639px;
     }
     @include for-1024(){
         padding: 0;
+        min-height: 717px;
         // overflow-x: hidden;
-        overflow: visible;
+        // overflow: visible;
     }
-
+    @include for-1366(){
+        min-height: 1012px;
+    }
+    @include for-1600(){
+        min-height: auto;
+    }
     &__title{
         font-family: $TT;
         font-weight: 700;
@@ -895,14 +945,20 @@ body {
             margin-left: -9%;
         }
         img{
+            max-width: 270px;
+
             @media (max-width:1024px){
-                width: 80%;
-                max-height: 500px;
+                // width: 80%;
+                // max-height: 500px;
             }
-            max-height: 500px;
+
             @include for-600(){
                 width: 100%;
+                max-width: 436px;
                 max-height: inherit;
+            }
+            @include for-1024(){
+                max-width: 100%;
             }
             // @include for-1024(){
               
@@ -943,7 +999,12 @@ body {
 
 .accordeonItem{
     padding-bottom: 10px;
-    border-bottom: 1px solid rgba(#fff, .6);
+    &:not(:last-child){
+        border-bottom: 1px solid rgba(#fff, .1);
+        @include for-1024(){
+            border-bottom: 2px solid rgba(#fff, .1);
+        }
+    }
     &.aos-animate[data-aos^=fade][data-aos^=fade]{
         transform: none !important;
     }
@@ -1006,18 +1067,25 @@ body {
             z-index: 500;
         }
         @include for-1024(){
-            opacity: 0;
-            visibility: visible;
-            position: relative;
-            height: auto;
-            width: auto;
-            padding: 0;
-            height: 0;
-            top: inherit;
-            left: inherit;
-            overflow: hidden;
-            height: 0;
+            // opacity: 0;
+            // visibility: visible;
+            // position: relative;
+            // height: auto;
+            // width: auto;
+            // padding: 0;
+            // height: 0;
+            // top: inherit;
+            // left: inherit;
+            // overflow: hidden;
+            // height: 0;
             // margin-top: -20px;
+            position: static;
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+            display: none;
+            height: auto;
+            width: 100%;
             &.isOpen{
                 // overflow: visible;
                 // height: auto;
@@ -1056,7 +1124,7 @@ body {
         font-size: 16px;
         line-height: 20px;
         /* or 125% */
-        text-transform: uppercase;
+      
         letter-spacing: 0.03em;
         @include for-600(){
             font-size: 18px;
@@ -1067,6 +1135,7 @@ body {
             font-size: 32px;
             line-height: 1;
             font-family: $TT;
+            text-transform: uppercase;
         }
         @include for-1366(){
             font-size: 36px;
@@ -1214,7 +1283,9 @@ body {
         font-family: $TT;
         font-weight: 700;
         letter-spacing: 0.03em;
-        text-transform: uppercase;
+        @include for-1024(){
+            text-transform: uppercase;
+        }
     }
     &__row{
         @include for-1024(){
@@ -1670,8 +1741,8 @@ body {
             max-width: 53%;
         }
         @include for-1024(){
-            // position: static;
-            width: 58%;
+            position: static;
+            width: 50%;
             max-width: 100%;
             margin-right: -13%;
         }
@@ -1833,9 +1904,9 @@ body {
                 &:hover{
                     cursor: url(../images/sldierLeft.svg), auto;
                    }
-                   &.swiper-button-disabled:hover{
-                    cursor: url(../images/sldierLeftDisabled.svg), auto;
-                   }
+                //    &.swiper-button-disabled:hover{
+                //     cursor: url(../images/sldierLeftDisabled.svg), auto;
+                //    }
                 // svg{
                 //     margin-left: -151px;
                 // }
@@ -1850,9 +1921,9 @@ body {
                 &:hover{
                     cursor: url(../images/sliderRight.svg), auto;
                    }
-                   &.swiper-button-disabled:hover{
-                    cursor: url(../images/sliderRightDisabled.svg), auto;
-                   }
+                //    &.swiper-button-disabled:hover{
+                //     cursor: url(../images/sliderRightDisabled.svg), auto;
+                //    }
                 svg{
                     opacity: 0;
                     margin-left: 151px;
@@ -2560,15 +2631,17 @@ body {
         }
     }
     &--new{
-        padding: 24px 0;
+        padding: 24px 0 0;
         &.manager{
             @include for-600(){
                 padding-top: 48px;
             }
             @include for-1024(){
                 padding-top: 28px;
+                
             }
         }
+      
     
         .manager__info{
             padding-right: 10px;
@@ -2651,6 +2724,9 @@ body {
             }
         }
         .manager__box{
+            @include for-600-only(){
+                padding-bottom: 62px;
+            }
             @include for-1024(){
                 align-items: flex-start;
             }
@@ -3165,6 +3241,26 @@ body {
     }
     & + .manager {
         margin-top: 30px;
+        @media (min-width:320px) and (max-width:600px){
+            .manager__box{
+                padding-bottom: 64px;
+            }
+        }
+        @media (min-width:600px) and (max-width:1024px){
+            .manager__box{
+                padding-bottom: 76px;
+            }
+        }
+        @media (max-width:1024px){
+          
+            .manager__label-link{
+                background: rgba(21, 15, 15, 0.8);
+            }
+        }
+      
+        @media (max-width:568px){
+            margin-bottom: -20px;
+        }
         @include for-600(){
             margin-top: 40px
         }
@@ -3274,7 +3370,7 @@ body {
         color: #150F0F;
         box-sizing: border-box;
         padding-bottom: 4px;
-        border-bottom:2px dashed rgba(79, 86, 89, 0.4);
+        border-bottom:2px dotted rgba(79, 86, 89, 0.4);
         @include for-600(){
             font-size: 18px;
             line-height: 22px;
@@ -3357,10 +3453,10 @@ body {
         padding: 128px 0 112px;
     }
     &__container{
-        max-width: 632px;
+        // max-width: 632px;
         margin: 0 auto;
         box-sizing: border-box;
-        padding-right: 75px;
+        // padding-right: 75px;
         @include for-1366(){
             max-width: 857px;
         }
@@ -3505,6 +3601,7 @@ body {
         box-sizing: border-box;
     }
     &Item{
+        background-color: #F5F5F5;
         & + &{
             margin-top: 8px;
             @include for-1024(){
@@ -3613,6 +3710,7 @@ body {
             @include for-1024(){
                 font-size: 32px;
                 letter-spacing: .05em;
+                margin-bottom: 0;
             }
             @include for-1366(){
                 font-size: 36px;
@@ -3759,7 +3857,7 @@ body {
 }
 .page-section{
     padding-bottom: 40px;
-    @include for-1366(){
+    @include for-1024(){
         padding-bottom: 128px;
     }
     @include for-1600(){
@@ -3831,7 +3929,7 @@ body {
             }
             @include for-1024(){
                 font-size: 32px;
-                max-width: 60%;
+                max-width: 68%;
             }
             @include for-1366(){
                 font-size: 36px;
@@ -4367,7 +4465,7 @@ body {
            }
            .default-section__title{
             @include for-1366(){
-                max-width: 20%;
+                max-width: 22%;
             }
             @include for-1600(){
                 max-width: 30%;
@@ -4951,6 +5049,16 @@ body {
         padding: 12px 15px;
         background-color: #fff;
         margin: -18px -16px 14px;
+        @include for-1024(){
+            &:hover{
+                svg{
+                    fill: #DD2B1C;
+                }
+                .text-page__backText{
+                    color: #DD2B1C;
+                }
+            }
+        }
         @include for-600(){
             margin: -14px -16px 26px;
         }
@@ -4966,6 +5074,7 @@ body {
             flex-shrink: 0;
             margin-right: 8px;
             fill: rgba(79, 86, 89, 0.4);;
+            transition: $transition;
             &--desktop{
                 display: none;
                 @include for-1024(){
@@ -4990,7 +5099,7 @@ body {
             /* txt/gray 1 70% */
             
             color: rgba(79, 86, 89, 0.7);
-            color: rgba(79, 86, 89, 0.7);
+            transition: $transition;
             @include for-1024(){
                 color: #150F0F;
                 padding-top: 2px;
@@ -5504,7 +5613,18 @@ body {
 }
 
 .reviewModal{
-    height: 400px !important;
+    // height: 400px !important;
+    height: 100%;
+    .simplebar-mask:after{
+        display: none;
+    }
+    @include for-1024(){
+        height: 400px !important;
+        .simplebar-mask:after{
+            display: block;
+            background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+        }
+    }
     .defaultModal__head-close{
         top: 40px;
     }
@@ -5826,4 +5946,10 @@ body {
 .header__dropdown.js-active .dropdown-menu__item{
     opacity: 1;
     transform: none;
+}
+.page--dark .manager--new{
+    background: rgba(36,26,26,.9);
+}
+.page--dark .newFooter {
+    background-color: #110101;
 }
