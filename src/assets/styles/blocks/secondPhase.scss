@@ -104,6 +104,7 @@ body {
                 height: calc(100vh - 140px);
             }
         }
+
         @include for-1024(){
             justify-content: center;
             padding-bottom: 50px;
@@ -122,7 +123,7 @@ body {
         
         &--end-mob{
             justify-content:center;
-            gap: 8px;
+            // gap: 8px;
             @include for-1024(){
                 padding-bottom: 112px;
             }
@@ -181,6 +182,12 @@ body {
             }
            
         }
+        &--start-desktop{
+            justify-content: flex-end;
+            @include for-1024(){
+               justify-content: center;
+            }
+        }
     }
     &--gradiend-new{
        
@@ -221,7 +228,7 @@ body {
         overflow: hidden;
         img{
             display: block;
-            height: 110%;
+            height: calc(100% + 100px);
             width: 100%;
             object-fit: cover;
         }
@@ -525,9 +532,31 @@ body {
         position: absolute;
         width: 100%;
         left: 0;
-        top: 50%;
-        transform: translateY(-50%);
+        bottom: 20%;
+        // top: 50%;
+        // transform: translateY(-50%);
         z-index: 10;
+        @include for-600(){
+            bottom: -20%;
+        }
+        @media (min-width:768px){
+            bottom: -300px;
+        }
+        @include for-1024(){
+            bottom: -1px;
+        }
+        @media (min-width:1500px){
+            bottom: -10%;
+        }
+        @include for-1600(){
+            bottom: 0;
+        }
+        @media (min-width:1800px){
+            bottom: -10%;
+        }
+        @include for-retina(){
+            bottom: -35%;
+        }
         img{
             width: 100%;
         }
@@ -813,7 +842,7 @@ body {
         @include for-600(){
             // font-size:148px;
             font-size: 30.6vw;
-            letter-spacing: 0.03em;
+            // letter-spacing: 0.03em;
             
         }
         @include for-1024(){
@@ -821,11 +850,11 @@ body {
         }
         @include for-1366(){
             font-size: 342px;
-            letter-spacing: -0.02em;
+            // letter-spacing: -0.02em;
         }
         @include for-1600(){
             font-size: 360px;
-            letter-spacing: 0.03em;
+            // letter-spacing: 0.03em;
         }
 
     }
@@ -865,7 +894,7 @@ body {
             right: 9.1%;
         }
         @include for-1920(){
-            right: 16.1%;
+            right: 23.1%;
         }
         
     }   
@@ -936,6 +965,7 @@ body {
             left: 0;
             width: 40%;
             max-width: inherit;
+            margin-top: -30%;
         }
         @include for-1366(){
             width: 42%;
@@ -1079,20 +1109,28 @@ body {
             // overflow: hidden;
             // height: 0;
             // margin-top: -20px;
-            position: static;
+            position: relative;
+            top: auto;
+            left: auto;
             opacity: 1;
             visibility: visible;
             transform: none;
-            display: none;
+            // display: none;
             height: auto;
             width: 100%;
+            max-height: 0;
+            overflow: hidden;
+            transition: $transition;
+            padding: 0;
             &.isOpen{
+                padding: 20px 0;
                 // overflow: visible;
                 // height: auto;
                 // margin-top: 0;
                 transform: none;
                 height: auto;
                 opacity: 1;
+                max-height: 500px;
             }
 
         }
@@ -1113,6 +1151,7 @@ body {
             padding: 0;
             background: transparent;
             max-height: inherit;
+            overflow: hidden;
         }
         @include for-1600(){
             max-width: 90%;
@@ -1668,9 +1707,10 @@ body {
             justify-content: space-between;
             padding: 0 8.3%;
             box-sizing: border-box;
+            align-items: center;
         }
         @include for-1600(){
-            align-items: center;
+           
         }
 
     }
@@ -1727,6 +1767,9 @@ body {
         width: 65%;
         padding-right: 10px;
         box-sizing: border-box;
+        @include for-1366-only(){
+            width: 88%;
+        }
     }
     &__picture{
         position: absolute;
@@ -1834,8 +1877,9 @@ body {
             z-index: 1050;
             padding: 15px;
             bottom: 80px;
+            z-index: 1;
             &:hover{
-                cursor: normal;
+                // cursor: normal;
             }
             .swiper-pagination-bullet:hover{
                 cursor: pointer;
@@ -3246,12 +3290,12 @@ body {
                 padding-bottom: 64px;
             }
         }
-        @media (min-width:600px) and (max-width:1024px){
+        @media (min-width:600px) and (max-width:1023px){
             .manager__box{
                 padding-bottom: 76px;
             }
         }
-        @media (max-width:1024px){
+        @media (max-width:1023px){
           
             .manager__label-link{
                 background: rgba(21, 15, 15, 0.8);
@@ -3371,6 +3415,16 @@ body {
         box-sizing: border-box;
         padding-bottom: 4px;
         border-bottom:2px dotted rgba(79, 86, 89, 0.4);
+        // &:before,&:after{
+        //     content: '';
+        //     position: absolute;
+        //     bottom: 0;
+        //     width: 5px;
+        // }
+        // &:before{
+        //     left: 0;
+
+        // }
         @include for-600(){
             font-size: 18px;
             line-height: 22px;
@@ -3457,6 +3511,9 @@ body {
         margin: 0 auto;
         box-sizing: border-box;
         // padding-right: 75px;
+        @include for-1024(){
+            max-width: 632px;
+        }
         @include for-1366(){
             max-width: 857px;
         }
@@ -4362,7 +4419,7 @@ body {
         .default-section__title{
             max-width: 85%;
             @include for-600(){
-                max-width: 84%;
+                max-width: 422px;
             }
             @include for-1024(){
                 max-width: 50%;
@@ -4575,6 +4632,9 @@ body {
             width: 235px;
             right: -125px;
             top: -57px;
+            @include for-600(){
+                width: 50%;
+            }
             @include for-1024(){
                 width: 280px;
                 right: 0;
@@ -5626,57 +5686,95 @@ body {
         }
     }
     .defaultModal__head-close{
-        top: 40px;
+        top: 16px;
+        right: 12px;
+        position: fixed;
+        @include for-1024(){
+            top: 40px;
+            position: absolute;
+        }
     }
     max-width: 791px;
     &__wrap{
         background-color: #fff;
-        padding: 32px;
+        padding: 16px;
         box-sizing: border-box;
+        @include for-1024(){
+            padding: 32px;
+        }
     }
     &__title{
         font-family: $TT;
         font-size: 44px;
-        line-height: 44px;
+        line-height: 1;
         /* identical to box height, or 100% */
         
-        letter-spacing: 0.05em;
+        letter-spacing: 0.04em;
         text-transform: uppercase;
         
         /* txt/black */
         
         color: #150F0F;
+        max-width: 394px;
+        @include for-600(){
+            letter-spacing: .05em;
+            font-size: 60px;
+
+        }
+        @include for-1024(){
+            max-width: inherit;
+        }
     }
     &__head{
       
     }
     &__company{
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
         align-items: center;
         margin: 24px 0;
+      
     }
     &__logo{
+        max-width: 60px;
+        flex-shrink: 0;
+        margin-right: 8px;
+        @include for-600(){
+            max-width: 76px;
+        }
+       @include for-1024(){
         max-width: 110px;   
+       }
     }
     &__companyName{
         font-family: $TT;
         font-weight: 700;
-        font-size: 36px;
-        line-height: 36px;
+     
+        line-height: 1;
         /* identical to box height, or 100% */
         
-        text-align: right;
-        letter-spacing: 0.06em;
+      
+        letter-spacing: 0.05em;
         text-transform: uppercase;
         
         /* ui/primary */
         
         color: #DD2B1C;
         margin-bottom: 4px;
+        font-size: 28px;
+        @include for-600(){
+            font-size: 40px;
+        }
+        @include for-1024(){
+            text-align: right;
+            font-size: 36px;
+            letter-spacing: 0.06em;
+        }
     }
     &__companyRight{
-        text-align: right;
+        @include for-1024(){
+            text-align: right;
+        }
     }
     &__companyPosition{
         font-family: $DM;
@@ -5691,20 +5789,35 @@ body {
         /* txt/black */
         
         color: #150F0F;
+        @include for-600(){
+            font-size: 18px;
+            line-height: 22px;
+        }
         
     }
     &__content{
         font-family: $DM;
         font-weight: 300;
-        font-size: 20px;
-        line-height: 32px;
-        /* or 160% */
+     
+      
         
         letter-spacing: 0.03em;
         
         /* txt/black */
         
         color: #150F0F;
+        font-size: 16px;
+        line-height: 24px;
+        padding-right: 40px;
+        @include for-600(){
+            font-size: 18px;
+            line-height: 28px;
+        }
+        @include for-1024(){
+            font-size: 20px;
+            line-height: 32px;
+            padding-right: 0;
+        }
     }
 }
 @media (min-width:320px) and (max-width:576px){
@@ -5845,8 +5958,9 @@ body {
 }
 
 .landReviews--hero{
+    height: auto;
     @include for-1024(){
-        height: calc(100vh - 100px);
+     
         padding: 60px 0 64px;
     }
     @include for-1366(){
@@ -5900,8 +6014,11 @@ body {
     }
     .landReviews__pagination{
         @include for-1024(){
-            left: 15%;
+            left: 16%;
             bottom: 10px;
+        }
+        @include for-1600(){
+            left: 15%;
         }
     }
 }

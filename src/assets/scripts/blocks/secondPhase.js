@@ -25,8 +25,10 @@ window.addEventListener('load', function() {
         scrollTrigger: {
           // markers:true,
           trigger: ".advancher",
-          start: "top center+=300px",
-          end: "bottom center-=300px",
+          // start: "top center+=300px",
+          // end: "bottom center-=300px",
+          start: "top bottom",
+          end: "bottom top",
           scrub: true
         }
       });
@@ -42,21 +44,24 @@ window.addEventListener('load', function() {
         scrollTrigger:{
           trigger:parallaxElem,
           scrub:true,
-          start:"top top"
-        }
-      });
-      var DocImg = new TimelineMax();
-      let parallaxElemDoc = $(".standarts__picture img");
-      DocImg.to(parallaxElemDoc, 1, { 
-        y: "-20%",
-        ease: "none" ,
-        scrollTrigger:{
-          trigger:parallaxElemDoc,
-          scrub:true,
+          // start: "top bottom",
+          // end: "bottom top",
           start: "top bottom",
           end: "bottom top",
         }
       });
+      // var DocImg = new TimelineMax();
+      // let parallaxElemDoc = $(".standarts__picture img");
+      // DocImg.to(parallaxElemDoc, 1, { 
+      //   y: "-20%",
+      //   ease: "none" ,
+      //   scrollTrigger:{
+      //     trigger:parallaxElemDoc,
+      //     scrub:true,
+      //     start: "top bottom",
+      //     end: "bottom top",
+      //   }
+      // });
 
       
 
@@ -70,7 +75,8 @@ window.addEventListener('load', function() {
         scrollTrigger:{
           trigger:aboutprod__picture,
           scrub:true,
-          start:"top center"
+          start: "top bottom",
+          end: "bottom top",
         }
       });
       
@@ -81,13 +87,15 @@ window.addEventListener('load', function() {
           var chainBig = new TimelineMax();
           let chainBigElem = $(".numeral__picture");
           chainBig.to(chainBigElem, 1, { 
-            y: "35%",
+            y: "-45%",
             ease: "none" ,
            
             scrollTrigger:{
               trigger:chainBigElem,
               scrub:true,
-              start:"top center"
+              start: "top bottom",
+              end: "bottom top",
+              // markers:true
             }
           });
 
@@ -99,8 +107,8 @@ window.addEventListener('load', function() {
             scrollTrigger: {
               // markers:true,
               trigger: ".constructor",
-              start: "top center+=300px",
-              end: "bottom center-=300px",
+              start: "top bottom",
+              end: "bottom top",
               scrub: true
             }
           });
@@ -111,13 +119,14 @@ window.addEventListener('load', function() {
           var chainBig = new TimelineMax();
           let chainBigElem = $(".numeral__picture");
           chainBig.to(chainBigElem, 1, { 
-            y: "60%",
+            y: "-300px",
             ease: "none" ,
            
             scrollTrigger:{
               trigger:chainBigElem,
               scrub:true,
-              start:"top center"
+              start: "top bottom",
+              end: "bottom top",
             }
           });
 
@@ -128,64 +137,71 @@ window.addEventListener('load', function() {
             scrollTrigger: {
               // markers:true,
               trigger: ".constructor",
-              start: "top center+=300px",
-              end: "bottom center-=300px",
+              // start: "top center+=300px",
+              // end: "bottom center-=300px",
+              start: "top bottom",
+              end: "bottom top",
               scrub: true
             }
           });
          
         },
-        "(min-width: 1024px) and (max-width: 1365px)": function minWidth1024pxAndMaxWidth1366px() {
+        "(min-width: 1024px) and (max-width: 1340px)": function minWidth1024pxAndMaxWidth1366px() {
           var chainBig = new TimelineMax();
           let chainBigElem = $(".numeral__picture");
           chainBig.to(chainBigElem, 1, { 
-            y: "35%",
+            y: "-50%",
             ease: "none" ,
            
             scrollTrigger:{
               trigger:chainBigElem,
               scrub:true,
-              start:"top center",
-              endTrigger:".landParallaxSections"
+              start: "top bottom",
+              end: "bottom top",
               // end:"center bottom"
             }
           });
           TL.to(".constructor__picture", {
-            top: "100px",
+            y: "20%",
             ease: "none",
             scrollTrigger: {
               // markers:true,
               trigger: ".constructor",
-              start: "top center+=300px",
-              end: "bottom center-=300px",
+              // start: "top center+=300px",
+              // end: "bottom center-=300px",
+              start: "top bottom",
+              end: "bottom top",
               scrub: true
             }
           });
          
         },
-        "(min-width: 1365px) and (max-width:1599px)": function minWidth1365pxAndMaxWidth1600px() {
+        "(min-width: 1340px) and (max-width:1599px)": function minWidth1365pxAndMaxWidth1600px() {
           var chainBig = new TimelineMax();
           let chainBigElem = $(".numeral__picture");
           chainBig.to(chainBigElem, 1, { 
-            y: "50%",
+            y: "-30%",
             ease: "none" ,
            
             scrollTrigger:{
               trigger:chainBigElem,
               scrub:true,
-              start:"top center",
+              start: "top bottom",
+              end: "bottom top",
               // endTrigger:".landParallaxSections"
               // end:"center bottom"
             }
           });
           TL.to(".constructor__picture", {
-            top: "100px",
+            y: "20%",
             ease: "none",
             scrollTrigger: {
               // markers:true,
               trigger: ".constructor",
-              start: "top center+=300px",
-              end: "bottom center-=300px",
+              // start: "top center+=300px",
+              // end: "bottom center-=300px",
+              start: "top bottom",
+              end: "bottom top",
               scrub: true
             }
           });
@@ -193,29 +209,31 @@ window.addEventListener('load', function() {
           
          
         },
-        "(min-width: 1600px)  and (max-width:1919x)": function minWidth1365pxAndMaxWidth1919px() {
+        "(min-width: 1600px)  and (max-width:1919px)": function minWidth1365pxAndMaxWidth1919px() {
           var chainBig = new TimelineMax();
           let chainBigElem = $(".numeral__picture");
           chainBig.to(chainBigElem, 1, { 
-            y: "40%",
+            y: "-50%",
             ease: "none" ,
            
             scrollTrigger:{
               trigger:chainBigElem,
               scrub:true,
-              start:"top center",
-              // endTrigger:".landParallaxSections"
+              start: "top bottom",
+              end: "bottom top",
               // end:"center bottom"
             }
           });
           TL.to(".constructor__picture", {
-            top: "150px",
+            y: "20%",
             ease: "none",
             scrollTrigger: {
               // markers:true,
               trigger: ".constructor",
-              start: "top center+=300px",
-              end: "bottom center-=300px",
+              // start: "top center+=300px",
+              // end: "bottom center-=300px",
+              start: "top bottom",
+              end: "bottom top",
               scrub: true
             }
           });
@@ -228,26 +246,29 @@ window.addEventListener('load', function() {
           var chainBig = new TimelineMax();
           let chainBigElem = $(".numeral__picture");
           chainBig.to(chainBigElem, 1, { 
-            y: "60%",
+            y: "-50%",
             ease: "none" ,
            
             scrollTrigger:{
               trigger:chainBigElem,
               scrub:true,
-              start:"top center",
+              start: "top bottom",
+              end: "bottom top",
               // endTrigger:".landParallaxSections"
               // end:"center bottom"
             }
           });
 
           TL.to(".constructor__picture", {
-            top: "150px",
+            y: "20%",
             ease: "none",
             scrollTrigger: {
               // markers:true,
               trigger: ".constructor",
-              start: "top center+=300px",
-              end: "bottom center-=300px",
+              // start: "top center+=300px",
+              // end: "bottom center-=300px",
+              start: "top bottom",
+              end: "bottom top",
               scrub: true
             }
           });
@@ -272,8 +293,10 @@ window.addEventListener('load', function() {
           trigger:SectionLeftTitle,
          
           scrub:true,
-          start:"top center",
-          end:"bottom"
+          // start:"top center",
+          // end:"bottom"
+          start: "top bottom",
+          end: "bottom top",
         }
       });
       let SectionLeftDescLine = new TimelineMax();
@@ -287,7 +310,9 @@ window.addEventListener('load', function() {
           trigger:SectionLeftTitle,
          
           scrub:true,
-          start:"top center",
+          // start:"top center",
+          start: "top bottom",
+          end: "bottom top",
         }
       });
       
@@ -303,8 +328,10 @@ window.addEventListener('load', function() {
           trigger:SectionRightTitle,
          
           scrub:true,
-          start:"top center",
-          end:"bottom"
+          // start:"top center",
+          // end:"bottom"
+          start: "top bottom",
+          end: "bottom top",
         }
       });
 
@@ -336,8 +363,10 @@ window.addEventListener('load', function() {
           trigger:SectionRightTitle,
          
           scrub:true,
-          start:"top center",
-          end:"bottom"
+          // start:"top center",
+          // end:"bottom"
+          start: "top bottom",
+          end: "bottom top",
         }
       });
 
@@ -347,19 +376,19 @@ window.addEventListener('load', function() {
       let BigChainLine = new TimelineMax();
       let   BigChain = $(".landParallaxSections__image");
 
-      BigChainLine.to(BigChain, 1, { 
-        y: "-65%",
-        ease: "none" ,
+      // BigChainLine.to(BigChain, 1, { 
+      //   y: "-65%",
+      //   ease: "none" ,
         
-        scrollTrigger:{
-          trigger:".landParallaxSections .container",
-          // markers:true,
-          scrub:true,
-          start:"top center",
-          end:"bottom+=300",
-          endTrigger:".triggerEndSecond "
-        }
-      });
+      //   scrollTrigger:{
+      //     trigger:".landParallaxSections .container",
+      //     // markers:true,
+      //     scrub:true,
+      //     start:"top center",
+      //     end:"bottom+=300",
+      //     endTrigger:".triggerEndSecond "
+      //   }
+      // });
       // BigChainLine.fromTo(BigChain, {
       //   y: "-30%",
       // }, {
@@ -373,20 +402,56 @@ window.addEventListener('load', function() {
       //   }
       // });
 
- 
       // BigChainLine.to(BigChain, 1, { 
-      //   y: "-100%",
+      //   y: "-20%",
       //   ease: "none" ,
-        
+      //   // immediateRender: false,
       //   scrollTrigger:{
-      //     trigger:".triggerEnd",
+      //     trigger:".landParallaxSections",
+      //     // markers:true,
+      //     scrub:true,
+      //     start:"top center",
+      //     end:"center bottom",
+      //     endTrigger:".triggerStart"
+      //   }
+      // });
+      // BigChainLine.to(BigChain, 1, { 
+      //   y: "-80%",
+      //   ease: "none" ,
+      //   immediateRender: false,
+      //   scrollTrigger:{
+      //     trigger:".triggerStart",
       //     markers:true,
       //     scrub:true,
       //     start:"top center",
-      //     endTrigger:".triggerEndSecond"
+      //     end:"center bottom+=1000",
+      //     // endTrigger:".default-section__content--left"
       //   }
       // });
       
+
+
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: ".landParallaxSections__image",
+          scrub: true,
+          // markers:true,
+          start: "top bottom",
+          end: "bottom top",
+          // end: () => `+=${$(".landParallaxSections").height() - $(".default-section__content--left").height() - 500}`
+
+        }
+      })
+      .to(BigChain, {
+        y: "-10%",
+        ease: "none" ,
+        duration:1
+      })
+      .to(BigChain, {
+        ease: "none" ,
+        y: "-100%",
+        duration:3
+      });
 
 
       // let SectionRightTitleLine = new TimelineMax();
@@ -448,6 +513,11 @@ window.addEventListener('load', function() {
         window.addEventListener('resize', function() {
           FixedFooter();
         });
+
+      if(!isTablet){
+        $(".accordeonItem:first-child").addClass("js-active")
+        $(".accordeonItem:first-child .accordeonItem__body").addClass("isOpen")
+      }
       $('.accordeon').on('click', '.accordeonItem__head:not(.js-active)', function() {
         $(this).parent().toggleClass('js-active').siblings().removeClass('js-active')
         if (isTablet){
@@ -493,6 +563,7 @@ window.addEventListener('load', function() {
         cartFooterFixedNew();
        });
     
+    try{
       const swiperClients = new Swiper(".ourClients__slider", {
         slidesPerView: "auto",
         spaceBetween: 16,
@@ -505,7 +576,11 @@ window.addEventListener('load', function() {
         },
         
       });
+    } catch {
 
+    }
+  
+      
       const swiperReviews = new Swiper(".landReviews__slider", {
         slidesPerView: 1,
         // spaceBetween: 16,
@@ -521,8 +596,9 @@ window.addEventListener('load', function() {
         
         
       });
+  
 
-
+    try {
       const swiperTextPage = new Swiper(".text-page__slider", {
         pagination: {
           el: ".text-page__sliderPagination",
@@ -540,6 +616,9 @@ window.addEventListener('load', function() {
         },
         
       });
+    } catch {
+
+    }
       function calcHeightReview(){
         // fore
         var line_height=20;
