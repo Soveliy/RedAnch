@@ -78,6 +78,20 @@ body {
             z-index: 10;
         }
     }
+    &--gradiend-bottom{
+        .land-hero__picture {
+           margin-top: -84px;
+           @include for-1024(){
+            margin-top: -100px;
+           }
+           @include for-1366(){
+            margin-top: -114px;
+           }
+           @include for-1600(){
+            margin-top: -140px;
+           }
+        }
+    }
     &__content{
         position: relative;
         z-index: 50;
@@ -203,6 +217,7 @@ body {
                 }
                 @include for-1600(){
                     height: 65%;
+                    opacity: .95;
                 }
             }
             &:after{
@@ -245,7 +260,7 @@ body {
                 height: 172%;
             }
             @include for-1600(){
-                height: 165%;
+                height: 156%;
             }
             &:before{
                 z-index: 1;
@@ -259,6 +274,7 @@ body {
                 pointer-events: none;
                 @include for-1024(){
                     bottom: 0;
+                 
                     background: linear-gradient(180deg, rgba(17, 1, 1, 0) 0%, #110101 100%);
                 }
                 @include for-1024(){
@@ -836,8 +852,9 @@ body {
         letter-spacing: -0.02em;
         text-transform: uppercase;
         background-position: 100%;
-        background-size: cover;
+        background-size: auto;
         padding-bottom: 10px;
+        background-position-x: center !important;
         
         @include for-600(){
             // font-size:148px;
@@ -846,6 +863,7 @@ body {
             
         }
         @include for-1024(){
+            background-size: cover;
             font-size: 210px;
         }
         @include for-1366(){
@@ -1062,6 +1080,10 @@ body {
         align-items: center;
         justify-content: space-between;
         cursor: pointer;
+        transition: $transition;
+        &:hover{
+            opacity: .8;
+        }
        
     }
     &__bg{
@@ -1725,6 +1747,10 @@ body {
         @include for-1024(){
             max-width: 100%;
         }
+        @include for-1366(){
+          
+            max-width: 662px;
+        }
         @include for-1600(){
             max-width: 80%;
         }
@@ -1784,21 +1810,28 @@ body {
             max-width: 53%;
         }
         @include for-1024(){
-            position: static;
-            width: 50%;
+            position: absolute;
+            width: 46%;
             max-width: 100%;
+            left: 60%;
             margin-right: -13%;
         }
+        @media (min-width:1150px){
+            width: 35%;
+            left: 65%;
+        }
         @include for-1366(){
-            width: 51%;
             margin-right: 2%;
             margin-top: -67px;
+            left: 58.7%;
+            width: 42%;
             
         }
         @include for-1600(){
-            width: 50%;
+            width: 54%;
             margin-right: 4%;
-            margin-top: 0;
+            margin-top: -48px;
+            left: 48.2%;
         }
         
     }
@@ -1819,7 +1852,7 @@ body {
         }
         .landReviews__pagination{
             left: 15px;
-            bottom: 0;
+            bottom: 22px;
         }
         .landReviews__slider{
             padding-bottom: 24px;
@@ -1845,8 +1878,12 @@ body {
         font-weight: 700;
         letter-spacing: 0.03em;
         text-transform: uppercase;
+        max-width: 224px;
         @include for-600(){
-            max-width: 70%;
+            max-width: 400px;
+        }
+        @include for-1024(){
+            max-width: inherit;
         }
        
     }
@@ -1876,7 +1913,7 @@ body {
             left: 16.6%;
             z-index: 1050;
             padding: 15px;
-            bottom: 80px;
+            bottom: 55px;
             z-index: 1;
             &:hover{
                 // cursor: normal;
@@ -1886,10 +1923,10 @@ body {
             }
         }
         @include for-1366(){
-            bottom: 90px;
+            bottom: 75px;
         }
         @include for-1600(){
-            bottom: 95px;
+            bottom: 65px;
         }
         .swiper-pagination-bullet{
             height: 8px;
@@ -1912,16 +1949,39 @@ body {
             height: 40px;
             width: 40px;
         }
+        &-wrap{
+            height: 24px;
+            width: 24px;
+            @include for-600(){
+                height: 40px;
+                width: 40px;
+            }
+            @include for-1024(){
+                height: 120px;
+                width: 120px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #fff;
+                border-radius: 50%;
+                // opacity: 0;
+                pointer-events: none;
+                position: fixed;
+                transition: opacity $transition;
+                z-index: 50;
+                transform: translate(-50%,-50%);
+            }
+        }
         @include for-1024(){
             position: absolute;
             height: 100%;
             width:50%;
             top: 0;
-       
+            opacity: 0;
          
 
             transition: $transition;
-            opacity: 0;
+            // opacity: 0;
             z-index: 1000;
             // &:hover{
             //     opacity: 1;
@@ -1941,13 +2001,20 @@ body {
             //     background-color: #fff;
             // }
             
-
+            &:hover{
+                opacity: 1;
+                cursor: none;
+                .landReviews__arrow-wrap{
+                    // opacity: 1;
+                    cursor: none;
+                }
+            }
             &--prev{
                 transition: .3s;
                 left: 0;
-                &:hover{
-                    cursor: url(../images/sldierLeft.svg), auto;
-                   }
+                // &:hover{
+                //     cursor: url(../images/sldierLeft.svg), auto;
+                //    }
                 //    &.swiper-button-disabled:hover{
                 //     cursor: url(../images/sldierLeftDisabled.svg), auto;
                 //    }
@@ -1962,15 +2029,15 @@ body {
             &--next{
                 right: 0;
                 transition: .3s;
-                &:hover{
-                    cursor: url(../images/sliderRight.svg), auto;
-                   }
+                // &:hover{
+                //     cursor: url(../images/sliderRight.svg), auto;
+                //    }
                 //    &.swiper-button-disabled:hover{
                 //     cursor: url(../images/sliderRightDisabled.svg), auto;
                 //    }
                 svg{
-                    opacity: 0;
-                    margin-left: 151px;
+                    // opacity: 0;
+                    // margin-left: 151px;
                 }
                 // &:before{
                 //     margin-left: 150px;
@@ -1988,11 +2055,11 @@ body {
                 fill: #110101;
                 height: 24px;
                 width: 24px;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%,-50%);
-                position: absolute;
-                z-index: 50;
+                // top: 50%;
+                // left: 50%;
+                // transform: translate(-50%,-50%);
+                // position: absolute;
+                // z-index: 50;
             }
         }
     }
@@ -2132,12 +2199,16 @@ body {
         }
       
         &--full{
+         height: 100px;
+         @include for-600(){
+            height: auto;
+         }
             &:after{
                 content: '';
                 position: absolute;
                 height: 25px;
                 background: linear-gradient(180deg, rgba(36, 26, 26, 0) 0%, #241A1A 100%);
-                bottom: 0;
+                bottom: -3px;
                 left: 0;
                 width: 100%;
             }
@@ -2958,8 +3029,9 @@ body {
                 display: block;
             }
         }
+        max-width: 230px;
         @include for-600(){
-            max-width: 325px;
+            // max-width: 325px;
         }
         @include for-1024(){
             max-width: 528px;
@@ -3032,7 +3104,7 @@ body {
             bottom: 32px;
         }
         @include for-1366(){
-            bottom: 65px;
+            bottom: 50px;
         }
         @include for-1600(){
             bottom: 76px;
@@ -3295,6 +3367,20 @@ body {
                 padding-bottom: 76px;
             }
         }
+        @include for-1366-only(){
+            margin-top: 120px;
+            padding-top: 0;
+        }
+        @include for-1366(){
+             .label-link__icon{
+                margin-top: 4px;
+             }
+        }
+        @include for-1600(){
+            .label-link__icon{
+               margin-top: 14px;
+            }
+       }
         @media (max-width:1023px){
           
             .manager__label-link{
@@ -4288,6 +4374,7 @@ body {
         }
         @include for-1600(){
             margin-bottom: 120px;
+            max-width: 868px;
         }
     }
     &Item{
@@ -4357,7 +4444,7 @@ body {
             font-size: 60px;
             line-height: 60px;
             margin-bottom: 20px;
-            max-width: 70%;
+            max-width: 68%;
         }
 
        }
@@ -4532,7 +4619,7 @@ body {
                 @include for-1024(){
                     position: relative;
                     z-index: 50;
-                    margin-top: 156px;
+                    margin-top: 64px;
                     font-size: 20px;
                     line-height: 32px;
                     max-width: 413px;
@@ -4540,7 +4627,7 @@ body {
                 @include for-1366(){
                     font-size: 24px;
                     line-height: 36px;
-                    margin-top: 64px;
+                  
                 }
                 @include for-1600(){
                     font-size: 32px;
@@ -4630,25 +4717,30 @@ body {
     &__image{
             position: absolute;
             width: 235px;
-            right: -125px;
-            top: -57px;
+            right: -150px;
+            top: 100px;
+            @media (min-width:400px){
+                right: -135px;
+            }
             @include for-600(){
                 width: 50%;
+                max-width: 350px;
             }
             @include for-1024(){
                 width: 280px;
                 right: 0;
-                top: -61px;
+                top:150px;
+                max-width: inherit;
             }
             @include for-1366(){
                 width: 330px;
                 right: 119px;
-                top: -30px;
+                top: 180px;
             }
             @include for-1600(){
                 width: 373px;
                 right: 53px;
-                top: 0;
+                top:100px;
             }
             @include for-1920(){
                 top: 150px;
@@ -4731,7 +4823,7 @@ body {
             }
         }
         @include for-1366(){
-            padding: 24px;
+            padding: 30px 24px;
         }
         &__logo{
             padding: 0 13px;
@@ -4928,6 +5020,11 @@ body {
                 display: none;
             }
         }
+        &:hover{
+            svg{
+                fill: #dd2b1c;
+            }
+        }
         .articleItem__date{
             color: rgba(79, 86, 89, 0.5);
             &:before{
@@ -5063,17 +5160,19 @@ body {
             height: 24px;
             width: 24px;
             // opacity: 0;
-            right: 31px;
-            bottom: 18px;
+            // right: 31px;
+            // bottom: 18px;
+            right: 24px;
+            bottom: 24px;
             fill: #fff;
             z-index: 50;
             opacity: 0;
             transition: $transition;
         }
-        @include for-1366(){
-            right: 47px;
-            bottom: 37px;
-        }
+        // @include for-1366(){
+        //     right: 47px;
+        //     bottom: 37px;
+        // }
     }
     picture{
         position: absolute;
@@ -5107,8 +5206,8 @@ body {
         display: flex;
         align-items: center;
         padding: 12px 15px;
-        background-color: #fff;
-        margin: -18px -16px 14px;
+        background-color: #F5F5F5;
+        margin: -16px -16px 14px;
         @include for-1024(){
             &:hover{
                 svg{
@@ -5123,7 +5222,7 @@ body {
             margin: -14px -16px 26px;
         }
         @include for-600(){
-            margin: -14px -16px 4px;
+            margin: -12px -16px 4px;
         }
         @include for-1024(){
             background-color: transparent;
@@ -5678,6 +5777,9 @@ body {
     .simplebar-mask:after{
         display: none;
     }
+    @include for-600(){
+        height: max-content;
+    }
     @include for-1024(){
         height: 400px !important;
         .simplebar-mask:after{
@@ -5689,6 +5791,10 @@ body {
         top: 16px;
         right: 12px;
         position: fixed;
+        @include for-600(){
+            top: 23px;
+            position: absolute;
+        }
         @include for-1024(){
             top: 40px;
             position: absolute;
@@ -5924,7 +6030,7 @@ body {
 
     }
     &.js-active{
-        svg{
+        .main-menu__link-dropdownIcon{
             transform: rotate(180deg);
         }
     }
@@ -6014,8 +6120,11 @@ body {
     }
     .landReviews__pagination{
         @include for-1024(){
+            left: 15%;
+            bottom: 17px;
+        }
+        @include for-1366(){
             left: 16%;
-            bottom: 10px;
         }
         @include for-1600(){
             left: 15%;
@@ -6069,4 +6178,103 @@ body {
 }
 .page--dark .newFooter {
     background-color: #110101;
+}
+.body--light .main{
+    // background-color: #e5e5e5;
+    background-color: #ededed;
+}
+.main{
+    z-index: 750;
+}
+
+// .burger{
+//     opacity: 1;
+//     visibility: visible;
+// }
+.main-menu{
+    display: none;
+}
+@media (max-width:1024px){
+    .burger{
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+        &.js-active{
+            z-index: 6000;
+        }
+    }
+
+    .header{
+        &__burger{
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+        
+        }
+        &-top__row{
+            padding-right: 40px;
+        }
+        .logo{
+            &.js-active{
+                position: relative;
+                z-index: 6000;
+            }
+        }
+    }
+    .main-menu{
+        overflow: hidden auto;
+        position: fixed;
+        top: 42px;
+        left: 0;
+        height: calc(100% - 42px);
+        width: 100%;
+        display: none;
+        z-index: 4000;
+        margin: 0;
+        padding: 30px 16px;
+        box-sizing: border-box;
+
+      
+    }
+    .header--dark{
+        .main-menu{
+            background-color: #150F0F;
+        }
+    }
+    .main-menu__item--parent{
+        display: block;
+    }
+}
+@media (min-width:320px) and (max-width:568px){
+    .main-menu__link{
+        padding: 0;
+        font-size: 32px;
+        line-height: 32px;
+        font-family: $TT;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+    .main-menu__link-dropdownIcon{
+        height: 16px;
+        width: 16px;
+        fill: #fff;
+    }
+}
+.main-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    &__phone,&__email{
+        color: #DD2B1C;
+    }
+    &__phone{
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 32px;
+        /* identical to box height, or 100% */
+        
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        font-family: $TT;
+    }
 }

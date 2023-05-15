@@ -50,18 +50,18 @@ window.addEventListener('load', function() {
           end: "bottom top",
         }
       });
-      // var DocImg = new TimelineMax();
-      // let parallaxElemDoc = $(".standarts__picture img");
-      // DocImg.to(parallaxElemDoc, 1, { 
-      //   y: "-20%",
-      //   ease: "none" ,
-      //   scrollTrigger:{
-      //     trigger:parallaxElemDoc,
-      //     scrub:true,
-      //     start: "top bottom",
-      //     end: "bottom top",
-      //   }
-      // });
+      var DocImg = new TimelineMax();
+      let parallaxElemDoc = $(".standarts__picture img");
+      DocImg.to(parallaxElemDoc, 1, { 
+        y: "-20%",
+        ease: "none" ,
+        scrollTrigger:{
+          trigger:parallaxElemDoc,
+          scrub:true,
+          start: "top bottom",
+          end: "bottom top",
+        }
+      });
 
       
 
@@ -225,7 +225,7 @@ window.addEventListener('load', function() {
             }
           });
           TL.to(".constructor__picture", {
-            y: "20%",
+            y: "15%",
             ease: "none",
             scrollTrigger: {
               // markers:true,
@@ -260,7 +260,7 @@ window.addEventListener('load', function() {
           });
 
           TL.to(".constructor__picture", {
-            y: "20%",
+            y: "15%",
             ease: "none",
             scrollTrigger: {
               // markers:true,
@@ -507,6 +507,7 @@ window.addEventListener('load', function() {
          
           // $(".footerFix").height(footerHeight)
           $(".main").css("margin-bottom" , footerHeight + "px")
+          $(".main").addClass("main-footer-margin")
          
         }
         FixedFooter();
@@ -638,7 +639,18 @@ window.addEventListener('load', function() {
           }
         });
 
-
+        // Cursors 
+        
+       
+        document.addEventListener("mousemove", moveCursor)
+        function moveCursor(e){
+          let reviewsCursor = document.querySelectorAll(".landReviews__arrow-wrap")
+          let x = e.clientX;
+          let y = e.clientY;
+          $(".landReviews__arrow-wrap").css("top", y + "px")
+          $(".landReviews__arrow-wrap").css("left", x + "px")
+  
+        }
         $(".ReviewsItem__showmore").click(function(){
           let reviewText = $(this).closest(".ReviewsItem").find(".ReviewsItem__descContent").text()
           showModal(reviewText)

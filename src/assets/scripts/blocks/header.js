@@ -18,6 +18,8 @@ $(".header__productionButton").click(function(){
 
   })
   $(".header-top__burger").click(function(){
+    
+    $(".main-menu").slideToggle(800)
     $(this).toggleClass("js-active")
     $(".header__dropdown,.header__defaulButton,.dropdown-menu").removeClass("js-active")
     $(".header").removeClass("js-no-opacity")
@@ -27,6 +29,14 @@ $(".header__productionButton").click(function(){
     $("body").removeClass("js-hidden")
     $(".main-menu__item--parent").removeClass("js-active")
     if (isMobile){
+      
+      if ($(this).hasClass("js-active")){
+        $("body").addClass("js-hidden")
+        $(".logo").addClass("js-active")
+      } else {
+
+      }
+    
       // $(".search-form__input-container").hide();
       // $(".search-form__input").removeClass("js-active")
     }
