@@ -38,19 +38,19 @@ window.addEventListener('load', function() {
 
       var tl = new TimelineMax();
       let parallaxElem = $(".land-hero__picture img");
-      tl.to(parallaxElem, 1, { 
-        y: -100,
-        ease: "cubic-bezier(.5,0,0,1)" ,
-        scrollTrigger:{
-          trigger:parallaxElem,
-          scrub:true,
-          // start: "top bottom",
-          // end: "bottom top",
-          start: "top bottom",
-          end: "bottom top",
-        }
-      });
-      var DocImg = new TimelineMax();
+        tl.to(parallaxElem, 1, { 
+          y: -100,
+          ease: "cubic-bezier(.5,0,0,1)" ,
+          scrollTrigger:{
+            trigger:parallaxElem,
+            scrub:true,
+         
+            start: "top=+1 bottom",
+            end: "bottom top",
+          }
+        });
+  
+      let DocImg = new TimelineMax();
       let parallaxElemDoc = $(".standarts__picture img");
       DocImg.to(parallaxElemDoc, 1, { 
         y: "-20%",
@@ -375,7 +375,84 @@ window.addEventListener('load', function() {
       
       let BigChainLine = new TimelineMax();
       let   BigChain = $(".landParallaxSections__image");
+      ScrollTrigger.matchMedia({
+        "(min-width: 320px) and (max-width: 650px)": function minwidth320() {
+          gsap.timeline({
+            scrollTrigger: {
+              trigger: ".landParallaxSections__image",
+              scrub: true,
+              // markers:true,
+              start: "top bottom",
+              end: "bottom top",
+              // end: () => `+=${$(".landParallaxSections").height() - $(".default-section__content--left").height() - 500}`
+    
+            }
+          })
+          .to(BigChain, {
+            y: "-20%",
+            ease: "none" ,
+            duration:1
+          })
+          .to(BigChain, {
+            ease: "none" ,
+            y: "-200%",
+            duration:3
+          });
+    
+         
+        },
 
+        "(min-width: 650px) and (max-width: 1023px)": function minwidth320() {
+          gsap.timeline({
+            scrollTrigger: {
+              trigger: ".landParallaxSections__image",
+              scrub: true,
+              // markers:true,
+              start: "top bottom",
+              end: "bottom top",
+              // end: () => `+=${$(".landParallaxSections").height() - $(".default-section__content--left").height() - 500}`
+    
+            }
+          })
+          .to(BigChain, {
+            y: "-20%",
+            ease: "none" ,
+            duration:1
+          })
+          .to(BigChain, {
+            ease: "none" ,
+            y: "-250%",
+            duration:3
+          });
+    
+         
+        },
+
+        "(min-width: 1023px)": function min1023px() {
+          gsap.timeline({
+            scrollTrigger: {
+              trigger: ".landParallaxSections__image",
+              scrub: true,
+              // markers:true,
+              start: "top bottom",
+              end: "bottom top",
+              // end: () => `+=${$(".landParallaxSections").height() - $(".default-section__content--left").height() - 500}`
+    
+            }
+          })
+          .to(BigChain, {
+            y: "-10%",
+            ease: "none" ,
+            duration:1
+          })
+          .to(BigChain, {
+            ease: "none" ,
+            y: "-100%",
+            duration:3
+          });
+    
+        },
+      });
       // BigChainLine.to(BigChain, 1, { 
       //   y: "-65%",
       //   ease: "none" ,
@@ -431,28 +508,7 @@ window.addEventListener('load', function() {
       
 
 
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: ".landParallaxSections__image",
-          scrub: true,
-          // markers:true,
-          start: "top bottom",
-          end: "bottom top",
-          // end: () => `+=${$(".landParallaxSections").height() - $(".default-section__content--left").height() - 500}`
-
-        }
-      })
-      .to(BigChain, {
-        y: "-10%",
-        ease: "none" ,
-        duration:1
-      })
-      .to(BigChain, {
-        ease: "none" ,
-        y: "-100%",
-        duration:3
-      });
-
+    
 
       // let SectionRightTitleLine = new TimelineMax();
       // let  SectionRightTitle = $(".default-section__content--right .default-section__title");
@@ -506,8 +562,21 @@ window.addEventListener('load', function() {
           let footerHeight = $(".footerFix").outerHeight();
          
           // $(".footerFix").height(footerHeight)
-          $(".main").css("margin-bottom" , footerHeight + "px")
-          $(".main").addClass("main-footer-margin")
+     
+          let fixedBtn = $(".empty-page__footer--js")
+          let landParallaxSections = $(".landParallaxSections")
+          if (landParallaxSections.length){
+            $(".footer").addClass("land-parallax-color")
+          }
+          if (fixedBtn.length){
+             
+            let fixedBtnHeight = $(".empty-page__footer--js").outerHeight();
+            $(".main").css("margin-bottom" , footerHeight + fixedBtnHeight  + "px")
+            } else {
+            $(".main").css("margin-bottom" , footerHeight + "px")
+            $(".main").addClass("main-footer-margin")
+
+          }
          
         }
         FixedFooter();
@@ -550,12 +619,12 @@ window.addEventListener('load', function() {
       })
       const cartFooterFixedNew = () => {
         const footerForEmptyPage = document.querySelector('.empty-page__footer--js');
-      if (footerForEmptyPage){
-        let elementFooterNew = document.querySelector('.newFooter');
-        if(elementFooterNew){
-           elementFooterNew.style.marginBottom = footerForEmptyPage.offsetHeight + "px";
-        }
-        }
+        if (footerForEmptyPage){
+          let elementFooterNew = document.querySelector('.newFooter');
+          if(elementFooterNew){
+            elementFooterNew.style.marginBottom = footerForEmptyPage.offsetHeight + "px";
+          }
+          }
       };
 
       cartFooterFixedNew();

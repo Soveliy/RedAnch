@@ -32,9 +32,11 @@ $(".header__productionButton").click(function(){
       
       if ($(this).hasClass("js-active")){
         $("body").addClass("js-hidden")
-        $(".logo").addClass("js-active")
+        $(".header-top__items").addClass("js-opacity")
       } else {
-
+        $("body").removeClass("js-hidden")
+      
+        $(".header-top__items").removClass("js-opacity")
       }
     
       // $(".search-form__input-container").hide();
@@ -102,7 +104,10 @@ $(".header__productionButton").click(function(){
     $(this).parent().toggleClass("js-active")
     $(this).closest(".main-menu__item--parent").find(".bgShadow").toggle(500)
     e.preventDefault()
-   $(this).next().toggleClass("js-active")
+    $(this).next().toggleClass("js-active")
+    if (isMobile){
+      $(this).closest(".main-menu__item--parent").siblings().removeClass("js-active")
+    }
   })
   $(function() {
     let dataItem;
