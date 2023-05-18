@@ -2947,16 +2947,28 @@ body {
             padding: 83px 0 24px;
         }
     }
+    .newQuestions{
+        margin-bottom: 32px;
+        @include for-600(){
+            margin-bottom: 41px;
+        }
+        @include for-1024(){
+            margin-bottom: 66px;
+        }
+        @include for-1024(){
+           margin-bottom: 70px;
+        }
+    }
     &__seeAlso{
-        margin: 32px 0 39px;
+        margin: 0 0 39px;
         @include for-600(){
             margin: 41px 0 57px;
         }
         @include for-1024(){
-            margin: 66px 0;
+            margin: 0 0 66px;
         }
         @include for-1366(){
-            margin: 70px 0;
+            margin: 0 0 70px;
         }
     }
     &__picture{
