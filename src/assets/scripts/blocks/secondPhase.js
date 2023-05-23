@@ -633,22 +633,30 @@ window.addEventListener('load', function() {
         cartFooterFixedNew();
        });
     
-    try{
+    
       const swiperClients = new Swiper(".ourClients__slider", {
         slidesPerView: "auto",
         spaceBetween: 16,
         // centeredSlides: true,
+       
         breakpoints: {
           1024: {
             slidesPerView: 5,
             spaceBetween: 32,
+            // observer:true,
+            navigation: {
+              nextEl: ".ourClients__arrow--next",
+              prevEl: ".ourClients__arrow--prev",
+            },
+            pagination: {
+              el: ".ourClients__pagination",
+              clickable:true,
+            },
           },
         },
         
       });
-    } catch {
-
-    }
+  
   
       
       const swiperReviews = new Swiper(".landReviews__slider", {
@@ -703,7 +711,7 @@ window.addEventListener('load', function() {
             console.log(textIn)
             if (textIn > limitHeight){
               $(this).find(".ReviewsItem__descContent").addClass("ReviewsItem__descContent--full")
-              $(this).find(".ReviewsItem__showmore").addClass(".ReviewsItem__showmore--active")
+              $(this).closest(".ReviewsItem").find(".ReviewsItem__showmore").addClass("ReviewsItem__showmore--active")
             }
           }
         });
@@ -720,18 +728,20 @@ window.addEventListener('load', function() {
           $(".landReviews__arrow-wrap").css("left", x + "px")
   
         }
-        $(".ReviewsItem__showmore").click(function(){
-          let reviewText = $(this).closest(".ReviewsItem").find(".ReviewsItem__descContent").text()
-          showModal(reviewText)
-          console.log(reviewText)
-        })
+        // $(".ReviewsItem__showmore").click(function(){
+        //   let reviewText = $(this).closest(".ReviewsItem").find(".ReviewsItem__descContent").text()
+        //   let landReviewsTitle = $(".landReviews__title").text()
+        //   showModal(reviewText,landReviewsTitle)
+           
+        //   console.log(reviewText)
+        // })
 
-        function showModal(reviewText){
-          $(".ReviewsItem__modalContent").html(reviewText)
-          $(".ReviewsItem__modal").addClass("js-active")
-          $("body").addClass("js-hidden")
+        // function showModal(reviewText,landReviewsTitle){
+        //   $(".ReviewsItem__modalContent").html(`<div class="ReviewsItem__modalContentTitle">${landReviewsTitle}</div><div class="ReviewsItem__modalContentText">${reviewText}</div>`)
+        //   $(".ReviewsItem__modal").addClass("js-active")
+        //   $("body").addClass("js-hidden")
        
-        }
+        // }
 
 
         $(".ReviewsItem__modalBg").click(function(){

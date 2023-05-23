@@ -19,7 +19,7 @@ $(".header__productionButton").click(function(){
   })
   $(".header-top__burger").click(function(){
     
-    $(".main-menu").slideToggle(800)
+
     $(this).toggleClass("js-active")
     $(".header__dropdown,.header__defaulButton,.dropdown-menu").removeClass("js-active")
     $(".header").removeClass("js-no-opacity")
@@ -32,11 +32,14 @@ $(".header__productionButton").click(function(){
       
       if ($(this).hasClass("js-active")){
         $("body").addClass("js-hidden")
+       //  $("body").css("overflow", "hidden")
         $(".header-top__items").addClass("js-opacity")
+        $(".main-menu").addClass("js-active")
       } else {
+       $("body").removeAttr( 'style' );
+       $(".main-menu").removeClass("js-active")
         $("body").removeClass("js-hidden")
-      
-        $(".header-top__items").removClass("js-opacity")
+        $(".header-top__items").removeClass("js-opacity")
       }
     
       // $(".search-form__input-container").hide();
@@ -100,15 +103,20 @@ $(".header__productionButton").click(function(){
       $(".main-menu__item--parent").removeClass("js-active")
     }
 });
-  $(".main-menu__item--parent a").click(function(e){
-    $(this).parent().toggleClass("js-active")
-    $(this).closest(".main-menu__item--parent").find(".bgShadow").toggle(500)
-    e.preventDefault()
-    $(this).next().toggleClass("js-active")
-    if (isMobile){
-      $(this).closest(".main-menu__item--parent").siblings().removeClass("js-active")
-    }
-  })
+$(".main-menu__item--parent > a").click(function(e){
+  $(this).parent().toggleClass("js-active")
+  $("body").addClass("js-hidden")
+  $(this).closest(".main-menu__item--parent").find(".bgShadow").toggle(500)
+  e.preventDefault()
+ $(this).next().toggleClass("js-active")
+  if (isMobile){
+     
+     console.log($(this).parent().siblings())
+     $(this).parent().siblings().removeClass("js-active")
+     $(this).parent().siblings().find(".header__dropdown").removeClass("js-active")
+  }
+})
+ 
   $(function() {
     let dataItem;
     $('ul.catalog-menu__main-list').on('click', 'li:not(.js-active)', function() {
