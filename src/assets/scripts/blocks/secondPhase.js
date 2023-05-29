@@ -5,7 +5,7 @@ window.addEventListener('load', function() {
     }
     var winw = window.innerWidth || e.clientWidth || g.clientWidth;
 
-    var isTablet = winw < 1025;
+    var isTablet = winw < 1024;
     var isMobile = winw < 600;
 
   
@@ -18,22 +18,38 @@ window.addEventListener('load', function() {
       TweenMaxWithCSS = gsapWithCSS.core.Tween;
       var TL = gsapWithCSS.timeline();
 
+      if($(".advancher__title").hasClass("advancher__title--big")){
+        TL.to(".advancher__title--big", {
+          backgroundPosition: "100% 50%",
+          ease: "none",
+          scrollTrigger: {
+            // markers:true,
+            trigger: ".advancher",
+            // start: "top center+=300px",
+            // end: "bottom center-=300px",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true
+          }
+        });
+      } else {
+        TL.to(".advancher__title", {
+          backgroundPosition: "100% 100%",
+          ease: "none",
+          scrollTrigger: {
+            // markers:true,
+            trigger: ".advancher",
+            // start: "top center+=300px",
+            // end: "bottom center-=300px",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true
+          }
+        });
+      }
+      
 
-      TL.to(".advancher__title", {
-        backgroundPosition: "100% 100%",
-        ease: "none",
-        scrollTrigger: {
-          // markers:true,
-          trigger: ".advancher",
-          // start: "top center+=300px",
-          // end: "bottom center-=300px",
-          start: "top bottom",
-          end: "bottom top",
-          scrub: true
-        }
-      });
-
-
+      
    
 
       var tl = new TimelineMax();
@@ -699,16 +715,22 @@ window.addEventListener('load', function() {
     }
       function calcHeightReview(){
         // fore
-        var line_height=20;
-        let limitHeight = line_height*5;
+        var line_height;
+        if (winw < 600){
+          line_height = 20
+        } else {
+          line_height = 24
+        }
+        let limitHeight = line_height*8;
 
        
         // height=product_prod_text_in.height();	
         // var count_rov=height/line_height;
         $(".landReviews:not(.landReviews--hero) .ReviewsItem__desc").each(function() {
-          if (isMobile){
+          if (isTablet){
             var textIn= $(this).find(".ReviewsItem__descContent").height();
             console.log(textIn)
+            console.log(limitHeight)
             if (textIn > limitHeight){
               $(this).find(".ReviewsItem__descContent").addClass("ReviewsItem__descContent--full")
               $(this).closest(".ReviewsItem").find(".ReviewsItem__showmore").addClass("ReviewsItem__showmore--active")
