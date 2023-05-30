@@ -20,7 +20,7 @@ window.addEventListener('load', function() {
 
       if($(".advancher__title").hasClass("advancher__title--big")){
         TL.to(".advancher__title--big", {
-          backgroundPosition: "100% 50%",
+          backgroundPosition: "100% 65%",
           ease: "none",
           scrollTrigger: {
             // markers:true,
@@ -810,4 +810,38 @@ window.addEventListener('load', function() {
     
       $(".text-page__content table").wrapAll("<div class='text-page__content-wrap'><div class='text-page__content-scroll'></div></div>");
       
+
+
+      // 3 step
+
+
+     
+      let textToLeftTimeline = gsap.timeline();
+   
+      textToLeftTimeline.to(".floating__line--right-to-left", 
+      {
+        x: "-50%",
+    
+        scrollTrigger:{
+          trigger:".floating__line--right-to-left",
+          scrub:true,
+          start: "top bottom",
+          end: "bottom top",
+           ease: "none",
+           markers:true
+        }
+      });
+      textToLeftTimeline.to(".floating__line--left-to-right", 
+      {
+        x: "50%",
+    
+        scrollTrigger:{
+          trigger:".floating__line--right-to-left",
+          scrub:true,
+          start: "top bottom",
+          end: "bottom top",
+           ease: "none",
+           markers:true
+        }
+      });
 });
