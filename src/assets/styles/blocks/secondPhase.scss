@@ -4562,6 +4562,10 @@ body {
             margin-top: 4px;
             flex-shrink: 0;
             margin-right: 17px;
+            &--big{
+                width: 64px;
+                height: 39px;
+            }
             img{
                 height: 100%;
             }
@@ -7039,6 +7043,48 @@ body {
        letter-spacing: .03em;
     }
     &__title{
+        color: #fff;
+    }
+}
+.assortment{
+    &__image{
+        width: 100%;
+        height: auto;
+    }
+    &__linkLabelNew{
+        margin-top: 32px;
+    }
+    &__title{
+        color: #fff;
+    }
+}
+
+.registry{
+    &__title,&__desc{
+        color: #fff;
+    }
+    &__desc{
+        font-family: $DM;
+        font-weight: 300;
+        margin-top: 16px;
+        &--desk{
+            display: none;
+            @include for-1024(){
+                display: block;
+            }
+        }
+        &--mob{
+            @include for-1024(){
+                display: none;
+            }
+        }
+    }
+
+    &__image{
+        width: 100%;
+        height: auto;
+    }
+    &__desc{
         color: #fff;
     }
 }

@@ -844,4 +844,15 @@ window.addEventListener('load', function() {
            markers:true
         }
       });
+
+      var swiper = new Swiper(".imp-projects__slider", {
+        pagination: {
+          el: ".imp-projects__swiper-pagination",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".imp-projects__slider-next",
+          prevEl: ".imp-projects__slider-prev",
+        },
+      });
 });
