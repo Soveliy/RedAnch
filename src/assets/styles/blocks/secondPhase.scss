@@ -129,7 +129,7 @@ body {
        
         @include for-1600(){
            
-            padding: 32px 32px 170px;
+            padding: 32px 48px 170px;
         }
         @media (min-width:1600px) and (max-width:1910px){
             padding-top: 100px;
@@ -327,8 +327,11 @@ body {
         }
         @include for-1600(){
             bottom: 23px;
-            padding: 0 75px 0 32px;
+            padding: 0 75px 0 48px;
         }
+        // @include for-1920(){
+        //     padding-left: 48px;
+        // }
         &Desc{
             position: relative;
             font-family: $DM;
@@ -1738,11 +1741,16 @@ body {
    
 }
 .standarts{
+  
     background: rgba(36,26,26,.9);
     position: relative;
+    overflow: hidden;
     z-index: 5;
     // overflow: hidden;
     padding: 40px 0;
+    &--no-bg{
+        background-color: transparent;
+    }
     @include for-600(){
         padding: 80px 0;
     }
@@ -3048,7 +3056,7 @@ body {
         }
         .manager__picture {
          
-            margin-left: -130px;
+            margin-left: -80px;
             margin-right: 0;
             @include for-600(){
                 margin-left: -90px;
@@ -4495,6 +4503,9 @@ body {
         position: relative;
         z-index: 500;
     }
+    &--medium-padding{
+        padding: 32px 0;
+    }
     @include for-600(){
         padding: 55px 0;
     }
@@ -4509,6 +4520,23 @@ body {
     }
     &__row{
         margin: -12px 0;
+        &--column-tablet{
+            @include for-600-only(){
+                flex-direction: column;
+                .landTizersItem{
+                   flex-direction: row;
+                }
+                .landTizersItem__icon {
+                    width: 112px;
+                    height: 68px;
+                    margin-right: 16px;
+                }
+                .landTizers__item-container{
+                 
+                    width: 100%;
+                }
+            }
+        }
         @include for-600(){
             display: flex;
             flex-wrap: wrap;
@@ -4565,6 +4593,7 @@ body {
             &--big{
                 width: 64px;
                 height: 39px;
+                margin-top: 0;
             }
             img{
                 height: 100%;
@@ -6814,6 +6843,12 @@ body {
                 line-height: 125px;
              }
         }
+        &-320{
+            @media screen and (min-width: 600px) {
+                font-size: 320px;
+                line-height: 260px;
+             }
+        }
     }
     &--ds{
         &-200 {
@@ -6983,9 +7018,37 @@ body {
 }
 
 .about-factory{
+    padding-bottom: 35px;
+    @include for-600(){
+        padding-bottom: 0;
+    }
+    &__image{
+        &--desk{
+            display: none;
+            @include for-1024(){
+                display: block;
+            }
+        }
+        &--mob{
+            @include for-1024(){
+                display: none;
+            }
+        }
+    }
+    &__body{
+        display: flex;
+    }
     &__head{
+        margin-bottom: 16px;
+        @include for-600(){
+            margin-bottom: 25px;
+        }
         svg{
+            height: auto;
             width: 100%;
+            @include for-600(){
+                width: 74%;
+            }
         }
         // margin-bottom: 24px;
     }
@@ -6997,6 +7060,22 @@ body {
         
         letter-spacing: 0.03em;
         color: #FFFFFF;
+        @include for-600(){
+            font-size: 18px;
+            line-height: 28px;
+        }
+        @include for-1024(){
+            font-size: 20px;
+            line-height: 32px;
+        }
+        @include for-1366(){
+            font-size: 24px;
+            line-height: 36px;
+        }
+        @include for-1600(){
+            font-size: 32px;
+            line-height: 46px;
+        }
         
     }   
     &__video{
@@ -7007,6 +7086,17 @@ body {
         padding: 16px;
         box-sizing: border-box;
         margin-top: 24px;
+        @include for-600(){
+            margin-top: 16px;
+        }
+        @include for-1024(){
+            margin-top: 0;
+            width: 22.5%;
+            flex-shrink: 0;
+            align-items: center;
+            flex-direction: row-reverse;
+            justify-content: center;
+        }
         &-title{
             position: relative;
             z-index: 10;
@@ -7017,12 +7107,27 @@ body {
             letter-spacing: 0.06em;
             text-transform: uppercase;
             color: #FFFFFF;
+            @include for-600(){
+                font-size: 28px;
+                line-height: 32px;
+                letter-spacing: .05em;
+            }
+            @include for-1024(){
+                font-size: 24px;
+                line-height: 24px;
+                max-width: 60px;
+            }
         }
         &-icon{
             position: relative;
             z-index: 10;
             height: 18px;
             width: 16px;
+            @include for-1024(){
+                width: 27px;
+                height: 31px;
+                margin-right: 16px;
+            }
         }
         &-picture{
             position: absolute;
@@ -7038,15 +7143,51 @@ body {
     }
 }
 .first-step{
+    padding: 23px 0;
+    @include for-600(){
+        padding: 40px 0;
+    }
     &__number{
        color: rgba(221, 43, 28, 1);
        letter-spacing: .03em;
     }
     &__title{
+        position: relative;
+        z-index: 5;
+        margin-top: -71px;
+        letter-spacing: .03em;
         color: #fff;
+        @include for-600(){
+            margin-top: -95px;
+        }
+    }
+    &__image{
+        margin: -23px -15px 0;
+        width: calc(100% + 30px);
+        @include for-600(){
+            margin: -30px -15px 0;
+        }
+    }
+    &__desc{
+        font-family: $DM;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.03em;
+        color: #FFFFFF;
+        margin: 16px 0;
+        @include for-600(){
+            font-size: 20px;
+            line-height: 28px;
+            max-width: 422px;
+        }
     }
 }
 .assortment{
+    padding: 26px 0 23px;
+    @include for-600(){
+        padding: 42px 0 40px;
+    }
     &__image{
         width: 100%;
         height: auto;
@@ -7055,18 +7196,49 @@ body {
         margin-top: 32px;
     }
     &__title{
+        margin-top: -20px;
         color: #fff;
+        letter-spacing: .03em;
+        @include for-600(){
+            margin-top: -28px;
+        }
     }
 }
 
 .registry{
+    position: relative;
+    overflow: hidden;
+    padding: 17px 0;
+    @include for-600(){
+        padding: 23px 0;
+    }
     &__title,&__desc{
         color: #fff;
+    }
+    &__title{
+        position: relative;
+        z-index: 5;
+        letter-spacing: .03em;
     }
     &__desc{
         font-family: $DM;
         font-weight: 300;
+        font-size: 18px;
+        line-height: 28px;
+        /* or 156% */
+
+        letter-spacing: 0.03em;
+
+        /* txt/white */
+
+        color: #FFFFFF;
+
         margin-top: 16px;
+        @include for-600(){
+            font-size: 20px;
+            line-height: 28px;
+            max-width: 422px;
+        }
         &--desk{
             display: none;
             @include for-1024(){
@@ -7081,10 +7253,94 @@ body {
     }
 
     &__image{
-        width: 100%;
         height: auto;
+        width: 129%;
+        margin-top: -36%;
+        @media (min-width:400px){
+            margin-top: -25%;
+        }
+        @include for-600(){
+           margin-left: -8%;
+           margin-top: -23%;
+        }
     }
     &__desc{
         color: #fff;
+    }
+}
+.imp-projects{
+    padding: 50px 0px;
+    position: relative;
+    overflow: hidden;
+    @include for-600(){
+        padding: 54px 0;
+    }
+    &__title{
+        color: #fff;
+        letter-spacing: .03em;
+        margin-bottom: 16px;
+    }
+    &__arrow{
+        display: none;
+    }
+    &__desc{
+        font-family: $DM;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.03em;
+        color: #FFFFFF;
+        @include for-600(){
+            font-size: 20px;
+            line-height: 28px;
+            max-width: 422px;
+        }
+     
+    }
+    &__image{
+        img{
+            width: 100%;
+        }
+    }
+    &__swiper-pagination{
+        position: static;
+        margin-top: 16px;
+        font-family: $DM;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.6);
+        text-align: left;
+        @include for-600(){
+            margin-top: 24px;
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+    &__slider{
+        margin-top: 16px;
+    }
+    &__slide-desc{
+        font-family: $DM;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 20px;
+        /* or 125% */
+        
+        letter-spacing: 0.03em;
+        
+        /* txt/white */
+        
+        color: #FFFFFF;
+        margin-top: 8px;
+        @include for-600(){
+            font-size: 18px;
+            line-height: 22px;
+            max-width: 265px;
+        }
+    }
+    .swiper-slide{
+        width: 91%;
     }
 }

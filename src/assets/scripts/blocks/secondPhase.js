@@ -828,7 +828,7 @@ window.addEventListener('load', function() {
           start: "top bottom",
           end: "bottom top",
            ease: "none",
-           markers:true
+          
         }
       });
       textToLeftTimeline.to(".floating__line--left-to-right", 
@@ -841,18 +841,31 @@ window.addEventListener('load', function() {
           start: "top bottom",
           end: "bottom top",
            ease: "none",
-           markers:true
+          
         }
       });
 
-      var swiper = new Swiper(".imp-projects__slider", {
+      var projects = new Swiper(".imp-projects__slider", {
+        spaceBetween:16,
+        slidesPerView: "auto",
         pagination: {
           el: ".imp-projects__swiper-pagination",
           type: "fraction",
+          renderFraction: function (currentClass, totalClass) {
+            return '<span class="' + currentClass + '"></span>' +
+                   ' из ' +
+                   '<span class="' + totalClass + '"></span>';
+        }
         },
+        
         navigation: {
           nextEl: ".imp-projects__slider-next",
           prevEl: ".imp-projects__slider-prev",
         },
+        breakpoints:{
+          1023:{
+            spaceBetween:32,
+          }
+        }
       });
 });
