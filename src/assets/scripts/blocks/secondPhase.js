@@ -20,7 +20,7 @@ window.addEventListener('load', function() {
 
       if($(".advancher__title").hasClass("advancher__title--big")){
         TL.to(".advancher__title--big", {
-          backgroundPosition: "100% 65%",
+          backgroundPosition: "100% 85%",
           ease: "none",
           scrollTrigger: {
             // markers:true,
@@ -679,6 +679,7 @@ window.addEventListener('load', function() {
         slidesPerView: 1,
         // spaceBetween: 16,
         // centeredSlides: true,
+        autoHeight:true,
         navigation: {
           nextEl: ".landReviews__arrow--next",
           prevEl: ".landReviews__arrow--prev",
