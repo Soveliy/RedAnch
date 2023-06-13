@@ -65,6 +65,73 @@ window.addEventListener('load', function() {
           end: "bottom top",
         }
       });
+     
+      TL.to(".history-step__dates image", {
+        yPercent:20,
+        ease: "none",
+        scrollTrigger: {
+          // markers:true,
+          trigger: ".history-step__dates",
+          // start: "top center+=300px",
+          // end: "bottom center-=300px",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true
+        }
+      });
+      TL.to(".about-factory__image--mob image", {
+        yPercent:20,
+        ease: "none",
+        scrollTrigger: {
+          // markers:true,
+          trigger: ".about-factory__image--mob",
+          // start: "top center+=300px",
+          // end: "bottom center-=300px",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true
+        }
+      });
+
+      TL.to(".about-factory__image--desk image", {
+        yPercent:20,
+        ease: "none",
+        scrollTrigger: {
+          // markers:true,
+          trigger: ".about-factory__image--desk",
+          // start: "top center+=300px",
+          // end: "bottom center-=300px",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true
+        }
+      });
+      TL.to(".assortment__image image", {
+        yPercent:20,
+        ease: "none",
+        scrollTrigger: {
+          // markers:true,
+          trigger: ".assortment__image",
+          // start: "top center+=300px",
+          // end: "bottom center-=300px",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true
+        }
+      });
+      TL.to(".registry__image image", {
+        yPercent:10,
+        ease: "none",
+        scrollTrigger: {
+          // markers:true,
+          trigger: ".registry__image",
+          // start: "top center+=300px",
+          // end: "bottom center-=300px",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true
+        }
+      });
       
       
     
@@ -851,13 +918,14 @@ window.addEventListener('load', function() {
 
      
       let textToLeftTimeline = gsap.timeline();
-   
-      textToLeftTimeline.to(".floating__line--right-to-left", 
+      let elemsRight = document.querySelectorAll(".floating__line--right-to-left")
+      let elemsLeft = document.querySelectorAll(".floating__line--left-to-right")
+      textToLeftTimeline.to(elemsRight[0], 
       {
         x: "-50%",
     
         scrollTrigger:{
-          trigger:".floating__line--right-to-left",
+          trigger:elemsRight[0],
           scrub:true,
           start: "top bottom",
           end: "bottom top",
@@ -865,12 +933,12 @@ window.addEventListener('load', function() {
           
         }
       });
-      textToLeftTimeline.to(".floating__line--left-to-right", 
+      textToLeftTimeline.to(elemsLeft[0], 
       {
         x: "50%",
     
         scrollTrigger:{
-          trigger:".floating__line--right-to-left",
+          trigger:elemsRight[0],
           scrub:true,
           start: "top bottom",
           end: "bottom top",
@@ -879,6 +947,77 @@ window.addEventListener('load', function() {
         }
       });
 
+      textToLeftTimeline.to(elemsRight[1], 
+        {
+          x: "-50%",
+      
+          scrollTrigger:{
+            trigger:elemsRight[1],
+            scrub:true,
+            start: "top bottom",
+            end: "bottom top",
+             ease: "none",
+            
+          }
+        });
+        textToLeftTimeline.to(elemsLeft[1], 
+        {
+          x: "50%",
+      
+          scrollTrigger:{
+            trigger:elemsRight[1],
+            scrub:true,
+            start: "top bottom",
+            end: "bottom top",
+             ease: "none",
+            
+          }
+        });
+        textToLeftTimeline.to(elemsRight[2], 
+          {
+            x: "-30%",
+        
+            scrollTrigger:{
+              trigger:elemsRight[2],
+              scrub:true,
+              start: "top bottom",
+              end: "bottom top",
+               ease: "none",
+              
+            }
+          });
+          textToLeftTimeline.to(elemsLeft[2], 
+          {
+            x: "30%",
+        
+            scrollTrigger:{
+              trigger:elemsRight[2],
+              scrub:true,
+              start: "top bottom",
+              end: "bottom top",
+               ease: "none",
+              
+            }
+          });
+
+          $(".history-step__image").each(function() {
+            var stepImages = new TimelineMax();
+            var child = $(this).find("img");
+            let parallaxY;
+            if (!isTablet){
+              parallaxY = -180
+            } else {
+              parallaxY = -80
+            }
+            stepImages.to(child, 1, {
+               y: parallaxY,
+               ease: "none" ,
+               scrollTrigger:{
+                trigger:$(this),
+                scrub:true,
+               }
+              });
+            });
       var projects = new Swiper(".imp-projects__slider", {
         spaceBetween:16,
         slidesPerView: "auto",
