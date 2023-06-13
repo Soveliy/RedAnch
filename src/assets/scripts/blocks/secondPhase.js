@@ -18,39 +18,9 @@ window.addEventListener('load', function() {
       TweenMaxWithCSS = gsapWithCSS.core.Tween;
       var TL = gsapWithCSS.timeline();
 
-      if($(".advancher__title").hasClass("advancher__title--big")){
-        TL.to(".advancher__title--big", {
-          backgroundPosition: "100% 85%",
-          ease: "none",
-          scrollTrigger: {
-            // markers:true,
-            trigger: ".advancher",
-            // start: "top center+=300px",
-            // end: "bottom center-=300px",
-            start: "top bottom",
-            end: "bottom top",
-            scrub: true
-          }
-        });
-      } else {
-        TL.to(".advancher__title", {
-          backgroundPosition: "100% 100%",
-          ease: "none",
-          scrollTrigger: {
-            // markers:true,
-            trigger: ".advancher",
-            // start: "top center+=300px",
-            // end: "bottom center-=300px",
-            start: "top bottom",
-            end: "bottom top",
-            scrub: true
-          }
-        });
-      }
       
 
       
-   
 
       var tl = new TimelineMax();
       let parallaxElem = $(".land-hero__picture img");
@@ -103,7 +73,7 @@ window.addEventListener('load', function() {
           var chainBig = new TimelineMax();
           let chainBigElem = $(".numeral__picture");
           chainBig.to(chainBigElem, 1, { 
-            y: "-45%",
+            y: "-70%",
             ease: "none" ,
            
             scrollTrigger:{
@@ -196,7 +166,7 @@ window.addEventListener('load', function() {
           var chainBig = new TimelineMax();
           let chainBigElem = $(".numeral__picture");
           chainBig.to(chainBigElem, 1, { 
-            y: "-30%",
+            y: "-27%",
             ease: "none" ,
            
             scrollTrigger:{
@@ -229,7 +199,7 @@ window.addEventListener('load', function() {
           var chainBig = new TimelineMax();
           let chainBigElem = $(".numeral__picture");
           chainBig.to(chainBigElem, 1, { 
-            y: "-50%",
+            y: "-75%",
             ease: "none" ,
            
             scrollTrigger:{
@@ -293,9 +263,72 @@ window.addEventListener('load', function() {
           
          
         },
-     
+        "(min-width: 320px) and (max-width: 1023px)": function minWidth320pxAndMaxWidth1023px() {
+                
+          if($(".advancher__title").hasClass("advancher__title--big")){
+            TL.to(".advancher__title--big", {
+              backgroundPosition: "100% 95%",
+              ease: "none",
+              scrollTrigger: {
+                // markers:true,
+                trigger: ".advancher",
+                // start: "top center+=300px",
+                // end: "bottom center-=300px",
+                start: "top bottom",
+                end: "bottom top",
+                scrub: true
+              }
+            });
+          } else {
+            TL.to(".advancher__title", {
+              backgroundPosition: "100% 100%",
+              ease: "none",
+              scrollTrigger: {
+                // markers:true,
+                trigger: ".advancher",
+                // start: "top center+=300px",
+                // end: "bottom center-=300px",
+                start: "top bottom",
+                end: "bottom top",
+                scrub: true
+              }
+            });
+          }
+        },
+        "(min-width: 1024px)": function minWidth1024px() {
+          
+            if($(".advancher__title").hasClass("advancher__title--big")){
+              TL.to(".advancher__title--big", {
+                    backgroundPosition: "100% 85%",
+                    ease: "none",
+                    scrollTrigger: {
+                      // markers:true,
+                      trigger: ".advancher",
+                      // start: "top center+=300px",
+                      // end: "bottom center-=300px",
+                      start: "top bottom",
+                      end: "bottom top",
+                      scrub: true
+                    }
+                  });
+                } else {
+                  TL.to(".advancher__title", {
+                    backgroundPosition: "100% 100%",
+                    ease: "none",
+                    scrollTrigger: {
+                      // markers:true,
+                      trigger: ".advancher",
+                      // start: "top center+=300px",
+                      // end: "bottom center-=300px",
+                      start: "top bottom",
+                      end: "bottom top",
+                      scrub: true
+                    }
+                  });
+            }
+        },
       });
-
+     
 
       
       let SectionLeftTitleLine = new TimelineMax();
@@ -457,14 +490,14 @@ window.addEventListener('load', function() {
             }
           })
           .to(BigChain, {
-            y: "-10%",
+            y: "-12%",
             ease: "none" ,
             duration:1
           })
           .to(BigChain, {
             ease: "none" ,
-            y: "-100%",
-            duration:3
+            y: "-150%",
+            duration:4
           });
     
         },

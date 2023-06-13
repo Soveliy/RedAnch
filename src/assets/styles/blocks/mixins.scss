@@ -1,7 +1,10 @@
 $DM : 'PF Din Text Cond Pro';
 $TT : 'TT Bluescreens';
 $transition: .8s cubic-bezier(.5,0,0,1);
+@mixin for-mob-only{
+    @media (max-width: 568px) { @content; }
 
+}
 @mixin for-600 {
     @media (min-width: 568px) { @content; }
 }
