@@ -495,6 +495,23 @@ body {
             font-size: 36px;
             line-height: 56px;
         }
+        &--type-2{
+            font-size: 18px;
+            line-height: 28px;
+            margin-top: 8px;
+            @include for-600(){
+                font-size: 20px;
+                line-height: 28px;
+              
+                
+            }
+            @include for-1024(){
+                font-size: 28px;
+                line-height: 40px;
+                max-width: 381px;
+                margin-top: 24px;
+            }
+        }
     }
 }
 .main{
@@ -5752,21 +5769,7 @@ body {
             }
         }
         h2 + p{
-            font-size: 18px;
-            line-height: 28px;
-            letter-spacing: .03em;
-            @include for-600(){
-                font-size: 20px;
-                line-height: 28px;
-            }
-            @include for-1366(){
-                font-size: 24px;
-                line-height: 36px;
-            }
-            @include for-1600(){
-                font-size: 32px;
-                line-height: 48px;
-            }
+          
         }
         h3{
             font-size: 20px;
@@ -5814,10 +5817,10 @@ body {
         }
         h2,h3,h4,h5,h6{
             margin-top: 24px;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             @include for-1366(){
                 margin-top: 32px;
-                margin-bottom: 12px;
+             
             }
         }
         > *:first-child{
@@ -5827,22 +5830,42 @@ body {
             margin-bottom: 0 !important;
         }
        p{
-        font-size: 14px;
-        line-height: 20px;
-        letter-spacing: .05em;
-        margin-bottom: 24px;
+        // font-size: 14px;
+        // line-height: 20px;
+        // letter-spacing: .05em;
+        // margin-bottom: 24px;
+        // @include for-600(){
+        //     font-size: 16px;
+        //     line-height: 24px;
+        // }
+        // @include for-1366(){
+        //     font-size: 20px;
+        //     line-height: 28px;
+        //     margin-bottom: 32px;
+        // }
+        // @include for-1600(){
+        //     font-size: 24px;
+        //     line-height: 32px;
+        // }
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: .03em;
         @include for-600(){
-            font-size: 16px;
-            line-height: 24px;
-        }
-        @include for-1366(){
             font-size: 20px;
             line-height: 28px;
-            margin-bottom: 32px;
+        }
+        @include for-1366(){
+            font-size: 24px;
+            line-height: 36px;
         }
         @include for-1600(){
-            font-size: 24px;
-            line-height: 32px;
+            font-size: 32px;
+            line-height: 48px;
+        }
+       }
+       picture + p{
+        @include for-1024(){
+            margin-top: 10px;
         }
        }
        table{
@@ -5898,6 +5921,9 @@ body {
                 padding-left: 0;
             }
         }
+       }
+       p + p{
+        margin-top: 12px;
        }
        p + ul, p + ol{
         margin-top: -12px;
@@ -6964,6 +6990,12 @@ body {
                 line-height: 96px;
              }
         }
+        &-232{
+            @media screen and (min-width: 1340px) {
+                font-size: 232px;
+                line-height: 232px;
+             }
+        }
         &-280{
             @media screen and (min-width: 1340px) {
                 font-size: 280px;
@@ -6990,6 +7022,12 @@ body {
         }
     }
     &--dl{
+        &-264{
+            @media screen and (min-width: 1600px) {
+                font-size: 264px;
+                line-height: 264px;
+             }
+        }
         &-240{
             @media screen and (min-width: 1600px) {
                 font-size: 240px;
@@ -9282,12 +9320,13 @@ body {
      
             align-items: flex-start;
             justify-content: flex-start;
-            padding-top: 99px;
+            padding-top: 109px;
+          
             @include for-600(){
                 padding-top: 112px;
             }
             @include for-1024(){
-                padding-top: 124px;
+                padding-top: 140px;
             }
             @include for-1600(){
                 padding-top: 164px;
@@ -9906,4 +9945,109 @@ body {
 }
 .page--ultralight{
     background-color: #fff;
+}
+
+
+.cycle-stages{
+    padding: 30px  0 40px;
+    @include for-1024(){
+        padding: 147px 0;
+    }
+    &__item{
+        @include for-1024(){
+            padding: 0 8.6%;
+        }
+        &.text-page__content{
+            max-width: 82.9%;
+            margin-left: auto;
+            margin-right: auto;
+            h2{
+                @include for-1024(){
+                    margin-bottom: 0;
+                }
+            }
+            h2 + p{
+                @include for-1024(){
+                    margin-top: 24px;
+                }
+            }
+            p + p{
+                @include for-1024(){
+                    margin-top: 16px;
+                }
+            }
+            p{
+                @include for-1024(){
+                    max-width: 74%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    line-height: 32px;
+                }
+            }
+        }
+        &.text-page__content:not(.text-page__content--without-margin-title){
+            h3{
+                margin-left: 13%;
+            }
+        }
+        
+    }
+    &__item + &__item{
+        margin-top: 40px;
+        @include for-1024(){
+            margin-top: 64px;
+        }
+    }
+    &__head{
+        display: flex;
+        align-items: center;
+    }
+    &__value{
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        
+        /* txt/primary */
+        
+        color: #DD2B1C;
+        @include for-1024(){
+            margin-right: 28px;
+        }
+    }
+    &__head{
+        position: relative;
+        z-index: 10;
+    }
+    &__title{
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #150F0F;
+        
+        text-shadow: 0px 4px 80px rgba(255, 255, 255, 0.8);
+    }
+    &__picture{
+        margin: -14px -15px 16px;
+        width: calc(100% + 30px);
+        @include for-1024(){
+            margin: -64px 0 16px;
+            width: 100%;
+        }
+    }
+    &__desc{
+        font-family: $DM;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.03em;
+        color: #150F0F;
+        @include for-1024(){
+            font-size: 20px;
+            line-height: 32px;
+            max-width: 48%;
+            margin-left: auto;
+        }
+        
+    }
+    &.text-page__content{
+        max-width: 100%;
+    }
 }
