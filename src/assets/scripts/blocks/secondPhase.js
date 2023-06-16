@@ -1018,6 +1018,24 @@ window.addEventListener('load', function() {
                }
               });
             });
+            $(".cycle-stages__picture").each(function() {
+              var stepImages = new TimelineMax();
+              var child = $(this).find("img");
+              let parallaxY;
+              if (!isTablet){
+                parallaxY = -180
+              } else {
+                parallaxY = -80
+              }
+              stepImages.to(child, 1, {
+                 y: parallaxY,
+                 ease: "none" ,
+                 scrollTrigger:{
+                  trigger:$(this),
+                  scrub:true,
+                 }
+                });
+              });
       var projects = new Swiper(".imp-projects__slider", {
         spaceBetween:16,
         slidesPerView: "auto",

@@ -509,7 +509,22 @@ body {
                 font-size: 28px;
                 line-height: 40px;
                 max-width: 381px;
-                margin-top: 24px;
+                margin-top: 24px !important;
+            }
+            @include for-1366(){
+                font-size: 28px;
+                line-height: 40px;
+                max-width: 744px;
+                margin-top: 32px !important;
+            }
+            @include for-1600(){
+                margin-top: 22px !important;
+                margin-left: 127px;
+                max-width: 61%;
+            }
+            @include for-1920(){
+                margin-left: 154px;
+                max-width: 57.6%;
             }
         }
     }
@@ -3140,6 +3155,14 @@ body {
     position: relative;
     overflow: hidden;
     background: #241a1a;
+    &--margin{
+        @include for-1024(){
+            margin-top: 54px;
+        }
+        @include for-1600(){
+            margin-top: 70px;
+        }
+    }
     .container{
         @include for-1920(){
             position: relative;
@@ -3292,6 +3315,27 @@ body {
                 }
             }
 
+        }
+        &--type-3{
+            letter-spacing: .05em;
+            @include for-600(){
+                letter-spacing: .03em;
+                max-width: 353px;
+            }
+            @include for-600-only(){
+                svg{
+                    bottom: 26px;
+                }
+            }
+            @include for-1024(){
+                line-height: 90px;
+            }
+            @include for-1366(){
+                line-height: 143px;
+            }
+            @include for-1600(){
+                line-height: 156px;
+            }
         }
         &::before{
             content: '';
@@ -5184,6 +5228,115 @@ body {
             padding-bottom: 268px;
         }
     }
+    &__head{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 16px;
+        @include for-1024(){
+            flex-direction: row-reverse;
+            margin-bottom: 40px;
+            justify-content: space-between;
+
+        }
+        &-desc{
+            font-family: $DM;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 28px;
+            /* or 156% */
+            
+            letter-spacing: 0.03em;
+            
+            /* txt/black */
+            
+            color: #150F0F;
+            margin-top: 16px;
+            @include for-600(){
+                font-size: 20px;
+                line-height: 28px;
+                max-width: 75%;
+            }
+            @include for-1024(){
+                font-size: 24px;
+                line-height: 36px;
+                margin-top: 0;
+            }
+            @include for-1366(){
+                        max-width: 68%;
+                        font-size: 24px;
+                line-height: 36px;
+            }
+            @include for-1600(){
+                max-width: 67%;
+                font-size: 32px;
+                line-height: 46px;
+            }
+        }
+        &-info{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            @include for-1024(){
+                align-items: flex-end;
+                padding-top: 6px;
+            }
+            @include for-1600(){
+                padding-top: 8px;
+            }
+            &-title{
+                font-family: $DM;
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 16px;
+                letter-spacing: 0.05em;
+                color: #50575A;
+                @include for-600(){
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+                @include for-1024(){
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+                @include for-1366(){
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+                @include for-1600(){
+                    font-size: 24px;
+                    line-height: 28px;
+                }
+            }
+            &-link{
+                font-family: $TT;
+                font-weight: 700;
+                font-size: 32px;
+                line-height: 32px;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                color: #DD2B1C;
+                margin-top: 6px;
+                @include for-600(){
+                    font-size: 48px;
+                    line-height: 48px;
+                }
+                @include for-1024(){
+                    font-size: 36px;
+                    line-height: 36px;
+                }
+                @include for-1366(){
+                    font-size: 44px;
+                    line-height: 44px;
+                }
+                @include for-1600(){
+                    font-size: 60px;
+                    line-height: 60px;
+                }
+                
+            }
+        }
+    }
     &__row{
         margin: -4px;
         display: flex;
@@ -5209,16 +5362,16 @@ body {
         margin-top: 26px;
         @include for-600(){
             margin-top: 34px;
-            max-width: 230px;
+            max-width: max-content;
         }
         @include for-1024(){
-            max-width: 235px;
+          
         }
         @include for-1366(){
-            max-width: 280px;
+           
         }
         @include for-1600(){
-            max-width: 350px;
+         
         }
         a{
             width: 100%;
@@ -5589,6 +5742,19 @@ body {
             padding-left: 30px;
             box-sizing: border-box;
             align-items: flex-start;
+        }
+        &-desc{
+            font-family:$DM;
+            font-size: 16px;
+            line-height: 20px;
+            /* or 125% */
+            font-weight: 300;
+            letter-spacing: 0.03em;
+            
+            /* txt/black */
+            
+            color: #150F0F;
+            margin-bottom: 10px;
         }
     }
     &__wrapper{
@@ -6905,7 +7071,12 @@ body {
         }
     }
     &--ts{
-      
+        &-65{
+            @media screen and (min-width: 600px) {
+                font-size: 65px;
+                line-height: 67px;
+             }
+        }
         &-150{
             @media screen and (min-width: 600px) {
                 font-size: 150px;
@@ -7022,6 +7193,12 @@ body {
         }
     }
     &--dl{
+        &-180{
+            @media screen and (min-width: 1600px) {
+                font-size: 180px;
+                line-height: 180px;
+             }
+        }
         &-264{
             @media screen and (min-width: 1600px) {
                 font-size: 264px;
@@ -7058,6 +7235,23 @@ body {
                 line-height: 804px;
              }
         }
+    }
+}
+.brief{
+    &--ts{
+        &-16{
+            @include for-600(){
+                font-size: 16px;
+            line-height: 20px;
+            }
+          
+        }
+       &-28{
+        @include for-600(){
+            font-size: 28px;
+            line-height: 32px;
+        }
+       }
     }
 }
 .floating{
@@ -9328,8 +9522,14 @@ body {
             @include for-1024(){
                 padding-top: 140px;
             }
+            @include for-1366(){
+                padding-top: 162px;
+                .land-hero__title {
+                    letter-spacing: .02em;
+                }
+            }
             @include for-1600(){
-                padding-top: 164px;
+                padding-top: 181px;
             }
         
     }
@@ -9951,16 +10151,27 @@ body {
 .cycle-stages{
     padding: 30px  0 40px;
     @include for-1024(){
-        padding: 147px 0;
+        padding: 147px 0 128px; 
+    }
+    @include for-1366(){
+        padding: 131px 0 141px;
+    }
+    @include for-1600(){
+        padding: 161px 0 124px;
+    }
+    @include for-1920(){
+        padding: 200px 0 120px;
     }
     &__item{
         @include for-1024(){
             padding: 0 8.6%;
         }
         &.text-page__content{
+          @include for-1024(){
             max-width: 82.9%;
             margin-left: auto;
             margin-right: auto;
+          }
             h2{
                 @include for-1024(){
                     margin-bottom: 0;
@@ -9970,10 +10181,19 @@ body {
                 @include for-1024(){
                     margin-top: 24px;
                 }
+                @include for-1366(){
+                    margin-top: 40px;
+                }
             }
             p + p{
                 @include for-1024(){
                     margin-top: 16px;
+                }
+                @include for-1366(){
+                    margin-top: 23px;
+                }
+                @include for-1600(){
+                    margin-top: 17px;
                 }
             }
             p{
@@ -9983,11 +10203,26 @@ body {
                     margin-right: auto;
                     line-height: 32px;
                 }
+                @include for-1366(){
+                    line-height: 36px;
+                }
+                @include for-1600(){
+                    line-height: 46px;
+                    max-width: 74.5%;
+                }
+            }
+            picture + p:not(.note){
+                margin-top: 32px;
             }
         }
         &.text-page__content:not(.text-page__content--without-margin-title){
             h3{
+               @include for-1024(){
                 margin-left: 13%;
+               }
+                @include for-1366(){
+                    margin-bottom: 32px;
+                }
             }
         }
         
@@ -9997,10 +10232,18 @@ body {
         @include for-1024(){
             margin-top: 64px;
         }
+        @include for-1366(){
+            margin-top: 80px;
+        }
+        @include for-1600(){
+            margin-top: 97px;
+        }
     }
     &__head{
+       @include for-1024(){
         display: flex;
         align-items: center;
+       }
     }
     &__value{
         letter-spacing: 0.03em;
@@ -10011,6 +10254,9 @@ body {
         color: #DD2B1C;
         @include for-1024(){
             margin-right: 28px;
+        }
+        @include for-1600(){
+            margin-right: 24px;
         }
     }
     &__head{
@@ -10023,13 +10269,29 @@ body {
         color: #150F0F;
         
         text-shadow: 0px 4px 80px rgba(255, 255, 255, 0.8);
+        @include for-1366(){
+            letter-spacing: .03em;
+        }
+        @include for-1600(){
+            letter-spacing: .04em;
+        }
     }
     &__picture{
         margin: -14px -15px 16px;
         width: calc(100% + 30px);
+        img{
+            width: 100%;
+        }
         @include for-1024(){
             margin: -64px 0 16px;
             width: 100%;
+            
+        }
+        @include for-1366(){
+            margin: -88px 0 32px;
+        }
+        @include for-1600(){
+            margin: -102px 0 35px;
         }
     }
     &__desc{
@@ -10045,9 +10307,550 @@ body {
             max-width: 48%;
             margin-left: auto;
         }
-        
+        @include for-1366(){
+            font-size: 24px;
+            line-height: 36px;
+        }
+        @include for-1600(){
+            font-size: 32px;
+            line-height: 46px;
+            max-width: 48.7%;
+        }
     }
     &.text-page__content{
         max-width: 100%;
+    }
+}
+.member-card{
+    &__picture{
+        &--not-hidden{
+            @include for-1600(){
+                width: 320px;
+                margin-left: 20px;
+            }
+            background-color: #fff;
+            &:before{
+               @media (max-width:1023px){
+                display: none;
+               }
+            }
+            .member-card__text + .member-card__text{
+                @include for-1600(){
+                    margin-top: -35px;
+                }
+            }
+            display: block;
+            @media (max-width:1023px){
+                img{
+                    width: auto;
+                    height: auto;
+                    object-fit: inherit;
+                    position: static;
+                }
+            }
+        }
+       
+    }
+}
+.main__bricks--contacts .member-card__picture.member-card__picture--not-hidden{
+    background-color: #fff;
+}
+.page-header{
+    // padding-top: 16px;
+    margin-bottom: 16px;
+    @include for-600(){
+        // padding-top: 28px;
+        margin-bottom: 24px;
+    }
+    @include for-1024(){
+        // padding-top: 40px;
+        margin-bottom: 32px;
+    }
+    @include for-1366(){
+        // padding-top: 50px;
+        margin-bottom: 64px;
+    }
+    @include for-1600(){
+        // padding-top: 40px;
+    }
+    &__title{
+        letter-spacing: .03em;
+    }
+    
+}
+.page-content{
+    padding-bottom: 58px;
+    @include for-600(){
+        padding-bottom: 80px;
+    }
+    @include for-1024(){
+        padding-bottom: 192px;
+    }
+    @include for-1366(){
+        padding-bottom: 128px;
+    }
+    @include for-1600(){
+        padding-bottom: 160px;
+    }
+    &--padding-both{
+        @include for-1024(){
+            padding-left: 8.3%;
+            padding-right: 8.3%;
+        }
+    }
+    &__desc{
+        font-family: $DM;
+        @include for-1024(){
+            margin-bottom: 32px;
+        }
+        &--desk{
+            display: none;
+            @include for-1024(){
+                display: block;
+                font-family: $DM;
+                font-weight: 300;
+                font-size: 20px;
+                line-height: 32px;
+                /* or 160% */
+                
+                letter-spacing: 0.03em;
+                
+                /* txt/black */
+                
+                color: #150F0F;
+                max-width: 55%;
+            }
+            @include for-1366(){
+                font-size: 24px;
+                line-height: 36px;
+                margin-bottom: 40px;
+                max-width: 62%;
+            }
+            @include for-1600(){
+                font-size: 32px;
+                line-height: 46px;
+                max-width: 58%;
+            }
+            
+        }
+    }
+    &__sidebar{
+        margin-bottom: 24px;
+        @include for-600(){
+            margin-bottom: 19px;
+        }
+        @include for-1024(){
+            width: 216px;
+            flex-shrink: 0;
+            margin-right: 32px;
+        }
+        @include for-1366(){
+            width: 304px;
+        }
+        @include for-1600(){
+            width: 23.3%;
+        }
+        @include for-1920(){
+            width: 432px;
+        }
+    }
+    &__row{
+        @include for-1024(){
+            display: flex;
+            padding-top: 32px;
+        }
+        @include for-1366(){
+            padding-top: 0;
+        }
+    }
+}
+.certs{
+    &__row{
+        display: flex;
+        flex-wrap: wrap;
+        margin: -4px;
+        @include for-1024(){
+            margin: -16px;
+        }
+    }
+    &__item-container{
+        padding: 4px;
+        box-sizing: border-box;
+        width: 50%;
+        @include for-600(){
+            width: 33.3%;
+        }
+        @include for-1024(){
+            width: 25%;
+            padding: 16px;
+        }
+    }
+    &-item{
+        position: relative;
+        box-sizing: border-box;
+        &:hover{
+            @include for-1024(){
+                .certs-item__desc{
+                    color: #DD2B1C;
+                }
+            }
+        }
+        // &:before{
+        //     display: block;
+        //     content: '';
+        //     padding-top: 100%;
+        // }
+        // img{
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     height: 100%;
+        //     width: 100%;
+        // }
+        img{
+            max-width: 100%;
+            width: 100%;
+        }
+        &__desc{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            min-height: 50%;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9052) 32.29%, #FFFFFF 100%);
+            width: 100%;
+            box-sizing: border-box;
+            padding: 40px 16px 20px 16px;
+            display: flex;
+            align-items: flex-end;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 16px;
+            /* or 114% */
+            
+            letter-spacing: 0.05em;
+            
+            /* txt/black */
+            
+            color: #150F0F;
+            font-family: $DM;
+            @include for-600(){
+                font-size: 16px;
+                line-height: 20px;
+            }
+            @include for-1024(){
+                font-size: 14px;
+                line-height: 16px;
+                transition: $transition;
+                min-height: 33%;
+            }
+            @include for-1366(){
+                font-size: 16px;
+                line-height: 20px;
+                padding: 48px 24px 24px;
+            }
+            @include for-1600(){
+                font-size: 20px;
+                line-height: 24px;
+            }
+            
+        }
+    }
+}
+.page--light main{
+    background-color: #ededed;
+}
+.sideMenu{
+    display: flex;
+    white-space: nowrap;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin-right: -15px;
+    padding-right: 15px;
+    @include for-1024(){
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        flex-direction: column;
+        white-space: normal;
+    }
+    &__item{
+        & + &{
+            margin-left: 24px;
+            @include for-1024(){
+                margin-left: 0;
+                border-top: 2px solid rgba(79, 86, 89, 0.1);
+            }
+        }
+        &--current{
+            .sideMenu__link{
+                &:before{
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 4px;
+                    width: 100%;
+                    background-color: #DD2B1C;
+                    @include for-1024(){
+                        width: 4px;
+                        height: calc(100% - 32px);
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                    @include for-1366(){
+                        height: calc(100% - 48px);
+                    }
+                }
+            }
+        }
+    }
+    &__link{
+        position: relative;
+        display: block;
+        font-family: $DM;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.03em;
+        color: #150F0F;
+        padding-bottom: 8px;
+        @include for-600(){
+            font-size: 18px;
+            line-height: 22px;
+        }
+        @include for-1024(){
+            padding: 16px 32px;
+            background-color: #F5F5F5;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 20px;
+            transition: $transition;
+            &:hover{
+                color: #DD2B1C;
+            }
+        }
+        @include for-1366(){
+            font-size: 20px;
+            line-height: 24px;
+            padding: 24px 32px;
+        }
+        @include for-1600(){
+            font-size: 24px;
+            line-height: 28px;
+        }
+    }
+}
+
+.inform{
+    @include for-1024(){
+        padding-right: 23.3%;
+    }
+    &__title{
+        letter-spacing: .03em;
+        margin-bottom: 8px;
+        color: #150F0F;
+        @include for-600(){
+            margin-bottom: 14px;
+        }
+        @include for-1024(){
+            margin-bottom: 11px;
+        }
+    }
+    &__item + &__item{
+        margin-top: 44px;
+        @include for-1366(){
+            margin-top: 52px;
+        }
+        @include for-1600(){
+            margin-top: 60px;
+        }
+    }
+    &__desc{
+        color: #150F0F;
+        letter-spacing: .03em;
+        line-height: 28px;
+        @include for-600-only(){
+            line-height: 28px !important;
+        }
+        @include for-1024(){
+            line-height: 32px;
+            max-width: 85%;
+        }
+        @include for-1366(){
+            max-width: 100%;
+            line-height: 36px;
+        }
+        @include for-1600(){
+            line-height: 46px;
+        }
+    }
+    &__newDoc{
+        margin-top: 6px;
+        @include for-600(){
+            margin-top: 10px;
+        }
+        @include for-1600(){
+            margin-top: 12px;
+        }
+    }
+}
+.newDoc{
+    &__item{
+        position: relative;
+        display: block;
+        box-sizing: border-box;
+        padding: 10px 64px 10px 16px;
+        background-color: #fff;
+        @include for-1024(){
+            padding: 18px 80px 18px 16px;
+            &:before{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                background-color: #DD2B1C;
+                height: 4px;
+                transition: $transition;
+            }
+            &:hover{
+                &:before{
+                    width: 100%;
+                }
+                svg{
+                    fill: #dd2b1c;
+                }
+            }
+        }
+        @include for-1366(){
+            padding: 26px 88px 26px 24px;
+        }
+        & + &{
+            margin-top: 8px;
+        }
+        &-icon{
+            position: absolute;
+            height: 24px;
+            width: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 16px;
+            fill:  rgba(79, 86, 89, 0.2);
+            @include for-1024(){
+                transition: $transition;
+            }
+            @include for-1366(){
+                right: 24px;
+            }
+        }
+        &-name{
+            letter-spacing: .05em;
+            @include for-1024(){
+                letter-spacing: .03em;
+            }
+        }
+        &-desc{
+            letter-spacing: .05em;
+            margin-top: 4px;
+
+        }
+      
+    }
+}
+
+.exhib-info{
+    &__item{
+        & + &{
+            margin-top: 12px;
+            @include for-1366(){
+                margin-top: 24px;
+            }
+        }
+    }
+    &__desc{
+        font-family: $DM;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 20px;
+        /* or 125% */
+        
+        letter-spacing: 0.03em;
+        
+        /* txt/black */
+        
+        color: #150F0F;
+        @include for-1366(){
+            letter-spacing: .05em;
+        }
+    }
+    &__title{
+        &--desk{
+            display: none;
+            @include for-1024(){
+                display: block;
+            }
+        }
+        font-family: $DM;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 20px;
+        /* identical to box height, or 125% */
+        
+        letter-spacing: 0.03em;
+        
+        /* txt/gray 1 70% */
+        
+        color: rgba(79, 86, 89, 0.7);
+        margin-bottom: 4px;
+        @include for-1600(){
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 6px;
+        }
+    }
+    &__date{
+        font-family: $DM;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: .03em;
+        color: #50575a;
+        @include for-600(){
+            letter-spacing: .05em;
+        }
+        @include for-1024(){
+            font-size: 36px;
+            line-height: 1;
+            font-weight: 700;
+            font-family: $TT;
+            color: #150f0f;
+        }
+        @include for-1366(){
+            font-size: 44px;
+        }
+        // @include for-1600(){
+        //     font-size: 60px;
+        // }
+    
+    }
+    &__link{
+        font-family: $DM;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        /* identical to box height, or 125% */
+        
+        letter-spacing: 0.05em;
+        
+        /* txt/primary */
+        
+        color: #DD2B1C;
+        @include for-1024(){
+            transition: $transition;
+            &:hover{
+                opacity: .7;
+            }
+        }
     }
 }

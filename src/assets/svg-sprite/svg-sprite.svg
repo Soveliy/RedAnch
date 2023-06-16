@@ -356,4 +356,12 @@
   </defs>
   </symbol>
 
+
+  <symbol id="download2" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M24 16V24H22L2 24H0L0 22L0 16H2L2 22L22 22V16H24Z" />
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M13 15.0858L13 2.5H11L11 15.0858L5.20714 9.29289L4.50003 8.58579L3.08582 10L3.79292 10.7071L11.2929 18.2071L12 18.9142L12.7071 18.2071L20.2071 10.7071L20.9142 10L19.5 8.58578L18.7929 9.29289L13 15.0858Z" />
+</symbol>
+
+
 </svg>
+
