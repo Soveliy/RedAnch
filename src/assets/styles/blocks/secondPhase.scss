@@ -6213,20 +6213,20 @@ body {
        li + li{
         margin-top: 12px;
        }
-       h4 + p,h5 + p{
-        @include for-1024(){
-            font-size: 14px;
-            line-height: 20px;
-        }
-        @include for-1366(){
-            font-size: 16px;
-            line-height: 24px;
-        }
-        @include for-1600(){
-            font-size: 20px;
-            line-height: 28px;
-        }
-       }
+    //    h4 + p,h5 + p{
+    //     @include for-1024(){
+    //         font-size: 14px;
+    //         line-height: 20px;
+    //     }
+    //     @include for-1366(){
+    //         font-size: 16px;
+    //         line-height: 24px;
+    //     }
+    //     @include for-1600(){
+    //         font-size: 20px;
+    //         line-height: 28px;
+    //     }
+    //    }
        .text-page__content-wrap{
         position: relative;
         &:after{
