@@ -791,6 +791,24 @@ window.addEventListener('load', function() {
         
         
       });
+
+
+      const swiperReviewsP = new Swiper(".our-team__slider", {
+        slidesPerView: 1,
+        // spaceBetween: 16,
+        // centeredSlides: true,
+        autoHeight:true,
+        navigation: {
+          nextEl: ".our-team .landReviews__arrow--next",
+          prevEl: ".our-team .landReviews__arrow--prev",
+        },
+        pagination: {
+          el: ".our-team__pagination",
+          clickable:true,
+        },
+        
+        
+      });
   
 
     try {
@@ -1059,4 +1077,15 @@ window.addEventListener('load', function() {
           }
         }
       });
+      $('.sideMenu__link').click(function(e) {
+        e.preventDefault();
+        var id = $(this).attr('data-tab'),
+            content = $('.inform[data-tab="'+ id +'"]');
+        
+        $('.sideMenu__link').parent().removeClass('sideMenu__item--current');
+        $(this).parent().addClass('sideMenu__item--current');
+        
+        $('.inform.active').removeClass('active');
+        content.addClass('active');
+     });
 });
