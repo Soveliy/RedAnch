@@ -722,6 +722,15 @@ window.addEventListener('load', function() {
         } 
       });
 
+      $('.vacancy').on('click', '.vacancy__item-head:not(.js-active)', function() {
+        $(this).parent().toggleClass('js-active').siblings().removeClass('js-active')
+      
+          $(this).parent().siblings().find(".vacancy__item-body").removeClass("js-active");
+          $(this).next().toggleClass("js-active");
+         
+        
+      });
+
       $(".accordeonItem__bg").click(function(){
         $("body").removeClass("js-hidden")
         bodyScrollLock.clearAllBodyScrollLocks();
@@ -797,7 +806,7 @@ window.addEventListener('load', function() {
         slidesPerView: 1,
         // spaceBetween: 16,
         // centeredSlides: true,
-        autoHeight:true,
+        // autoHeight:true,
         navigation: {
           nextEl: ".our-team .landReviews__arrow--next",
           prevEl: ".our-team .landReviews__arrow--prev",
@@ -840,12 +849,24 @@ window.addEventListener('load', function() {
         } else {
           line_height = 24
         }
-        let limitHeight = line_height*8;
+        let limitHeight = line_height*10;
 
        
         // height=product_prod_text_in.height();	
         // var count_rov=height/line_height;
         $(".landReviews:not(.landReviews--hero) .ReviewsItem__desc").each(function() {
+          if (isTablet){
+            var textIn= $(this).find(".ReviewsItem__descContent").height();
+            console.log(textIn)
+            console.log(limitHeight)
+            if (textIn > limitHeight){
+              $(this).find(".ReviewsItem__descContent").addClass("ReviewsItem__descContent--full")
+              $(this).closest(".ReviewsItem").find(".ReviewsItem__showmore").addClass("ReviewsItem__showmore--active")
+            }
+          }
+        });
+
+        $(".our-team .ReviewsItem__desc").each(function() {
           if (isTablet){
             var textIn= $(this).find(".ReviewsItem__descContent").height();
             console.log(textIn)
@@ -879,20 +900,7 @@ window.addEventListener('load', function() {
           $(".imp-projects__arrow-wrap").css("left", x + "px")
   
         }
-        // $(".ReviewsItem__showmore").click(function(){
-        //   let reviewText = $(this).closest(".ReviewsItem").find(".ReviewsItem__descContent").text()
-        //   let landReviewsTitle = $(".landReviews__title").text()
-        //   showModal(reviewText,landReviewsTitle)
-           
-        //   console.log(reviewText)
-        // })
-
-        // function showModal(reviewText,landReviewsTitle){
-        //   $(".ReviewsItem__modalContent").html(`<div class="ReviewsItem__modalContentTitle">${landReviewsTitle}</div><div class="ReviewsItem__modalContentText">${reviewText}</div>`)
-        //   $(".ReviewsItem__modal").addClass("js-active")
-        //   $("body").addClass("js-hidden")
-       
-        // }
+    
 
 
         $(".ReviewsItem__modalBg").click(function(){
