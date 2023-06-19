@@ -12128,6 +12128,10 @@ body {
     background-color: #fff;
     padding: 0 15px;
     box-sizing: border-box;
+    @include for-1024(){
+        margin: 0;
+        padding: 0;
+    }
     @include for-1366(){
         padding: 0 32px;
     }
