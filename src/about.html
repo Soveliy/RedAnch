@@ -85,7 +85,7 @@
                                                                 видео <span class="br-desk"></span> о заводе
                                                         </div>
                                                         <svg class="about-factory__video-icon">
-                                                                <use href="./assets/images/svg-sprite/svg-sprite.svg#videoPlay"></use>
+                                                                <use href="./assets/images/svg-sprite/svg-sprite.svg#play2"></use>
                                                         </svg>
                                                         <picture class="about-factory__video-picture">
                                                                 <source media="(min-width: 1023px)" srcset="./assets/images/thridStep/video_desk.jpg">
@@ -117,7 +117,7 @@
                                                         <div class="first-step__desc" data-aos="fade-up" data-aos-delay="300">
                                                                 Завод работает с&nbsp;1898 года и&nbsp;демонстрирует неизменно высокое качество изделий
                                                         </div>
-                                                        <div class="linkLabelNew first-step__linkLabelNew aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+                                                        <div class="linkLabelNew first-step__linkLabelNew" data-aos="fade-up" data-aos-delay="400">
                                                                 <a href="#" class="linkLabelNew__box linkLabel__box--white linkLabelNew__box--lit">
                                                                         История завода
                                                                         <svg>
@@ -159,7 +159,7 @@
                                                         видов продукции <br>
                                                         в ассортименте 
                                                 </div>  
-                                                <div class="linkLabelNew assortment__linkLabelNew aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+                                                <div class="linkLabelNew assortment__linkLabelNew" data-aos="fade-up" data-aos-delay="200">
                                                         <a href="#" class="linkLabelNew__box linkLabel__box--white linkLabelNew__box--lit">
                                                                 Наша продукция
                                                                 <svg>
@@ -244,7 +244,7 @@
                                                 <path d="M704.71 0L1208.84 873.014C1201.08 873.446 1195.86 874.011 1190.6 874.011C1116.84 874.011 1043.08 874.244 969.323 874.011C914.736 873.812 873.264 849.385 846.17 802.625C747.814 633.134 650.156 463.21 551.833 293.686C545.509 282.785 544.877 274.875 551.5 263.775C599.663 181.655 647.061 99.0362 694.625 16.6168C697.387 11.7647 700.316 7.17846 704.71 0Z" fill="black"/>
                                                 </mask>
                                                 <g mask="url(#mask1_6026_353955)">
-                                                <rect width="1735.13" height="1155.32"  fill="url(#pattern1)"/>
+                                                <rect width="1735.13" height="1155.32" y="-200"  fill="url(#pattern1)"/>
                                                 </g>
                                                 <mask id="mask2_6026_353955" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="402" y="943" width="1007" height="278">
                                                 <path d="M1408 1220.36H402.805C406.133 1214.05 408.263 1209.2 410.893 1204.58C448.172 1139.84 484.785 1074.7 523.062 1010.56C548.991 967.124 588.134 943.461 639.559 943.395C837.469 943.229 1035.38 943.395 1233.29 943.062C1245.37 943.062 1251.86 946.585 1257.86 957.12C1305.85 1041.23 1354.38 1124.95 1402.88 1208.83C1404.84 1211.99 1405.91 1215.55 1408 1220.36Z" fill="black"/>
@@ -340,28 +340,47 @@
                                                 </div>
                                                 
                                         </div>  
-                                        <div class="swiper-button-next imp-projects__slider-next imp-projects__arrow"></div>
-                                        <div class="swiper-button-prev imp-projects__slider-prev imp-projects__arrow"></div>
+                                        <div class="imp-projects__arrows">
+                                                <div class="imp-projects__arrow imp-projects__arrow--prev">
+                                                        <div class="imp-projects__arrow-wrap">
+                                                                <svg class="imp-projects__arrowIcon">
+                                                                        <use
+                                                                                xlink:href="./assets/images/svg-sprite/svg-sprite.svg#sliderArrowLeft">
+                                                                        </use>
+                                                                </svg>
+                                                        </div>
+                                                      
+                                                </div>
+                                                <div class="imp-projects__arrow imp-projects__arrow--next">
+                                                       <div class="imp-projects__arrow-wrap">
+                                                                <svg class="imp-projects__arrowIcon">
+                                                                        <use
+                                                                                xlink:href="./assets/images/svg-sprite/svg-sprite.svg#sliderArrowRight">
+                                                                        </use>
+                                                                </svg>
+                                                       </div>
+                                                </div>
+
+                                        </div>
+                                      
+                                       
                                         <div class="swiper-pagination imp-projects__swiper-pagination"></div>
                                 
                                      </div>
                                 </div>
                         </div>
-                        <div class="standarts standarts--no-bg">
+                        <div class="standarts standarts--no-bg standarts--type-2">
                                 <div class="container">
-                                        <div class="standarts__row">
+                                        <div class="standarts__row standarts__row--type-2">
                                                 <div class="standarts__content">
-                                                        <div class="standarts__title ui-color-white-100 title--ms-52 title--ts-90 title--ds-90 title--dm-120 title--dl-144"
+                                                        <div data-aos="fade-up" data-aos-delay="0" class="standarts__title ui-color-white-100 title--ms-52 title--ts-90 title--ds-90 title--dm-120 title--dl-144"
                                                                 data-aos="fade-up">
                                                                 Соответствуем стандартам качества
                                                         </div>
-                                                        <div class="standarts__desc ui-color-white-100" data-aos="fade-up">
-                                                                Предназначена для изготовления якорных канатов яхт, судов
-                                                                и&nbsp;кораблей, крепления дебаркадеров, устройств крепления
-                                                                речных и&nbsp;морских буев, производства бриделей, браг
-                                                                и&nbsp;сцепок
+                                                        <div data-aos="fade-up" data-aos-delay="200" class="standarts__desc ui-color-white-100" data-aos="fade-up">
+                                                                &laquo;Завод Красный Якорь&raquo; является единственным Российским предприятием-изготовителем цепей и&nbsp;комплектующих по&nbsp;ГОСТ 228&ndash;79, которое имеет свидетельства о&nbsp;признании изготовителя, выданные Российским Морским Регистром Судоходства (РМРС) и&nbsp;Российским Речным Регистром (РРР), а&nbsp;также сертификат одобрения производителя Det Norske Veritas (DNV)
                                                         </div>
-                                                        <div class="linkLabelNew standarts__linkLabelNew" data-aos="fade-up">
+                                                        <div class="linkLabelNew standarts__linkLabelNew" data-aos="fade-up" data-aos-delay="300">
                                                                 <a href="#"
                                                                         class="linkLabelNew__box linkLabel__box--white linkLabelNew__box--lit">
                                                                         Все сертификаты
@@ -376,10 +395,10 @@
         
                                                 <picture class="standarts__picture">
                                                         <source media="(min-width: 1023px)"
-                                                                srcset="assets/images/lands/sert_desk.png">
+                                                                srcset="./assets/images/thridStep/sertDesk.png">
                                                         <source media="(min-width: 320px)"
-                                                                srcset="assets/images/lands/sert.png">
-                                                        <img src="assets/images/lands/sert.png" alt="">
+                                                                srcset="./assets/images/thridStep/certificatmob.png">
+                                                        <img src="./assets/images/thridStep/certificatmob.png" alt="">
                                                 </picture>
                                         </div>
                                 </div>
@@ -388,7 +407,7 @@
                 <!-- / MAIN -->
 
                 <!-- FOOTER -->
-                <footer class="footer newFooter newFooter--land-padding  footerFix">
+                <footer class="footer newFooter newFooter--land-padding  footerFix ui-background-black-90I">
                         <div class="container">
                                 <picture class="newFooter__picture">
                                         <source media="(min-width: 320px)"
@@ -400,7 +419,7 @@
                                         <a href="#"
                                                 class="newQuestions__link  title--ms-44 title--ts-70 title--ds-90 title--dm-152 title--dl-144">
                                                 Расскажите <br>
-                                                нам о вашей задаче
+                                                нам вашей задаче
                                                 <svg class="newQuestions__icon">
                                                         <use href="./assets/images/svg-sprite/svg-sprite.svg#arrow-se"></use>
                                                 </svg>

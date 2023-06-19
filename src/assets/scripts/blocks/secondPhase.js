@@ -869,6 +869,16 @@ window.addEventListener('load', function() {
           $(".landReviews__arrow-wrap").css("left", x + "px")
   
         }
+
+        document.addEventListener("mousemove", moveCursor2)
+        function moveCursor2(e){
+          let reviewsCursor2 = document.querySelectorAll(".imp-projects__arrow-wrap")
+          let x = e.clientX;
+          let y = e.clientY;
+          $(".imp-projects__arrow-wrap").css("top", y + "px")
+          $(".imp-projects__arrow-wrap").css("left", x + "px")
+  
+        }
         // $(".ReviewsItem__showmore").click(function(){
         //   let reviewText = $(this).closest(".ReviewsItem").find(".ReviewsItem__descContent").text()
         //   let landReviewsTitle = $(".landReviews__title").text()
@@ -993,7 +1003,7 @@ window.addEventListener('load', function() {
         });
         textToLeftTimeline.to(elemsRight[2], 
           {
-            x: "-30%",
+            x: "-20%",
         
             scrollTrigger:{
               trigger:elemsRight[2],
@@ -1017,7 +1027,7 @@ window.addEventListener('load', function() {
               
             }
           });
-
+        
           $(".history-step__image").each(function() {
             var stepImages = new TimelineMax();
             var child = $(this).find("img");
@@ -1035,7 +1045,43 @@ window.addEventListener('load', function() {
                 scrub:true,
                }
               });
+          });
+          if(!isTablet){
+            let numbersAnim = gsap.timeline();
+            let numbersItem = document.querySelectorAll(".numbers-prod__row")
+            
+            numbersAnim.to(numbersItem, 
+            {
+              x: "-30%",
+          
+              scrollTrigger:{
+                trigger:numbersItem,
+                scrub:true,
+                start: "top bottom",
+                end: "bottom top",
+                 ease: "none",
+                
+              }
             });
+          }
+            $(".first-step__image").each(function() {
+              var stepImages = new TimelineMax();
+              var child = $(this).find("img");
+              let parallaxY;
+              if (!isTablet){
+                parallaxY = -180
+              } else {
+                parallaxY = -80
+              }
+              stepImages.to(child, 1, {
+                 y: parallaxY,
+                 ease: "none" ,
+                 scrollTrigger:{
+                  trigger:$(this),
+                  scrub:true,
+                 }
+                });
+              });
             $(".cycle-stages__picture").each(function() {
               var stepImages = new TimelineMax();
               var child = $(this).find("img");
@@ -1068,8 +1114,8 @@ window.addEventListener('load', function() {
         },
         
         navigation: {
-          nextEl: ".imp-projects__slider-next",
-          prevEl: ".imp-projects__slider-prev",
+          nextEl: ".imp-projects__arrow--next",
+          prevEl: ".imp-projects__arrow--prev",
         },
         breakpoints:{
           1023:{

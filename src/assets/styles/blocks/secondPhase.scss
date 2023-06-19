@@ -1836,6 +1836,7 @@ body {
     z-index: 5;
     // overflow: hidden;
     padding: 40px 0;
+   
     &--no-bg{
         background-color: transparent;
     }
@@ -1854,6 +1855,17 @@ body {
     @include for-1920(){
         padding: 160px 0 64px;
     }
+    &--type-2{
+        @include for-1024(){
+            padding: 62px 0 151px;
+        }
+        @include for-1366(){
+            padding: 29px 0 80px;
+        }
+        @include for-1600(){
+            padding: 56px 0 256px;
+        }
+    }
     &__row{
         // display: flex;
         position: relative;
@@ -1866,6 +1878,66 @@ body {
         }
         @include for-1600(){
            
+        }
+
+        &--type-2{
+            .standarts__picture{
+                top: -7%;
+                right: -17%;
+                transform: none;
+                @include for-1024(){
+                    right: 66%;
+                    left: auto;
+                    top: 12%;
+                }
+                @include for-1366(){
+                    right: 53%;
+                    top: 18%;
+                }
+                @include for-1600(){
+                    right: 43%;
+                }
+            }
+            .standarts__content{
+                width: 100%;
+                @include for-1024(){
+                    padding: 0 0 0 52%;
+                }
+                @include for-1600(){
+                    padding: 0 0 0 50.5%;
+                }
+            }
+            .standarts__desc{
+                font-size: 16px;
+                line-height: 24px;
+                margin: 26px 0 34px;
+                max-width: 100%;
+                @include for-600(){
+                    font-size: 20px;
+                    line-height: 28px;
+                }
+                @include for-1024(){
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin: 30px 0 46px;
+                    padding-left: 83px;
+                    width: calc(100% + 20%);
+                    max-width: inherit;
+                }
+                @include for-1366(){
+                    font-size: 20px;
+                    line-height: 32px;
+                    margin: 40px 0 69px;
+                    padding-left: 103px;
+                }
+                @include for-1600(){
+                    font-size: 24px;
+                    line-height: 40px;
+                    width: 119%;
+                    margin: 29px 0 69px;
+                    padding-left: 130px;
+                }
+            }
         }
 
     }
@@ -7446,14 +7518,27 @@ body {
         }
     }
     &__image{
+        position: relative;
+        overflow: hidden;
         picture{
-            position: relative;
-            overflow: hidden;
+            height: calc(100% + 80px);
+            // height: 100%;
+            // width: 100%;
+            @include for-1024(){
+                height: calc(100% + 180px);
+            }
         }
         img{
-            height: 120%;
-            margin-bottom: -20%;
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+            object-fit: cover;
+           height: 100%;
+            // margin-bottom: -20%;
             width: 100%;
+            // @include for-1024(){
+            //     height: calc(100% + 180px);
+            // }
         }
         &--gradient-bottom{
             position: relative;
@@ -8363,6 +8448,7 @@ body {
         overflow: hidden ;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 16px;
         box-sizing: border-box;
         margin-top: 24px;
@@ -8428,6 +8514,15 @@ body {
                 height: 31px;
                 margin-right: 16px;
             }
+            @include for-1366(){
+                width: 34px;
+                height: 39px;
+                margin-right: 20px;
+            }
+            @include for-1600(){
+                width: 42px;
+                height: 49px;
+            }
         }
         &-picture{
             position: absolute;
@@ -8452,6 +8547,9 @@ body {
     }
     @include for-1366(){
         padding: 169px 0 88px;
+    }
+    @include for-1600(){
+        padding: 255px 0 88px;
     }
     &__header{
         @include for-1024(){
@@ -8491,20 +8589,37 @@ body {
         @include for-1600(){
             font-size: 104px;
             line-height: 104px;
-            margin-bottom: -40px;
-            margin-left: 28px;
+            margin-bottom: -46px;
+            margin-left: 17px;
         }
 
     }
     &__image{
+        position: relative;
+        overflow: hidden;
         margin: -23px -15px 0;
         width: calc(100% + 30px);
+        padding-top: 56.25%;
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: calc(100% + 80px);
+            object-fit: cover;
+            @include for-1024(){
+                height: calc((100% + 180px));
+            }
+        }
         @include for-600(){
             margin: -30px -15px 0;
         }
         @include for-1024(){
             width: 100%;
             margin: -44px 0 0 0;
+        }
+        @include for-1600(){
+            margin: -24px 0 0 0;
         }
     }
     &__body{
@@ -8514,6 +8629,9 @@ body {
         }
         @include for-1366(){
             padding: 0 0 0 52%;
+        }
+        @include for-1600(){
+            margin-top: 44px;
         }
     }
     &__desc{
@@ -8540,7 +8658,7 @@ body {
             margin: 0 0 44px 0;
         }
         @include for-1600(){
-            font-size: 32px;
+            font-size: 36px;
             line-height: 56px;
         }
     }
@@ -8591,6 +8709,9 @@ body {
             letter-spacing: .04em;
             margin-top: 0;
         }
+        @include for-1366(){
+            line-height: 104px;
+        }
         @include for-1600(){
             font-size: 104px;
             line-height: 104px;
@@ -8632,6 +8753,9 @@ body {
     @include for-1024(){
         padding: 53px 0;
     }
+    @include for-1600(){
+        padding: 143px 0 67px;
+    }
     &__title,&__desc{
         color: #fff;
     }
@@ -8645,6 +8769,7 @@ body {
         @include for-1600(){
             font-size: 144px;
             line-height: 144px;
+         
         }
     }
     &__desc{
@@ -8674,6 +8799,7 @@ body {
         @include for-1366(){
             font-size: 28px;
             line-height: 40px;
+            padding-right: 10%;
         }
         @include for-1600(){
             font-size: 36px;
@@ -8714,6 +8840,9 @@ body {
             margin-left: -3%;
             width: 75.6%;
         }
+        @include for-1600(){
+            width: 75.6%;
+        }
     }
     &__desc{
         color: #fff;
@@ -8727,6 +8856,14 @@ body {
         
             right: 3.3%;
             max-width: 45%;
+        }
+        @include for-1366(){
+            top: 45%;
+            right: 3.8%;
+        }
+        @include for-1600(){
+            top: 50%;
+            padding-right: 0;
         }
     }
 }
@@ -8745,7 +8882,7 @@ body {
     }
     &__content{
       @include for-1024(){
-        padding-left: 8.3%;
+        padding: 0 8.3%;
         box-sizing: border-box;
       }
     }
@@ -8762,11 +8899,97 @@ body {
         @include for-1600(){
             font-size: 144px;
             line-height: 144px;
+            margin-bottom: 36px;
+        }
+    }
+    &__arrows{
+        display: none;
+        @include for-1024(){
+            display: block;
         }
     }
     &__arrow{
-        display: none;
+        height: 24px;
+        width: 24px;
+        display: block;
+        @include for-600(){
+            height: 40px;
+            width: 40px;
+        }
+        @include for-1024(){
+            display: block;
+        }
+        &-wrap{
+            height: 24px;
+            width: 24px;
+            @include for-600(){
+                height: 40px;
+                width: 40px;
+            }
+            @include for-1024(){
+                height: 120px;
+                width: 120px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(#fff,.4);
+                border-radius: 50%;
+                // opacity: 0;
+                pointer-events: none;
+                position: fixed;
+                transition: opacity $transition;
+                z-index: 50;
+                transform: translate(-50%,-50%);
+            }
+        }
+        @include for-1024(){
+            position: absolute;
+            height: 100%;
+            width:calc(50% + 2px);
+            top: 0;
+            opacity: 0;
+            transition: $transition;
+    
+            z-index: 1000;
+           
+            
+            &:hover{
+                opacity: 1;
+                cursor: none;
+                .landReviews__arrow-wrap{
+                    // opacity: 1;
+                    cursor: none;
+                }
+            }
+            &--prev{
+                transition: .3s;
+                left: 0;
+             
+                &:before{
+                    margin-left: -150px;
+                }
+                
+            }
+            
+            &--next{
+                right: 0;
+                transition: .3s;
+              
+            }
+        }
+      
+        svg{
+            height: 100%;
+            width: 100%;
+            fill: #fff;
+            @include for-1024(){
+                fill: #110101;
+                height: 24px;
+                width: 24px;
+            }
+        }
     }
+    
     &__desc{
         font-family: $DM;
         font-weight: 300;
@@ -8792,6 +9015,7 @@ body {
         @include for-1600(){
             font-size: 32px;
             line-height: 46px;
+            max-width: 560px;
         }
      
     }
@@ -8824,6 +9048,11 @@ body {
             font-size: 24px;
             line-height: 28px;
             margin-top: 48px;
+        }
+        @include for-1600(){
+            font-size: 32px;
+            line-height: 36px;
+            margin-top: 58px;
         }
     }
     &__slider{
@@ -8867,6 +9096,10 @@ body {
             max-width: 524px;
             margin-top: 20px;
         }
+        @include for-1600(){
+            font-size: 32px;
+            line-height: 36px;
+        }
     }
     .swiper-slide{
         width: 91%;
@@ -8886,6 +9119,9 @@ body {
     }
     @include for-1366(){
         padding: 111px 0 78px;
+    }
+    @include for-1600(){
+        padding: 152px 0 78px;
     }
     &__row{
         @include for-1024(){
@@ -8946,6 +9182,9 @@ body {
                 height: 90px;
                 margin-bottom: 16px;
             }
+            @include for-1600(){
+                margin-bottom: 24px;
+            }
         }
     }
     
@@ -8968,6 +9207,14 @@ body {
             }
             &:nth-child(2){
                 width: 27.6%;
+            }
+        }
+        @include for-1600(){
+            &:nth-child(1){
+                width: 40%;
+            }
+            &:nth-child(2),&:nth-child(3){
+                padding-right: 5%;
             }
         }
         @include for-1024(){
@@ -9001,25 +9248,28 @@ body {
 }
 
 .numbers-prod{
+    position: relative;
+    overflow: hidden;
     padding-bottom: 78px;
     @include for-600(){
         padding-bottom: 100px;
     }
     @include for-1024(){
-        padding-bottom: 128px;
+        padding-bottom: 116px;
     }
     @include for-1366(){
         padding-bottom: 144px;
     }
     @include for-1600(){
-        padding-bottom: 200px;
+        padding-bottom: 186px;
     }
     &__row{
         display: flex;
         overflow-x: auto;
         overflow-y: hidden;
         @include for-1024(){
-            overflow: hidden;
+            overflow: visible;
+            transform: translateX(100%);
         }
     }
     &__item + &__item{
@@ -9028,7 +9278,7 @@ body {
             margin-left: 64px;
         }
         @include for-1024(){
-            margin-left: 118px;
+            margin-left: 93px;
         }
         @include for-1366(){
             margin-left: 80px;
@@ -9100,7 +9350,8 @@ body {
         }
         @include for-1600(){
             font-size: 104px;
-            margin-top: -308px;
+            margin-top: -296px;
+            padding-left: 14px;
         }
     }
 
@@ -9238,13 +9489,16 @@ body {
     &__image{
         margin: -24px -15px 16px;
         width: calc(100% + 30px);
+        img{
+            width: 100%;
+        }
         @include for-600(){
             margin: -32px -15px 16px;
         }
         @include for-1024(){
             margin: 0;
             flex-shrink: 0;
-            width: 50%;
+            width: 48%;
         }
     }
     &__desc{
@@ -9266,7 +9520,8 @@ body {
         @include for-1024(){
             font-size: 20px;
             line-height: 32px;
-            margin-left: 83px;
+            margin-left: 120px;
+            max-width: 65%;
         }
         @include for-1366(){
             font-size: 24px;
@@ -9324,11 +9579,26 @@ body {
                 .about-prod-text__image{
                     margin-left: 30px;
                 }
+                .about-prod-text__content{
+                    position: relative;
+                    left: 10%;
+
+                }
               
             }
+            @include for-1366(){
+                .about-prod-text__content{
+                    left: 6.3%;
+                }
+                .about-prod-text__desc{
+                    margin-left: 110px;
+                }
+               
+            }
+
             @include for-1600(){
                 .about-prod-text__content{
-                    left: 10%;
+                    left: 8%;
                 }
                 .about-prod-text__desc{
                     max-width: 64%;
@@ -9348,6 +9618,17 @@ body {
     @include for-600(){
         margin: 80px 0;
         padding: 80px 0;
+    }
+    @include for-1024(){
+        margin: 80px 0 47px;
+    }
+    @include for-1366(){
+        margin: 187px 0 135px;
+        
+    }
+    @include for-1600(){
+        margin: 100px 0;
+        padding: 223px 0 61px;
     }
     &__bg{
         position: absolute;
@@ -9373,11 +9654,11 @@ body {
             height: 130px;
             background: linear-gradient(180deg, rgba(17, 1, 1, 0) 0%, #110101 100%);
             width: 100%;
-            bottom: -10px;
+            bottom: -40px;
             left: 0;
             z-index: 50;
             @include for-1024(){
-                height: 360px;
+                height: 390px;
             }
         }
         img{
@@ -9391,6 +9672,7 @@ body {
         transform: translateX(-50%);
         width: 100%;
         z-index: 20;
+       
     }
     &__content{
         position: relative;
@@ -9417,13 +9699,15 @@ body {
         }
         @include for-1024(){
             font-size: 600px;
-            line-height: 1;
+            line-height: 699px;
+            margin-bottom: 2px;
         }
         @include for-1366(){
             font-size: 800px;
         }
         @include for-1600(){
             font-size: 900px;
+            line-height: 1;
         }
     }
     &__title{
@@ -9449,16 +9733,18 @@ body {
         }
         @include for-1024(){
             font-size: 114px;
-            margin-bottom: 40px;
+            margin-bottom: 14px;
+            
         }
         @include for-1366(){
             font-size: 144px;
             line-height: 128px;
-            margin-bottom: 80px;
+            margin-bottom: 32px;
         }
         @include for-1600(){
             font-size: 200px;
             line-height: 1;
+            letter-spacing: .02em;
         }
     }
     &__desc{
@@ -9499,6 +9785,9 @@ body {
             @include for-1366(){
                 margin-top: 24px;
             }
+            @include for-1600(){
+                margin-top: 7px;
+            }
         }
     }
     &--type-1{
@@ -9512,7 +9801,8 @@ body {
             max-width: 680px;
           }
           @include for-1600(){
-            max-width: 938px;
+          
+            max-width: 895px;
           }
         }
         .presentation__title{
@@ -9520,35 +9810,59 @@ body {
                 margin-top: -60px;
             }
             @include for-1366(){
-                margin-top: -90px;
+                margin-top: -20px;
+            }
+            @include for-1600(){
+                margin-top: -72px;
+                margin-bottom: 17px;
+            }
+
+        }
+        .presentation__desc{
+            @include for-1600(){
+                padding-right: 10%;
             }
         }
     }
     &--type-2{
-      
+        @include for-1366(){
+            margin: 119px 0 135px;
+        }
+        @include for-1600(){
+            padding: 133px 0 61px;
+        }
+        .presentation__image{
+            padding-left: 26px;
+        }
         .presentation__title{
             @include for-1024(){
                 margin-left: auto;
                 margin-right: auto;
                 font-size: 114px;
                 max-width: 630px;
+                max-width: 666px;
+                margin-top: -77px;
+                margin-bottom: 43px;
             }
             @include for-1366(){
-                margin-top: -60px;
+                margin-top: 44px;
                 max-width: 925px;
               
                 font-size: 144px;
+                line-height: 1;
+                margin-bottom: 80px;
             }
+            
             @include for-1600(){
-                margin-top: -90px;
+                margin-top: -35px;
                 font-size: 200px;
-                max-width: 1073px;
+                max-width: 1005px;
             }
          
         }
         .presentation__desc{
             @include for-1024(){
-                max-width: 527px;
+                max-width: 540px;
                 margin-left: auto;
                 margin-right: auto;
             }
@@ -9558,6 +9872,9 @@ body {
             }
             @include for-1600(){
                 max-width: 734px;
+                p + p{
+                    margin-top: 20px;
+                }
             }
         }
     }
@@ -9618,7 +9935,7 @@ body {
             padding: 157px 143px 0;
         }
         @include for-1600(){
-            padding: 172px 176px 0;
+            padding: 161px 228px 0 176px;
         }
     }
     &__title{
@@ -9642,7 +9959,9 @@ body {
         }
         @include for-1024(){
             padding: 0;
-            max-width: 420px;
+           
+            max-width: 543px;
+            font-size: 114px;
            
         }
         @include for-1366(){
@@ -9664,6 +9983,9 @@ body {
         @include for-1366(){
             max-width: 300px;
             padding-top: 20px;
+        }
+        @include for-1600(){
+            padding-top: 14px;
         }
 
     }
@@ -11591,4 +11913,7 @@ body {
         border-top: 2px solid rgba(79, 86, 89, 0.1);
     }
    
+}
+.ui-background-black-90I{
+    background: #241a1a !important;
 }
