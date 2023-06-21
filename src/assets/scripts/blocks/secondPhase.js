@@ -1142,4 +1142,26 @@ window.addEventListener('load', function() {
         $('.inform.active').removeClass('active');
         content.addClass('active');
      });
+
+     $('.site-map__btn').click(function(e) {
+      $("body").toggleClass("js-hidden")
+      $("burger").toggleClass("js-active")
+        $(this).parent().toggleClass("js-active")
+      });
+      $('.about-prod-text__other-info-link,.conditions-item__link').click(function(e) {
+          $("#text-modal").arcticmodal({
+            afterOpen: function (data, el) {
+              $('body').css('overflow', 'hidden');
+              $('#text-modal').addClass('is-active');
+           },
+           beforeClose: function (data, el) {
+              setTimeout(() => {
+                 $('body').css('overflow', 'auto');
+                 $('.b-modal#text-modal').removeClass('is-active');
+              }, 100);
+           },
+          })
+        });
+      
+     
 });
