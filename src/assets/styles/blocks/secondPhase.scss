@@ -335,6 +335,11 @@ body {
         font-weight: 700;
         color: #fff;
         opacity: 1;
+        &--dark{
+            color: #150F0F;
+            text-shadow: 0px 4px 80px 0px rgba(255, 255, 255, 0.80);
+
+        }
     }
     &__bottom{
         display: none;
@@ -411,6 +416,10 @@ body {
         
         color: #FFFFFF;
         max-width: 422px;
+        &--dark{
+            color: #150F0F;
+            text-shadow: 0px 4px 80px 0px rgba(255, 255, 255, 0.80);
+        }
        
         @include for-600(){
             margin: auto 0 24px;
@@ -9383,6 +9392,7 @@ body {
     position: relative;
     overflow: hidden;
     padding-bottom: 78px;
+    
     @include for-600(){
         padding-bottom: 100px;
     }
@@ -9397,8 +9407,13 @@ body {
     }
     &__row{
         display: flex;
-        overflow-x: auto;
+        overflow-x: scroll;
         overflow-y: hidden;
+        @media (max-width:1024px){
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        }
         @include for-1024(){
             overflow: visible;
             transform: translateX(100%);
@@ -9582,6 +9597,7 @@ body {
                 
                 color: #DD2B1C;
                 margin-top: 4px;
+                position: static;
                 cursor: pointer;
                 
             }
@@ -12223,15 +12239,43 @@ body {
     box-sizing: border-box;
     @include for-1024(){
         margin: 0;
-        padding: 0;
-    }
-    @include for-1366(){
+    
         padding: 0 32px;
     }
+ 
     .text-page__content{
         max-width: 100%;
     }
     &__item{
+        position: relative;
+        &:not(:last-child){
+            &:before{
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: rgba(79, 86, 89, 0.1);
+                height: 2px;
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 2px;
+                transition: $transition;
+                background-color: #dd2b1c;
+            }
+        }
+        &:hover{
+            @include for-1024(){
+                &:after{
+                    width: 100%;
+                }
+            }
+        }
         &.js-active{
             .vacancy__item-icon{
                 span:nth-child(2){
@@ -12245,6 +12289,7 @@ body {
             justify-content: space-between;
             padding: 16px 0;
             @include for-1024(){
+             
                 cursor: pointer;
                 transition: $transition;
                 &:hover{
@@ -12301,6 +12346,10 @@ body {
             
             color: #150F0F;
             transition: $transition;
+            @include for-600(){
+                font-size: 48px;
+                line-height: 48px;
+            }
             @include for-1024(){
                 font-size: 32px;
                 line-height: 32px;
@@ -12337,6 +12386,7 @@ body {
                     top: 50%;
                     margin-top: -1px;
                     background-color: #110101;
+                    transition: $transition;
                     @include for-1024(){
                         background-color: #110101;
                     }
@@ -12452,9 +12502,9 @@ body {
             margin-bottom: 16px;
         }
     }
-    &__item + &__item{
-        border-top: 2px solid rgba(79, 86, 89, 0.1);
-    }
+    // &__item + &__item{
+    //     border-top: 2px solid ;
+    // }
     &__linkLabelNew{
         margin-top:16px;
     }
@@ -12463,6 +12513,10 @@ body {
         @include for-1024(){
             margin-bottom: -192px;
             margin-top: 48px;
+            .ButtonBox__container{
+                margin-left: 8.3%;
+                margin-right: 8.3%;
+            }
         }
         @include for-1600(){
             margin-bottom: -161px;
