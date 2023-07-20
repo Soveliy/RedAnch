@@ -87,7 +87,7 @@ window.addEventListener('load', function() {
           trigger: ".about-factory__image--mob",
           // start: "top center+=300px",
           // end: "bottom center-=300px",
-          start: "top bottom",
+          start: "top=+1 bottom",
           end: "bottom top",
           scrub: true
         }
@@ -101,7 +101,7 @@ window.addEventListener('load', function() {
           trigger: ".about-factory__image--desk",
           // start: "top center+=300px",
           // end: "bottom center-=300px",
-          start: "top bottom",
+          start: "top=+1 bottom",
           end: "bottom top",
           scrub: true
         }
@@ -1041,7 +1041,7 @@ window.addEventListener('load', function() {
             var child = $(this).find("img");
             let parallaxY;
             if (!isTablet){
-              parallaxY = -180
+              parallaxY = -120
             } else {
               parallaxY = -80
             }

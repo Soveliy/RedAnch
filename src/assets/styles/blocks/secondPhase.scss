@@ -1963,6 +1963,14 @@ body {
                 @include for-1600(){
                     right: 43%;
                 }
+                @include for-1920(){
+                    top: 3%;
+                    width: 49%;
+                    margin-right: 8%;
+                    img{
+                        width: 100%;
+                    }
+                }
             }
             .standarts__content{
                 width: 100%;
@@ -7359,32 +7367,38 @@ body {
         }
     }
     &--ts{
+        &-110{
+            @media screen and (min-width: 600px) and (max-width:1023px) {
+                font-size: 110px;
+                line-height: 110px;
+             }
+        }
         &-65{
-            @media screen and (min-width: 600px) {
+            @media screen and (min-width: 600px) and (max-width:1023px) {
                 font-size: 65px;
                 line-height: 67px;
              }
         }
         &-150{
-            @media screen and (min-width: 600px) {
+            @media screen and (min-width: 600px) and (max-width:1023px) {
                 font-size: 150px;
                 line-height: 125px;
              }
         }
         &-168{
-            @media screen and (min-width: 600px) {
+            @media screen and (min-width: 600px) and (max-width:1023px) {
                 font-size: 168px;
                 line-height: 150px;
              }
         }
         &-320{
-            @media screen and (min-width: 600px) {
+            @media screen and (min-width: 600px) and (max-width:1023px) {
                 font-size: 320px;
                 line-height: 260px;
              }
         }
         &-477{
-            @media screen and (min-width: 600px) {
+            @media screen and (min-width: 600px) and (max-width:1023px) {
                 font-size: 477px;
                 line-height: 388px;
              }
@@ -7393,49 +7407,49 @@ body {
     &--ds{
         &-80 {
 
-            @media screen and (min-width: 1024px) {
+            @media screen and (min-width: 1024px) and (max-width:1339px) {
                font-size: 80px;
                line-height: 80px;
             }
          }
          &-150 {
 
-            @media screen and (min-width: 1024px) {
+            @media screen and (min-width: 1024px) and (max-width:1339px) {
                font-size: 150px;
                line-height: 125px;
             }
          }
         &-180 {
 
-            @media screen and (min-width: 1024px) {
+            @media screen and (min-width: 1024px) and (max-width:1339px) {
                font-size: 180px;
                line-height: 210px;
             }
          }
         &-280 {
 
-            @media screen and (min-width: 1024px) {
+            @media screen and (min-width: 1024px) and (max-width:1339px) {
                font-size: 280px;
                line-height: 243px;
             }
          }
         &-284 {
 
-            @media screen and (min-width: 1024px) {
+            @media screen and (min-width: 1024px) and (max-width:1339px) {
                font-size: 284px;
                line-height: 182px;
             }
          }
         &-200 {
 
-            @media screen and (min-width: 1024px) {
+            @media screen and (min-width: 1024px) and (max-width:1339px) {
                font-size: 200px;
                line-height: 164px;
             }
          }
          &-453 {
 
-            @media screen and (min-width: 1024px) {
+            @media screen and (min-width: 1024px) and (max-width:1339px) {
                font-size: 453px;
                line-height: 347px;
             }
@@ -7444,43 +7458,55 @@ body {
     }
     &--dm{
         &-96{
-            @media screen and (min-width: 1340px) {
+            @media screen and (min-width: 1340px) and (max-width:1599px) {
                 font-size: 96px;
                 line-height: 96px;
              }
         }
+        &-400{
+            @media screen and (min-width: 1340px) and (max-width:1599px) {
+                font-size: 400px;
+                line-height: 1;
+             }
+        }
         &-232{
-            @media screen and (min-width: 1340px) {
+            @media screen and (min-width: 1340px) and (max-width:1599px) {
                 font-size: 232px;
                 line-height: 232px;
              }
         }
         &-280{
-            @media screen and (min-width: 1340px) {
+            @media screen and (min-width: 1340px) and (max-width:1599px) {
                 font-size: 280px;
                 line-height: 238px;
              }
         }
         &-334{
-            @media screen and (min-width: 1340px) {
+            @media screen and (min-width: 1340px) and (max-width:1599px) {
                 font-size: 334px;
-                line-height: 390px;
+                line-height: 301px;
              }
         }
         &-360{
-            @media screen and (min-width: 1340px) {
+            @media screen and (min-width: 1340px) and (max-width:1599px) {
                 font-size: 360px;
                 line-height: 232px;
              }
         }
         &-600{
-            @media screen and (min-width: 1340px) {
+            @media screen and (min-width: 1340px) and (max-width:1599px) {
                 font-size: 600px;
                 line-height: 699px;
              }
         }
     }
     &--dl{
+        &-176{
+            @media screen and (min-width: 1600px) {
+                font-size: 176px;
+                line-height: 144px;
+             }
+        }
         &-180{
             @media screen and (min-width: 1600px) {
                 font-size: 180px;
@@ -7550,6 +7576,10 @@ body {
     @include for-1024(){
         padding: 42px 0 91px;
     }
+    @include for-1366(){
+        // padding-top: 0;
+
+    }
     @include for-1600(){
         padding: 42px 0 126px;
     }
@@ -7618,6 +7648,9 @@ body {
     @include for-1024(){
         padding: 64px 0;
     }
+    @include for-1366(){
+        padding: 60px 0;
+    }
     @include for-1600(){
         padding: 80px 0;
     }
@@ -7661,12 +7694,249 @@ body {
     &__image{
         position: relative;
         overflow: hidden;
+        &--parallax{
+            &-1{
+                height: 266px;
+                @include for-600(){
+                    height: 466px;
+                }
+                @include for-1024(){
+                    height: 428px;
+                }
+                @include for-1366(){
+                    height: 338px;
+                }
+                @include for-1600(){
+                    height: 398px;
+                }
+                @include for-1920(){
+                    height: 478px;
+                }
+            }
+            &-2{
+                height: 393px;
+                @include for-600(){
+                    height: 737px;
+                }
+                @include for-1024(){
+                    height: 420px;
+                }
+                @include for-1366(){
+                    height: 578px;
+                }
+                @include for-1600(){
+                    height: 678px;
+                }
+                @include for-1920(){
+                    height: 820px;
+                }
+            }
+            &-3{
+                height: 231px;
+                @include for-600(){
+                    height: 433px;
+                }
+                @include for-1024(){
+                    height: 394px;
+                }
+                @include for-1366(){
+                    height: 538px;
+                }
+                @include for-1600(){
+                    height: 626px;
+                }
+                @include for-1920(){
+                    height: 756px;
+                }
+            }
+            &-4{
+                height: 253px;
+                @include for-600(){
+                    height: 309px;
+                }
+                @include for-1024(){
+                    height: 308px;
+                }
+                @include for-1366(){
+                    height: 504px;
+                }
+                @include for-1600(){
+                    height: 504px;
+                }
+                @include for-1920(){
+                    height: 616px;
+                }
+            }
+            &-5{
+                height: 412px;
+                @include for-600(){
+                    height: 748px;
+                }
+                @include for-1024(){
+                    height: 270px;
+                }
+                @include for-1366(){
+                    height: 376px;
+                }
+                @include for-1600(){
+                    height: 450px;
+                }
+                @include for-1920(){
+                    height: 500px;
+                }
+            }
+            &-6{
+                height: 100vw;
+               
+            }
+            &-7{
+                height: 393px;
+                @include for-600(){
+                    height: 737px;
+                }
+                @include for-1024(){
+                    height: 420px;
+                }
+                @include for-1366(){
+                    height: 578px;
+                }
+                @include for-1600(){
+                    height: 678px;
+                }
+                @include for-1920(){
+                    height: 820px;
+                }
+            }
+            &-8{
+                height: 412px;
+                @include for-600(){
+                    height: 737px;
+                }
+                @include for-1024(){
+                    height: 492px;
+                }
+                @include for-1366(){
+                    height:676px;
+                }
+                @include for-1600(){
+                    height: 786px;
+                }
+                @include for-1920(){
+                    height: 958ox;
+                }
+            }
+            &-9{
+                height: 266px;
+                @include for-600(){
+                    height: 498px;
+                }
+                @include for-1024(){
+                    height: 394px;
+                }
+                @include for-1366(){
+                    height: 517px;
+                }
+                @include for-1600(){
+                    height: 626px;
+                }
+                @include for-1920(){
+                    height: 756px;
+                }
+            }
+            &-10{
+                height: 100vw;
+             
+            }
+            &-11{
+                height: 266px;
+                @include for-600(){
+                    height: 498px;
+                }
+                @include for-1024(){
+                    height: 394px;
+                }
+                @include for-1366(){
+                    height: 517px;
+                }
+                @include for-1600(){
+                    height: 626px;
+                }
+                @include for-1920(){
+                    height: 756px;
+                }
+            }
+            &-12{
+                height: 393px;
+                @include for-600(){
+                    height: 737px;
+                }
+                @include for-1024(){
+                    height: 420px;
+                }
+                @include for-1366(){
+                    height: 516px;
+                }
+                @include for-1600(){
+                    height: 678px;
+                }
+                @include for-1920(){
+                    height: 820px;
+                }
+            }
+            &-13{
+                height: 265px;
+                @include for-600(){
+                    height: 498px;
+                }
+                @include for-1024(){
+                    height: 394px;
+                }
+                @include for-1366(){
+                    height: 626px;
+                }
+                @include for-1600(){
+                    height: 756px;
+                }
+                
+            }
+            &-14{
+                height: 266px;
+                @include for-600(){
+                    height: 498px;
+                }
+                @include for-1024(){
+                    height: 394px;
+                }
+                @include for-1366(){
+                    height: 516px;
+                }
+                @include for-1600(){
+                    height: 756px;
+                }
+            }
+            &-15{
+                height: 393px;
+                @include for-600(){
+                    height: 737px;
+                }
+                @include for-1024(){
+                    height: 420px;
+                }
+                @include for-1366(){
+                    height: 588px;
+                }
+                @include for-1600(){
+                    height: 820px;
+                }
+               
+            }
+        }
         picture{
             height: calc(100% + 80px);
             // height: 100%;
             // width: 100%;
             @include for-1024(){
-                height: calc(100% + 180px);
+                height: calc(100% + 120px);
             }
         }
         img{
@@ -7708,6 +7978,10 @@ body {
         @include for-1024(){
             font-size: 24px;
             line-height: 36px;
+        }
+        @include for-1366(){
+            font-size: 28px;
+            line-height: 40px;
         }
         @include for-1600(){
             font-size: 36px;
@@ -7751,6 +8025,9 @@ body {
             @include for-1024(){
                 margin-left: -30px;
             }
+            @include for-1366(){
+                margin-left: -42px;
+            }
             @include for-1600(){
                 margin-left: -50px;
             }
@@ -7767,6 +8044,9 @@ body {
             @include for-1024(){
                 margin-top: 18px;
             }
+            @include for-1366(){
+                margin-top: 31px;
+            }
         }
         .history-step__image{
             width: calc(100% + 30px);
@@ -7780,6 +8060,11 @@ body {
                 right: 51px;
                 width: 300px;
                 margin: 0;
+            }
+            @include for-1366(){
+                top: 128px;
+                right: 78px;
+                width: 408px;
             }
             @include for-1600(){
                 width: 481px;
@@ -7800,6 +8085,9 @@ body {
                 }
                 
             }
+            @include for-1366(){
+                padding: 0 10% 0 17.3%;
+            }
             @include for-1600(){
                 padding: 0 0 0 17.3%;
             }
@@ -7808,6 +8096,12 @@ body {
             @include for-1024(){
                 padding: 0 17.3%;
                 box-sizing: border-box;
+            }
+            @include for-1366(){
+                padding: 0 28% 0 17.3%;
+            }
+            @include for-1600(){
+                padding: 0 17.3%;
             }
         }
     }
@@ -7846,6 +8140,9 @@ body {
                 margin: 0 32px 0 0;
                 width: 39.5%;
             }
+            @include for-1366(){
+                width: 40.8%;
+            }
         }
         .history-step__title + .history-step__desc{
             margin-top: 8px;
@@ -7853,6 +8150,11 @@ body {
                 margin-top: 20px;
                 font-size: 20px;
                 line-height: 32px;
+            }
+            @include for-1366(){
+                font-size: 24px;
+                line-height: 36px;
+                margin-top: 4px;
             }
             @include for-1600(){
                 font-size: 32px;
@@ -7867,9 +8169,17 @@ body {
                 box-sizing: border-box;
                 margin-top: -33px;
             }
+            @include for-1366(){
+                margin-top: -160px;
+            }
             @include for-1600(){
                 margin-top: -200px;
                 padding: 0 2.6% 0 16.9%;
+            }
+            &.history-page__content--type-2{
+               @include for-1366-only(){
+                margin-top: -75px;
+               }
             }
         }
         .history-step__right{
@@ -7911,6 +8221,14 @@ body {
                 right: -84px;
                 width: 39.7%;
                 bottom: -198px;
+            }
+            @include for-1366(){
+                max-width: 54%;
+        
+  
+                right: -84px;
+                width: 46.7%;
+                bottom: -318px;
             }
             @include for-1600(){
                 right: -133px;
@@ -7955,6 +8273,9 @@ body {
                 padding: 0 17.3%;
                 box-sizing: border-box;
             }
+            @include for-1366(){
+                padding-top: 136px;
+            }
             @include for-1600(){
                 padding: 0 16.7%;
                 padding-top: 70px;
@@ -7972,6 +8293,12 @@ body {
                 margin: 0 17.3%;
                 max-width: 50%;
                 margin-top: 13px;
+            }
+            @include for-1366-only(){
+                font-size: 24px;
+                line-height: 36px;
+                max-width: 38%;
+                margin-top: 54px;
             }
             @include for-1600(){
                 margin: 0 16.7%;
@@ -7998,12 +8325,20 @@ body {
                 z-index: 10;
                 box-sizing: border-box;
             }
+            @include for-1366(){
+                margin-top: -86%;
+            }
             @include for-1600(){
                 margin-top: -71%;
             }
             p{
                 @include for-1024(){
                     max-width: 331px;
+                }
+                @include for-1366(){
+                    max-width: 435px;
+                    font-size: 28px;
+                    line-height: 40px;
                 }
                 @include for-1600(){
                     max-width: 524px;
@@ -8021,6 +8356,11 @@ body {
                     margin-left: auto;
                     margin-top: 38.7%;
                 }
+                @include for-1366(){
+                    max-width: 684px;
+                    margin-left: auto;
+                    margin-top: 62.7%;
+                }
                 @include for-1600(){
                     max-width: 775px;
                     margin-top: 40.7%;
@@ -8037,6 +8377,11 @@ body {
                 p + p{
                     margin-top: 34px;
                     margin-left: 0;
+                }
+            }
+            @include for-1366(){
+                p{
+                    max-width: 524px;
                 }
             }
             @include for-1600(){
@@ -8066,9 +8411,13 @@ body {
                 margin: -215px -32px -35px;
             }
             @include for-1600(){
-                width: calc(100% + 96px);
-                margin: -215px -48px -35px;
+                width: 100vw;
+                position: relative;
+                left: 50%;
+                right: 50%;
+                margin: -215px -50vw -35px;
             }
+
             &:before{
                 position: absolute;
                 top: -2px;
@@ -8166,6 +8515,9 @@ body {
             @include for-1024(){
                 margin-top: -50px;
             }
+            @include for-1366(){
+                margin-top: -118px;
+            }
             @include for-1600(){
                 margin-top: -118px;
             }
@@ -8173,6 +8525,10 @@ body {
                 @include for-1024(){
                     font-size: 24px;
                     line-height: 36px;
+                }
+                @include for-1366(){
+                    font-size: 28px;
+                    line-height: 40px;
                 }
                 @include for-1600(){
                     font-size: 36px;
@@ -8193,6 +8549,11 @@ body {
                     line-height: 32px;
                     margin-top: 17px;
                 }
+                @include for-1366(){
+                    font-size: 24px;
+                    line-height: 36px;
+                    margin-top: 26px;
+                }
                 @include for-1600(){
                     font-size: 32px;
                     line-height: 46px;
@@ -8208,6 +8569,9 @@ body {
             padding: 0 9% 0 8.6%;
             box-sizing: border-box;
             margin-top: 17px;
+           }
+           @include for-1366(){
+            margin-top: 72px;
            }
            @include for-1600(){
             margin-top: 24px;
@@ -8240,12 +8604,23 @@ body {
         padding-bottom: 5px;
         margin-left: -32px;
      }
+     @include for-1366(){
+        max-width: 50%;
+        padding-bottom: 13px;
+        margin-left: -59px;
+    
+     }
     }
     .history-step__image{
         @include for-1024(){
             top: -103px;
             right: 83px;
             width: 216px;
+        }
+        @include for-1366(){
+            top: -119px;
+            right: 109px;
+            width: 302px;
         }
         @include for-1600(){
             width: 352px;
@@ -8276,6 +8651,11 @@ body {
             font-size: 20px;
             line-height: 32px;
         }
+        @include for-1366(){
+            font-size: 24px;
+            line-height: 36px;
+            max-width: 58%;
+        }
         @include for-1600(){
             font-size: 32px;
             line-height: 48px;
@@ -8287,6 +8667,9 @@ body {
 .history-step--type-1.not-big-padding + .history-step--type-4{
     @include for-1024(){
         padding-bottom: 44%;
+    }
+    @include for-1366(){
+        padding-bottom: 57%;
     }
     @include for-1600(){
         margin-top: 240px;
@@ -8326,6 +8709,39 @@ body {
         }
     }
 }
+.history-step--type-2-2v{
+    .history-step__number{
+        @include for-1366-only(){
+            padding-left: 99px;
+        }
+    }
+    .history-step__title+.history-step__desc {
+        @include for-1366-only(){
+            font-size: 28px;
+            line-height: 40px;
+            margin-top: 20px;
+        }
+    }
+}
+.history-step--type-2-3v{
+    .history-step__number{
+        @include for-1366-only(){
+            padding-left: 99px;
+        }
+    }
+    .history-step__title+.history-step__desc {
+        @include for-1366-only(){
+            font-size: 28px;
+            line-height: 40px;
+            margin-top: 20px;
+        }
+    }
+    .history-page__content {
+        @include for-1366-only(){
+            margin-top: -80px;
+        }
+    }
+}
 .history-now{
     padding: 100px 0 40px;
     @include for-600(){
@@ -8348,6 +8764,11 @@ body {
             padding: 0 0 0 17.3%;
             letter-spacing: .02em;
             margin-bottom: 80px;
+        }
+        @include for-1366(){
+            line-height: 180px;
+            margin-bottom: 100px;
+            margin-bottom: 65px;
         }
         @include for-1600(){
             font-size: 240px;
@@ -8382,8 +8803,22 @@ body {
                     width: 43%;
                 }
             }
+            @include for-1366(){
+                width: 30.3%;
+                &:nth-child(2){
+                    width: 28%;
+                    padding-right: 10%;
+                }
+                &:last-child{
+                    width: 37%;
+                }
+            }
             @include for-1600(){
                 width: 27.3%;
+                &:last-child{
+                    width: 44%;
+                }
+                    
             }
             & + &{
                 margin-top: 24px;
@@ -8406,8 +8841,12 @@ body {
             @include for-1024(){
                 height: 67px;
             }
+            @include for-1366(){
+                height: 110px;
+               margin-bottom: 4px;
+            }
             @include for-1600(){
-                height: 108px;
+                height: 132px;
             }
             img{
                 max-height: 100%;
@@ -8431,6 +8870,10 @@ body {
             @include for-1024(){
                 font-size: 33px;
                 line-height: 33px;
+            }
+            @include for-1366(){
+                font-size: 44px;
+                line-height: 44px;
             }
             @include for-1600(){
                 font-size: 60px;
@@ -8535,6 +8978,10 @@ body {
        @include for-1600(){
         margin-top: 4px;
        }
+       @include for-1920(){
+        margin-top: 0;
+        align-items: center;
+       }
     }
     &__head{
         margin-bottom: 16px;
@@ -8613,6 +9060,9 @@ body {
         @include for-1600(){
             width: 36%;
             margin: 15px 0 0 72px;
+        }
+        @include for-1920(){
+            height: 246px;
         }
         &-title{
             position: relative;
@@ -9042,6 +9492,9 @@ body {
             line-height: 144px;
             margin-bottom: 36px;
         }
+        @include for-1920(){
+            padding-left: 9.7%;
+        }
     }
     &__arrows{
         display: none;
@@ -9158,6 +9611,9 @@ body {
             line-height: 46px;
             max-width: 560px;
         }
+        @include for-1920(){
+            padding-left: 9.7%;
+        }
      
     }
     &__image{
@@ -9175,6 +9631,7 @@ body {
         letter-spacing: 0.03em;
         color: rgba(255, 255, 255, 0.6);
         text-align: left;
+        user-select: none;
         @include for-600(){
             margin-top: 24px;
             font-size: 18px;
@@ -9356,6 +9813,11 @@ body {
             }
             &:nth-child(2),&:nth-child(3){
                 padding-right: 5%;
+            }
+        }
+        @include for-1920(){
+            &:nth-child(2),&:nth-child(3){
+                padding-right: 12%;
             }
         }
         @include for-1024(){
@@ -13226,5 +13688,13 @@ body {
             font-size: 44px;
             line-height: 44px;
         }
+    }
+}
+.cookie{
+    display: none;
+}
+.newQuestions__link--medium.title--dl-176 .newQuestions__icon{
+    @include for-1600(){
+        bottom: 70px;
     }
 }
