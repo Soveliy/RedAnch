@@ -801,7 +801,15 @@ window.addEventListener('load', function() {
         
       });
 
-
+      const swiperReviewsPhoto = new Swiper(".our-team__photo-slider", {
+        slidesPerView: 1,
+        // spaceBetween: 16,
+        // centeredSlides: true,
+        // autoHeight:true,
+        watchSlidesProgress: true,
+        
+        
+      });
       const swiperReviewsP = new Swiper(".our-team__slider", {
         slidesPerView: 1,
         // spaceBetween: 16,
@@ -816,8 +824,17 @@ window.addEventListener('load', function() {
           clickable:true,
         },
         
+        thumbs: {
+          swiper: swiperReviewsPhoto,
+        },
+        
         
       });
+      
+   
+      
+      
+
   
 
     try {
@@ -1108,6 +1125,60 @@ window.addEventListener('load', function() {
                  }
                 });
               });
+              $(".load-range__image").each(function() {
+                let loadRange = new TimelineMax();
+                let child = $(this).find("img");
+                let parallaxY;
+                if (!isTablet){
+                  parallaxY = -180
+                } else {
+                  parallaxY = -80
+                }
+                loadRange.to(child, 1, {
+                   y: parallaxY,
+                   ease: "none" ,
+                   scrollTrigger:{
+                    trigger:$(this),
+                    scrub:true,
+                   }
+                  });
+                });
+                $(".about-load-range__image").each(function() {
+                  let loadRange = new TimelineMax();
+                  let child = $(this).find("img");
+                  let parallaxY;
+                  if (!isTablet){
+                    parallaxY = -180
+                  } else {
+                    parallaxY = -80
+                  }
+                  loadRange.to(child, 1, {
+                     y: parallaxY,
+                     ease: "none" ,
+                     scrollTrigger:{
+                      trigger:$(this),
+                      scrub:true,
+                     }
+                    });
+                  });
+                  $(".about-prod-text__image").each(function() {
+                    let imgTimeLine = new TimelineMax();
+                    let child = $(this).find("img");
+                    let parallaxY;
+                    if (!isTablet){
+                      parallaxY = -180
+                    } else {
+                      parallaxY = -80
+                    }
+                    imgTimeLine.to(child, 1, {
+                       y: parallaxY,
+                       ease: "none" ,
+                       scrollTrigger:{
+                        trigger:$(this),
+                        scrub:true,
+                       }
+                      });
+                    });
       var projects = new Swiper(".imp-projects__slider", {
         spaceBetween:16,
         slidesPerView: "auto",
