@@ -363,7 +363,94 @@ window.addEventListener('load', function() {
           }
         },
         "(min-width: 1024px)": function minWidth1024px() {
+          let SectionLeftTitleLine = new TimelineMax();
+          let  SectionLeftTitle = $(".default-section__content--left .default-section__title");
+    
+          SectionLeftTitleLine.to(SectionLeftTitle, 1, { 
+            y: -70,
+            ease: "none" ,
+            
+            scrollTrigger:{
+              trigger:SectionLeftTitle,
+             
+              scrub:true,
+              // start:"top center",
+              // end:"bottom"
+              start: "top bottom",
+              end: "bottom top",
+            }
+          });
+          let SectionLeftDescLine = new TimelineMax();
+          let  SectionLeftDesc = $(".default-section__content--left .default-section__desc");
+    
+          SectionLeftDescLine.to(SectionLeftDesc, 1, { 
+            y: -70,
+            ease: "none" ,
+            
+            scrollTrigger:{
+              trigger:SectionLeftTitle,
+             
+              scrub:true,
+              // start:"top center",
+              start: "top bottom",
+              end: "bottom top",
+            }
+          });
           
+    
+          let SectionRightTitleLine = new TimelineMax();
+          let  SectionRightTitle = $(".default-section__content--right .default-section__title");
+    
+          SectionRightTitleLine.to(SectionRightTitle, 1, { 
+            y: -70,
+            ease: "none" ,
+            
+            scrollTrigger:{
+              trigger:SectionRightTitle,
+             
+              scrub:true,
+              // start:"top center",
+              // end:"bottom"
+              start: "top bottom",
+              end: "bottom top",
+            }
+          });
+    
+    
+          let SectionRightDescLine = new TimelineMax();
+          let  SectionRightDesc = $(".default-section__content--right .default-section__desc");
+    
+          SectionRightDescLine.to(SectionRightDesc, 1, { 
+            y: -70,
+            ease: "none" ,
+            
+            scrollTrigger:{
+              trigger:SectionRightTitle,
+             
+              scrub:true,
+              start:"top center",
+              end:"bottom"
+            }
+          });
+    
+          let SectionRightBtnLine = new TimelineMax();
+          let  SectionRightBtn = $(".default-section__content--right .default-section__linkLabelNew");
+    
+          SectionRightBtnLine.to(SectionRightBtn, 1, { 
+            y: -70,
+            ease: "none" ,
+            
+            scrollTrigger:{
+              trigger:SectionRightBtn,
+             
+              scrub:true,
+              // markers:true,
+              // start:"top center",
+              // end:"bottom"
+              start: "top bottom",
+              end: "bottom top",
+            }
+          });
             if($(".advancher__title").hasClass("advancher__title--big")){
               TL.to(".advancher__title--big", {
                     backgroundPosition: "100% 85%",
@@ -394,97 +481,31 @@ window.addEventListener('load', function() {
                   });
             }
         },
+        "(max-width: 1024px)": function maxWidth1024px() {
+          $(".default-section__picture").each(function() {
+            let imgTimeLine = new TimelineMax();
+            let child = $(this).find("img");
+            let parallaxY;
+            if (!isTablet){
+              parallaxY = -180
+            } else {
+              parallaxY = -80
+            }
+            imgTimeLine.to(child, 1, {
+               y: parallaxY,
+               ease: "none" ,
+               scrollTrigger:{
+                trigger:$(this),
+                scrub:true,
+               }
+              });
+            });
+        },
       });
      
 
       
-      let SectionLeftTitleLine = new TimelineMax();
-      let  SectionLeftTitle = $(".default-section__content--left .default-section__title");
-
-      SectionLeftTitleLine.to(SectionLeftTitle, 1, { 
-        y: -70,
-        ease: "none" ,
-        
-        scrollTrigger:{
-          trigger:SectionLeftTitle,
-         
-          scrub:true,
-          // start:"top center",
-          // end:"bottom"
-          start: "top bottom",
-          end: "bottom top",
-        }
-      });
-      let SectionLeftDescLine = new TimelineMax();
-      let  SectionLeftDesc = $(".default-section__content--left .default-section__desc");
-
-      SectionLeftDescLine.to(SectionLeftDesc, 1, { 
-        y: -70,
-        ease: "none" ,
-        
-        scrollTrigger:{
-          trigger:SectionLeftTitle,
-         
-          scrub:true,
-          // start:"top center",
-          start: "top bottom",
-          end: "bottom top",
-        }
-      });
-      
-
-      let SectionRightTitleLine = new TimelineMax();
-      let  SectionRightTitle = $(".default-section__content--right .default-section__title");
-
-      SectionRightTitleLine.to(SectionRightTitle, 1, { 
-        y: -70,
-        ease: "none" ,
-        
-        scrollTrigger:{
-          trigger:SectionRightTitle,
-         
-          scrub:true,
-          // start:"top center",
-          // end:"bottom"
-          start: "top bottom",
-          end: "bottom top",
-        }
-      });
-
-
-      let SectionRightDescLine = new TimelineMax();
-      let  SectionRightDesc = $(".default-section__content--right .default-section__desc");
-
-      SectionRightDescLine.to(SectionRightDesc, 1, { 
-        y: -70,
-        ease: "none" ,
-        
-        scrollTrigger:{
-          trigger:SectionRightTitle,
-         
-          scrub:true,
-          start:"top center",
-          end:"bottom"
-        }
-      });
-
-      let SectionRightBtnLine = new TimelineMax();
-      let  SectionRightBtn = $(".default-section__content--right .default-section__linkLabelNew");
-
-      SectionRightBtnLine.to(SectionRightBtn, 1, { 
-        y: -70,
-        ease: "none" ,
-        
-        scrollTrigger:{
-          trigger:SectionRightTitle,
-         
-          scrub:true,
-          // start:"top center",
-          // end:"bottom"
-          start: "top bottom",
-          end: "bottom top",
-        }
-      });
+ 
 
 
 
@@ -537,7 +558,7 @@ window.addEventListener('load', function() {
           })
           .to(BigChain, {
             ease: "none" ,
-            y: "-250%",
+            y: "-400%",
             duration:3
           });
     
@@ -714,8 +735,9 @@ window.addEventListener('load', function() {
           console.log(targetElement)
           bodyScrollLock.disableBodyScroll(targetElement);
           $(this).parent().siblings().find(".accordeonItem__body").removeClass("js-active")
+          $(".body__page,.constructor").addClass("isBigIndex")
         } else {
-        
+          
           $(this).parent().siblings().find(".accordeonItem__body").removeClass("isOpen");
           $(this).next().toggleClass("isOpen");
          
@@ -731,13 +753,29 @@ window.addEventListener('load', function() {
         
       });
 
-      $(".accordeonItem__bg").click(function(){
+      $(".accordeonItem__bg,.accordeonItem__close").click(function(){
         $("body").removeClass("js-hidden")
         bodyScrollLock.clearAllBodyScrollLocks();
         $(".accordeonItem__body,.accordeonItem").removeClass("js-active")
         $(this).parent().siblings().find(".accordeonItem__body")
+        $(".body__page,.constructor").removeClass("isBigIndex")
       })
-    
+      $(".hero__linkLabel .linkLabel__box").click(function(){
+        $("#industriesModal").arcticmodal({
+          afterOpen: function (data, el) {
+            $('body').css('overflow', 'hidden');
+            $('.b-modal#industriesModal').addClass('is-active');
+         },
+         beforeClose: function (data, el) {
+            setTimeout(() => {
+               $('body').css('overflow', 'auto');
+               $('.b-modal').removeClass('is-active');
+            }, 100);
+         },
+        })
+        
+      })
+      
       $(".search-examples__item").click(function(){
         $(".search-element__input--new").val("")
         $(".search-element__input--new").val($(this).text())
@@ -1216,7 +1254,7 @@ window.addEventListener('load', function() {
 
      $('.site-map__btn').click(function(e) {
       $("body").toggleClass("js-hidden")
-      $("burger").toggleClass("js-active")
+      $(".burger").toggleClass("js-active")
         $(this).parent().toggleClass("js-active")
       });
       $('.about-prod-text__other-info-link,.conditions-item__link').click(function(e) {
