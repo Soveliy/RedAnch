@@ -243,6 +243,26 @@ body {
                 justify-content: center !important;
             }
         }
+        &--how-we-work{
+            height: calc((var(--vhSection,1vh) * 100) - 84px);
+            
+            justify-content: center;
+            @include for-1024(){
+                height: calc(100vh - 100px);
+                padding-top: 65px;
+                justify-content: flex-start;
+            }
+            @include for-1366(){
+                padding-top: 46px;
+            }
+            @include for-1600(){
+                padding-top: 23px !important;
+                .land-hero__desc{
+                    margin-left: 95px;
+                    margin-top: 24px;
+                }
+            }
+        }
     }
     &--gradiend-new{
        
@@ -325,6 +345,7 @@ body {
             }
         }
         &--how-we-work{
+          
             img{
                 object-position: top;
             }
@@ -858,6 +879,7 @@ body {
             /* txt/primary */
             
             color: #DD2B1C;
+            margin-bottom: -20px;
             .small{
                 font-size: 20px;
                 @include for-600(){
@@ -877,18 +899,23 @@ body {
             @include for-600(){
                 font-size: 160px;
                 line-height: 150px;
+                margin-bottom: -34px;
             }
             @include for-1024(){
                 font-size: 208px;
                 line-height: 176px;
+                margin-bottom: -50px;
             }
             @include for-1366(){
                 font-size: 280px;
                 line-height: 232px;
+                margin-bottom: -64px;
             }
             @include for-1600(){
                 font-size: 304px;
                 line-height: 264px;
+
+
             }
         }
         &Name{
@@ -941,15 +968,17 @@ body {
             @include for-1024(){
                 font-size: 24px;
                 line-height: 28px;
-                max-width: inherit;
+                max-width: 270px;
             }
             @include for-1366(){
                 font-size: 28px;
                 line-height: 32px;
+                max-width: 310px;
             }
             @include for-1600(){
                 font-size: 36px;
                 line-height: 40px;
+                max-width: 400px;
             }
         }
 
@@ -1149,16 +1178,17 @@ body {
 }
 .constructor{
     position: relative;
-    overflow: hidden;
+    
     background: rgba(36, 26, 26, 0.9);
     padding: 40px 0;
-    z-index: 100;
+    z-index: 700;
     min-height: 400px;
     @include for-600(){
         padding: 40px 0 134px;
         min-height: 639px;
     }
     @include for-1024(){
+        overflow: hidden;
         padding: 0;
         min-height: 717px;
         // overflow-x: hidden;
@@ -1188,23 +1218,33 @@ body {
     }
 
     &__row{
-        position: relative;
+        
         @include for-1024(){
+            position: relative;
             display: flex;
             justify-content: space-between;
         }
     }
     &__picture{
-        top: -40px;
+        top: 0;
         left: -105px;
         position: absolute;
-        margin-top: -220px;
+        height: 100%;
+        overflow: hidden;
+        img{
+            position: relative;
+            margin-top: -220px;
+        }
         @include for-600(){
             max-width: 450px;
-            top: -197px;
+            // top: -197px;
+            top: 0;
             left: -93px;
             position: absolute;
             width: 74%;
+            img{
+                margin-top: -197px;
+            }
         }
         @include for-1024(){
             position: relative;
@@ -1213,6 +1253,9 @@ body {
             width: 40%;
             max-width: inherit;
             margin-top: -30%;
+            img{
+                margin-top: 0;
+            }
         }
         @include for-1366(){
             width: 42%;
@@ -1584,10 +1627,11 @@ body {
 .about-prod{
     position: relative;
     z-index: 500;
-    padding: 0 0 40px;
+    padding: 40px 0;
     background: rgba(36,26,26,.9);
     @include for-1024(){
         padding: 47px 0;
+        z-index: 800;
     }
     @media (min-width:1200px){
         padding: 0 0 200px;
@@ -4429,6 +4473,9 @@ body {
         &__row{
             display: flex;
             align-items: flex-start;
+            @include for-1024(){
+                width: 100%;
+            }
             &--center{
                 @include for-1024(){
                     align-items: center;
@@ -4445,6 +4492,7 @@ body {
                 display: flex;
                 margin-right: 62px;
                 max-width: 210px;
+                width: 100%;
             }
             @include for-1366(){
                 max-width: 270px;
@@ -4455,7 +4503,7 @@ body {
                 margin-right: 10.9%;
             }
             @include for-1920(){
-                margin-right: 16.9%;
+                margin-right: 14.9%;
             }
         }
         &__icon{
@@ -5294,7 +5342,7 @@ body {
                 margin: -32px -15px 16px;
             }
             img{
-                height: calc(100% + 180px);
+                height: calc(100% + 40px);
                 object-fit: cover;
                 object-position: center;
                 @include for-1024(){
@@ -7160,16 +7208,30 @@ body {
 }
 .page--dark .manager--new{
     background: rgba(36,26,26,.9);
+    &.manager--bg{
+        // &:after{
+        //     content: '';
+        //     position: absolute;
+        //     top: 100%;
+        //     height: 100%;
+        //     left: 0;
+        //     width: 100%;
+        //     background: rgba(36,26,26,.9);
+        // }
+    }
+}
+.main--lands:after{
+   
 }
 .page--dark .newFooter {
-
-    background: rgba(36,26,26,.9);
+    overflow: visible;
+    background: #110101;
     &:before{
         content: '';
         position: absolute;
+        bottom: 100%;
+        height: 100vh;
         left: 0;
-        top: -1px;
-        height: 1px;
         width: 100%;
         background: rgba(36,26,26,.9);
     }
@@ -14871,5 +14933,10 @@ body {
 .newQuestions__link.title--ts-110 svg{
     @include for-600-only(){
         bottom: 31px;
+    }
+}
+.numeral--with-bg{
+    .numeral__itemValue{
+        margin-bottom: 0 !important;
     }
 }
