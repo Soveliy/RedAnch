@@ -154,7 +154,7 @@ window.addEventListener('load', function() {
 
 
              
-          TL.to(".constructor__picture", {
+          TL.to(".constructor__picture img", {
             top: "100px",
             ease: "none",
             scrollTrigger: {
@@ -184,8 +184,8 @@ window.addEventListener('load', function() {
           });
 
              
-          TL.to(".constructor__picture", {
-            top: "-100px",
+          TL.to(".constructor__picture img", {
+            top: "100px",
             ease: "none",
             scrollTrigger: {
               // markers:true,
@@ -444,7 +444,7 @@ window.addEventListener('load', function() {
               trigger:SectionRightBtn,
              
               scrub:true,
-              // markers:true,
+              markers:true,
               // start:"top center",
               // end:"bottom"
               start: "top bottom",
@@ -489,7 +489,7 @@ window.addEventListener('load', function() {
             if (!isTablet){
               parallaxY = -180
             } else {
-              parallaxY = -80
+              parallaxY = -40
             }
             imgTimeLine.to(child, 1, {
                y: parallaxY,
@@ -552,14 +552,14 @@ window.addEventListener('load', function() {
             }
           })
           .to(BigChain, {
-            y: "-20%",
+            y: "-40%",
             ease: "none" ,
             duration:1
           })
           .to(BigChain, {
             ease: "none" ,
-            y: "-400%",
-            duration:3
+            y: "-380%",
+            duration:6
           });
     
          
